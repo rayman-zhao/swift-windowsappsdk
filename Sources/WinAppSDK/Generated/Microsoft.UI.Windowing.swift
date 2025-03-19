@@ -17,6 +17,8 @@ public typealias IconShowOptions = __x_ABI_CMicrosoft_CUI_CWindowing_CIconShowOp
 public typealias OverlappedPresenterState = __x_ABI_CMicrosoft_CUI_CWindowing_COverlappedPresenterState
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.titlebarheightoption)
 public typealias TitleBarHeightOption = __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarHeightOption
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.titlebartheme)
+public typealias TitleBarTheme = __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow)
 public final class AppWindow : WinRTClass {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindow
@@ -256,10 +258,32 @@ public final class AppWindow : WinRTClass {
         get { try! _IAppWindow3.get_DispatcherQueueImpl() }
     }
 
+    private lazy var _IAppWindow4: __ABI_Microsoft_UI_Windowing.IAppWindow4! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.settaskbaricon)
+    public func setTaskbarIcon(_ iconPath: String) throws {
+        try _IAppWindow4.SetTaskbarIconImpl(iconPath)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.settaskbaricon)
+    public func setTaskbarIcon(_ iconId: WinAppSDK.IconId) throws {
+        try _IAppWindow4.SetTaskbarIconWithIconIdImpl(iconId)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.settitlebaricon)
+    public func setTitleBarIcon(_ iconPath: String) throws {
+        try _IAppWindow4.SetTitleBarIconImpl(iconPath)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.settitlebaricon)
+    public func setTitleBarIcon(_ iconId: WinAppSDK.IconId) throws {
+        try _IAppWindow4.SetTitleBarIconWithIconIdImpl(iconId)
+    }
+
     deinit {
         _default = nil
         _IAppWindow2 = nil
         _IAppWindow3 = nil
+        _IAppWindow4 = nil
     }
 }
 
@@ -568,9 +592,17 @@ public final class AppWindowTitleBar : WinRTClass {
         set { try! _IAppWindowTitleBar2.put_PreferredHeightOptionImpl(newValue) }
     }
 
+    private lazy var _IAppWindowTitleBar3: __ABI_Microsoft_UI_Windowing.IAppWindowTitleBar3! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowtitlebar.preferredtheme)
+    public var preferredTheme : TitleBarTheme {
+        get { try! _IAppWindowTitleBar3.get_PreferredThemeImpl() }
+        set { try! _IAppWindowTitleBar3.put_PreferredThemeImpl(newValue) }
+    }
+
     deinit {
         _default = nil
         _IAppWindowTitleBar2 = nil
+        _IAppWindowTitleBar3 = nil
     }
 }
 
@@ -931,9 +963,35 @@ public final class OverlappedPresenter : WinAppSDK.AppWindowPresenter {
         try _IOverlappedPresenter2.RestoreWithActivationImpl(activateWindow)
     }
 
+    private lazy var _IOverlappedPresenter3: __ABI_Microsoft_UI_Windowing.IOverlappedPresenter3! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenter.preferredmaximumheight)
+    public var preferredMaximumHeight : Int32? {
+        get { try! _IOverlappedPresenter3.get_PreferredMaximumHeightImpl() }
+        set { try! _IOverlappedPresenter3.put_PreferredMaximumHeightImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenter.preferredmaximumwidth)
+    public var preferredMaximumWidth : Int32? {
+        get { try! _IOverlappedPresenter3.get_PreferredMaximumWidthImpl() }
+        set { try! _IOverlappedPresenter3.put_PreferredMaximumWidthImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenter.preferredminimumheight)
+    public var preferredMinimumHeight : Int32? {
+        get { try! _IOverlappedPresenter3.get_PreferredMinimumHeightImpl() }
+        set { try! _IOverlappedPresenter3.put_PreferredMinimumHeightImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenter.preferredminimumwidth)
+    public var preferredMinimumWidth : Int32? {
+        get { try! _IOverlappedPresenter3.get_PreferredMinimumWidthImpl() }
+        set { try! _IOverlappedPresenter3.put_PreferredMinimumWidthImpl(newValue) }
+    }
+
     deinit {
         _default = nil
         _IOverlappedPresenter2 = nil
+        _IOverlappedPresenter3 = nil
     }
 }
 
@@ -1023,4 +1081,20 @@ extension WinAppSDK.TitleBarHeightOption {
     }
 }
 extension WinAppSDK.TitleBarHeightOption: @retroactive Hashable, @retroactive Codable {}
+
+extension WinAppSDK.TitleBarTheme {
+    public static var legacy : WinAppSDK.TitleBarTheme {
+        __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme_Legacy
+    }
+    public static var useDefaultAppMode : WinAppSDK.TitleBarTheme {
+        __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme_UseDefaultAppMode
+    }
+    public static var light : WinAppSDK.TitleBarTheme {
+        __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme_Light
+    }
+    public static var dark : WinAppSDK.TitleBarTheme {
+        __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme_Dark
+    }
+}
+extension WinAppSDK.TitleBarTheme: @retroactive Hashable, @retroactive Codable {}
 

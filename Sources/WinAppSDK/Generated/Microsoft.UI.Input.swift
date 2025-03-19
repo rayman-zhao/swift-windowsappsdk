@@ -1220,6 +1220,12 @@ public final class InputFocusNavigationHost : WinAppSDK.InputObject {
         return try! _IInputFocusNavigationHostStatics.GetForSiteBridgeImpl(site)
     }
 
+    private static let _IInputFocusNavigationHostStatics2: __ABI_Microsoft_UI_Input.IInputFocusNavigationHostStatics2 = try! RoGetActivationFactory(HString("Microsoft.UI.Input.InputFocusNavigationHost"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputfocusnavigationhost.getforsitelink)
+    public static func getForSiteLink(_ contentSiteLink: WinAppSDK.AnyIContentSiteLink!) -> InputFocusNavigationHost! {
+        return try! _IInputFocusNavigationHostStatics2.GetForSiteLinkImpl(contentSiteLink)
+    }
+
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputfocusnavigationhost.navigatefocus)
     public func navigateFocus(_ request: FocusNavigationRequest!) throws -> FocusNavigationResult {
         try _default.NavigateFocusImpl(request)

@@ -5,12 +5,210 @@ import Foundation
 @_spi(WinRTInternal) @_spi(WinRTImplements) import WindowsFoundation
 import CWinRT
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentautomationoptions)
+public typealias ContentAutomationOptions = __x_ABI_CMicrosoft_CUI_CContent_CContentAutomationOptions
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateroundingmode)
 public typealias ContentCoordinateRoundingMode = __x_ABI_CMicrosoft_CUI_CContent_CContentCoordinateRoundingMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentlayoutdirection)
 public typealias ContentLayoutDirection = __x_ABI_CMicrosoft_CUI_CContent_CContentLayoutDirection
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsizepolicy)
 public typealias ContentSizePolicy = __x_ABI_CMicrosoft_CUI_CContent_CContentSizePolicy
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink)
+public final class ChildSiteLink : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteInput, IContentSiteLink {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IChildSiteLink
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink>?) -> ChildSiteLink? {
+        guard let abi = abi else { return nil }
+        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    override public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static let _IChildSiteLinkStatics: __ABI_Microsoft_UI_Content.IChildSiteLinkStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Content.ChildSiteLink"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.create)
+    public static func create(_ parent: ContentIsland!, _ placementVisual: WinAppSDK.ContainerVisual!) -> ChildSiteLink! {
+        return try! _IChildSiteLinkStatics.CreateImpl(parent, placementVisual)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.createforsystemvisual)
+    public static func createForSystemVisual(_ parent: ContentIsland!, _ placementVisual: UWP.ContainerVisual!) -> ChildSiteLink! {
+        return try! _IChildSiteLinkStatics.CreateForSystemVisualImpl(parent, placementVisual)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.connect)
+    public func connect(_ content: ContentIsland!) throws {
+        try _default.ConnectImpl(content)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.actualsize)
+    public var actualSize : WindowsFoundation.Vector2 {
+        get { try! _default.get_ActualSizeImpl() }
+        set { try! _default.put_ActualSizeImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.dispatcherqueue)
+    public var dispatcherQueue : WinAppSDK.DispatcherQueue! {
+        get { try! _default.get_DispatcherQueueImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.localtoparenttransformmatrix)
+    public var localToParentTransformMatrix : WindowsFoundation.Matrix4x4 {
+        get { try! _default.get_LocalToParentTransformMatrixImpl() }
+        set { try! _default.put_LocalToParentTransformMatrixImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.siteview)
+    public var siteView : ContentSiteView! {
+        get { try! _default.get_SiteViewImpl() }
+    }
+
+    private lazy var _IClosable: __ABI_Windows_Foundation.IClosable! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.close)
+    public func close() throws {
+        try _IClosable.CloseImpl()
+    }
+
+    private lazy var _IClosableNotifier: __ABI_Microsoft_UI.IClosableNotifier! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.isclosed)
+    public var isClosed : Bool {
+        get { try! _IClosableNotifier.get_IsClosedImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.closed)
+    public lazy var closed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_ClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_ClosedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.frameworkclosed)
+    public lazy var frameworkClosed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_FrameworkClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_FrameworkClosedImpl($0)
+       }
+      )
+    }()
+
+    private lazy var _IContentSiteAutomation: __ABI_Microsoft_UI_Content.IContentSiteAutomation! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.automationoption)
+    public var automationOption : ContentAutomationOptions {
+        get { try! _IContentSiteAutomation.get_AutomationOptionImpl() }
+        set { try! _IContentSiteAutomation.put_AutomationOptionImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.automationprovider)
+    public var automationProvider : Any! {
+        get { try! _IContentSiteAutomation.get_AutomationProviderImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.fragmentrootautomationproviderrequested)
+    public lazy var fragmentRootAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_FragmentRootAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_FragmentRootAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.nextsiblingautomationproviderrequested)
+    public lazy var nextSiblingAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_NextSiblingAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_NextSiblingAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.parentautomationproviderrequested)
+    public lazy var parentAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_ParentAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_ParentAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.previoussiblingautomationproviderrequested)
+    public lazy var previousSiblingAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_PreviousSiblingAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_PreviousSiblingAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    private lazy var _IContentSiteInput: __ABI_Microsoft_UI_Content.IContentSiteInput! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.processeskeyboardinput)
+    public var processesKeyboardInput : Bool {
+        get { try! _IContentSiteInput.get_ProcessesKeyboardInputImpl() }
+        set { try! _IContentSiteInput.put_ProcessesKeyboardInputImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.processespointerinput)
+    public var processesPointerInput : Bool {
+        get { try! _IContentSiteInput.get_ProcessesPointerInputImpl() }
+        set { try! _IContentSiteInput.put_ProcessesPointerInputImpl(newValue) }
+    }
+
+    private lazy var _IContentSiteLink: __ABI_Microsoft_UI_Content.IContentSiteLink! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink.parent)
+    public var parent : ContentIsland! {
+        get { try! _IContentSiteLink.get_ParentImpl() }
+    }
+
+    deinit {
+        _default = nil
+        _IClosable = nil
+        _IClosableNotifier = nil
+        _IContentSiteAutomation = nil
+        _IContentSiteInput = nil
+        _IContentSiteLink = nil
+    }
+}
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateconverter)
 open class ContentCoordinateConverter : WinRTClass {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentCoordinateConverter
@@ -192,8 +390,15 @@ public final class ContentEnvironmentStateChangedEventArgs : WinRTClass {
         get { try! _default.get_DidDisplayIdChangeImpl() }
     }
 
+    private lazy var _IContentEnvironmentStateChangedEventArgs2: __ABI_Microsoft_UI_Content.IContentEnvironmentStateChangedEventArgs2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentenvironmentstatechangedeventargs.diddisplayscalechange)
+    public var didDisplayScaleChange : Bool {
+        get { try! _IContentEnvironmentStateChangedEventArgs2.get_DidDisplayScaleChangeImpl() }
+    }
+
     deinit {
         _default = nil
+        _IContentEnvironmentStateChangedEventArgs2 = nil
     }
 }
 
@@ -248,6 +453,17 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.getfromid)
     public class func getFromId(_ id: UInt64) -> ContentIsland! {
         return try! _IContentIslandStatics.GetFromIdImpl(id)
+    }
+
+    private static let _IContentIslandStatics2: __ABI_Microsoft_UI_Content.IContentIslandStatics2 = try! RoGetActivationFactory(HString("Microsoft.UI.Content.ContentIsland"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.createforsystemvisual)
+    public class func createForSystemVisual(_ queue: WinAppSDK.DispatcherQueue!, _ root: UWP.Visual!) -> ContentIsland! {
+        return try! _IContentIslandStatics2.CreateForSystemVisualImpl(queue, root)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.getbysystemvisual)
+    public class func getBySystemVisual(_ child: UWP.Visual!) -> ContentIsland! {
+        return try! _IContentIslandStatics2.GetBySystemVisualImpl(child)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.getautomationhostprovider)
@@ -370,6 +586,63 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
       )
     }()
 
+    private lazy var _IContentIsland2: __ABI_Microsoft_UI_Content.IContentIsland2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.children)
+    public var children : WindowsFoundation.AnyIIterable<ChildSiteLink?>! {
+        get { try! _IContentIsland2.get_ChildrenImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.localtoclienttransformmatrix)
+    public var localToClientTransformMatrix : WindowsFoundation.Matrix4x4 {
+        get { try! _IContentIsland2.get_LocalToClientTransformMatrixImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.localtoparenttransformmatrix)
+    public var localToParentTransformMatrix : WindowsFoundation.Matrix4x4 {
+        get { try! _IContentIsland2.get_LocalToParentTransformMatrixImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.popups)
+    public var popups : WindowsFoundation.AnyIIterable<DesktopPopupSiteBridge?>! {
+        get { try! _IContentIsland2.get_PopupsImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.processeskeyboardinput)
+    public var processesKeyboardInput : Bool {
+        get { try! _IContentIsland2.get_ProcessesKeyboardInputImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.processespointerinput)
+    public var processesPointerInput : Bool {
+        get { try! _IContentIsland2.get_ProcessesPointerInputImpl() }
+    }
+
+    private lazy var _IContentIslandAutomation: __ABI_Microsoft_UI_Content.IContentIslandAutomation! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.automationoption)
+    public var automationOption : ContentAutomationOptions {
+        get { try! _IContentIslandAutomation.get_AutomationOptionImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.fragmentrootautomationprovider)
+    public var fragmentRootAutomationProvider : Any! {
+        get { try! _IContentIslandAutomation.get_FragmentRootAutomationProviderImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.nextsiblingautomationprovider)
+    public var nextSiblingAutomationProvider : Any! {
+        get { try! _IContentIslandAutomation.get_NextSiblingAutomationProviderImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.parentautomationprovider)
+    public var parentAutomationProvider : Any! {
+        get { try! _IContentIslandAutomation.get_ParentAutomationProviderImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.previoussiblingautomationprovider)
+    public var previousSiblingAutomationProvider : Any! {
+        get { try! _IContentIslandAutomation.get_PreviousSiblingAutomationProviderImpl() }
+    }
+
     private lazy var _IClosable: __ABI_Windows_Foundation.IClosable! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.close)
     public func close() throws {
@@ -428,6 +701,8 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
     internal typealias Composable = IContentIsland
     deinit {
         _default = nil
+        _IContentIsland2 = nil
+        _IContentIslandAutomation = nil
         _IClosable = nil
         _IClosableNotifier = nil
         _ICompositionSupportsSystemBackdrop = nil
@@ -548,6 +823,12 @@ open class ContentIslandEnvironment : WinRTClass {
       )
     }()
 
+    private lazy var _IContentIslandEnvironment2: __ABI_Microsoft_UI_Content.IContentIslandEnvironment2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment.displayscale)
+    public var displayScale : Float {
+        get { try! _IContentIslandEnvironment2.get_DisplayScaleImpl() }
+    }
+
     internal enum IContentIslandEnvironment : ComposableImpl {
         internal typealias CABI = C_IInspectable
         internal typealias SwiftABI = WindowsFoundation.IInspectable
@@ -561,6 +842,7 @@ open class ContentIslandEnvironment : WinRTClass {
     internal typealias Composable = IContentIslandEnvironment
     deinit {
         _default = nil
+        _IContentIslandEnvironment2 = nil
     }
 }
 
@@ -611,6 +893,59 @@ public final class ContentIslandStateChangedEventArgs : WinRTClass {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandstatechangedeventargs.didsitevisiblechange)
     public var didSiteVisibleChange : Bool {
         get { try! _default.get_DidSiteVisibleChangeImpl() }
+    }
+
+    private lazy var _IContentIslandStateChangedEventArgs2: __ABI_Microsoft_UI_Content.IContentIslandStateChangedEventArgs2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandstatechangedeventargs.didlocaltoclienttransformmatrixchange)
+    public var didLocalToClientTransformMatrixChange : Bool {
+        get { try! _IContentIslandStateChangedEventArgs2.get_DidLocalToClientTransformMatrixChangeImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandstatechangedeventargs.didlocaltoparenttransformmatrixchange)
+    public var didLocalToParentTransformMatrixChange : Bool {
+        get { try! _IContentIslandStateChangedEventArgs2.get_DidLocalToParentTransformMatrixChangeImpl() }
+    }
+
+    deinit {
+        _default = nil
+        _IContentIslandStateChangedEventArgs2 = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteautomationproviderrequestedeventargs)
+public final class ContentSiteAutomationProviderRequestedEventArgs : WinRTClass {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteAutomationProviderRequestedEventArgs
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationProviderRequestedEventArgs
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationProviderRequestedEventArgs>?) -> ContentSiteAutomationProviderRequestedEventArgs? {
+        guard let abi = abi else { return nil }
+        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteautomationproviderrequestedeventargs.automationprovider)
+    public var automationProvider : Any! {
+        get { try! _default.get_AutomationProviderImpl() }
+        set { try! _default.put_AutomationProviderImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteautomationproviderrequestedeventargs.handled)
+    public var handled : Bool {
+        get { try! _default.get_HandledImpl() }
+        set { try! _default.put_HandledImpl(newValue) }
     }
 
     deinit {
@@ -665,6 +1000,12 @@ open class ContentSiteEnvironmentView : WinRTClass {
         get { try! _default.get_DisplayIdImpl() }
     }
 
+    private lazy var _IContentSiteEnvironmentView2: __ABI_Microsoft_UI_Content.IContentSiteEnvironmentView2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview.displayscale)
+    public var displayScale : Float {
+        get { try! _IContentSiteEnvironmentView2.get_DisplayScaleImpl() }
+    }
+
     internal enum IContentSiteEnvironmentView : ComposableImpl {
         internal typealias CABI = C_IInspectable
         internal typealias SwiftABI = WindowsFoundation.IInspectable
@@ -678,6 +1019,7 @@ open class ContentSiteEnvironmentView : WinRTClass {
     internal typealias Composable = IContentSiteEnvironmentView
     deinit {
         _default = nil
+        _IContentSiteEnvironmentView2 = nil
     }
 }
 
@@ -788,6 +1130,33 @@ open class ContentSiteView : WinRTClass {
         get { try! _default.get_ShouldApplyRasterizationScaleImpl() }
     }
 
+    private lazy var _IContentSiteView2: __ABI_Microsoft_UI_Content.IContentSiteView2! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.localtoclienttransformmatrix)
+    public var localToClientTransformMatrix : WindowsFoundation.Matrix4x4 {
+        get { try! _IContentSiteView2.get_LocalToClientTransformMatrixImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.localtoparenttransformmatrix)
+    public var localToParentTransformMatrix : WindowsFoundation.Matrix4x4 {
+        get { try! _IContentSiteView2.get_LocalToParentTransformMatrixImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.processeskeyboardinput)
+    public var processesKeyboardInput : Bool {
+        get { try! _IContentSiteView2.get_ProcessesKeyboardInputImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.processespointerinput)
+    public var processesPointerInput : Bool {
+        get { try! _IContentSiteView2.get_ProcessesPointerInputImpl() }
+    }
+
+    private lazy var _IContentSiteViewAutomation: __ABI_Microsoft_UI_Content.IContentSiteViewAutomation! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.automationoption)
+    public var automationOption : ContentAutomationOptions {
+        get { try! _IContentSiteViewAutomation.get_AutomationOptionImpl() }
+    }
+
     internal enum IContentSiteView : ComposableImpl {
         internal typealias CABI = C_IInspectable
         internal typealias SwiftABI = WindowsFoundation.IInspectable
@@ -801,6 +1170,8 @@ open class ContentSiteView : WinRTClass {
     internal typealias Composable = IContentSiteView
     deinit {
         _default = nil
+        _IContentSiteView2 = nil
+        _IContentSiteViewAutomation = nil
     }
 }
 
@@ -834,6 +1205,12 @@ public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge {
         return try! _IDesktopChildSiteBridgeStatics.CreateImpl(compositor, parentWindowId)
     }
 
+    private static let _IDesktopChildSiteBridgeStatics2: __ABI_Microsoft_UI_Content.IDesktopChildSiteBridgeStatics2 = try! RoGetActivationFactory(HString("Microsoft.UI.Content.DesktopChildSiteBridge"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.createwithdispatcherqueue)
+    public static func createWithDispatcherQueue(_ queue: WinAppSDK.DispatcherQueue!, _ parentWindowId: WinAppSDK.WindowId) -> DesktopChildSiteBridge! {
+        return try! _IDesktopChildSiteBridgeStatics2.CreateWithDispatcherQueueImpl(queue, parentWindowId)
+    }
+
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.resizepolicy)
     public var resizePolicy : ContentSizePolicy {
         get { try! _default.get_ResizePolicyImpl() }
@@ -847,6 +1224,240 @@ public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge {
 
     deinit {
         _default = nil
+    }
+}
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge)
+public final class DesktopPopupSiteBridge : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteBridge, IContentSiteLink {
+    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopPopupSiteBridge
+    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge
+    private lazy var _default: SwiftABI! = getInterfaceForCaching()
+    @_spi(WinRTInternal)
+    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
+        if T.self == CABI.self {
+            return RawPointer(_default)
+        }
+        return super._getABI()
+    }
+
+    @_spi(WinRTInternal)
+    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge>?) -> DesktopPopupSiteBridge? {
+        guard let abi = abi else { return nil }
+        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
+    }
+
+    @_spi(WinRTInternal)
+    public init(fromAbi: WindowsFoundation.IInspectable) {
+        super.init(fromAbi)
+    }
+
+    override public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        return super.queryInterface(iid)
+    }
+    private static let _IDesktopPopupSiteBridgeStatics: __ABI_Microsoft_UI_Content.IDesktopPopupSiteBridgeStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Content.DesktopPopupSiteBridge"))
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.create)
+    public static func create(_ parent: ContentIsland!) -> DesktopPopupSiteBridge! {
+        return try! _IDesktopPopupSiteBridgeStatics.CreateImpl(parent)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.connect)
+    public func connect(_ content: ContentIsland!) throws {
+        try _default.ConnectImpl(content)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.disable)
+    public func disable() throws {
+        try _default.DisableImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.enable)
+    public func enable() throws {
+        try _default.EnableImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.hide)
+    public func hide() throws {
+        try _default.HideImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.moveandresize)
+    public func moveAndResize(_ rect: UWP.RectInt32) throws {
+        try _default.MoveAndResizeImpl(rect)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.moveinzorderatbottom)
+    public func moveInZOrderAtBottom() throws {
+        try _default.MoveInZOrderAtBottomImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.moveinzorderattop)
+    public func moveInZOrderAtTop() throws {
+        try _default.MoveInZOrderAtTopImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.moveinzorderbelow)
+    public func moveInZOrderBelow(_ windowId: WinAppSDK.WindowId) throws {
+        try _default.MoveInZOrderBelowImpl(windowId)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.show)
+    public func show() throws {
+        try _default.ShowImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.isenabled)
+    public var isEnabled : Bool {
+        get { try! _default.get_IsEnabledImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.isvisible)
+    public var isVisible : Bool {
+        get { try! _default.get_IsVisibleImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.siteview)
+    public var siteView : ContentSiteView! {
+        get { try! _default.get_SiteViewImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.windowid)
+    public var windowId : WinAppSDK.WindowId {
+        get { try! _default.get_WindowIdImpl() }
+    }
+
+    private lazy var _IClosable: __ABI_Windows_Foundation.IClosable! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.close)
+    public func close() throws {
+        try _IClosable.CloseImpl()
+    }
+
+    private lazy var _IClosableNotifier: __ABI_Microsoft_UI.IClosableNotifier! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.isclosed)
+    public var isClosed : Bool {
+        get { try! _IClosableNotifier.get_IsClosedImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.closed)
+    public lazy var closed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_ClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_ClosedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.frameworkclosed)
+    public lazy var frameworkClosed : Event<WinAppSDK.ClosableNotifierHandler> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IClosableNotifier else { return .init() }
+          return try! this.add_FrameworkClosedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IClosableNotifier.remove_FrameworkClosedImpl($0)
+       }
+      )
+    }()
+
+    private lazy var _IContentSiteAutomation: __ABI_Microsoft_UI_Content.IContentSiteAutomation! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.automationoption)
+    public var automationOption : ContentAutomationOptions {
+        get { try! _IContentSiteAutomation.get_AutomationOptionImpl() }
+        set { try! _IContentSiteAutomation.put_AutomationOptionImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.automationprovider)
+    public var automationProvider : Any! {
+        get { try! _IContentSiteAutomation.get_AutomationProviderImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.fragmentrootautomationproviderrequested)
+    public lazy var fragmentRootAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_FragmentRootAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_FragmentRootAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.nextsiblingautomationproviderrequested)
+    public lazy var nextSiblingAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_NextSiblingAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_NextSiblingAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.parentautomationproviderrequested)
+    public lazy var parentAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_ParentAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_ParentAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.previoussiblingautomationproviderrequested)
+    public lazy var previousSiblingAutomationProviderRequested : Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> = {
+      .init(
+        add: { [weak self] in
+          guard let this = self?._IContentSiteAutomation else { return .init() }
+          return try! this.add_PreviousSiblingAutomationProviderRequestedImpl($0)
+        },
+        remove: { [weak self] in
+         try? self?._IContentSiteAutomation.remove_PreviousSiblingAutomationProviderRequestedImpl($0)
+       }
+      )
+    }()
+
+    private lazy var _IContentSiteBridge: __ABI_Microsoft_UI_Content.IContentSiteBridge! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.dispatcherqueue)
+    public var dispatcherQueue : WinAppSDK.DispatcherQueue! {
+        get { try! _IContentSiteBridge.get_DispatcherQueueImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.layoutdirectionoverride)
+    public var layoutDirectionOverride : ContentLayoutDirection? {
+        get { try! _IContentSiteBridge.get_LayoutDirectionOverrideImpl() }
+        set { try! _IContentSiteBridge.put_LayoutDirectionOverrideImpl(newValue) }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.overridescale)
+    public var overrideScale : Float {
+        get { try! _IContentSiteBridge.get_OverrideScaleImpl() }
+        set { try! _IContentSiteBridge.put_OverrideScaleImpl(newValue) }
+    }
+
+    private lazy var _IContentSiteLink: __ABI_Microsoft_UI_Content.IContentSiteLink! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge.parent)
+    public var parent : ContentIsland! {
+        get { try! _IContentSiteLink.get_ParentImpl() }
+    }
+
+    deinit {
+        _default = nil
+        _IClosable = nil
+        _IClosableNotifier = nil
+        _IContentSiteAutomation = nil
+        _IContentSiteBridge = nil
+        _IContentSiteLink = nil
     }
 }
 
@@ -1028,6 +1639,34 @@ open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsF
     }
 }
 
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation)
+public protocol IContentSiteAutomation : WinRTInterface {
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.automationoption)
+    var automationOption: WinAppSDK.ContentAutomationOptions { get set }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.automationprovider)
+    var automationProvider: Any! { get }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.fragmentrootautomationproviderrequested)
+    var fragmentRootAutomationProviderRequested: Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> { get }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.nextsiblingautomationproviderrequested)
+    var nextSiblingAutomationProviderRequested: Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> { get }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.parentautomationproviderrequested)
+    var parentAutomationProviderRequested: Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> { get }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation.previoussiblingautomationproviderrequested)
+    var previousSiblingAutomationProviderRequested: Event<TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?>> { get }
+}
+
+extension IContentSiteAutomation {
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        switch iid {
+            case __ABI_Microsoft_UI_Content.IContentSiteAutomationWrapper.IID:
+                let wrapper = __ABI_Microsoft_UI_Content.IContentSiteAutomationWrapper(self)
+                return wrapper!.queryInterface(iid)
+            default: return nil
+        }
+    }
+}
+public typealias AnyIContentSiteAutomation = any IContentSiteAutomation
+
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridge)
 public protocol IContentSiteBridge : WindowsFoundation.IClosable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridge.dispatcherqueue)
@@ -1052,6 +1691,57 @@ extension IContentSiteBridge {
     }
 }
 public typealias AnyIContentSiteBridge = any IContentSiteBridge
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteinput)
+public protocol IContentSiteInput : WinRTInterface {
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteinput.processeskeyboardinput)
+    var processesKeyboardInput: Bool { get set }
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteinput.processespointerinput)
+    var processesPointerInput: Bool { get set }
+}
+
+extension IContentSiteInput {
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        switch iid {
+            case __ABI_Microsoft_UI_Content.IContentSiteInputWrapper.IID:
+                let wrapper = __ABI_Microsoft_UI_Content.IContentSiteInputWrapper(self)
+                return wrapper!.queryInterface(iid)
+            default: return nil
+        }
+    }
+}
+public typealias AnyIContentSiteInput = any IContentSiteInput
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitelink)
+public protocol IContentSiteLink : WinRTInterface {
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitelink.parent)
+    var parent: WinAppSDK.ContentIsland! { get }
+}
+
+extension IContentSiteLink {
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
+        switch iid {
+            case __ABI_Microsoft_UI_Content.IContentSiteLinkWrapper.IID:
+                let wrapper = __ABI_Microsoft_UI_Content.IContentSiteLinkWrapper(self)
+                return wrapper!.queryInterface(iid)
+            default: return nil
+        }
+    }
+}
+public typealias AnyIContentSiteLink = any IContentSiteLink
+
+extension WinAppSDK.ContentAutomationOptions {
+    public static var none : WinAppSDK.ContentAutomationOptions {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentAutomationOptions_None
+    }
+    public static var frameworkBased : WinAppSDK.ContentAutomationOptions {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentAutomationOptions_FrameworkBased
+    }
+    public static var fragmentBased : WinAppSDK.ContentAutomationOptions {
+        __x_ABI_CMicrosoft_CUI_CContent_CContentAutomationOptions_FragmentBased
+    }
+}
+extension WinAppSDK.ContentAutomationOptions: @retroactive Hashable, @retroactive Codable {}
 
 extension WinAppSDK.ContentCoordinateRoundingMode {
     public static var auto : WinAppSDK.ContentCoordinateRoundingMode {

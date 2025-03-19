@@ -17,6 +17,10 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow3: WindowsFoundatio
     .init(Data1: 0x2F260CEA, Data2: 0x193D, Data3: 0x5DD6, Data4: ( 0xA9,0x04,0xD7,0x64,0x9A,0x60,0x8D,0x2F ))// 2F260CEA-193D-5DD6-A904-D7649A608D2F
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4: WindowsFoundation.IID {
+    .init(Data1: 0x383BFB91, Data2: 0xEA29, Data3: 0x5414, Data4: ( 0x80,0xCD,0x6C,0x76,0xD9,0x81,0xEB,0x31 ))// 383BFB91-EA29-5414-80CD-6C76D981EB31
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs: WindowsFoundation.IID {
     .init(Data1: 0x2182BC5D, Data2: 0xFDAC, Data3: 0x5C3E, Data4: ( 0xBF,0x37,0x7D,0x8D,0x68,0x4E,0x9D,0x1D ))// 2182BC5D-FDAC-5C3E-BF37-7D8D684E9D1D
 }
@@ -53,6 +57,10 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar2: WindowsF
     .init(Data1: 0x86FAED38, Data2: 0x748A, Data3: 0x5B4B, Data4: ( 0x9C,0xCF,0x3B,0xA0,0x49,0x6C,0x90,0x41 ))// 86FAED38-748A-5B4B-9CCF-3BA0496C9041
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3: WindowsFoundation.IID {
+    .init(Data1: 0x07146E74, Data2: 0x0410, Data3: 0x5597, Data4: ( 0xAB,0xA7,0x1A,0xF2,0x76,0xD2,0xAE,0x07 ))// 07146E74-0410-5597-ABA7-1AF276D2AE07
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBarStatics: WindowsFoundation.IID {
     .init(Data1: 0x9E1DA52E, Data2: 0x8B15, Data3: 0x54D6, Data4: ( 0xA8,0x86,0xF7,0xB9,0xF9,0xD9,0x30,0xB2 ))// 9E1DA52E-8B15-54D6-A886-F7B9F9D930B2
 }
@@ -87,6 +95,10 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter: Windows
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2: WindowsFoundation.IID {
     .init(Data1: 0x5C6CCD93, Data2: 0x4244, Data3: 0x5CD2, Data4: ( 0xB3,0x55,0xED,0x5E,0xA3,0x4D,0xF7,0x30 ))// 5C6CCD93-4244-5CD2-B355-ED5EA34DF730
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3: WindowsFoundation.IID {
+    .init(Data1: 0x55D26138, Data2: 0x4C38, Data3: 0x57E7, Data4: ( 0xA0,0xC1,0xD4,0x67,0xB7,0x74,0xDB,0x8C ))// 55D26138-4C38-57E7-A0C1-D467B774DB8C
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics: WindowsFoundation.IID {
@@ -370,6 +382,37 @@ public enum __ABI_Microsoft_UI_Windowing {
                 }
             }
             return .from(abi: value)
+        }
+
+    }
+
+    public class IAppWindow4: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4 }
+
+        internal func SetTaskbarIconImpl(_ iconPath: String) throws {
+            let _iconPath = try! HString(iconPath)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetTaskbarIcon(pThis, _iconPath.get()))
+            }
+        }
+
+        internal func SetTaskbarIconWithIconIdImpl(_ iconId: WinAppSDK.IconId) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetTaskbarIconWithIconId(pThis, .from(swift: iconId)))
+            }
+        }
+
+        internal func SetTitleBarIconImpl(_ iconPath: String) throws {
+            let _iconPath = try! HString(iconPath)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetTitleBarIcon(pThis, _iconPath.get()))
+            }
+        }
+
+        internal func SetTitleBarIconWithIconIdImpl(_ iconId: WinAppSDK.IconId) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetTitleBarIconWithIconId(pThis, .from(swift: iconId)))
+            }
         }
 
     }
@@ -826,6 +869,25 @@ public enum __ABI_Microsoft_UI_Windowing {
 
     }
 
+    public class IAppWindowTitleBar3: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3 }
+
+        internal func get_PreferredThemeImpl() throws -> WinAppSDK.TitleBarTheme {
+            var value: __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredTheme(pThis, &value))
+            }
+            return value
+        }
+
+        internal func put_PreferredThemeImpl(_ value: WinAppSDK.TitleBarTheme) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredTheme(pThis, value))
+            }
+        }
+
+    }
+
     public class IAppWindowTitleBarStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBarStatics }
 
@@ -1208,6 +1270,79 @@ public enum __ABI_Microsoft_UI_Windowing {
         internal func RestoreWithActivationImpl(_ activateWindow: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.RestoreWithActivation(pThis, .init(from: activateWindow)))
+            }
+        }
+
+    }
+
+    public class IOverlappedPresenter3: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3 }
+
+        internal func get_PreferredMinimumHeightImpl() throws -> Int32? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMinimumHeight(pThis, &valueAbi))
+                }
+            }
+            return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
+        }
+
+        internal func put_PreferredMinimumHeightImpl(_ value: Int32?) throws {
+            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
+            let _value = try! valueWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredMinimumHeight(pThis, _value))
+            }
+        }
+
+        internal func get_PreferredMinimumWidthImpl() throws -> Int32? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMinimumWidth(pThis, &valueAbi))
+                }
+            }
+            return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
+        }
+
+        internal func put_PreferredMinimumWidthImpl(_ value: Int32?) throws {
+            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
+            let _value = try! valueWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredMinimumWidth(pThis, _value))
+            }
+        }
+
+        internal func get_PreferredMaximumWidthImpl() throws -> Int32? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMaximumWidth(pThis, &valueAbi))
+                }
+            }
+            return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
+        }
+
+        internal func put_PreferredMaximumWidthImpl(_ value: Int32?) throws {
+            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
+            let _value = try! valueWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredMaximumWidth(pThis, _value))
+            }
+        }
+
+        internal func get_PreferredMaximumHeightImpl() throws -> Int32? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMaximumHeight(pThis, &valueAbi))
+                }
+            }
+            return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
+        }
+
+        internal func put_PreferredMaximumHeightImpl(_ value: Int32?) throws {
+            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
+            let _value = try! valueWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredMaximumHeight(pThis, _value))
             }
         }
 

@@ -1013,6 +1013,180 @@ fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition_
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink: WindowsFoundation.IID {
+    .init(Data1: 0x20eed339, Data2: 0xc583, Data3: 0x5027, Data4: ( 0x91,0xcc,0xa3,0xee,0xe3,0x91,0x90,0x04 ))// 20eed339-c583-5027-91cc-a3eee3919004
+}
+
+internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Content.ChildSiteLink>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge>
+internal class IIterableChildSiteLink: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink }
+
+    internal func FirstImpl() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.ChildSiteLink?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink
+    internal typealias SwiftABI = IIterableChildSiteLink
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WinAppSDK.ChildSiteLink?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterable, AbiInterfaceImpl {
+    typealias T = WinAppSDK.ChildSiteLink?
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.ChildSiteLink?>? {
+        try! _default.FirstImpl()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge: WindowsFoundation.IID {
+    .init(Data1: 0x63e787bb, Data2: 0x0f05, Data3: 0x5896, Data4: ( 0x84,0xce,0xa6,0x32,0x68,0x34,0x3f,0xd8 ))// 63e787bb-0f05-5896-84ce-a63268343fd8
+}
+
+internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Content.DesktopPopupSiteBridge>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge>
+internal class IIterableDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge }
+
+    internal func FirstImpl() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.DesktopPopupSiteBridge?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge
+    internal typealias SwiftABI = IIterableDesktopPopupSiteBridge
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WinAppSDK.DesktopPopupSiteBridge?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterable, AbiInterfaceImpl {
+    typealias T = WinAppSDK.DesktopPopupSiteBridge?
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.DesktopPopupSiteBridge?>? {
+        try! _default.FirstImpl()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint: WindowsFoundation.IID {
     .init(Data1: 0x645acc33, Data2: 0xffce, Data3: 0x5ad3, Data4: ( 0xbe,0x2b,0xc4,0x9b,0x9c,0x27,0xc3,0x5d ))// 645acc33-ffce-5ad3-be2b-c49b9c27c35d
 }
@@ -2932,6 +3106,262 @@ fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition_
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
     fileprivate var current : WinAppSDK.Visual? {
+        get { try! _default.get_CurrentImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrentImpl() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink: WindowsFoundation.IID {
+    .init(Data1: 0x95e02266, Data2: 0x15a8, Data3: 0x59ae, Data4: ( 0x8a,0x00,0x06,0xd2,0x4f,0xa3,0x4e,0x40 ))// 95e02266-15a8-59ae-8a00-06d24fa34e40
+}
+
+internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Content.ChildSiteLink>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        result?.copyTo($1)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: { _, _, _, _ in return failWith(err: E_NOTIMPL) }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge>
+internal class IIteratorChildSiteLink: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink }
+
+    internal func get_CurrentImpl() throws -> WinAppSDK.ChildSiteLink? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &resultAbi))
+            }
+        }
+        return .from(abi: result)
+    }
+
+    internal func get_HasCurrentImpl() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    internal func MoveNextImpl() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink
+    internal typealias SwiftABI = IIteratorChildSiteLink
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WinAppSDK.ChildSiteLink?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterator, AbiInterfaceImpl {
+    typealias T = WinAppSDK.ChildSiteLink?
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNextImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WinAppSDK.ChildSiteLink? {
+        get { try! _default.get_CurrentImpl() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrentImpl() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge: WindowsFoundation.IID {
+    .init(Data1: 0xcc9ed456, Data2: 0x5402, Data3: 0x5d3e, Data4: ( 0x86,0xb9,0xd3,0xf2,0x57,0x08,0xe4,0x4d ))// cc9ed456-5402-5d3e-86b9-d3f25708e44d
+}
+
+internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Microsoft.UI.Content.DesktopPopupSiteBridge>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        result?.copyTo($1)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: { _, _, _, _ in return failWith(err: E_NOTIMPL) }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge>
+internal class IIteratorDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge }
+
+    internal func get_CurrentImpl() throws -> WinAppSDK.DesktopPopupSiteBridge? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &resultAbi))
+            }
+        }
+        return .from(abi: result)
+    }
+
+    internal func get_HasCurrentImpl() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    internal func MoveNextImpl() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge
+    internal typealias SwiftABI = IIteratorDesktopPopupSiteBridge
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WinAppSDK.DesktopPopupSiteBridge?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterator, AbiInterfaceImpl {
+    typealias T = WinAppSDK.DesktopPopupSiteBridge?
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNextImpl()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WinAppSDK.DesktopPopupSiteBridge? {
         get { try! _default.get_CurrentImpl() }
     }
 
@@ -7534,6 +7964,64 @@ internal var __x_ABI_C__FIReference_1_floatVTable: __x_ABI_C__FIReference_1_floa
     }
 )
 typealias __x_ABI_C__FIReference_1_floatWrapper = ReferenceWrapperBase<WinAppSDK.__x_ABI_C__FIReference_1_floatBridge>
+private var IID___x_ABI_C__FIReference_1_int: WindowsFoundation.IID {
+    .init(Data1: 0x548cefbd, Data2: 0xbc8a, Data3: 0x5fa0, Data4: ( 0x8d,0xf2,0x95,0x74,0x40,0xfc,0x8b,0xf4 ))// 548cefbd-bc8a-5fa0-8df2-957440fc8bf4
+}
+
+internal enum __x_ABI_C__FIReference_1_intBridge: ReferenceBridge {
+    typealias CABI = __x_ABI_C__FIReference_1_int
+    typealias SwiftProjection = Int32
+    static var IID: WindowsFoundation.IID { IID___x_ABI_C__FIReference_1_int }
+
+    static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let val = abi else { return nil }
+        var result: INT32 = 0
+        try! CHECKED(val.get().pointee.lpVtbl.pointee.get_Value(val.get(), &result))
+        return result
+    }
+
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIReference_1_intVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+internal var __x_ABI_C__FIReference_1_intVTable: __x_ABI_C__FIReference_1_intVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIReference_1_intWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIReference_1_intWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIReference_1_intWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IPropertyValueWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IReference`1<Int32>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Value: {
+        guard let __unwrapped__instance = __x_ABI_C__FIReference_1_intWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance
+        $1?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIReference_1_intWrapper = ReferenceWrapperBase<WinAppSDK.__x_ABI_C__FIReference_1_intBridge>
 private var IID___x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirection: WindowsFoundation.IID {
     .init(Data1: 0x76e53eed, Data2: 0x3539, Data3: 0x540b, Data4: ( 0x8d,0x51,0x42,0x06,0xbc,0xa6,0x3f,0x5f ))// 76e53eed-3539-540b-8d51-4206bca63f5f
 }
@@ -8214,6 +8702,57 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CConten
     internal typealias Handler = WindowsFoundation.TypedEventHandler<WinAppSDK.ContentIslandEnvironment?, WinAppSDK.ContentEnvironmentStateChangedEventArgs?>
     internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgs
     internal typealias SwiftABI = WinAppSDK.TypedEventHandlerContentIslandEnvironment_ContentEnvironmentStateChangedEventArgs
+
+    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (sender, args) in
+            try! _default.InvokeImpl(sender, args)
+        }
+        return handler
+    }
+}
+private var IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IID {
+    .init(Data1: 0xee3f9952, Data2: 0x86b4, Data3: 0x5871, Data4: ( 0xb8,0xf2,0xb5,0x82,0x6f,0xe3,0xd1,0x23 ))// ee3f9952-86b4-5871-b8f2-b5826fe3d123
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVtbl = .init(
+    QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.addRef($0) },
+    Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.release($0) },
+    Invoke: {
+        guard let __unwrapped__instance = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let sender: WinAppSDK.AnyIContentSiteAutomation? = __ABI_Microsoft_UI_Content.IContentSiteAutomationWrapper.unwrapFrom(abi: ComPtr($1))
+        let args: WinAppSDK.ContentSiteAutomationProviderRequestedEventArgs? = .from(abi: ComPtr($2))
+        __unwrapped__instance(sender, args)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsBridge>
+internal class TypedEventHandlerIContentSiteAutomation_ContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IUnknown {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs }
+
+    internal func InvokeImpl(_ sender: WinAppSDK.AnyIContentSiteAutomation?, _ args: WinAppSDK.ContentSiteAutomationProviderRequestedEventArgs?) throws {
+        let senderWrapper = __ABI_Microsoft_UI_Content.IContentSiteAutomationWrapper(sender)
+        let _sender = try! senderWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _sender, RawPointer(args)))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.TypedEventHandler<WinAppSDK.AnyIContentSiteAutomation?, WinAppSDK.ContentSiteAutomationProviderRequestedEventArgs?>
+    internal typealias CABI = __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs
+    internal typealias SwiftABI = WinAppSDK.TypedEventHandlerIContentSiteAutomation_ContentSiteAutomationProviderRequestedEventArgs
 
     internal static func from(abi: ComPtr<CABI>?) -> Handler? {
         guard let abi = abi else { return nil }
@@ -9949,6 +10488,14 @@ internal class __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CA
 }
 public extension EventSource where Handler == TypedEventHandler<ISystemBackdropControllerWithTargets?, Any?> {
     func invoke(_ sender: WinAppSDK.AnyISystemBackdropControllerWithTargets!, _ args: Any!) {
+        for handler in getInvocationList() {
+            handler(sender, args)
+        }
+    }
+}
+
+public extension EventSource where Handler == TypedEventHandler<IContentSiteAutomation?, ContentSiteAutomationProviderRequestedEventArgs?> {
+    func invoke(_ sender: WinAppSDK.AnyIContentSiteAutomation!, _ args: WinAppSDK.ContentSiteAutomationProviderRequestedEventArgs!) {
         for handler in getInvocationList() {
             handler(sender, args)
         }

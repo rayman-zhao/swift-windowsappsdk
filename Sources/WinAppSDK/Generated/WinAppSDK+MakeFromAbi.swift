@@ -64,9 +64,24 @@ fileprivate func makeISystemBackdropControllerWithTargetsFrom(abi: WindowsFounda
     return __IMPL_Microsoft_UI_Composition_SystemBackdrops.ISystemBackdropControllerWithTargetsBridge.from(abi: RawPointer(swiftAbi))!
 }
 
+fileprivate func makeIContentSiteAutomationFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteAutomation = try! abi.QueryInterface()
+    return __IMPL_Microsoft_UI_Content.IContentSiteAutomationBridge.from(abi: RawPointer(swiftAbi))!
+}
+
 fileprivate func makeIContentSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
     let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteBridge = try! abi.QueryInterface()
     return __IMPL_Microsoft_UI_Content.IContentSiteBridgeBridge.from(abi: RawPointer(swiftAbi))!
+}
+
+fileprivate func makeIContentSiteInputFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteInput = try! abi.QueryInterface()
+    return __IMPL_Microsoft_UI_Content.IContentSiteInputBridge.from(abi: RawPointer(swiftAbi))!
+}
+
+fileprivate func makeIContentSiteLinkFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteLink = try! abi.QueryInterface()
+    return __IMPL_Microsoft_UI_Content.IContentSiteLinkBridge.from(abi: RawPointer(swiftAbi))!
 }
 
 fileprivate func makeIPointerPointTransformFrom(abi: WindowsFoundation.IInspectable) -> Any {
@@ -576,6 +591,10 @@ fileprivate func makeSystemBackdropConfigurationFrom(abi: WindowsFoundation.IIns
     return SystemBackdropConfiguration(fromAbi: abi)
 }
 
+fileprivate func makeChildSiteLinkFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return ChildSiteLink(fromAbi: abi)
+}
+
 fileprivate func makeContentCoordinateConverterFrom(abi: WindowsFoundation.IInspectable) -> Any {
     return ContentCoordinateConverter(fromAbi: abi)
 }
@@ -608,6 +627,10 @@ fileprivate func makeContentIslandStateChangedEventArgsFrom(abi: WindowsFoundati
     return ContentIslandStateChangedEventArgs(fromAbi: abi)
 }
 
+fileprivate func makeContentSiteAutomationProviderRequestedEventArgsFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return ContentSiteAutomationProviderRequestedEventArgs(fromAbi: abi)
+}
+
 fileprivate func makeContentSiteEnvironmentViewFrom(abi: WindowsFoundation.IInspectable) -> Any {
     return ContentSiteEnvironmentView(fromAbi: abi)
 }
@@ -618,6 +641,10 @@ fileprivate func makeContentSiteViewFrom(abi: WindowsFoundation.IInspectable) ->
 
 fileprivate func makeDesktopChildSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
     return DesktopChildSiteBridge(fromAbi: abi)
+}
+
+fileprivate func makeDesktopPopupSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
+    return DesktopPopupSiteBridge(fromAbi: abi)
 }
 
 fileprivate func makeDesktopSiteBridgeFrom(abi: WindowsFoundation.IInspectable) -> Any {
@@ -904,7 +931,10 @@ public class __MakeFromAbi: MakeFromAbi {
             case "IInteractionTrackerOwner": return makeIInteractionTrackerOwnerFrom(abi: abi)
             case "ISystemBackdropController": return makeISystemBackdropControllerFrom(abi: abi)
             case "ISystemBackdropControllerWithTargets": return makeISystemBackdropControllerWithTargetsFrom(abi: abi)
+            case "IContentSiteAutomation": return makeIContentSiteAutomationFrom(abi: abi)
             case "IContentSiteBridge": return makeIContentSiteBridgeFrom(abi: abi)
+            case "IContentSiteInput": return makeIContentSiteInputFrom(abi: abi)
+            case "IContentSiteLink": return makeIContentSiteLinkFrom(abi: abi)
             case "IPointerPointTransform": return makeIPointerPointTransformFrom(abi: abi)
             case "IResourceContext": return makeIResourceContextFrom(abi: abi)
             case "IResourceManager": return makeIResourceManagerFrom(abi: abi)
@@ -1031,6 +1061,7 @@ public class __MakeFromAbi: MakeFromAbi {
             case "DesktopAcrylicController": return makeDesktopAcrylicControllerFrom(abi: abi)
             case "MicaController": return makeMicaControllerFrom(abi: abi)
             case "SystemBackdropConfiguration": return makeSystemBackdropConfigurationFrom(abi: abi)
+            case "ChildSiteLink": return makeChildSiteLinkFrom(abi: abi)
             case "ContentCoordinateConverter": return makeContentCoordinateConverterFrom(abi: abi)
             case "ContentDeferral": return makeContentDeferralFrom(abi: abi)
             case "ContentEnvironmentSettingChangedEventArgs": return makeContentEnvironmentSettingChangedEventArgsFrom(abi: abi)
@@ -1039,9 +1070,11 @@ public class __MakeFromAbi: MakeFromAbi {
             case "ContentIslandAutomationProviderRequestedEventArgs": return makeContentIslandAutomationProviderRequestedEventArgsFrom(abi: abi)
             case "ContentIslandEnvironment": return makeContentIslandEnvironmentFrom(abi: abi)
             case "ContentIslandStateChangedEventArgs": return makeContentIslandStateChangedEventArgsFrom(abi: abi)
+            case "ContentSiteAutomationProviderRequestedEventArgs": return makeContentSiteAutomationProviderRequestedEventArgsFrom(abi: abi)
             case "ContentSiteEnvironmentView": return makeContentSiteEnvironmentViewFrom(abi: abi)
             case "ContentSiteView": return makeContentSiteViewFrom(abi: abi)
             case "DesktopChildSiteBridge": return makeDesktopChildSiteBridgeFrom(abi: abi)
+            case "DesktopPopupSiteBridge": return makeDesktopPopupSiteBridgeFrom(abi: abi)
             case "DesktopSiteBridge": return makeDesktopSiteBridgeFrom(abi: abi)
             case "DispatcherExitDeferral": return makeDispatcherExitDeferralFrom(abi: abi)
             case "DispatcherQueue": return makeDispatcherQueueFrom(abi: abi)
