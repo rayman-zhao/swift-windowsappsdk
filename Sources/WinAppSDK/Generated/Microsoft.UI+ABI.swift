@@ -21,11 +21,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CIClosableNotifierHandler: WindowsFoundat
     .init(Data1: 0x478CEC68, Data2: 0xEA8E, Data3: 0x52FC, Data4: ( 0x87,0xE2,0xC8,0x19,0xDE,0x00,0x0F,0x92 ))// 478CEC68-EA8E-52FC-87E2-C819DE000F92
 }
 
+@_spi(WinRTInternal)
 public enum __ABI_Microsoft_UI {
     public class IClosableNotifier: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIClosableNotifier }
 
-        open func get_IsClosedImpl() throws -> Bool {
+        open func get_IsClosed() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIClosableNotifier.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsClosed(pThis, &value))
@@ -33,7 +34,7 @@ public enum __ABI_Microsoft_UI {
             return .init(from: value)
         }
 
-        open func add_ClosedImpl(_ handler: WinAppSDK.ClosableNotifierHandler?) throws -> EventRegistrationToken {
+        open func add_Closed(_ handler: WinAppSDK.ClosableNotifierHandler?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = __ABI_Microsoft_UI.ClosableNotifierHandlerWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -43,13 +44,13 @@ public enum __ABI_Microsoft_UI {
             return token
         }
 
-        open func remove_ClosedImpl(_ token: EventRegistrationToken) throws {
+        open func remove_Closed(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIClosableNotifier.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Closed(pThis, token))
             }
         }
 
-        open func add_FrameworkClosedImpl(_ handler: WinAppSDK.ClosableNotifierHandler?) throws -> EventRegistrationToken {
+        open func add_FrameworkClosed(_ handler: WinAppSDK.ClosableNotifierHandler?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = __ABI_Microsoft_UI.ClosableNotifierHandlerWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -59,7 +60,7 @@ public enum __ABI_Microsoft_UI {
             return token
         }
 
-        open func remove_FrameworkClosedImpl(_ token: EventRegistrationToken) throws {
+        open func remove_FrameworkClosed(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIClosableNotifier.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_FrameworkClosed(pThis, token))
             }
@@ -142,7 +143,7 @@ public enum __ABI_Microsoft_UI {
     public class IColorsStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIColorsStatics }
 
-        internal func get_AliceBlueImpl() throws -> UWP.Color {
+        public func get_AliceBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_AliceBlue(pThis, &value))
@@ -150,7 +151,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_AntiqueWhiteImpl() throws -> UWP.Color {
+        public func get_AntiqueWhite() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_AntiqueWhite(pThis, &value))
@@ -158,7 +159,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_AquaImpl() throws -> UWP.Color {
+        public func get_Aqua() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Aqua(pThis, &value))
@@ -166,7 +167,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_AquamarineImpl() throws -> UWP.Color {
+        public func get_Aquamarine() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Aquamarine(pThis, &value))
@@ -174,7 +175,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_AzureImpl() throws -> UWP.Color {
+        public func get_Azure() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Azure(pThis, &value))
@@ -182,7 +183,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BeigeImpl() throws -> UWP.Color {
+        public func get_Beige() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Beige(pThis, &value))
@@ -190,7 +191,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BisqueImpl() throws -> UWP.Color {
+        public func get_Bisque() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Bisque(pThis, &value))
@@ -198,7 +199,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BlackImpl() throws -> UWP.Color {
+        public func get_Black() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Black(pThis, &value))
@@ -206,7 +207,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BlanchedAlmondImpl() throws -> UWP.Color {
+        public func get_BlanchedAlmond() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_BlanchedAlmond(pThis, &value))
@@ -214,7 +215,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BlueImpl() throws -> UWP.Color {
+        public func get_Blue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Blue(pThis, &value))
@@ -222,7 +223,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BlueVioletImpl() throws -> UWP.Color {
+        public func get_BlueViolet() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_BlueViolet(pThis, &value))
@@ -230,7 +231,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BrownImpl() throws -> UWP.Color {
+        public func get_Brown() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Brown(pThis, &value))
@@ -238,7 +239,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_BurlyWoodImpl() throws -> UWP.Color {
+        public func get_BurlyWood() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_BurlyWood(pThis, &value))
@@ -246,7 +247,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CadetBlueImpl() throws -> UWP.Color {
+        public func get_CadetBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_CadetBlue(pThis, &value))
@@ -254,7 +255,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_ChartreuseImpl() throws -> UWP.Color {
+        public func get_Chartreuse() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Chartreuse(pThis, &value))
@@ -262,7 +263,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_ChocolateImpl() throws -> UWP.Color {
+        public func get_Chocolate() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Chocolate(pThis, &value))
@@ -270,7 +271,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CoralImpl() throws -> UWP.Color {
+        public func get_Coral() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Coral(pThis, &value))
@@ -278,7 +279,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CornflowerBlueImpl() throws -> UWP.Color {
+        public func get_CornflowerBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornflowerBlue(pThis, &value))
@@ -286,7 +287,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CornsilkImpl() throws -> UWP.Color {
+        public func get_Cornsilk() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cornsilk(pThis, &value))
@@ -294,7 +295,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CrimsonImpl() throws -> UWP.Color {
+        public func get_Crimson() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Crimson(pThis, &value))
@@ -302,7 +303,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_CyanImpl() throws -> UWP.Color {
+        public func get_Cyan() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cyan(pThis, &value))
@@ -310,7 +311,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkBlueImpl() throws -> UWP.Color {
+        public func get_DarkBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkBlue(pThis, &value))
@@ -318,7 +319,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkCyanImpl() throws -> UWP.Color {
+        public func get_DarkCyan() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkCyan(pThis, &value))
@@ -326,7 +327,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkGoldenrodImpl() throws -> UWP.Color {
+        public func get_DarkGoldenrod() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGoldenrod(pThis, &value))
@@ -334,7 +335,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkGrayImpl() throws -> UWP.Color {
+        public func get_DarkGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGray(pThis, &value))
@@ -342,7 +343,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkGreenImpl() throws -> UWP.Color {
+        public func get_DarkGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGreen(pThis, &value))
@@ -350,7 +351,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkKhakiImpl() throws -> UWP.Color {
+        public func get_DarkKhaki() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkKhaki(pThis, &value))
@@ -358,7 +359,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkMagentaImpl() throws -> UWP.Color {
+        public func get_DarkMagenta() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkMagenta(pThis, &value))
@@ -366,7 +367,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkOliveGreenImpl() throws -> UWP.Color {
+        public func get_DarkOliveGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOliveGreen(pThis, &value))
@@ -374,7 +375,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkOrangeImpl() throws -> UWP.Color {
+        public func get_DarkOrange() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOrange(pThis, &value))
@@ -382,7 +383,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkOrchidImpl() throws -> UWP.Color {
+        public func get_DarkOrchid() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOrchid(pThis, &value))
@@ -390,7 +391,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkRedImpl() throws -> UWP.Color {
+        public func get_DarkRed() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkRed(pThis, &value))
@@ -398,7 +399,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkSalmonImpl() throws -> UWP.Color {
+        public func get_DarkSalmon() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSalmon(pThis, &value))
@@ -406,7 +407,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkSeaGreenImpl() throws -> UWP.Color {
+        public func get_DarkSeaGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSeaGreen(pThis, &value))
@@ -414,7 +415,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkSlateBlueImpl() throws -> UWP.Color {
+        public func get_DarkSlateBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSlateBlue(pThis, &value))
@@ -422,7 +423,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkSlateGrayImpl() throws -> UWP.Color {
+        public func get_DarkSlateGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSlateGray(pThis, &value))
@@ -430,7 +431,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkTurquoiseImpl() throws -> UWP.Color {
+        public func get_DarkTurquoise() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkTurquoise(pThis, &value))
@@ -438,7 +439,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DarkVioletImpl() throws -> UWP.Color {
+        public func get_DarkViolet() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkViolet(pThis, &value))
@@ -446,7 +447,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DeepPinkImpl() throws -> UWP.Color {
+        public func get_DeepPink() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeepPink(pThis, &value))
@@ -454,7 +455,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DeepSkyBlueImpl() throws -> UWP.Color {
+        public func get_DeepSkyBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeepSkyBlue(pThis, &value))
@@ -462,7 +463,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DimGrayImpl() throws -> UWP.Color {
+        public func get_DimGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DimGray(pThis, &value))
@@ -470,7 +471,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_DodgerBlueImpl() throws -> UWP.Color {
+        public func get_DodgerBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DodgerBlue(pThis, &value))
@@ -478,7 +479,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_FirebrickImpl() throws -> UWP.Color {
+        public func get_Firebrick() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Firebrick(pThis, &value))
@@ -486,7 +487,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_FloralWhiteImpl() throws -> UWP.Color {
+        public func get_FloralWhite() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_FloralWhite(pThis, &value))
@@ -494,7 +495,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_ForestGreenImpl() throws -> UWP.Color {
+        public func get_ForestGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForestGreen(pThis, &value))
@@ -502,7 +503,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_FuchsiaImpl() throws -> UWP.Color {
+        public func get_Fuchsia() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fuchsia(pThis, &value))
@@ -510,7 +511,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GainsboroImpl() throws -> UWP.Color {
+        public func get_Gainsboro() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gainsboro(pThis, &value))
@@ -518,7 +519,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GhostWhiteImpl() throws -> UWP.Color {
+        public func get_GhostWhite() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_GhostWhite(pThis, &value))
@@ -526,7 +527,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GoldImpl() throws -> UWP.Color {
+        public func get_Gold() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gold(pThis, &value))
@@ -534,7 +535,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GoldenrodImpl() throws -> UWP.Color {
+        public func get_Goldenrod() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Goldenrod(pThis, &value))
@@ -542,7 +543,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GrayImpl() throws -> UWP.Color {
+        public func get_Gray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gray(pThis, &value))
@@ -550,7 +551,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GreenImpl() throws -> UWP.Color {
+        public func get_Green() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Green(pThis, &value))
@@ -558,7 +559,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_GreenYellowImpl() throws -> UWP.Color {
+        public func get_GreenYellow() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_GreenYellow(pThis, &value))
@@ -566,7 +567,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_HoneydewImpl() throws -> UWP.Color {
+        public func get_Honeydew() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Honeydew(pThis, &value))
@@ -574,7 +575,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_HotPinkImpl() throws -> UWP.Color {
+        public func get_HotPink() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_HotPink(pThis, &value))
@@ -582,7 +583,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_IndianRedImpl() throws -> UWP.Color {
+        public func get_IndianRed() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IndianRed(pThis, &value))
@@ -590,7 +591,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_IndigoImpl() throws -> UWP.Color {
+        public func get_Indigo() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Indigo(pThis, &value))
@@ -598,7 +599,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_IvoryImpl() throws -> UWP.Color {
+        public func get_Ivory() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Ivory(pThis, &value))
@@ -606,7 +607,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_KhakiImpl() throws -> UWP.Color {
+        public func get_Khaki() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Khaki(pThis, &value))
@@ -614,7 +615,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LavenderImpl() throws -> UWP.Color {
+        public func get_Lavender() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lavender(pThis, &value))
@@ -622,7 +623,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LavenderBlushImpl() throws -> UWP.Color {
+        public func get_LavenderBlush() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LavenderBlush(pThis, &value))
@@ -630,7 +631,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LawnGreenImpl() throws -> UWP.Color {
+        public func get_LawnGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LawnGreen(pThis, &value))
@@ -638,7 +639,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LemonChiffonImpl() throws -> UWP.Color {
+        public func get_LemonChiffon() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LemonChiffon(pThis, &value))
@@ -646,7 +647,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightBlueImpl() throws -> UWP.Color {
+        public func get_LightBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightBlue(pThis, &value))
@@ -654,7 +655,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightCoralImpl() throws -> UWP.Color {
+        public func get_LightCoral() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightCoral(pThis, &value))
@@ -662,7 +663,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightCyanImpl() throws -> UWP.Color {
+        public func get_LightCyan() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightCyan(pThis, &value))
@@ -670,7 +671,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightGoldenrodYellowImpl() throws -> UWP.Color {
+        public func get_LightGoldenrodYellow() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGoldenrodYellow(pThis, &value))
@@ -678,7 +679,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightGreenImpl() throws -> UWP.Color {
+        public func get_LightGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGreen(pThis, &value))
@@ -686,7 +687,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightGrayImpl() throws -> UWP.Color {
+        public func get_LightGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGray(pThis, &value))
@@ -694,7 +695,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightPinkImpl() throws -> UWP.Color {
+        public func get_LightPink() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightPink(pThis, &value))
@@ -702,7 +703,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightSalmonImpl() throws -> UWP.Color {
+        public func get_LightSalmon() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSalmon(pThis, &value))
@@ -710,7 +711,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightSeaGreenImpl() throws -> UWP.Color {
+        public func get_LightSeaGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSeaGreen(pThis, &value))
@@ -718,7 +719,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightSkyBlueImpl() throws -> UWP.Color {
+        public func get_LightSkyBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSkyBlue(pThis, &value))
@@ -726,7 +727,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightSlateGrayImpl() throws -> UWP.Color {
+        public func get_LightSlateGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSlateGray(pThis, &value))
@@ -734,7 +735,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightSteelBlueImpl() throws -> UWP.Color {
+        public func get_LightSteelBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSteelBlue(pThis, &value))
@@ -742,7 +743,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LightYellowImpl() throws -> UWP.Color {
+        public func get_LightYellow() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightYellow(pThis, &value))
@@ -750,7 +751,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LimeImpl() throws -> UWP.Color {
+        public func get_Lime() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lime(pThis, &value))
@@ -758,7 +759,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LimeGreenImpl() throws -> UWP.Color {
+        public func get_LimeGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LimeGreen(pThis, &value))
@@ -766,7 +767,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_LinenImpl() throws -> UWP.Color {
+        public func get_Linen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Linen(pThis, &value))
@@ -774,7 +775,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MagentaImpl() throws -> UWP.Color {
+        public func get_Magenta() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Magenta(pThis, &value))
@@ -782,7 +783,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MaroonImpl() throws -> UWP.Color {
+        public func get_Maroon() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Maroon(pThis, &value))
@@ -790,7 +791,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumAquamarineImpl() throws -> UWP.Color {
+        public func get_MediumAquamarine() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumAquamarine(pThis, &value))
@@ -798,7 +799,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumBlueImpl() throws -> UWP.Color {
+        public func get_MediumBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumBlue(pThis, &value))
@@ -806,7 +807,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumOrchidImpl() throws -> UWP.Color {
+        public func get_MediumOrchid() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumOrchid(pThis, &value))
@@ -814,7 +815,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumPurpleImpl() throws -> UWP.Color {
+        public func get_MediumPurple() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumPurple(pThis, &value))
@@ -822,7 +823,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumSeaGreenImpl() throws -> UWP.Color {
+        public func get_MediumSeaGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSeaGreen(pThis, &value))
@@ -830,7 +831,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumSlateBlueImpl() throws -> UWP.Color {
+        public func get_MediumSlateBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSlateBlue(pThis, &value))
@@ -838,7 +839,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumSpringGreenImpl() throws -> UWP.Color {
+        public func get_MediumSpringGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSpringGreen(pThis, &value))
@@ -846,7 +847,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumTurquoiseImpl() throws -> UWP.Color {
+        public func get_MediumTurquoise() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumTurquoise(pThis, &value))
@@ -854,7 +855,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MediumVioletRedImpl() throws -> UWP.Color {
+        public func get_MediumVioletRed() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumVioletRed(pThis, &value))
@@ -862,7 +863,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MidnightBlueImpl() throws -> UWP.Color {
+        public func get_MidnightBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MidnightBlue(pThis, &value))
@@ -870,7 +871,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MintCreamImpl() throws -> UWP.Color {
+        public func get_MintCream() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MintCream(pThis, &value))
@@ -878,7 +879,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MistyRoseImpl() throws -> UWP.Color {
+        public func get_MistyRose() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_MistyRose(pThis, &value))
@@ -886,7 +887,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_MoccasinImpl() throws -> UWP.Color {
+        public func get_Moccasin() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Moccasin(pThis, &value))
@@ -894,7 +895,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_NavajoWhiteImpl() throws -> UWP.Color {
+        public func get_NavajoWhite() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_NavajoWhite(pThis, &value))
@@ -902,7 +903,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_NavyImpl() throws -> UWP.Color {
+        public func get_Navy() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Navy(pThis, &value))
@@ -910,7 +911,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OldLaceImpl() throws -> UWP.Color {
+        public func get_OldLace() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_OldLace(pThis, &value))
@@ -918,7 +919,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OliveImpl() throws -> UWP.Color {
+        public func get_Olive() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Olive(pThis, &value))
@@ -926,7 +927,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OliveDrabImpl() throws -> UWP.Color {
+        public func get_OliveDrab() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_OliveDrab(pThis, &value))
@@ -934,7 +935,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OrangeImpl() throws -> UWP.Color {
+        public func get_Orange() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orange(pThis, &value))
@@ -942,7 +943,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OrangeRedImpl() throws -> UWP.Color {
+        public func get_OrangeRed() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_OrangeRed(pThis, &value))
@@ -950,7 +951,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_OrchidImpl() throws -> UWP.Color {
+        public func get_Orchid() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orchid(pThis, &value))
@@ -958,7 +959,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PaleGoldenrodImpl() throws -> UWP.Color {
+        public func get_PaleGoldenrod() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleGoldenrod(pThis, &value))
@@ -966,7 +967,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PaleGreenImpl() throws -> UWP.Color {
+        public func get_PaleGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleGreen(pThis, &value))
@@ -974,7 +975,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PaleTurquoiseImpl() throws -> UWP.Color {
+        public func get_PaleTurquoise() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleTurquoise(pThis, &value))
@@ -982,7 +983,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PaleVioletRedImpl() throws -> UWP.Color {
+        public func get_PaleVioletRed() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleVioletRed(pThis, &value))
@@ -990,7 +991,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PapayaWhipImpl() throws -> UWP.Color {
+        public func get_PapayaWhip() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PapayaWhip(pThis, &value))
@@ -998,7 +999,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PeachPuffImpl() throws -> UWP.Color {
+        public func get_PeachPuff() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PeachPuff(pThis, &value))
@@ -1006,7 +1007,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PeruImpl() throws -> UWP.Color {
+        public func get_Peru() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Peru(pThis, &value))
@@ -1014,7 +1015,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PinkImpl() throws -> UWP.Color {
+        public func get_Pink() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Pink(pThis, &value))
@@ -1022,7 +1023,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PlumImpl() throws -> UWP.Color {
+        public func get_Plum() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Plum(pThis, &value))
@@ -1030,7 +1031,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PowderBlueImpl() throws -> UWP.Color {
+        public func get_PowderBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PowderBlue(pThis, &value))
@@ -1038,7 +1039,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_PurpleImpl() throws -> UWP.Color {
+        public func get_Purple() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Purple(pThis, &value))
@@ -1046,7 +1047,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_RedImpl() throws -> UWP.Color {
+        public func get_Red() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Red(pThis, &value))
@@ -1054,7 +1055,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_RosyBrownImpl() throws -> UWP.Color {
+        public func get_RosyBrown() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_RosyBrown(pThis, &value))
@@ -1062,7 +1063,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_RoyalBlueImpl() throws -> UWP.Color {
+        public func get_RoyalBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoyalBlue(pThis, &value))
@@ -1070,7 +1071,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SaddleBrownImpl() throws -> UWP.Color {
+        public func get_SaddleBrown() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SaddleBrown(pThis, &value))
@@ -1078,7 +1079,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SalmonImpl() throws -> UWP.Color {
+        public func get_Salmon() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Salmon(pThis, &value))
@@ -1086,7 +1087,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SandyBrownImpl() throws -> UWP.Color {
+        public func get_SandyBrown() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SandyBrown(pThis, &value))
@@ -1094,7 +1095,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SeaGreenImpl() throws -> UWP.Color {
+        public func get_SeaGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SeaGreen(pThis, &value))
@@ -1102,7 +1103,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SeaShellImpl() throws -> UWP.Color {
+        public func get_SeaShell() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SeaShell(pThis, &value))
@@ -1110,7 +1111,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SiennaImpl() throws -> UWP.Color {
+        public func get_Sienna() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Sienna(pThis, &value))
@@ -1118,7 +1119,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SilverImpl() throws -> UWP.Color {
+        public func get_Silver() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Silver(pThis, &value))
@@ -1126,7 +1127,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SkyBlueImpl() throws -> UWP.Color {
+        public func get_SkyBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SkyBlue(pThis, &value))
@@ -1134,7 +1135,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SlateBlueImpl() throws -> UWP.Color {
+        public func get_SlateBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SlateBlue(pThis, &value))
@@ -1142,7 +1143,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SlateGrayImpl() throws -> UWP.Color {
+        public func get_SlateGray() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SlateGray(pThis, &value))
@@ -1150,7 +1151,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SnowImpl() throws -> UWP.Color {
+        public func get_Snow() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Snow(pThis, &value))
@@ -1158,7 +1159,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SpringGreenImpl() throws -> UWP.Color {
+        public func get_SpringGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpringGreen(pThis, &value))
@@ -1166,7 +1167,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_SteelBlueImpl() throws -> UWP.Color {
+        public func get_SteelBlue() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SteelBlue(pThis, &value))
@@ -1174,7 +1175,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_TanImpl() throws -> UWP.Color {
+        public func get_Tan() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tan(pThis, &value))
@@ -1182,7 +1183,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_TealImpl() throws -> UWP.Color {
+        public func get_Teal() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Teal(pThis, &value))
@@ -1190,7 +1191,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_ThistleImpl() throws -> UWP.Color {
+        public func get_Thistle() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Thistle(pThis, &value))
@@ -1198,7 +1199,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_TomatoImpl() throws -> UWP.Color {
+        public func get_Tomato() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tomato(pThis, &value))
@@ -1206,7 +1207,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_TransparentImpl() throws -> UWP.Color {
+        public func get_Transparent() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transparent(pThis, &value))
@@ -1214,7 +1215,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_TurquoiseImpl() throws -> UWP.Color {
+        public func get_Turquoise() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Turquoise(pThis, &value))
@@ -1222,7 +1223,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_VioletImpl() throws -> UWP.Color {
+        public func get_Violet() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Violet(pThis, &value))
@@ -1230,7 +1231,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_WheatImpl() throws -> UWP.Color {
+        public func get_Wheat() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Wheat(pThis, &value))
@@ -1238,7 +1239,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_WhiteImpl() throws -> UWP.Color {
+        public func get_White() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_White(pThis, &value))
@@ -1246,7 +1247,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_WhiteSmokeImpl() throws -> UWP.Color {
+        public func get_WhiteSmoke() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_WhiteSmoke(pThis, &value))
@@ -1254,7 +1255,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_YellowImpl() throws -> UWP.Color {
+        public func get_Yellow() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Yellow(pThis, &value))
@@ -1262,7 +1263,7 @@ public enum __ABI_Microsoft_UI {
             return .from(abi: value)
         }
 
-        internal func get_YellowGreenImpl() throws -> UWP.Color {
+        public func get_YellowGreen() throws -> UWP.Color {
             var value: __x_ABI_CWindows_CUI_CColor = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_YellowGreen(pThis, &value))
@@ -1293,7 +1294,7 @@ extension __ABI_Microsoft_UI {
     public class ClosableNotifierHandler: WindowsFoundation.IUnknown {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIClosableNotifierHandler }
 
-        open func InvokeImpl() throws {
+        open func Invoke() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CIClosableNotifierHandler.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis))
             }
@@ -1308,9 +1309,11 @@ extension __ABI_Microsoft_UI {
         AddRef: { ClosableNotifierHandlerWrapper.addRef($0) },
         Release: { ClosableNotifierHandlerWrapper.release($0) },
         Invoke: {
-            guard let __unwrapped__instance = ClosableNotifierHandlerWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            __unwrapped__instance()
-            return S_OK
+            do {
+                guard let __unwrapped__instance = ClosableNotifierHandlerWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+                try __unwrapped__instance()
+                return S_OK
+            } catch { return failWith(error: error) }
         }
     )
 }

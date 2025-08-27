@@ -33,6 +33,18 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs: W
     .init(Data1: 0x0E09D90B, Data2: 0x2261, Data3: 0x590B, Data4: ( 0x9A,0xD1,0x85,0x04,0x99,0x1D,0x87,0x54 ))// 0E09D90B-2261-590B-9AD1-8504991D8754
 }
 
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental: WindowsFoundation.IID {
+    .init(Data1: 0x04DB96C7, Data2: 0xDEB6, Data3: 0x5BE4, Data4: ( 0xBF,0xDC,0x1B,0xC0,0x36,0x1C,0x8A,0x12 ))// 04DB96C7-DEB6-5BE4-BFDC-1BC0361C8A12
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails: WindowsFoundation.IID {
+    .init(Data1: 0x639EC5B2, Data2: 0xAC0C, Data3: 0x5BBF, Data4: ( 0x84,0x22,0x98,0xDC,0xA5,0x40,0xD2,0x19 ))// 639EC5B2-AC0C-5BBF-8422-98DCA540D219
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics: WindowsFoundation.IID {
+    .init(Data1: 0xF19F1745, Data2: 0x52AD, Data3: 0x5CF7, Data4: ( 0x97,0xEA,0x76,0xC5,0xFD,0x6F,0xF3,0xC1 ))// F19F1745-52AD-5CF7-97EA-76C5FD6FF3C1
+}
+
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter: WindowsFoundation.IID {
     .init(Data1: 0xBC3042C2, Data2: 0xC6C6, Data3: 0x5632, Data4: ( 0x89,0x89,0xFF,0x0E,0xC6,0xD3,0xB4,0x0D ))// BC3042C2-C6C6-5632-8989-FF0EC6D3B40D
 }
@@ -47,6 +59,10 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics: WindowsFou
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics2: WindowsFoundation.IID {
     .init(Data1: 0xCABC23DB, Data2: 0x4606, Data3: 0x5D6E, Data4: ( 0x89,0xA5,0x06,0xDE,0x1D,0x8B,0xD3,0xE2 ))// CABC23DB-4606-5D6E-89A5-06DE1D8BD3E2
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3: WindowsFoundation.IID {
+    .init(Data1: 0x0BCC835A, Data2: 0x1286, Data3: 0x5113, Data4: ( 0x9F,0x59,0xF1,0x09,0x3D,0x2E,0x08,0x7A ))// 0BCC835A-1286-5113-9F59-F1093D2E087A
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar: WindowsFoundation.IID {
@@ -75,6 +91,10 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics: WindowsF
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics2: WindowsFoundation.IID {
     .init(Data1: 0x7207AD4B, Data2: 0x890D, Data3: 0x5DD7, Data4: ( 0xBC,0x18,0x78,0xFF,0xD9,0x54,0x4D,0x8F ))// 7207AD4B-890D-5DD7-BC18-78FFD9544D8F
+}
+
+private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3: WindowsFoundation.IID {
+    .init(Data1: 0x745D3602, Data2: 0x268B, Data3: 0x5060, Data4: ( 0x84,0x37,0xFC,0xC0,0x25,0xE2,0x55,0xD6 ))// 745D3602-268B-5060-8437-FCC025E255D6
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher: WindowsFoundation.IID {
@@ -109,11 +129,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics2:
     .init(Data1: 0xED5C4F92, Data2: 0x32F4, Data3: 0x5D15, Data4: ( 0x80,0xD0,0xB2,0xA5,0xEF,0xA0,0x4D,0x39 ))// ED5C4F92-32F4-5D15-80D0-B2A5EFA04D39
 }
 
+@_spi(WinRTInternal)
 public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindow: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow }
 
-        internal func get_IdImpl() throws -> WinAppSDK.WindowId {
+        public func get_Id() throws -> WinAppSDK.WindowId {
             var value: __x_ABI_CMicrosoft_CUI_CWindowId = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, &value))
@@ -121,7 +142,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_IsShownInSwitchersImpl() throws -> Bool {
+        public func get_IsShownInSwitchers() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsShownInSwitchers(pThis, &value))
@@ -129,13 +150,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsShownInSwitchersImpl(_ value: Bool) throws {
+        public func put_IsShownInSwitchers(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsShownInSwitchers(pThis, .init(from: value)))
             }
         }
 
-        internal func get_IsVisibleImpl() throws -> Bool {
+        public func get_IsVisible() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsVisible(pThis, &value))
@@ -143,7 +164,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_OwnerWindowIdImpl() throws -> WinAppSDK.WindowId {
+        public func get_OwnerWindowId() throws -> WinAppSDK.WindowId {
             var value: __x_ABI_CMicrosoft_CUI_CWindowId = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_OwnerWindowId(pThis, &value))
@@ -151,7 +172,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_PositionImpl() throws -> UWP.PointInt32 {
+        public func get_Position() throws -> UWP.PointInt32 {
             var value: __x_ABI_CWindows_CGraphics_CPointInt32 = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Position(pThis, &value))
@@ -159,16 +180,16 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_PresenterImpl() throws -> WinAppSDK.AppWindowPresenter? {
+        public func get_Presenter() throws -> WinAppSDK.AppWindowPresenter? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_Presenter(pThis, &valueAbi))
                 }
             }
-            return .from(abi: value)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowPresenterBridge.from(abi: value)
         }
 
-        internal func get_SizeImpl() throws -> UWP.SizeInt32 {
+        public func get_Size() throws -> UWP.SizeInt32 {
             var value: __x_ABI_CWindows_CGraphics_CSizeInt32 = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &value))
@@ -176,7 +197,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_TitleImpl() throws -> String {
+        public func get_Title() throws -> String {
             var value: HSTRING?
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Title(pThis, &value))
@@ -184,96 +205,96 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_TitleImpl(_ value: String) throws {
+        public func put_Title(_ value: String) throws {
             let _value = try! HString(value)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, _value.get()))
             }
         }
 
-        internal func get_TitleBarImpl() throws -> WinAppSDK.AppWindowTitleBar? {
+        public func get_TitleBar() throws -> WinAppSDK.AppWindowTitleBar? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_TitleBar(pThis, &valueAbi))
                 }
             }
-            return .from(abi: value)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowTitleBarBridge.from(abi: value)
         }
 
-        internal func DestroyImpl() throws {
+        public func Destroy() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Destroy(pThis))
             }
         }
 
-        internal func HideImpl() throws {
+        public func Hide() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Hide(pThis))
             }
         }
 
-        internal func MoveImpl(_ position: UWP.PointInt32) throws {
+        public func Move(_ position: UWP.PointInt32) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Move(pThis, .from(swift: position)))
             }
         }
 
-        internal func MoveAndResizeImpl(_ rect: UWP.RectInt32) throws {
+        public func MoveAndResize(_ rect: UWP.RectInt32) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MoveAndResize(pThis, .from(swift: rect)))
             }
         }
 
-        internal func MoveAndResizeRelativeToDisplayAreaImpl(_ rect: UWP.RectInt32, _ displayarea: WinAppSDK.DisplayArea?) throws {
+        public func MoveAndResizeRelativeToDisplayArea(_ rect: UWP.RectInt32, _ displayarea: WinAppSDK.DisplayArea?) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MoveAndResizeRelativeToDisplayArea(pThis, .from(swift: rect), RawPointer(displayarea)))
             }
         }
 
-        internal func ResizeImpl(_ size: UWP.SizeInt32) throws {
+        public func Resize(_ size: UWP.SizeInt32) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Resize(pThis, .from(swift: size)))
             }
         }
 
-        internal func SetIconImpl(_ iconPath: String) throws {
+        public func SetIcon(_ iconPath: String) throws {
             let _iconPath = try! HString(iconPath)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetIcon(pThis, _iconPath.get()))
             }
         }
 
-        internal func SetIconWithIconIdImpl(_ iconId: WinAppSDK.IconId) throws {
+        public func SetIconWithIconId(_ iconId: WinAppSDK.IconId) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetIconWithIconId(pThis, .from(swift: iconId)))
             }
         }
 
-        internal func SetPresenterImpl(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?) throws {
+        public func SetPresenter(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetPresenter(pThis, RawPointer(appWindowPresenter)))
             }
         }
 
-        internal func SetPresenterByKindImpl(_ appWindowPresenterKind: WinAppSDK.AppWindowPresenterKind) throws {
+        public func SetPresenterByKind(_ appWindowPresenterKind: WinAppSDK.AppWindowPresenterKind) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetPresenterByKind(pThis, appWindowPresenterKind))
             }
         }
 
-        internal func ShowImpl() throws {
+        public func Show() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Show(pThis))
             }
         }
 
-        internal func ShowWithActivationImpl(_ activateWindow: Bool) throws {
+        public func ShowWithActivation(_ activateWindow: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.ShowWithActivation(pThis, .init(from: activateWindow)))
             }
         }
 
-        internal func add_ChangedImpl(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, WinAppSDK.AppWindowChangedEventArgs?>?) throws -> EventRegistrationToken {
+        public func add_Changed(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, WinAppSDK.AppWindowChangedEventArgs?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -283,13 +304,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_ChangedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Changed(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Changed(pThis, token))
             }
         }
 
-        internal func add_ClosingImpl(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, WinAppSDK.AppWindowClosingEventArgs?>?) throws -> EventRegistrationToken {
+        public func add_Closing(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, WinAppSDK.AppWindowClosingEventArgs?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -299,13 +320,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_ClosingImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Closing(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Closing(pThis, token))
             }
         }
 
-        internal func add_DestroyingImpl(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, Any?>?) throws -> EventRegistrationToken {
+        public func add_Destroying(_ handler: TypedEventHandler<WinAppSDK.AppWindow?, Any?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -315,7 +336,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_DestroyingImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Destroying(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Destroying(pThis, token))
             }
@@ -326,7 +347,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindow2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2 }
 
-        internal func get_ClientSizeImpl() throws -> UWP.SizeInt32 {
+        public func get_ClientSize() throws -> UWP.SizeInt32 {
             var value: __x_ABI_CWindows_CGraphics_CSizeInt32 = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClientSize(pThis, &value))
@@ -334,31 +355,31 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func MoveInZOrderAtBottomImpl() throws {
+        public func MoveInZOrderAtBottom() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderAtBottom(pThis))
             }
         }
 
-        internal func MoveInZOrderAtTopImpl() throws {
+        public func MoveInZOrderAtTop() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderAtTop(pThis))
             }
         }
 
-        internal func MoveInZOrderBelowImpl(_ windowId: WinAppSDK.WindowId) throws {
+        public func MoveInZOrderBelow(_ windowId: WinAppSDK.WindowId) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MoveInZOrderBelow(pThis, .from(swift: windowId)))
             }
         }
 
-        internal func ResizeClientImpl(_ size: UWP.SizeInt32) throws {
+        public func ResizeClient(_ size: UWP.SizeInt32) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.ResizeClient(pThis, .from(swift: size)))
             }
         }
 
-        internal func ShowOnceWithRequestedStartupStateImpl() throws {
+        public func ShowOnceWithRequestedStartupState() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.ShowOnceWithRequestedStartupState(pThis))
             }
@@ -369,19 +390,19 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindow3: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow3 }
 
-        internal func AssociateWithDispatcherQueueImpl(_ dispatcherQueue: WinAppSDK.DispatcherQueue?) throws {
+        public func AssociateWithDispatcherQueue(_ dispatcherQueue: WinAppSDK.DispatcherQueue?) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow3.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.AssociateWithDispatcherQueue(pThis, RawPointer(dispatcherQueue)))
             }
         }
 
-        internal func get_DispatcherQueueImpl() throws -> WinAppSDK.DispatcherQueue? {
+        public func get_DispatcherQueue() throws -> WinAppSDK.DispatcherQueue? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow3.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, &valueAbi))
                 }
             }
-            return .from(abi: value)
+            return __IMPL_Microsoft_UI_Dispatching.DispatcherQueueBridge.from(abi: value)
         }
 
     }
@@ -389,27 +410,27 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindow4: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4 }
 
-        internal func SetTaskbarIconImpl(_ iconPath: String) throws {
+        public func SetTaskbarIcon(_ iconPath: String) throws {
             let _iconPath = try! HString(iconPath)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetTaskbarIcon(pThis, _iconPath.get()))
             }
         }
 
-        internal func SetTaskbarIconWithIconIdImpl(_ iconId: WinAppSDK.IconId) throws {
+        public func SetTaskbarIconWithIconId(_ iconId: WinAppSDK.IconId) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetTaskbarIconWithIconId(pThis, .from(swift: iconId)))
             }
         }
 
-        internal func SetTitleBarIconImpl(_ iconPath: String) throws {
+        public func SetTitleBarIcon(_ iconPath: String) throws {
             let _iconPath = try! HString(iconPath)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetTitleBarIcon(pThis, _iconPath.get()))
             }
         }
 
-        internal func SetTitleBarIconWithIconIdImpl(_ iconId: WinAppSDK.IconId) throws {
+        public func SetTitleBarIconWithIconId(_ iconId: WinAppSDK.IconId) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetTitleBarIconWithIconId(pThis, .from(swift: iconId)))
             }
@@ -420,7 +441,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowChangedEventArgs: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs }
 
-        internal func get_DidPositionChangeImpl() throws -> Bool {
+        public func get_DidPositionChange() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidPositionChange(pThis, &value))
@@ -428,7 +449,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_DidPresenterChangeImpl() throws -> Bool {
+        public func get_DidPresenterChange() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidPresenterChange(pThis, &value))
@@ -436,7 +457,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_DidSizeChangeImpl() throws -> Bool {
+        public func get_DidSizeChange() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidSizeChange(pThis, &value))
@@ -444,7 +465,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_DidVisibilityChangeImpl() throws -> Bool {
+        public func get_DidVisibilityChange() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidVisibilityChange(pThis, &value))
@@ -457,7 +478,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowChangedEventArgs2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2 }
 
-        internal func get_DidZOrderChangeImpl() throws -> Bool {
+        public func get_DidZOrderChange() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidZOrderChange(pThis, &value))
@@ -465,7 +486,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_IsZOrderAtBottomImpl() throws -> Bool {
+        public func get_IsZOrderAtBottom() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsZOrderAtBottom(pThis, &value))
@@ -473,7 +494,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_IsZOrderAtTopImpl() throws -> Bool {
+        public func get_IsZOrderAtTop() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsZOrderAtTop(pThis, &value))
@@ -481,7 +502,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_ZOrderBelowWindowIdImpl() throws -> WinAppSDK.WindowId {
+        public func get_ZOrderBelowWindowId() throws -> WinAppSDK.WindowId {
             var value: __x_ABI_CMicrosoft_CUI_CWindowId = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ZOrderBelowWindowId(pThis, &value))
@@ -494,7 +515,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowClosingEventArgs: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs }
 
-        internal func get_CancelImpl() throws -> Bool {
+        public func get_Cancel() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cancel(pThis, &value))
@@ -502,7 +523,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_CancelImpl(_ value: Bool) throws {
+        public func put_Cancel(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_Cancel(pThis, .init(from: value)))
             }
@@ -510,10 +531,145 @@ public enum __ABI_Microsoft_UI_Windowing {
 
     }
 
+    public class IAppWindowExperimental: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental }
+
+        public func get_PersistedStateId() throws -> Foundation.UUID? {
+            let (value) = try ComPtrs.initialize { valueAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PersistedStateId(pThis, &valueAbi))
+                }
+            }
+            return WinAppSDK.__x_ABI_C__FIReference_1_GUIDWrapper.unwrapFrom(abi: value)
+        }
+
+        public func put_PersistedStateId(_ value: Foundation.UUID?) throws {
+            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_GUIDWrapper(value)
+            let _value = try! valueWrapper?.toABI { $0 }
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PersistedStateId(pThis, _value))
+            }
+        }
+
+        public func get_PlacementRestorationBehavior() throws -> WinAppSDK.PlacementRestorationBehavior {
+            var value: __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlacementRestorationBehavior(pThis, &value))
+            }
+            return value
+        }
+
+        public func put_PlacementRestorationBehavior(_ value: WinAppSDK.PlacementRestorationBehavior) throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlacementRestorationBehavior(pThis, value))
+            }
+        }
+
+        public func GetCurrentPlacement() throws -> WinAppSDK.AppWindowPlacementDetails? {
+            let (result) = try ComPtrs.initialize { resultAbi in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetCurrentPlacement(pThis, &resultAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Windowing.AppWindowPlacementDetailsBridge.from(abi: result)
+        }
+
+        public func SaveCurrentPlacement() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SaveCurrentPlacement(pThis))
+            }
+        }
+
+        public func SetCurrentPlacement(_ placementDetails: WinAppSDK.AppWindowPlacementDetails?, _ isFirstWindow: Bool) throws -> Bool {
+            var result: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SetCurrentPlacement(pThis, RawPointer(placementDetails), .init(from: isFirstWindow), &result))
+            }
+            return .init(from: result)
+        }
+
+    }
+
+    public class IAppWindowPlacementDetails: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails }
+
+        public func get_NormalRect() throws -> UWP.RectInt32 {
+            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_NormalRect(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        public func get_WorkArea() throws -> UWP.RectInt32 {
+            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_WorkArea(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        public func get_Dpi() throws -> Int32 {
+            var value: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Dpi(pThis, &value))
+            }
+            return value
+        }
+
+        public func get_ShowCmd() throws -> Int32 {
+            var value: INT32 = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShowCmd(pThis, &value))
+            }
+            return value
+        }
+
+        public func get_ArrangeRect() throws -> UWP.RectInt32 {
+            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ArrangeRect(pThis, &value))
+            }
+            return .from(abi: value)
+        }
+
+        public func get_DeviceName() throws -> String {
+            var value: HSTRING?
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeviceName(pThis, &value))
+            }
+            return .init(from: value)
+        }
+
+        public func get_Flags() throws -> WinAppSDK.PlacementInfo {
+            var value: __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo = .init(0)
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Flags(pThis, &value))
+            }
+            return value
+        }
+
+    }
+
+    public class IAppWindowPlacementDetailsStatics: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics }
+
+        public func Create(_ normalRect: UWP.RectInt32, _ workArea: UWP.RectInt32, _ dpi: Int32, _ showCmd: Int32, _ arrangeRect: UWP.RectInt32, _ flags: WinAppSDK.PlacementInfo, _ deviceName: String) throws -> WinAppSDK.AppWindowPlacementDetails? {
+            let (result) = try ComPtrs.initialize { resultAbi in
+                let _deviceName = try! HString(deviceName)
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, .from(swift: normalRect), .from(swift: workArea), dpi, showCmd, .from(swift: arrangeRect), flags, _deviceName.get(), &resultAbi))
+                }
+            }
+            return __IMPL_Microsoft_UI_Windowing.AppWindowPlacementDetailsBridge.from(abi: result)
+        }
+
+    }
+
     public class IAppWindowPresenter: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter }
 
-        internal func get_KindImpl() throws -> WinAppSDK.AppWindowPresenterKind {
+        public func get_Kind() throws -> WinAppSDK.AppWindowPresenterKind {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_CAppWindowPresenterKind = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Kind(pThis, &value))
@@ -531,40 +687,40 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics }
 
-        internal func CreateImpl() throws -> WinAppSDK.AppWindow? {
+        public func Create() throws -> WinAppSDK.AppWindow? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
         }
 
-        internal func CreateWithPresenterImpl(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?) throws -> WinAppSDK.AppWindow? {
+        public func CreateWithPresenter(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?) throws -> WinAppSDK.AppWindow? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithPresenter(pThis, RawPointer(appWindowPresenter), &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
         }
 
-        internal func CreateWithPresenterAndOwnerImpl(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?, _ ownerWindowId: WinAppSDK.WindowId) throws -> WinAppSDK.AppWindow? {
+        public func CreateWithPresenterAndOwner(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?, _ ownerWindowId: WinAppSDK.WindowId) throws -> WinAppSDK.AppWindow? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithPresenterAndOwner(pThis, RawPointer(appWindowPresenter), .from(swift: ownerWindowId), &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
         }
 
-        internal func GetFromWindowIdImpl(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.AppWindow? {
+        public func GetFromWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.AppWindow? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetFromWindowId(pThis, .from(swift: windowId), &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
         }
 
     }
@@ -572,13 +728,24 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowStatics2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics2 }
 
-        internal func CreateWithDispatcherQueueImpl(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?, _ ownerWindowId: WinAppSDK.WindowId, _ DispatcherQueue: WinAppSDK.DispatcherQueue?) throws -> WinAppSDK.AppWindow? {
+        public func CreateWithDispatcherQueue(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?, _ ownerWindowId: WinAppSDK.WindowId, _ DispatcherQueue: WinAppSDK.DispatcherQueue?) throws -> WinAppSDK.AppWindow? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics2.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithDispatcherQueue(pThis, RawPointer(appWindowPresenter), .from(swift: ownerWindowId), RawPointer(DispatcherQueue), &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
+        }
+
+    }
+
+    public class IAppWindowStatics3: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3 }
+
+        public func SaveCurrentPlacementForAllPersistedStateIds() throws {
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.SaveCurrentPlacementForAllPersistedStateIds(pThis))
+            }
         }
 
     }
@@ -586,7 +753,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowTitleBar: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar }
 
-        internal func get_BackgroundColorImpl() throws -> UWP.Color? {
+        public func get_BackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundColor(pThis, &valueAbi))
@@ -595,7 +762,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_BackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_BackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -603,7 +770,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonBackgroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonBackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonBackgroundColor(pThis, &valueAbi))
@@ -612,7 +779,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonBackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonBackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -620,7 +787,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonForegroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonForegroundColor(pThis, &valueAbi))
@@ -629,7 +796,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -637,7 +804,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonHoverBackgroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonHoverBackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonHoverBackgroundColor(pThis, &valueAbi))
@@ -646,7 +813,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonHoverBackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonHoverBackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -654,7 +821,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonHoverForegroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonHoverForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonHoverForegroundColor(pThis, &valueAbi))
@@ -663,7 +830,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonHoverForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonHoverForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -671,7 +838,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonInactiveBackgroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonInactiveBackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonInactiveBackgroundColor(pThis, &valueAbi))
@@ -680,7 +847,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonInactiveBackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonInactiveBackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -688,7 +855,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonInactiveForegroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonInactiveForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonInactiveForegroundColor(pThis, &valueAbi))
@@ -697,7 +864,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonInactiveForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonInactiveForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -705,7 +872,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonPressedBackgroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonPressedBackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonPressedBackgroundColor(pThis, &valueAbi))
@@ -714,7 +881,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonPressedBackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonPressedBackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -722,7 +889,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ButtonPressedForegroundColorImpl() throws -> UWP.Color? {
+        public func get_ButtonPressedForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ButtonPressedForegroundColor(pThis, &valueAbi))
@@ -731,7 +898,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ButtonPressedForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ButtonPressedForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -739,7 +906,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_ExtendsContentIntoTitleBarImpl() throws -> Bool {
+        public func get_ExtendsContentIntoTitleBar() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExtendsContentIntoTitleBar(pThis, &value))
@@ -747,13 +914,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_ExtendsContentIntoTitleBarImpl(_ value: Bool) throws {
+        public func put_ExtendsContentIntoTitleBar(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_ExtendsContentIntoTitleBar(pThis, .init(from: value)))
             }
         }
 
-        internal func get_ForegroundColorImpl() throws -> UWP.Color? {
+        public func get_ForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForegroundColor(pThis, &valueAbi))
@@ -762,7 +929,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_ForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_ForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -770,7 +937,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_HeightImpl() throws -> Int32 {
+        public func get_Height() throws -> Int32 {
             var value: INT32 = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Height(pThis, &value))
@@ -778,7 +945,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func get_IconShowOptionsImpl() throws -> WinAppSDK.IconShowOptions {
+        public func get_IconShowOptions() throws -> WinAppSDK.IconShowOptions {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_CIconShowOptions = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IconShowOptions(pThis, &value))
@@ -786,13 +953,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func put_IconShowOptionsImpl(_ value: WinAppSDK.IconShowOptions) throws {
+        public func put_IconShowOptions(_ value: WinAppSDK.IconShowOptions) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IconShowOptions(pThis, value))
             }
         }
 
-        internal func get_InactiveBackgroundColorImpl() throws -> UWP.Color? {
+        public func get_InactiveBackgroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_InactiveBackgroundColor(pThis, &valueAbi))
@@ -801,7 +968,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_InactiveBackgroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_InactiveBackgroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -809,7 +976,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_InactiveForegroundColorImpl() throws -> UWP.Color? {
+        public func get_InactiveForegroundColor() throws -> UWP.Color? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_InactiveForegroundColor(pThis, &valueAbi))
@@ -818,7 +985,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_InactiveForegroundColorImpl(_ value: UWP.Color?) throws {
+        public func put_InactiveForegroundColor(_ value: UWP.Color?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
@@ -826,7 +993,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_LeftInsetImpl() throws -> Int32 {
+        public func get_LeftInset() throws -> Int32 {
             var value: INT32 = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LeftInset(pThis, &value))
@@ -834,7 +1001,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func get_RightInsetImpl() throws -> Int32 {
+        public func get_RightInset() throws -> Int32 {
             var value: INT32 = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_RightInset(pThis, &value))
@@ -842,9 +1009,17 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func ResetToDefaultImpl() throws {
+        public func ResetToDefault() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.ResetToDefault(pThis))
+            }
+        }
+
+        public func SetDragRectangles(_ value: [UWP.RectInt32]) throws {
+            try value.toABI { _value in
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.SetDragRectangles(pThis, _value.count, _value.start))
+                }
             }
         }
 
@@ -853,7 +1028,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowTitleBar2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar2 }
 
-        internal func get_PreferredHeightOptionImpl() throws -> WinAppSDK.TitleBarHeightOption {
+        public func get_PreferredHeightOption() throws -> WinAppSDK.TitleBarHeightOption {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarHeightOption = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredHeightOption(pThis, &value))
@@ -861,7 +1036,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func put_PreferredHeightOptionImpl(_ value: WinAppSDK.TitleBarHeightOption) throws {
+        public func put_PreferredHeightOption(_ value: WinAppSDK.TitleBarHeightOption) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredHeightOption(pThis, value))
             }
@@ -872,7 +1047,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowTitleBar3: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3 }
 
-        internal func get_PreferredThemeImpl() throws -> WinAppSDK.TitleBarTheme {
+        public func get_PreferredTheme() throws -> WinAppSDK.TitleBarTheme {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarTheme = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredTheme(pThis, &value))
@@ -880,7 +1055,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func put_PreferredThemeImpl(_ value: WinAppSDK.TitleBarTheme) throws {
+        public func put_PreferredTheme(_ value: WinAppSDK.TitleBarTheme) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreferredTheme(pThis, value))
             }
@@ -891,7 +1066,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IAppWindowTitleBarStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBarStatics }
 
-        internal func IsCustomizationSupportedImpl() throws -> Bool {
+        public func IsCustomizationSupported() throws -> Bool {
             var result: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBarStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.IsCustomizationSupported(pThis, &result))
@@ -904,7 +1079,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IDisplayArea: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea }
 
-        internal func get_DisplayIdImpl() throws -> WinAppSDK.DisplayId {
+        public func get_DisplayId() throws -> WinAppSDK.DisplayId {
             var value: __x_ABI_CMicrosoft_CUI_CDisplayId = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayId(pThis, &value))
@@ -912,7 +1087,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_IsPrimaryImpl() throws -> Bool {
+        public func get_IsPrimary() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPrimary(pThis, &value))
@@ -920,7 +1095,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_OuterBoundsImpl() throws -> UWP.RectInt32 {
+        public func get_OuterBounds() throws -> UWP.RectInt32 {
             var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_OuterBounds(pThis, &value))
@@ -928,7 +1103,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .from(abi: value)
         }
 
-        internal func get_WorkAreaImpl() throws -> UWP.RectInt32 {
+        public func get_WorkArea() throws -> UWP.RectInt32 {
             var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_WorkArea(pThis, &value))
@@ -941,25 +1116,25 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IDisplayAreaStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics }
 
-        internal func get_PrimaryImpl() throws -> WinAppSDK.DisplayArea? {
+        public func get_Primary() throws -> WinAppSDK.DisplayArea? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_Primary(pThis, &valueAbi))
                 }
             }
-            return .from(abi: value)
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: value)
         }
 
-        internal func CreateWatcherImpl() throws -> WinAppSDK.DisplayAreaWatcher? {
+        public func CreateWatcher() throws -> WinAppSDK.DisplayAreaWatcher? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWatcher(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaWatcherBridge.from(abi: result)
         }
 
-        internal func FindAllImpl() throws -> WindowsFoundation.AnyIVectorView<WinAppSDK.DisplayArea?>? {
+        public func FindAll() throws -> WindowsFoundation.AnyIVectorView<WinAppSDK.DisplayArea?>? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.FindAll(pThis, &resultAbi))
@@ -968,31 +1143,31 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.unwrapFrom(abi: result)
         }
 
-        internal func GetFromWindowIdImpl(_ windowId: WinAppSDK.WindowId, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
+        public func GetFromWindowId(_ windowId: WinAppSDK.WindowId, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetFromWindowId(pThis, .from(swift: windowId), displayAreaFallback, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: result)
         }
 
-        internal func GetFromPointImpl(_ point: UWP.PointInt32, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
+        public func GetFromPoint(_ point: UWP.PointInt32, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetFromPoint(pThis, .from(swift: point), displayAreaFallback, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: result)
         }
 
-        internal func GetFromRectImpl(_ rect: UWP.RectInt32, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
+        public func GetFromRect(_ rect: UWP.RectInt32, _ displayAreaFallback: WinAppSDK.DisplayAreaFallback) throws -> WinAppSDK.DisplayArea? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetFromRect(pThis, .from(swift: rect), displayAreaFallback, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: result)
         }
 
     }
@@ -1000,11 +1175,24 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IDisplayAreaStatics2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics2 }
 
-        internal func GetFromDisplayIdImpl(_ displayId: WinAppSDK.DisplayId) throws -> WinAppSDK.DisplayArea? {
+        public func GetFromDisplayId(_ displayId: WinAppSDK.DisplayId) throws -> WinAppSDK.DisplayArea? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics2.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetFromDisplayId(pThis, .from(swift: displayId), &resultAbi))
                 }
+            }
+            return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: result)
+        }
+
+    }
+
+    public class IDisplayAreaStatics3: WindowsFoundation.IInspectable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3 }
+
+        public func GetMetricsFromWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.DisplayId {
+            var result: __x_ABI_CMicrosoft_CUI_CDisplayId = .init()
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMetricsFromWindowId(pThis, .from(swift: windowId), &result))
             }
             return .from(abi: result)
         }
@@ -1014,7 +1202,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IDisplayAreaWatcher: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher }
 
-        internal func get_StatusImpl() throws -> WinAppSDK.DisplayAreaWatcherStatus {
+        public func get_Status() throws -> WinAppSDK.DisplayAreaWatcherStatus {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_CDisplayAreaWatcherStatus = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Status(pThis, &value))
@@ -1022,19 +1210,19 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func StartImpl() throws {
+        public func Start() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Start(pThis))
             }
         }
 
-        internal func StopImpl() throws {
+        public func Stop() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Stop(pThis))
             }
         }
 
-        internal func add_AddedImpl(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
+        public func add_Added(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -1044,13 +1232,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_AddedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Added(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Added(pThis, token))
             }
         }
 
-        internal func add_EnumerationCompletedImpl(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, Any?>?) throws -> EventRegistrationToken {
+        public func add_EnumerationCompleted(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, Any?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -1060,13 +1248,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_EnumerationCompletedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_EnumerationCompleted(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_EnumerationCompleted(pThis, token))
             }
         }
 
-        internal func add_RemovedImpl(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
+        public func add_Removed(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -1076,13 +1264,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_RemovedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Removed(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Removed(pThis, token))
             }
         }
 
-        internal func add_StoppedImpl(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, Any?>?) throws -> EventRegistrationToken {
+        public func add_Stopped(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, Any?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -1092,13 +1280,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_StoppedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Stopped(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Stopped(pThis, token))
             }
         }
 
-        internal func add_UpdatedImpl(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
+        public func add_Updated(_ handler: TypedEventHandler<WinAppSDK.DisplayAreaWatcher?, WinAppSDK.DisplayArea?>?) throws -> EventRegistrationToken {
             var token: EventRegistrationToken = .init()
             let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper(handler)
             let _handler = try! handlerWrapper?.toABI { $0 }
@@ -1108,7 +1296,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return token
         }
 
-        internal func remove_UpdatedImpl(_ token: EventRegistrationToken) throws {
+        public func remove_Updated(_ token: EventRegistrationToken) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Updated(pThis, token))
             }
@@ -1124,13 +1312,13 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IFullScreenPresenterStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIFullScreenPresenterStatics }
 
-        internal func CreateImpl() throws -> WinAppSDK.FullScreenPresenter? {
+        public func Create() throws -> WinAppSDK.FullScreenPresenter? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIFullScreenPresenterStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.FullScreenPresenterBridge.from(abi: result)
         }
 
     }
@@ -1138,7 +1326,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IOverlappedPresenter: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter }
 
-        internal func get_HasBorderImpl() throws -> Bool {
+        public func get_HasBorder() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasBorder(pThis, &value))
@@ -1146,7 +1334,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_HasTitleBarImpl() throws -> Bool {
+        public func get_HasTitleBar() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasTitleBar(pThis, &value))
@@ -1154,7 +1342,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func get_IsAlwaysOnTopImpl() throws -> Bool {
+        public func get_IsAlwaysOnTop() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsAlwaysOnTop(pThis, &value))
@@ -1162,13 +1350,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsAlwaysOnTopImpl(_ value: Bool) throws {
+        public func put_IsAlwaysOnTop(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsAlwaysOnTop(pThis, .init(from: value)))
             }
         }
 
-        internal func get_IsMaximizableImpl() throws -> Bool {
+        public func get_IsMaximizable() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsMaximizable(pThis, &value))
@@ -1176,13 +1364,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsMaximizableImpl(_ value: Bool) throws {
+        public func put_IsMaximizable(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsMaximizable(pThis, .init(from: value)))
             }
         }
 
-        internal func get_IsMinimizableImpl() throws -> Bool {
+        public func get_IsMinimizable() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsMinimizable(pThis, &value))
@@ -1190,13 +1378,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsMinimizableImpl(_ value: Bool) throws {
+        public func put_IsMinimizable(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsMinimizable(pThis, .init(from: value)))
             }
         }
 
-        internal func get_IsModalImpl() throws -> Bool {
+        public func get_IsModal() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsModal(pThis, &value))
@@ -1204,13 +1392,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsModalImpl(_ value: Bool) throws {
+        public func put_IsModal(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsModal(pThis, .init(from: value)))
             }
         }
 
-        internal func get_IsResizableImpl() throws -> Bool {
+        public func get_IsResizable() throws -> Bool {
             var value: boolean = 0
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsResizable(pThis, &value))
@@ -1218,13 +1406,13 @@ public enum __ABI_Microsoft_UI_Windowing {
             return .init(from: value)
         }
 
-        internal func put_IsResizableImpl(_ value: Bool) throws {
+        public func put_IsResizable(_ value: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsResizable(pThis, .init(from: value)))
             }
         }
 
-        internal func get_StateImpl() throws -> WinAppSDK.OverlappedPresenterState {
+        public func get_State() throws -> WinAppSDK.OverlappedPresenterState {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_COverlappedPresenterState = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_State(pThis, &value))
@@ -1232,25 +1420,25 @@ public enum __ABI_Microsoft_UI_Windowing {
             return value
         }
 
-        internal func MaximizeImpl() throws {
+        public func Maximize() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Maximize(pThis))
             }
         }
 
-        internal func MinimizeImpl() throws {
+        public func Minimize() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Minimize(pThis))
             }
         }
 
-        internal func RestoreImpl() throws {
+        public func Restore() throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.Restore(pThis))
             }
         }
 
-        internal func SetBorderAndTitleBarImpl(_ hasBorder: Bool, _ hasTitleBar: Bool) throws {
+        public func SetBorderAndTitleBar(_ hasBorder: Bool, _ hasTitleBar: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetBorderAndTitleBar(pThis, .init(from: hasBorder), .init(from: hasTitleBar)))
             }
@@ -1261,13 +1449,13 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IOverlappedPresenter2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2 }
 
-        internal func MinimizeWithActivationImpl(_ activateWindow: Bool) throws {
+        public func MinimizeWithActivation(_ activateWindow: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.MinimizeWithActivation(pThis, .init(from: activateWindow)))
             }
         }
 
-        internal func RestoreWithActivationImpl(_ activateWindow: Bool) throws {
+        public func RestoreWithActivation(_ activateWindow: Bool) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.RestoreWithActivation(pThis, .init(from: activateWindow)))
             }
@@ -1278,7 +1466,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IOverlappedPresenter3: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3 }
 
-        internal func get_PreferredMinimumHeightImpl() throws -> Int32? {
+        public func get_PreferredMinimumHeight() throws -> Int32? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMinimumHeight(pThis, &valueAbi))
@@ -1287,7 +1475,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_PreferredMinimumHeightImpl(_ value: Int32?) throws {
+        public func put_PreferredMinimumHeight(_ value: Int32?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
@@ -1295,7 +1483,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_PreferredMinimumWidthImpl() throws -> Int32? {
+        public func get_PreferredMinimumWidth() throws -> Int32? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMinimumWidth(pThis, &valueAbi))
@@ -1304,7 +1492,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_PreferredMinimumWidthImpl(_ value: Int32?) throws {
+        public func put_PreferredMinimumWidth(_ value: Int32?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
@@ -1312,7 +1500,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_PreferredMaximumWidthImpl() throws -> Int32? {
+        public func get_PreferredMaximumWidth() throws -> Int32? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMaximumWidth(pThis, &valueAbi))
@@ -1321,7 +1509,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_PreferredMaximumWidthImpl(_ value: Int32?) throws {
+        public func put_PreferredMaximumWidth(_ value: Int32?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
@@ -1329,7 +1517,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             }
         }
 
-        internal func get_PreferredMaximumHeightImpl() throws -> Int32? {
+        public func get_PreferredMaximumHeight() throws -> Int32? {
             let (value) = try ComPtrs.initialize { valueAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreferredMaximumHeight(pThis, &valueAbi))
@@ -1338,7 +1526,7 @@ public enum __ABI_Microsoft_UI_Windowing {
             return WinAppSDK.__x_ABI_C__FIReference_1_intWrapper.unwrapFrom(abi: value)
         }
 
-        internal func put_PreferredMaximumHeightImpl(_ value: Int32?) throws {
+        public func put_PreferredMaximumHeight(_ value: Int32?) throws {
             let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_intWrapper(value)
             let _value = try! valueWrapper?.toABI { $0 }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3.self) { pThis in
@@ -1351,40 +1539,40 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IOverlappedPresenterStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics }
 
-        internal func CreateImpl() throws -> WinAppSDK.OverlappedPresenter? {
+        public func Create() throws -> WinAppSDK.OverlappedPresenter? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.OverlappedPresenterBridge.from(abi: result)
         }
 
-        internal func CreateForContextMenuImpl() throws -> WinAppSDK.OverlappedPresenter? {
+        public func CreateForContextMenu() throws -> WinAppSDK.OverlappedPresenter? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForContextMenu(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.OverlappedPresenterBridge.from(abi: result)
         }
 
-        internal func CreateForDialogImpl() throws -> WinAppSDK.OverlappedPresenter? {
+        public func CreateForDialog() throws -> WinAppSDK.OverlappedPresenter? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForDialog(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.OverlappedPresenterBridge.from(abi: result)
         }
 
-        internal func CreateForToolWindowImpl() throws -> WinAppSDK.OverlappedPresenter? {
+        public func CreateForToolWindow() throws -> WinAppSDK.OverlappedPresenter? {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForToolWindow(pThis, &resultAbi))
                 }
             }
-            return .from(abi: result)
+            return __IMPL_Microsoft_UI_Windowing.OverlappedPresenterBridge.from(abi: result)
         }
 
     }
@@ -1392,7 +1580,7 @@ public enum __ABI_Microsoft_UI_Windowing {
     public class IOverlappedPresenterStatics2: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics2 }
 
-        internal func get_RequestedStartupStateImpl() throws -> WinAppSDK.OverlappedPresenterState {
+        public func get_RequestedStartupState() throws -> WinAppSDK.OverlappedPresenterState {
             var value: __x_ABI_CMicrosoft_CUI_CWindowing_COverlappedPresenterState = .init(0)
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestedStartupState(pThis, &value))
