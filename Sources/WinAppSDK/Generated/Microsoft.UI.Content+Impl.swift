@@ -6,46 +6,6 @@ import CWinRT
 
 @_spi(WinRTInternal)
 public enum __IMPL_Microsoft_UI_Content {
-    public enum IContentIslandEndpointConnectionPrivateBridge : AbiInterfaceBridge {
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate
-        public typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivate
-        public typealias SwiftProjection = AnyIContentIslandEndpointConnectionPrivate
-        public static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
-            guard let abi = abi else { return nil }
-            return IContentIslandEndpointConnectionPrivateImpl(abi)
-        }
-
-        public static func makeAbi() -> CABI {
-            let vtblPtr = withUnsafeMutablePointer(to: &__ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateVTable) { $0 }
-            return .init(lpVtbl: vtblPtr)
-        }
-    }
-
-    fileprivate class IContentIslandEndpointConnectionPrivateImpl: IContentIslandEndpointConnectionPrivate, WinRTAbiImpl {
-        fileprivate typealias Bridge = IContentIslandEndpointConnectionPrivateBridge
-        fileprivate let _default: Bridge.SwiftABI
-        fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
-        fileprivate init(_ fromAbi: ComPtr<Bridge.CABI>) {
-            _default = Bridge.SwiftABI(fromAbi)
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.connectremoteendpoint)
-        fileprivate func connectRemoteEndpoint(_ siteConnectionInfo: String) throws {
-            try _default.ConnectRemoteEndpoint(siteConnectionInfo)
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.connectioninfo)
-        fileprivate var connectionInfo : String {
-            get { try! _default.get_ConnectionInfo() }
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.isremoteendpointconnected)
-        fileprivate var isRemoteEndpointConnected : Bool {
-            get { try! _default.get_IsRemoteEndpointConnected() }
-        }
-
-    }
-
     public enum IContentSiteAutomationBridge : AbiInterfaceBridge {
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomation
         public typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteAutomation
@@ -179,85 +139,6 @@ public enum __IMPL_Microsoft_UI_Content {
         fileprivate func close() throws {
             try _IClosable.Close()
         }
-
-    }
-
-    public enum IContentSiteBridgeEndpointConnectionPrivateBridge : AbiInterfaceBridge {
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate
-        public typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivate
-        public typealias SwiftProjection = AnyIContentSiteBridgeEndpointConnectionPrivate
-        public static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
-            guard let abi = abi else { return nil }
-            return IContentSiteBridgeEndpointConnectionPrivateImpl(abi)
-        }
-
-        public static func makeAbi() -> CABI {
-            let vtblPtr = withUnsafeMutablePointer(to: &__ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateVTable) { $0 }
-            return .init(lpVtbl: vtblPtr)
-        }
-    }
-
-    fileprivate class IContentSiteBridgeEndpointConnectionPrivateImpl: IContentSiteBridgeEndpointConnectionPrivate, WinRTAbiImpl {
-        fileprivate typealias Bridge = IContentSiteBridgeEndpointConnectionPrivateBridge
-        fileprivate let _default: Bridge.SwiftABI
-        fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
-        fileprivate init(_ fromAbi: ComPtr<Bridge.CABI>) {
-            _default = Bridge.SwiftABI(fromAbi)
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.acceptremoteendpoint)
-        fileprivate func acceptRemoteEndpoint(_ islandConnectionInfo: String) throws {
-            try _default.AcceptRemoteEndpoint(islandConnectionInfo)
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.connectioninfo)
-        fileprivate var connectionInfo : String {
-            get { try! _default.get_ConnectionInfo() }
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.isremoteendpointconnected)
-        fileprivate var isRemoteEndpointConnected : Bool {
-            get { try! _default.get_IsRemoteEndpointConnected() }
-        }
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointconnecting)
-        fileprivate lazy var remoteEndpointConnecting : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> = {
-          .init(
-            add: { [weak self] in
-              guard let this = self?._default else { return .init() }
-              return try! this.add_RemoteEndpointConnecting($0)
-            },
-            remove: { [weak self] in
-             try? self?._default.remove_RemoteEndpointConnecting($0)
-           }
-          )
-        }()
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointdisconnected)
-        fileprivate lazy var remoteEndpointDisconnected : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> = {
-          .init(
-            add: { [weak self] in
-              guard let this = self?._default else { return .init() }
-              return try! this.add_RemoteEndpointDisconnected($0)
-            },
-            remove: { [weak self] in
-             try? self?._default.remove_RemoteEndpointDisconnected($0)
-           }
-          )
-        }()
-
-        /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointrequestedstatechanged)
-        fileprivate lazy var remoteEndpointRequestedStateChanged : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointRequestedStateChangedEventArgs?>> = {
-          .init(
-            add: { [weak self] in
-              guard let this = self?._default else { return .init() }
-              return try! this.add_RemoteEndpointRequestedStateChanged($0)
-            },
-            remove: { [weak self] in
-             try? self?._default.remove_RemoteEndpointRequestedStateChanged($0)
-           }
-          )
-        }()
 
     }
 
@@ -535,41 +416,6 @@ public enum __IMPL_Microsoft_UI_Content {
         public typealias Composable = IDesktopSiteBridge
     }
 
-    public enum EndpointConnectionEventArgsBridge: AbiBridge {
-        public typealias SwiftProjection = EndpointConnectionEventArgs
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs>?) -> EndpointConnectionEventArgs? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
-    public enum EndpointRequestedStateChangedEventArgsBridge: AbiBridge {
-        public typealias SwiftProjection = EndpointRequestedStateChangedEventArgs
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs>?) -> EndpointRequestedStateChangedEventArgs? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
-    public enum PopupWindowSiteBridgeBridge: AbiBridge {
-        public typealias SwiftProjection = PopupWindowSiteBridge
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge>?) -> PopupWindowSiteBridge? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
-}
-@_spi(WinRTInternal)
-public class IContentIslandEndpointConnectionPrivateMaker: MakeFromAbi {
-    public typealias SwiftType = AnyIContentIslandEndpointConnectionPrivate
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        let swiftAbi: __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivate = try! abi.QueryInterface()
-        return __IMPL_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateBridge.from(abi: RawPointer(swiftAbi))!
-    }
 }
 @_spi(WinRTInternal)
 public class IContentSiteAutomationMaker: MakeFromAbi {
@@ -585,14 +431,6 @@ public class IContentSiteBridgeMaker: MakeFromAbi {
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteBridge = try! abi.QueryInterface()
         return __IMPL_Microsoft_UI_Content.IContentSiteBridgeBridge.from(abi: RawPointer(swiftAbi))!
-    }
-}
-@_spi(WinRTInternal)
-public class IContentSiteBridgeEndpointConnectionPrivateMaker: MakeFromAbi {
-    public typealias SwiftType = AnyIContentSiteBridgeEndpointConnectionPrivate
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        let swiftAbi: __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivate = try! abi.QueryInterface()
-        return __IMPL_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateBridge.from(abi: RawPointer(swiftAbi))!
     }
 }
 @_spi(WinRTInternal)
@@ -714,26 +552,5 @@ public class DesktopSiteBridgeMaker: MakeFromAbi {
     public typealias SwiftType = DesktopSiteBridge
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return DesktopSiteBridge(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class EndpointConnectionEventArgsMaker: MakeFromAbi {
-    public typealias SwiftType = EndpointConnectionEventArgs
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return EndpointConnectionEventArgs(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class EndpointRequestedStateChangedEventArgsMaker: MakeFromAbi {
-    public typealias SwiftType = EndpointRequestedStateChangedEventArgs
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return EndpointRequestedStateChangedEventArgs(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class PopupWindowSiteBridgeMaker: MakeFromAbi {
-    public typealias SwiftType = PopupWindowSiteBridge
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return PopupWindowSiteBridge(fromAbi: abi)
     }
 }

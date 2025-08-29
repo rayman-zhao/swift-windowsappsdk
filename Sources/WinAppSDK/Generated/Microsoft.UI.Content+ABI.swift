@@ -57,10 +57,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandAutomationProvide
     .init(Data1: 0x9FE24BED, Data2: 0x2B9C, Data3: 0x5137, Data4: ( 0x88,0x7F,0x40,0x3C,0x94,0x84,0x18,0x24 ))// 9FE24BED-2B9C-5137-887F-403C94841824
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate: WindowsFoundation.IID {
-    .init(Data1: 0x7C5D833B, Data2: 0x70B8, Data3: 0x5448, Data4: ( 0x84,0x72,0x94,0x06,0xE5,0x8E,0x0D,0xB4 ))// 7C5D833B-70B8-5448-8472-9406E58E0DB4
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment: WindowsFoundation.IID {
     .init(Data1: 0xC334236D, Data2: 0xDA88, Data3: 0x566D, Data4: ( 0x81,0x1D,0x74,0xAE,0xF2,0xEB,0xA9,0x78 ))// C334236D-DA88-566D-811D-74AEF2EBA978
 }
@@ -69,16 +65,8 @@ private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment2: Win
     .init(Data1: 0x6BF81A71, Data2: 0xC1E4, Data3: 0x54D6, Data4: ( 0xAC,0x0D,0x02,0xBC,0xFF,0x52,0x97,0xE7 ))// 6BF81A71-C1E4-54D6-AC0D-02BCFF5297E7
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental: WindowsFoundation.IID {
-    .init(Data1: 0x5A8339BC, Data2: 0xF7A1, Data3: 0x5718, Data4: ( 0x96,0xCF,0x00,0xFC,0x83,0x32,0xAC,0x47 ))// 5A8339BC-F7A1-5718-96CF-00FC8332AC47
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentFactory: WindowsFoundation.IID {
     .init(Data1: 0x47A782D6, Data2: 0xB177, Data3: 0x5C1E, Data4: ( 0xBF,0x87,0x90,0x43,0x7D,0xD8,0x09,0xD0 ))// 47A782D6-B177-5C1E-BF87-90437DD809D0
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental: WindowsFoundation.IID {
-    .init(Data1: 0x215B5537, Data2: 0x8085, Data3: 0x51F8, Data4: ( 0x88,0xDB,0x00,0xBA,0x45,0xF5,0xBC,0xEE ))// 215B5537-8085-51F8-88DB-00BA45F5BCEE
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandFactory: WindowsFoundation.IID {
@@ -111,10 +99,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationProviderR
 
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridge: WindowsFoundation.IID {
     .init(Data1: 0xFAAAB99E, Data2: 0xA42B, Data3: 0x549C, Data4: ( 0x92,0xDF,0x3B,0x6D,0x6E,0x1E,0x36,0x8B ))// FAAAB99E-A42B-549C-92DF-3B6D6E1E368B
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate: WindowsFoundation.IID {
-    .init(Data1: 0x84D1A059, Data2: 0x692B, Data3: 0x577D, Data4: ( 0xA7,0x91,0x6A,0xD4,0xFA,0xFB,0xEB,0x1F ))// 84D1A059-692B-577D-A791-6AD4FAFBEB1F
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView: WindowsFoundation.IID {
@@ -177,28 +161,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge: WindowsFoun
     .init(Data1: 0xF0AE8750, Data2: 0x905C, Data3: 0x50A2, Data4: ( 0x8A,0x12,0x45,0x45,0xC6,0x24,0x5B,0xB4 ))// F0AE8750-905C-50A2-8A12-4545C6245BB4
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge2: WindowsFoundation.IID {
-    .init(Data1: 0x1190C041, Data2: 0x82FB, Data3: 0x5F3B, Data4: ( 0x91,0x11,0xCA,0x8F,0x19,0xA7,0x2B,0x75 ))// 1190C041-82FB-5F3B-9111-CA8F19A72B75
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeFactory: WindowsFoundation.IID {
     .init(Data1: 0xD94EE1FF, Data2: 0x3AF1, Data3: 0x54D0, Data4: ( 0x93,0x11,0x65,0x2B,0x29,0xC5,0x7C,0x5B ))// D94EE1FF-3AF1-54D0-9311-652B29C57C5B
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeStatics: WindowsFoundation.IID {
     .init(Data1: 0xE0B38DAF, Data2: 0x9CD4, Data3: 0x50C5, Data4: ( 0x83,0xEE,0xC7,0x6E,0x3C,0xF3,0x4E,0xBA ))// E0B38DAF-9CD4-50C5-83EE-C76E3CF34EBA
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x94BF2A15, Data2: 0xEDF0, Data3: 0x5EB2, Data4: ( 0x9C,0xEC,0x9B,0x93,0xAC,0x53,0x14,0x13 ))// 94BF2A15-EDF0-5EB2-9CEC-9B93AC531413
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0x513F95C6, Data2: 0x4193, Data3: 0x5388, Data4: ( 0x90,0xF8,0x8C,0xF3,0x40,0x81,0x5B,0x1E ))// 513F95C6-4193-5388-90F8-8CF340815B1E
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge: WindowsFoundation.IID {
-    .init(Data1: 0x044597A2, Data2: 0xE6EE, Data3: 0x5DAB, Data4: ( 0xAB,0xE0,0x19,0x23,0xEB,0xE3,0x4C,0x2E ))// 044597A2-E6EE-5DAB-ABE0-1923EBE34C2E
 }
 
 @_spi(WinRTInternal)
@@ -785,87 +753,6 @@ public enum __ABI_Microsoft_UI_Content {
 
     }
 
-    public class IContentIslandEndpointConnectionPrivate: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate }
-
-        open func get_ConnectionInfo() throws -> String {
-            var value: HSTRING?
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ConnectionInfo(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        open func get_IsRemoteEndpointConnected() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsRemoteEndpointConnected(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        open func ConnectRemoteEndpoint(_ siteConnectionInfo: String) throws {
-            let _siteConnectionInfo = try! HString(siteConnectionInfo)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectRemoteEndpoint(pThis, _siteConnectionInfo.get()))
-            }
-        }
-
-    }
-
-    internal static var IContentIslandEndpointConnectionPrivateVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEndpointConnectionPrivateVtbl = .init(
-        QueryInterface: { IContentIslandEndpointConnectionPrivateWrapper.queryInterface($0, $1, $2) },
-        AddRef: { IContentIslandEndpointConnectionPrivateWrapper.addRef($0) },
-        Release: { IContentIslandEndpointConnectionPrivateWrapper.release($0) },
-        GetIids: {
-            let size = MemoryLayout<WindowsFoundation.IID>.size
-            let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
-            iids[0] = IUnknown.IID
-            iids[1] = IInspectable.IID
-            iids[2] = __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateWrapper.IID
-            $1!.pointee = 3
-            $2!.pointee = iids
-            return S_OK
-        },
-
-        GetRuntimeClassName: {
-            _ = $0
-            let hstring = try! HString("Microsoft.UI.Content.IContentIslandEndpointConnectionPrivate").detach()
-            $1!.pointee = hstring
-            return S_OK
-        },
-
-        GetTrustLevel: {
-            _ = $0
-            $1!.pointee = TrustLevel(rawValue: 0)
-            return S_OK
-        },
-
-        get_ConnectionInfo: {
-            guard let __unwrapped__instance = IContentIslandEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.connectionInfo
-            $1?.initialize(to: try! HString(value).detach())
-            return S_OK
-        },
-
-        get_IsRemoteEndpointConnected: {
-            guard let __unwrapped__instance = IContentIslandEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.isRemoteEndpointConnected
-            $1?.initialize(to: .init(from: value))
-            return S_OK
-        },
-
-        ConnectRemoteEndpoint: {
-            do {
-                guard let __unwrapped__instance = IContentIslandEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-                let siteConnectionInfo: String = .init(from: $1)
-                try __unwrapped__instance.connectRemoteEndpoint(siteConnectionInfo)
-                return S_OK
-            } catch { return failWith(error: error) }
-        }
-    )
-
-    public typealias IContentIslandEndpointConnectionPrivateWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateBridge>
     public class IContentIslandEnvironment: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment }
 
@@ -932,97 +819,8 @@ public enum __ABI_Microsoft_UI_Content {
 
     }
 
-    public class IContentIslandEnvironmentExperimental: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental }
-
-        public func get_CurrentOrientation() throws -> WinAppSDK.ContentDisplayOrientations {
-            var value: __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_CurrentOrientation(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_NativeOrientation() throws -> WinAppSDK.ContentDisplayOrientations {
-            var value: __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_NativeOrientation(pThis, &value))
-            }
-            return value
-        }
-
-        public func add_ThemeChanged(_ handler: TypedEventHandler<WinAppSDK.ContentIslandEnvironment?, Any?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment_IInspectableWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_ThemeChanged(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_ThemeChanged(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ThemeChanged(pThis, token))
-            }
-        }
-
-    }
-
     public class IContentIslandEnvironmentFactory: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentFactory }
-
-    }
-
-    public class IContentIslandExperimental: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental }
-
-        public func get_Root() throws -> WinAppSDK.Visual? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Root(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Composition.VisualBridge.from(abi: value)
-        }
-
-        public func put_Root(_ value: WinAppSDK.Visual?) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Root(pThis, RawPointer(value)))
-            }
-        }
-
-        public func add_Connected(_ handler: EventHandler<WinAppSDK.ContentIsland?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CUI__CContent__CContentIslandWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_Connected(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_Connected(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Connected(pThis, token))
-            }
-        }
-
-        public func add_Disconnected(_ handler: EventHandler<WinAppSDK.ContentIsland?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CUI__CContent__CContentIslandWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_Disconnected(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_Disconnected(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Disconnected(pThis, token))
-            }
-        }
 
     }
 
@@ -1534,180 +1332,6 @@ public enum __ABI_Microsoft_UI_Content {
     )
 
     public typealias IContentSiteBridgeWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Content.IContentSiteBridgeBridge>
-    public class IContentSiteBridgeEndpointConnectionPrivate: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate }
-
-        open func get_ConnectionInfo() throws -> String {
-            var value: HSTRING?
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ConnectionInfo(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        open func get_IsRemoteEndpointConnected() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsRemoteEndpointConnected(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        open func AcceptRemoteEndpoint(_ islandConnectionInfo: String) throws {
-            let _islandConnectionInfo = try! HString(islandConnectionInfo)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.AcceptRemoteEndpoint(pThis, _islandConnectionInfo.get()))
-            }
-        }
-
-        open func add_RemoteEndpointConnecting(_ handler: TypedEventHandler<WinAppSDK.AnyIContentSiteBridgeEndpointConnectionPrivate?, WinAppSDK.EndpointConnectionEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointConnectionEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemoteEndpointConnecting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        open func remove_RemoteEndpointConnecting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RemoteEndpointConnecting(pThis, token))
-            }
-        }
-
-        open func add_RemoteEndpointDisconnected(_ handler: TypedEventHandler<WinAppSDK.AnyIContentSiteBridgeEndpointConnectionPrivate?, WinAppSDK.EndpointConnectionEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointConnectionEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemoteEndpointDisconnected(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        open func remove_RemoteEndpointDisconnected(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RemoteEndpointDisconnected(pThis, token))
-            }
-        }
-
-        open func add_RemoteEndpointRequestedStateChanged(_ handler: TypedEventHandler<WinAppSDK.AnyIContentSiteBridgeEndpointConnectionPrivate?, WinAppSDK.EndpointRequestedStateChangedEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointRequestedStateChangedEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemoteEndpointRequestedStateChanged(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        open func remove_RemoteEndpointRequestedStateChanged(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivate.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RemoteEndpointRequestedStateChanged(pThis, token))
-            }
-        }
-
-    }
-
-    internal static var IContentSiteBridgeEndpointConnectionPrivateVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeEndpointConnectionPrivateVtbl = .init(
-        QueryInterface: { IContentSiteBridgeEndpointConnectionPrivateWrapper.queryInterface($0, $1, $2) },
-        AddRef: { IContentSiteBridgeEndpointConnectionPrivateWrapper.addRef($0) },
-        Release: { IContentSiteBridgeEndpointConnectionPrivateWrapper.release($0) },
-        GetIids: {
-            let size = MemoryLayout<WindowsFoundation.IID>.size
-            let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
-            iids[0] = IUnknown.IID
-            iids[1] = IInspectable.IID
-            iids[2] = __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateWrapper.IID
-            $1!.pointee = 3
-            $2!.pointee = iids
-            return S_OK
-        },
-
-        GetRuntimeClassName: {
-            _ = $0
-            let hstring = try! HString("Microsoft.UI.Content.IContentSiteBridgeEndpointConnectionPrivate").detach()
-            $1!.pointee = hstring
-            return S_OK
-        },
-
-        GetTrustLevel: {
-            _ = $0
-            $1!.pointee = TrustLevel(rawValue: 0)
-            return S_OK
-        },
-
-        get_ConnectionInfo: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.connectionInfo
-            $1?.initialize(to: try! HString(value).detach())
-            return S_OK
-        },
-
-        get_IsRemoteEndpointConnected: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let value = __unwrapped__instance.isRemoteEndpointConnected
-            $1?.initialize(to: .init(from: value))
-            return S_OK
-        },
-
-        AcceptRemoteEndpoint: {
-            do {
-                guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-                let islandConnectionInfo: String = .init(from: $1)
-                try __unwrapped__instance.acceptRemoteEndpoint(islandConnectionInfo)
-                return S_OK
-            } catch { return failWith(error: error) }
-        },
-
-        add_RemoteEndpointConnecting: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            guard let handler = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointConnectionEventArgsWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
-            let token = __unwrapped__instance.remoteEndpointConnecting.addHandler(handler)
-            $2?.initialize(to: .from(swift: token))
-            return S_OK
-        },
-
-        remove_RemoteEndpointConnecting: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let token: EventRegistrationToken = $1
-            __unwrapped__instance.remoteEndpointConnecting.removeHandler(token)
-            return S_OK
-        },
-
-        add_RemoteEndpointDisconnected: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            guard let handler = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointConnectionEventArgsWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
-            let token = __unwrapped__instance.remoteEndpointDisconnected.addHandler(handler)
-            $2?.initialize(to: .from(swift: token))
-            return S_OK
-        },
-
-        remove_RemoteEndpointDisconnected: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let token: EventRegistrationToken = $1
-            __unwrapped__instance.remoteEndpointDisconnected.removeHandler(token)
-            return S_OK
-        },
-
-        add_RemoteEndpointRequestedStateChanged: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            guard let handler = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteBridgeEndpointConnectionPrivate___x_ABI_CMicrosoft__CUI__CContent__CEndpointRequestedStateChangedEventArgsWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
-            let token = __unwrapped__instance.remoteEndpointRequestedStateChanged.addHandler(handler)
-            $2?.initialize(to: .from(swift: token))
-            return S_OK
-        },
-
-        remove_RemoteEndpointRequestedStateChanged: {
-            guard let __unwrapped__instance = IContentSiteBridgeEndpointConnectionPrivateWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
-            let token: EventRegistrationToken = $1
-            __unwrapped__instance.remoteEndpointRequestedStateChanged.removeHandler(token)
-            return S_OK
-        }
-    )
-
-    public typealias IContentSiteBridgeEndpointConnectionPrivateWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateBridge>
     public class IContentSiteEnvironmentView: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView }
 
@@ -2309,20 +1933,6 @@ public enum __ABI_Microsoft_UI_Content {
 
     }
 
-    public class IDesktopSiteBridge2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge2 }
-
-        public func TryCreatePopupSiteBridge() throws -> WinAppSDK.PopupWindowSiteBridge? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.TryCreatePopupSiteBridge(pThis, &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Content.PopupWindowSiteBridgeBridge.from(abi: result)
-        }
-
-    }
-
     public class IDesktopSiteBridgeFactory: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeFactory }
 
@@ -2337,51 +1947,6 @@ public enum __ABI_Microsoft_UI_Content {
                 try CHECKED(pThis.pointee.lpVtbl.pointee.IsSupported(pThis, &result))
             }
             return .init(from: result)
-        }
-
-    }
-
-    public class IEndpointConnectionEventArgs: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs }
-
-        public func get_ConnectionInfo() throws -> String {
-            var value: HSTRING?
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ConnectionInfo(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-    }
-
-    public class IEndpointRequestedStateChangedEventArgs: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs }
-
-        public func get_DidRequestedSizeChange() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DidRequestedSizeChange(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-    }
-
-    public class IPopupWindowSiteBridge: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge }
-
-        public func get_Anchored() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Anchored(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        public func put_Anchored(_ value: Bool) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Anchored(pThis, .init(from: value)))
-            }
         }
 
     }

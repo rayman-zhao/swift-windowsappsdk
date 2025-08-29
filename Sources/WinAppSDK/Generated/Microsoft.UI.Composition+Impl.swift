@@ -650,15 +650,6 @@ public enum __IMPL_Microsoft_UI_Composition {
         }
     }
 
-    public enum CompositionNotificationDeferralBridge: AbiBridge {
-        public typealias SwiftProjection = CompositionNotificationDeferral
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral>?) -> CompositionNotificationDeferral? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
     public enum CompositionObjectBridge: ComposableBridge {
         public typealias SwiftProjection = CompositionObject
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CICompositionObject
@@ -1698,13 +1689,6 @@ public class CompositionNineGridBrushMaker: MakeFromAbi {
     public typealias SwiftType = CompositionNineGridBrush
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return CompositionNineGridBrush(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class CompositionNotificationDeferralMaker: MakeFromAbi {
-    public typealias SwiftType = CompositionNotificationDeferral
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return CompositionNotificationDeferral(fromAbi: abi)
     }
 }
 @_spi(WinRTInternal)

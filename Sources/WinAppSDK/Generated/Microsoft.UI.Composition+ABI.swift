@@ -269,10 +269,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionNineGridBrush: 
     .init(Data1: 0xC77A3D21, Data2: 0xC7EE, Data3: 0x517A, Data4: ( 0x98,0xF4,0xAD,0x9A,0x72,0x02,0xBC,0x86 ))// C77A3D21-C7EE-517A-98F4-AD9A7202BC86
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral: WindowsFoundation.IID {
-    .init(Data1: 0x396698B7, Data2: 0x437B, Data3: 0x5ACF, Data4: ( 0xAE,0xC9,0x63,0x42,0xC4,0x37,0xFA,0xF1 ))// 396698B7-437B-5ACF-AEC9-6342C437FAF1
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionObject: WindowsFoundation.IID {
     .init(Data1: 0x0E583D49, Data2: 0xFB5E, Data3: 0x5481, Data4: ( 0xA4,0x26,0xD3,0xC4,0x1E,0x05,0x9A,0x5A ))// 0E583D49-FB5E-5481-A426-D3C41E059A5A
 }
@@ -503,18 +499,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIDropShadow2: WindowsFounda
 
 private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIElasticEasingFunction: WindowsFoundation.IID {
     .init(Data1: 0xB952E12F, Data2: 0x4A50, Data3: 0x51A9, Data4: ( 0xA1,0x1A,0x23,0x85,0x5F,0x4A,0xAE,0x07 ))// B952E12F-4A50-51A9-A11A-23855F4AAE07
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow: WindowsFoundation.IID {
-    .init(Data1: 0xDA7447BF, Data2: 0x78A8, Data3: 0x5023, Data4: ( 0xB1,0xD5,0x4E,0xB0,0x90,0xD3,0xCE,0x25 ))// DA7447BF-78A8-5023-B1D5-4EB090D3CE25
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster: WindowsFoundation.IID {
-    .init(Data1: 0x201F3A32, Data2: 0xB715, Data3: 0x5A3B, Data4: ( 0xAF,0x0C,0x57,0x0F,0x1D,0xAE,0x4F,0x1B ))// 201F3A32-B715-5A3B-AF0C-570F1DAE4F1B
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver: WindowsFoundation.IID {
-    .init(Data1: 0x85A2028B, Data2: 0x896B, Data3: 0x56A2, Data4: ( 0x89,0x6B,0x59,0x85,0xBA,0x7F,0xB0,0xCF ))// 85A2028B-896B-56A2-896B-5985BA7FB0CF
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CComposition_CIExponentialEasingFunction: WindowsFoundation.IID {
@@ -2646,17 +2630,6 @@ public enum __ABI_Microsoft_UI_Composition {
         public func SetInsetScalesWithValues(_ left: Float, _ top: Float, _ right: Float, _ bottom: Float) throws {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionNineGridBrush.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.SetInsetScalesWithValues(pThis, left, top, right, bottom))
-            }
-        }
-
-    }
-
-    public class ICompositionNotificationDeferral: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral }
-
-        public func Complete() throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.Complete(pThis))
             }
         }
 
@@ -5222,122 +5195,6 @@ public enum __ABI_Microsoft_UI_Composition {
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Springiness(pThis, &value))
             }
             return value
-        }
-
-    }
-
-    public class IExpCompositionProjectedShadow: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow }
-
-        public func get_MaxOpacity() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxOpacity(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_MaxOpacity(_ value: Float) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxOpacity(pThis, value))
-            }
-        }
-
-        public func get_MinOpacity() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinOpacity(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_MinOpacity(_ value: Float) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_MinOpacity(pThis, value))
-            }
-        }
-
-        public func get_OpacityFalloff() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_OpacityFalloff(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_OpacityFalloff(_ value: Float) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadow.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_OpacityFalloff(pThis, value))
-            }
-        }
-
-    }
-
-    public class IExpCompositionProjectedShadowCaster: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster }
-
-        public func get_AncestorClip() throws -> WinAppSDK.Visual? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_AncestorClip(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Composition.VisualBridge.from(abi: value)
-        }
-
-        public func put_AncestorClip(_ value: WinAppSDK.Visual?) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_AncestorClip(pThis, RawPointer(value)))
-            }
-        }
-
-        public func get_Mask() throws -> WinAppSDK.CompositionBrush? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Mask(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Composition.CompositionBrushBridge.from(abi: value)
-        }
-
-        public func put_Mask(_ value: WinAppSDK.CompositionBrush?) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowCaster.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Mask(pThis, RawPointer(value)))
-            }
-        }
-
-    }
-
-    public class IExpCompositionProjectedShadowReceiver: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver }
-
-        public func get_DrawOrder() throws -> WinAppSDK.CompositionProjectedShadowDrawOrder {
-            var value: __x_ABI_CMicrosoft_CUI_CComposition_CCompositionProjectedShadowDrawOrder = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DrawOrder(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_DrawOrder(_ value: WinAppSDK.CompositionProjectedShadowDrawOrder) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_DrawOrder(pThis, value))
-            }
-        }
-
-        public func get_Mask() throws -> WinAppSDK.CompositionBrush? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_Mask(pThis, &valueAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Composition.CompositionBrushBridge.from(abi: value)
-        }
-
-        public func put_Mask(_ value: WinAppSDK.CompositionBrush?) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CIExpCompositionProjectedShadowReceiver.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Mask(pThis, RawPointer(value)))
-            }
         }
 
     }

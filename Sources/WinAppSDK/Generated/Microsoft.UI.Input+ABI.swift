@@ -149,20 +149,12 @@ private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputKeyboardSourceStatics2: Win
     .init(Data1: 0x8857518C, Data2: 0x2899, Data3: 0x5F11, Data4: ( 0x9B,0x64,0x0A,0xD8,0x32,0x34,0x82,0x4B ))// 8857518C-2899-5F11-9B64-0AD83234824B
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputKeyboardSourceStatics3: WindowsFoundation.IID {
-    .init(Data1: 0x34B960C5, Data2: 0xA5AE, Data3: 0x52AF, Data4: ( 0x85,0x66,0x6D,0x2D,0x55,0xFF,0x52,0xD1 ))// 34B960C5-A5AE-52AF-8566-6D2D55FF52D1
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissAction: WindowsFoundation.IID {
     .init(Data1: 0xE8A39502, Data2: 0xA860, Data3: 0x502F, Data4: ( 0x8C,0x10,0x36,0x46,0xD4,0x3A,0xEC,0xF1 ))// E8A39502-A860-502F-8C10-3646D43AECF1
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissActionStatics: WindowsFoundation.IID {
     .init(Data1: 0xED9B8DEF, Data2: 0x6496, Data3: 0x5169, Data4: ( 0x98,0x4D,0xD4,0x4B,0x4E,0x69,0x06,0x23 ))// ED9B8DEF-6496-5169-984D-D44B4E690623
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissActionStatics2: WindowsFoundation.IID {
-    .init(Data1: 0xC499A8A8, Data2: 0x7182, Data3: 0x5179, Data4: ( 0xA2,0x8C,0xEA,0xB3,0xF3,0x69,0xB6,0xF9 ))// C499A8A8-7182-5179-A28C-EAB3F369B6F9
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissEventArgs: WindowsFoundation.IID {
@@ -193,16 +185,8 @@ private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource: WindowsFound
     .init(Data1: 0x6A6C2764, Data2: 0xC3F4, Data3: 0x5BE5, Data4: ( 0x84,0x47,0xC9,0xA9,0x87,0x66,0xC2,0x40 ))// 6A6C2764-C3F4-5BE5-8447-C9A98766C240
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2: WindowsFoundation.IID {
-    .init(Data1: 0x58757E6E, Data2: 0xDA80, Data3: 0x5AD2, Data4: ( 0xA0,0x88,0xB9,0x0E,0x8E,0x40,0x73,0x79 ))// 58757E6E-DA80-5AD2-A088-B90E8E407379
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics: WindowsFoundation.IID {
     .init(Data1: 0xE8A19FD1, Data2: 0xA914, Data3: 0x533F, Data4: ( 0x9B,0x0F,0x6B,0xF0,0x06,0x5E,0x67,0x81 ))// E8A19FD1-A914-533F-9B0F-6BF0065E6781
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics2: WindowsFoundation.IID {
-    .init(Data1: 0x76B37B4A, Data2: 0xDE02, Data3: 0x531A, Data4: ( 0xA9,0xD2,0x18,0x51,0x86,0x15,0x9D,0x31 ))// 76B37B4A-DE02-531A-A9D2-185186159D31
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPreTranslateKeyboardSource: WindowsFoundation.IID {
@@ -287,10 +271,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CInput_CIRightTappedEventArgs: WindowsFou
 
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CITappedEventArgs: WindowsFoundation.IID {
     .init(Data1: 0xC3A01BB5, Data2: 0x6076, Data3: 0x5E0F, Data4: ( 0x87,0x1A,0x9D,0x94,0xA6,0xA8,0xF8,0x2B ))// C3A01BB5-6076-5E0F-871A-9D94A6A8F82B
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs: WindowsFoundation.IID {
-    .init(Data1: 0xC2196F0C, Data2: 0x60ED, Data3: 0x5B5D, Data4: ( 0xB9,0x19,0xAA,0x73,0x57,0xE0,0xA2,0x5C ))// C2196F0C-60ED-5B5D-B919-AA7357E0A25C
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CInput_CIWindowRectChangedEventArgs: WindowsFoundation.IID {
@@ -1562,20 +1542,6 @@ public enum __ABI_Microsoft_UI_Input {
 
     }
 
-    public class IInputKeyboardSourceStatics3: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputKeyboardSourceStatics3 }
-
-        public func GetForWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.InputKeyboardSource? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputKeyboardSourceStatics3.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForWindowId(pThis, .from(swift: windowId), &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Input.InputKeyboardSourceBridge.from(abi: result)
-        }
-
-    }
-
     public class IInputLightDismissAction: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissAction }
 
@@ -1604,20 +1570,6 @@ public enum __ABI_Microsoft_UI_Input {
             let (result) = try ComPtrs.initialize { resultAbi in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissActionStatics.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.GetForWindowId(pThis, .from(swift: windowId), &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Input.InputLightDismissActionBridge.from(abi: result)
-        }
-
-    }
-
-    public class IInputLightDismissActionStatics2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissActionStatics2 }
-
-        public func GetForIsland(_ content: WinAppSDK.ContentIsland?) throws -> WinAppSDK.InputLightDismissAction? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputLightDismissActionStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForIsland(pThis, RawPointer(content), &resultAbi))
                 }
             }
             return __IMPL_Microsoft_UI_Input.InputLightDismissActionBridge.from(abi: result)
@@ -2092,65 +2044,6 @@ public enum __ABI_Microsoft_UI_Input {
 
     }
 
-    public class IInputPointerSource2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2 }
-
-        public func TrySetDeviceKinds(_ DeviceKinds: WinAppSDK.InputPointerSourceDeviceKinds) throws -> Bool {
-            var result: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.TrySetDeviceKinds(pThis, DeviceKinds, &result))
-            }
-            return .init(from: result)
-        }
-
-        public func get_ActivationBehavior() throws -> WinAppSDK.InputPointerActivationBehavior {
-            var value: __x_ABI_CMicrosoft_CUI_CInput_CInputPointerActivationBehavior = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActivationBehavior(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_ActivationBehavior(_ value: WinAppSDK.InputPointerActivationBehavior) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_ActivationBehavior(pThis, value))
-            }
-        }
-
-        public func add_DirectManipulationHitTest(_ handler: TypedEventHandler<WinAppSDK.InputPointerSource?, WinAppSDK.PointerEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_DirectManipulationHitTest(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_DirectManipulationHitTest(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DirectManipulationHitTest(pThis, token))
-            }
-        }
-
-        public func add_TouchHitTesting(_ handler: TypedEventHandler<WinAppSDK.InputPointerSource?, WinAppSDK.TouchHitTestingEventArgs?>?) throws -> EventRegistrationToken {
-            var token: EventRegistrationToken = .init()
-            let handlerWrapper = WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CTouchHitTestingEventArgsWrapper(handler)
-            let _handler = try! handlerWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.add_TouchHitTesting(pThis, _handler, &token))
-            }
-            return token
-        }
-
-        public func remove_TouchHitTesting(_ token: EventRegistrationToken) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSource2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TouchHitTesting(pThis, token))
-            }
-        }
-
-    }
-
     public class IInputPointerSourceStatics: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics }
 
@@ -2161,35 +2054,6 @@ public enum __ABI_Microsoft_UI_Input {
                 }
             }
             return __IMPL_Microsoft_UI_Input.InputPointerSourceBridge.from(abi: result)
-        }
-
-    }
-
-    public class IInputPointerSourceStatics2: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics2 }
-
-        public func GetForVisual(_ visual: WinAppSDK.Visual?) throws -> WinAppSDK.InputPointerSource? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForVisual(pThis, RawPointer(visual), &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Input.InputPointerSourceBridge.from(abi: result)
-        }
-
-        public func GetForWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.InputPointerSource? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics2.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForWindowId(pThis, .from(swift: windowId), &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Input.InputPointerSourceBridge.from(abi: result)
-        }
-
-        public func RemoveForVisual(_ visual: WinAppSDK.Visual?) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CIInputPointerSourceStatics2.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveForVisual(pThis, RawPointer(visual)))
-            }
         }
 
     }
@@ -3064,73 +2928,6 @@ public enum __ABI_Microsoft_UI_Input {
 
     }
 
-    public class ITouchHitTestingEventArgs: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs }
-
-        public func get_BoundingBox() throws -> WindowsFoundation.Rect {
-            var value: __x_ABI_CWindows_CFoundation_CRect = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_BoundingBox(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Handled() throws -> Bool {
-            var value: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Handled(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        public func put_Handled(_ value: Bool) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_Handled(pThis, .init(from: value)))
-            }
-        }
-
-        public func get_Point() throws -> WindowsFoundation.Point {
-            var value: __x_ABI_CWindows_CFoundation_CPoint = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Point(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func GetProximityEvaluation() throws -> WinAppSDK.ProximityEvaluation {
-            var result: __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.GetProximityEvaluation(pThis, &result))
-            }
-            return .from(abi: result)
-        }
-
-        public func SetProximityEvaluation(_ proximityEvaluation: WinAppSDK.ProximityEvaluation) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.SetProximityEvaluation(pThis, .from(swift: proximityEvaluation)))
-            }
-        }
-
-        public func EvaluateProximityToRect(_ controlBoundingBox: WindowsFoundation.Rect) throws -> WinAppSDK.ProximityEvaluation {
-            var result: __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.EvaluateProximityToRect(pThis, .from(swift: controlBoundingBox), &result))
-            }
-            return .from(abi: result)
-        }
-
-        public func EvaluateProximityToPolygon(_ controlVertices: [WindowsFoundation.Point]) throws -> WinAppSDK.ProximityEvaluation {
-            var result: __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation = .init()
-            try controlVertices.toABI { _controlVertices in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.EvaluateProximityToPolygon(pThis, _controlVertices.count, _controlVertices.start, &result))
-                }
-            }
-            return .from(abi: result)
-        }
-
-    }
-
     public class IWindowRectChangedEventArgs: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CInput_CIWindowRectChangedEventArgs }
 
@@ -3273,11 +3070,6 @@ extension __x_ABI_CMicrosoft_CUI_CInput_CCrossSlideThresholds {
     extension __x_ABI_CMicrosoft_CUI_CInput_CManipulationVelocities {
         public static func from(swift: WinAppSDK.ManipulationVelocities) -> __x_ABI_CMicrosoft_CUI_CInput_CManipulationVelocities {
             .init(Linear: .from(swift: swift.linear), Angular: swift.angular, Expansion: swift.expansion)
-        }
-    }
-    extension __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation {
-        public static func from(swift: WinAppSDK.ProximityEvaluation) -> __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation {
-            .init(Score: swift.score, AdjustedPoint: .from(swift: swift.adjustedPoint))
         }
     }
     

@@ -33,18 +33,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs: W
     .init(Data1: 0x0E09D90B, Data2: 0x2261, Data3: 0x590B, Data4: ( 0x9A,0xD1,0x85,0x04,0x99,0x1D,0x87,0x54 ))// 0E09D90B-2261-590B-9AD1-8504991D8754
 }
 
-private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental: WindowsFoundation.IID {
-    .init(Data1: 0x04DB96C7, Data2: 0xDEB6, Data3: 0x5BE4, Data4: ( 0xBF,0xDC,0x1B,0xC0,0x36,0x1C,0x8A,0x12 ))// 04DB96C7-DEB6-5BE4-BFDC-1BC0361C8A12
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails: WindowsFoundation.IID {
-    .init(Data1: 0x639EC5B2, Data2: 0xAC0C, Data3: 0x5BBF, Data4: ( 0x84,0x22,0x98,0xDC,0xA5,0x40,0xD2,0x19 ))// 639EC5B2-AC0C-5BBF-8422-98DCA540D219
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics: WindowsFoundation.IID {
-    .init(Data1: 0xF19F1745, Data2: 0x52AD, Data3: 0x5CF7, Data4: ( 0x97,0xEA,0x76,0xC5,0xFD,0x6F,0xF3,0xC1 ))// F19F1745-52AD-5CF7-97EA-76C5FD6FF3C1
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter: WindowsFoundation.IID {
     .init(Data1: 0xBC3042C2, Data2: 0xC6C6, Data3: 0x5632, Data4: ( 0x89,0x89,0xFF,0x0E,0xC6,0xD3,0xB4,0x0D ))// BC3042C2-C6C6-5632-8989-FF0EC6D3B40D
 }
@@ -59,10 +47,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics: WindowsFou
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics2: WindowsFoundation.IID {
     .init(Data1: 0xCABC23DB, Data2: 0x4606, Data3: 0x5D6E, Data4: ( 0x89,0xA5,0x06,0xDE,0x1D,0x8B,0xD3,0xE2 ))// CABC23DB-4606-5D6E-89A5-06DE1D8BD3E2
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3: WindowsFoundation.IID {
-    .init(Data1: 0x0BCC835A, Data2: 0x1286, Data3: 0x5113, Data4: ( 0x9F,0x59,0xF1,0x09,0x3D,0x2E,0x08,0x7A ))// 0BCC835A-1286-5113-9F59-F1093D2E087A
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar: WindowsFoundation.IID {
@@ -91,10 +75,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics: WindowsF
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics2: WindowsFoundation.IID {
     .init(Data1: 0x7207AD4B, Data2: 0x890D, Data3: 0x5DD7, Data4: ( 0xBC,0x18,0x78,0xFF,0xD9,0x54,0x4D,0x8F ))// 7207AD4B-890D-5DD7-BC18-78FFD9544D8F
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3: WindowsFoundation.IID {
-    .init(Data1: 0x745D3602, Data2: 0x268B, Data3: 0x5060, Data4: ( 0x84,0x37,0xFC,0xC0,0x25,0xE2,0x55,0xD6 ))// 745D3602-268B-5060-8437-FCC025E255D6
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher: WindowsFoundation.IID {
@@ -531,141 +511,6 @@ public enum __ABI_Microsoft_UI_Windowing {
 
     }
 
-    public class IAppWindowExperimental: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental }
-
-        public func get_PersistedStateId() throws -> Foundation.UUID? {
-            let (value) = try ComPtrs.initialize { valueAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.get_PersistedStateId(pThis, &valueAbi))
-                }
-            }
-            return WinAppSDK.__x_ABI_C__FIReference_1_GUIDWrapper.unwrapFrom(abi: value)
-        }
-
-        public func put_PersistedStateId(_ value: Foundation.UUID?) throws {
-            let valueWrapper = WinAppSDK.__x_ABI_C__FIReference_1_GUIDWrapper(value)
-            let _value = try! valueWrapper?.toABI { $0 }
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PersistedStateId(pThis, _value))
-            }
-        }
-
-        public func get_PlacementRestorationBehavior() throws -> WinAppSDK.PlacementRestorationBehavior {
-            var value: __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlacementRestorationBehavior(pThis, &value))
-            }
-            return value
-        }
-
-        public func put_PlacementRestorationBehavior(_ value: WinAppSDK.PlacementRestorationBehavior) throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlacementRestorationBehavior(pThis, value))
-            }
-        }
-
-        public func GetCurrentPlacement() throws -> WinAppSDK.AppWindowPlacementDetails? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetCurrentPlacement(pThis, &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Windowing.AppWindowPlacementDetailsBridge.from(abi: result)
-        }
-
-        public func SaveCurrentPlacement() throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.SaveCurrentPlacement(pThis))
-            }
-        }
-
-        public func SetCurrentPlacement(_ placementDetails: WinAppSDK.AppWindowPlacementDetails?, _ isFirstWindow: Bool) throws -> Bool {
-            var result: boolean = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowExperimental.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.SetCurrentPlacement(pThis, RawPointer(placementDetails), .init(from: isFirstWindow), &result))
-            }
-            return .init(from: result)
-        }
-
-    }
-
-    public class IAppWindowPlacementDetails: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails }
-
-        public func get_NormalRect() throws -> UWP.RectInt32 {
-            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_NormalRect(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_WorkArea() throws -> UWP.RectInt32 {
-            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_WorkArea(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Dpi() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Dpi(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_ShowCmd() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShowCmd(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_ArrangeRect() throws -> UWP.RectInt32 {
-            var value: __x_ABI_CWindows_CGraphics_CRectInt32 = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ArrangeRect(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_DeviceName() throws -> String {
-            var value: HSTRING?
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeviceName(pThis, &value))
-            }
-            return .init(from: value)
-        }
-
-        public func get_Flags() throws -> WinAppSDK.PlacementInfo {
-            var value: __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Flags(pThis, &value))
-            }
-            return value
-        }
-
-    }
-
-    public class IAppWindowPlacementDetailsStatics: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics }
-
-        public func Create(_ normalRect: UWP.RectInt32, _ workArea: UWP.RectInt32, _ dpi: Int32, _ showCmd: Int32, _ arrangeRect: UWP.RectInt32, _ flags: WinAppSDK.PlacementInfo, _ deviceName: String) throws -> WinAppSDK.AppWindowPlacementDetails? {
-            let (result) = try ComPtrs.initialize { resultAbi in
-                let _deviceName = try! HString(deviceName)
-                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetailsStatics.self) { pThis in
-                    try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, .from(swift: normalRect), .from(swift: workArea), dpi, showCmd, .from(swift: arrangeRect), flags, _deviceName.get(), &resultAbi))
-                }
-            }
-            return __IMPL_Microsoft_UI_Windowing.AppWindowPlacementDetailsBridge.from(abi: result)
-        }
-
-    }
-
     public class IAppWindowPresenter: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter }
 
@@ -735,17 +580,6 @@ public enum __ABI_Microsoft_UI_Windowing {
                 }
             }
             return __IMPL_Microsoft_UI_Windowing.AppWindowBridge.from(abi: result)
-        }
-
-    }
-
-    public class IAppWindowStatics3: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3 }
-
-        public func SaveCurrentPlacementForAllPersistedStateIds() throws {
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics3.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.SaveCurrentPlacementForAllPersistedStateIds(pThis))
-            }
         }
 
     }
@@ -1182,19 +1016,6 @@ public enum __ABI_Microsoft_UI_Windowing {
                 }
             }
             return __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.from(abi: result)
-        }
-
-    }
-
-    public class IDisplayAreaStatics3: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3 }
-
-        public func GetMetricsFromWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.DisplayId {
-            var result: __x_ABI_CMicrosoft_CUI_CDisplayId = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics3.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMetricsFromWindowId(pThis, .from(swift: windowId), &result))
-            }
-            return .from(abi: result)
         }
 
     }

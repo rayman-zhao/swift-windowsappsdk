@@ -33,15 +33,6 @@ public enum __IMPL_Microsoft_UI_Windowing {
         }
     }
 
-    public enum AppWindowPlacementDetailsBridge: AbiBridge {
-        public typealias SwiftProjection = AppWindowPlacementDetails
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails>?) -> AppWindowPlacementDetails? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
     public enum AppWindowPresenterBridge: ComposableBridge {
         public typealias SwiftProjection = AppWindowPresenter
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter
@@ -128,13 +119,6 @@ public class AppWindowClosingEventArgsMaker: MakeFromAbi {
     public typealias SwiftType = AppWindowClosingEventArgs
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return AppWindowClosingEventArgs(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class AppWindowPlacementDetailsMaker: MakeFromAbi {
-    public typealias SwiftType = AppWindowPlacementDetails
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return AppWindowPlacementDetails(fromAbi: abi)
     }
 }
 @_spi(WinRTInternal)

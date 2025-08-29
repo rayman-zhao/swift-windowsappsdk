@@ -9,8 +9,6 @@ import CWinRT
 public typealias ContentAutomationOptions = __x_ABI_CMicrosoft_CUI_CContent_CContentAutomationOptions
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateroundingmode)
 public typealias ContentCoordinateRoundingMode = __x_ABI_CMicrosoft_CUI_CContent_CContentCoordinateRoundingMode
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentdisplayorientations)
-public typealias ContentDisplayOrientations = __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentlayoutdirection)
 public typealias ContentLayoutDirection = __x_ABI_CMicrosoft_CUI_CContent_CContentLayoutDirection
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsizepolicy)
@@ -379,7 +377,7 @@ public final class ContentEnvironmentStateChangedEventArgs : WinRTClass {
 }
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland)
-open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, WinAppSDK.ICompositionSupportsSystemBackdrop, IContentIslandEndpointConnectionPrivate {
+open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, WinAppSDK.ICompositionSupportsSystemBackdrop {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIsland
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIsland
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -628,39 +626,6 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
         get { try! _IContentIslandAutomation.get_PreviousSiblingAutomationProvider() }
     }
 
-    private lazy var _IContentIslandExperimental: __ABI_Microsoft_UI_Content.IContentIslandExperimental! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.root)
-    public var root : WinAppSDK.Visual! {
-        get { try! _IContentIslandExperimental.get_Root() }
-        set { try! _IContentIslandExperimental.put_Root(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.connected)
-    public lazy var connected : Event<EventHandler<ContentIsland?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentIslandExperimental else { return .init() }
-          return try! this.add_Connected($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentIslandExperimental.remove_Connected($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.disconnected)
-    public lazy var disconnected : Event<EventHandler<ContentIsland?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentIslandExperimental else { return .init() }
-          return try! this.add_Disconnected($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentIslandExperimental.remove_Disconnected($0)
-       }
-      )
-    }()
-
     private lazy var _IClosable: __ABI_Windows_Foundation.IClosable! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.close)
     public func close() throws {
@@ -706,31 +671,13 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
         set { try! _ICompositionSupportsSystemBackdrop.put_SystemBackdrop(newValue) }
     }
 
-    private lazy var _IContentIslandEndpointConnectionPrivate: __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivate! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.connectremoteendpoint)
-    public func connectRemoteEndpoint(_ siteConnectionInfo: String) throws {
-        try _IContentIslandEndpointConnectionPrivate.ConnectRemoteEndpoint(siteConnectionInfo)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.connectioninfo)
-    public var connectionInfo : String {
-        get { try! _IContentIslandEndpointConnectionPrivate.get_ConnectionInfo() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.isremoteendpointconnected)
-    public var isRemoteEndpointConnected : Bool {
-        get { try! _IContentIslandEndpointConnectionPrivate.get_IsRemoteEndpointConnected() }
-    }
-
     deinit {
         _default = nil
         _IContentIsland2 = nil
         _IContentIslandAutomation = nil
-        _IContentIslandExperimental = nil
         _IClosable = nil
         _IClosableNotifier = nil
         _ICompositionSupportsSystemBackdrop = nil
-        _IContentIslandEndpointConnectionPrivate = nil
     }
 }
 
@@ -842,34 +789,9 @@ open class ContentIslandEnvironment : WinRTClass {
         get { try! _IContentIslandEnvironment2.get_DisplayScale() }
     }
 
-    private lazy var _IContentIslandEnvironmentExperimental: __ABI_Microsoft_UI_Content.IContentIslandEnvironmentExperimental! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment.currentorientation)
-    public var currentOrientation : ContentDisplayOrientations {
-        get { try! _IContentIslandEnvironmentExperimental.get_CurrentOrientation() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment.nativeorientation)
-    public var nativeOrientation : ContentDisplayOrientations {
-        get { try! _IContentIslandEnvironmentExperimental.get_NativeOrientation() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment.themechanged)
-    public lazy var themeChanged : Event<TypedEventHandler<ContentIslandEnvironment?, Any?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentIslandEnvironmentExperimental else { return .init() }
-          return try! this.add_ThemeChanged($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentIslandEnvironmentExperimental.remove_ThemeChanged($0)
-       }
-      )
-    }()
-
     deinit {
         _default = nil
         _IContentIslandEnvironment2 = nil
-        _IContentIslandEnvironmentExperimental = nil
     }
 }
 
@@ -1157,7 +1079,7 @@ open class ContentSiteView : WinRTClass {
 }
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge)
-public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge, IContentSiteBridgeEndpointConnectionPrivate {
+public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopChildSiteBridge
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1174,9 +1096,6 @@ public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge, IConten
         super.init(fromAbi: fromAbi)
     }
 
-    override public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
-        return super.queryInterface(iid)
-    }
     private static let _IDesktopChildSiteBridgeStatics: __ABI_Microsoft_UI_Content.IDesktopChildSiteBridgeStatics = try! RoGetActivationFactory("Microsoft.UI.Content.DesktopChildSiteBridge")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.create)
     public static func create(_ compositor: WinAppSDK.Compositor!, _ parentWindowId: WinAppSDK.WindowId) throws -> DesktopChildSiteBridge! {
@@ -1200,64 +1119,8 @@ public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge, IConten
         get { try! _default.get_SiteView() }
     }
 
-    private lazy var _IContentSiteBridgeEndpointConnectionPrivate: __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivate! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.acceptremoteendpoint)
-    public func acceptRemoteEndpoint(_ islandConnectionInfo: String) throws {
-        try _IContentSiteBridgeEndpointConnectionPrivate.AcceptRemoteEndpoint(islandConnectionInfo)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.connectioninfo)
-    public var connectionInfo : String {
-        get { try! _IContentSiteBridgeEndpointConnectionPrivate.get_ConnectionInfo() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.isremoteendpointconnected)
-    public var isRemoteEndpointConnected : Bool {
-        get { try! _IContentSiteBridgeEndpointConnectionPrivate.get_IsRemoteEndpointConnected() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.remoteendpointconnecting)
-    public lazy var remoteEndpointConnecting : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentSiteBridgeEndpointConnectionPrivate else { return .init() }
-          return try! this.add_RemoteEndpointConnecting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentSiteBridgeEndpointConnectionPrivate.remove_RemoteEndpointConnecting($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.remoteendpointdisconnected)
-    public lazy var remoteEndpointDisconnected : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentSiteBridgeEndpointConnectionPrivate else { return .init() }
-          return try! this.add_RemoteEndpointDisconnected($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentSiteBridgeEndpointConnectionPrivate.remove_RemoteEndpointDisconnected($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge.remoteendpointrequestedstatechanged)
-    public lazy var remoteEndpointRequestedStateChanged : Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointRequestedStateChangedEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IContentSiteBridgeEndpointConnectionPrivate else { return .init() }
-          return try! this.add_RemoteEndpointRequestedStateChanged($0)
-        },
-        remove: { [weak self] in
-         try? self?._IContentSiteBridgeEndpointConnectionPrivate.remove_RemoteEndpointRequestedStateChanged($0)
-       }
-      )
-    }()
-
     deinit {
         _default = nil
-        _IContentSiteBridgeEndpointConnectionPrivate = nil
     }
 }
 
@@ -1586,12 +1449,6 @@ open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsF
         get { try! _default.get_WindowId() }
     }
 
-    private lazy var _IDesktopSiteBridge2: __ABI_Microsoft_UI_Content.IDesktopSiteBridge2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.trycreatepopupsitebridge)
-    public func tryCreatePopupSiteBridge() throws -> PopupWindowSiteBridge! {
-        try _IDesktopSiteBridge2.TryCreatePopupSiteBridge()
-    }
-
     private lazy var _IClosableNotifier: __ABI_Microsoft_UI.IClosableNotifier! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.isclosed)
     public var isClosed : Bool {
@@ -1650,119 +1507,11 @@ open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsF
 
     deinit {
         _default = nil
-        _IDesktopSiteBridge2 = nil
         _IClosableNotifier = nil
         _IClosable = nil
         _IContentSiteBridge = nil
     }
 }
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.endpointconnectioneventargs)
-public final class EndpointConnectionEventArgs : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IEndpointConnectionEventArgs
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIEndpointConnectionEventArgs
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.endpointconnectioneventargs.connectioninfo)
-    public var connectionInfo : String {
-        get { try! _default.get_ConnectionInfo() }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.endpointrequestedstatechangedeventargs)
-public final class EndpointRequestedStateChangedEventArgs : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IEndpointRequestedStateChangedEventArgs
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIEndpointRequestedStateChangedEventArgs
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.endpointrequestedstatechangedeventargs.didrequestedsizechange)
-    public var didRequestedSizeChange : Bool {
-        get { try! _default.get_DidRequestedSizeChange() }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.popupwindowsitebridge)
-public final class PopupWindowSiteBridge : WinAppSDK.DesktopSiteBridge {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Content.IPopupWindowSiteBridge
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIPopupWindowSiteBridge
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    override public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi: fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.popupwindowsitebridge.anchored)
-    public var anchored : Bool {
-        get { try! _default.get_Anchored() }
-        set { try! _default.put_Anchored(newValue) }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate)
-public protocol IContentIslandEndpointConnectionPrivate : WinRTInterface {
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.connectremoteendpoint)
-    func connectRemoteEndpoint(_ siteConnectionInfo: String) throws
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.connectioninfo)
-    var connectionInfo: String { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentislandendpointconnectionprivate.isremoteendpointconnected)
-    var isRemoteEndpointConnected: Bool { get }
-}
-
-extension IContentIslandEndpointConnectionPrivate {
-    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
-        switch iid {
-            case __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateWrapper.IID:
-                let wrapper = __ABI_Microsoft_UI_Content.IContentIslandEndpointConnectionPrivateWrapper(self)
-                return wrapper!.queryInterface(iid)
-            default: return nil
-        }
-    }
-}
-public typealias AnyIContentIslandEndpointConnectionPrivate = any IContentIslandEndpointConnectionPrivate
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteautomation)
 public protocol IContentSiteAutomation : WinRTInterface {
@@ -1816,34 +1565,6 @@ extension IContentSiteBridge {
     }
 }
 public typealias AnyIContentSiteBridge = any IContentSiteBridge
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate)
-public protocol IContentSiteBridgeEndpointConnectionPrivate : WinRTInterface {
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.acceptremoteendpoint)
-    func acceptRemoteEndpoint(_ islandConnectionInfo: String) throws
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.connectioninfo)
-    var connectionInfo: String { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.isremoteendpointconnected)
-    var isRemoteEndpointConnected: Bool { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointconnecting)
-    var remoteEndpointConnecting: Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointdisconnected)
-    var remoteEndpointDisconnected: Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointConnectionEventArgs?>> { get }
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsitebridgeendpointconnectionprivate.remoteendpointrequestedstatechanged)
-    var remoteEndpointRequestedStateChanged: Event<TypedEventHandler<IContentSiteBridgeEndpointConnectionPrivate?, EndpointRequestedStateChangedEventArgs?>> { get }
-}
-
-extension IContentSiteBridgeEndpointConnectionPrivate {
-    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
-        switch iid {
-            case __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateWrapper.IID:
-                let wrapper = __ABI_Microsoft_UI_Content.IContentSiteBridgeEndpointConnectionPrivateWrapper(self)
-                return wrapper!.queryInterface(iid)
-            default: return nil
-        }
-    }
-}
-public typealias AnyIContentSiteBridgeEndpointConnectionPrivate = any IContentSiteBridgeEndpointConnectionPrivate
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.icontentsiteinput)
 public protocol IContentSiteInput : WinRTInterface {
@@ -1911,25 +1632,6 @@ extension WinAppSDK.ContentCoordinateRoundingMode {
     }
 }
 extension WinAppSDK.ContentCoordinateRoundingMode: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.ContentDisplayOrientations {
-    public static var none : WinAppSDK.ContentDisplayOrientations {
-        __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations_None
-    }
-    public static var landscape : WinAppSDK.ContentDisplayOrientations {
-        __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations_Landscape
-    }
-    public static var portrait : WinAppSDK.ContentDisplayOrientations {
-        __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations_Portrait
-    }
-    public static var landscapeFlipped : WinAppSDK.ContentDisplayOrientations {
-        __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations_LandscapeFlipped
-    }
-    public static var portraitFlipped : WinAppSDK.ContentDisplayOrientations {
-        __x_ABI_CMicrosoft_CUI_CContent_CContentDisplayOrientations_PortraitFlipped
-    }
-}
-extension WinAppSDK.ContentDisplayOrientations: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinAppSDK.ContentLayoutDirection {
     public static var leftToRight : WinAppSDK.ContentLayoutDirection {

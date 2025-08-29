@@ -15,10 +15,6 @@ public typealias DisplayAreaWatcherStatus = __x_ABI_CMicrosoft_CUI_CWindowing_CD
 public typealias IconShowOptions = __x_ABI_CMicrosoft_CUI_CWindowing_CIconShowOptions
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenterstate)
 public typealias OverlappedPresenterState = __x_ABI_CMicrosoft_CUI_CWindowing_COverlappedPresenterState
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.placementinfo)
-public typealias PlacementInfo = __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.placementrestorationbehavior)
-public typealias PlacementRestorationBehavior = __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.titlebarheightoption)
 public typealias TitleBarHeightOption = __x_ABI_CMicrosoft_CUI_CWindowing_CTitleBarHeightOption
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.titlebartheme)
@@ -66,12 +62,6 @@ public final class AppWindow : WinRTClass {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.create)
     public static func create(_ appWindowPresenter: AppWindowPresenter!, _ ownerWindowId: WinAppSDK.WindowId, _ DispatcherQueue: WinAppSDK.DispatcherQueue!) throws -> AppWindow! {
         return try _IAppWindowStatics2.CreateWithDispatcherQueue(appWindowPresenter, ownerWindowId, DispatcherQueue)
-    }
-
-    private static let _IAppWindowStatics3: __ABI_Microsoft_UI_Windowing.IAppWindowStatics3 = try! RoGetActivationFactory("Microsoft.UI.Windowing.AppWindow")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.savecurrentplacementforallpersistedstateids)
-    public static func saveCurrentPlacementForAllPersistedStateIds() throws {
-        try _IAppWindowStatics3.SaveCurrentPlacementForAllPersistedStateIds()
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.destroy)
@@ -283,40 +273,11 @@ public final class AppWindow : WinRTClass {
         try _IAppWindow4.SetTitleBarIconWithIconId(iconId)
     }
 
-    private lazy var _IAppWindowExperimental: __ABI_Microsoft_UI_Windowing.IAppWindowExperimental! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.getcurrentplacement)
-    public func getCurrentPlacement() throws -> AppWindowPlacementDetails! {
-        try _IAppWindowExperimental.GetCurrentPlacement()
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.savecurrentplacement)
-    public func saveCurrentPlacement() throws {
-        try _IAppWindowExperimental.SaveCurrentPlacement()
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.setcurrentplacement)
-    public func setCurrentPlacement(_ placementDetails: AppWindowPlacementDetails!, _ isFirstWindow: Bool) throws -> Bool {
-        try _IAppWindowExperimental.SetCurrentPlacement(placementDetails, isFirstWindow)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.persistedstateid)
-    public var persistedStateId : Foundation.UUID? {
-        get { try! _IAppWindowExperimental.get_PersistedStateId() }
-        set { try! _IAppWindowExperimental.put_PersistedStateId(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow.placementrestorationbehavior)
-    public var placementRestorationBehavior : PlacementRestorationBehavior {
-        get { try! _IAppWindowExperimental.get_PlacementRestorationBehavior() }
-        set { try! _IAppWindowExperimental.put_PlacementRestorationBehavior(newValue) }
-    }
-
     deinit {
         _default = nil
         _IAppWindow2 = nil
         _IAppWindow3 = nil
         _IAppWindow4 = nil
-        _IAppWindowExperimental = nil
     }
 }
 
@@ -407,70 +368,6 @@ public final class AppWindowClosingEventArgs : WinRTClass {
     public var cancel : Bool {
         get { try! _default.get_Cancel() }
         set { try! _default.put_Cancel(newValue) }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails)
-public final class AppWindowPlacementDetails : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindowPlacementDetails
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPlacementDetails
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    private static let _IAppWindowPlacementDetailsStatics: __ABI_Microsoft_UI_Windowing.IAppWindowPlacementDetailsStatics = try! RoGetActivationFactory("Microsoft.UI.Windowing.AppWindowPlacementDetails")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.create)
-    public static func create(_ normalRect: UWP.RectInt32, _ workArea: UWP.RectInt32, _ dpi: Int32, _ showCmd: Int32, _ arrangeRect: UWP.RectInt32, _ flags: PlacementInfo, _ deviceName: String) throws -> AppWindowPlacementDetails! {
-        return try _IAppWindowPlacementDetailsStatics.Create(normalRect, workArea, dpi, showCmd, arrangeRect, flags, deviceName)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.arrangerect)
-    public var arrangeRect : UWP.RectInt32 {
-        get { try! _default.get_ArrangeRect() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.devicename)
-    public var deviceName : String {
-        get { try! _default.get_DeviceName() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.dpi)
-    public var dpi : Int32 {
-        get { try! _default.get_Dpi() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.flags)
-    public var flags : PlacementInfo {
-        get { try! _default.get_Flags() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.normalrect)
-    public var normalRect : UWP.RectInt32 {
-        get { try! _default.get_NormalRect() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.showcmd)
-    public var showCmd : Int32 {
-        get { try! _default.get_ShowCmd() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowplacementdetails.workarea)
-    public var workArea : UWP.RectInt32 {
-        get { try! _default.get_WorkArea() }
     }
 
     deinit {
@@ -726,12 +623,6 @@ public final class DisplayArea : WinRTClass {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.displayarea.getfromdisplayid)
     public static func getFromDisplayId(_ displayId: WinAppSDK.DisplayId) throws -> DisplayArea! {
         return try _IDisplayAreaStatics2.GetFromDisplayId(displayId)
-    }
-
-    private static let _IDisplayAreaStatics3: __ABI_Microsoft_UI_Windowing.IDisplayAreaStatics3 = try! RoGetActivationFactory("Microsoft.UI.Windowing.DisplayArea")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.displayarea.getmetricsfromwindowid)
-    public static func getMetricsFromWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.DisplayId {
-        return try _IDisplayAreaStatics3.GetMetricsFromWindowId(windowId)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.displayarea.displayid)
@@ -1117,50 +1008,6 @@ extension WinAppSDK.OverlappedPresenterState {
     }
 }
 extension WinAppSDK.OverlappedPresenterState: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.PlacementInfo {
-    public static var none : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_None
-    }
-    public static var restoreToMaximized : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_RestoreToMaximized
-    }
-    public static var restoreToArranged : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_RestoreToArranged
-    }
-    public static var arranged : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_Arranged
-    }
-    public static var resizable : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_Resizable
-    }
-    public static var fullScreen : WinAppSDK.PlacementInfo {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementInfo_FullScreen
-    }
-}
-extension WinAppSDK.PlacementInfo: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.PlacementRestorationBehavior {
-    public static var none : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_None
-    }
-    public static var allowShowMaximized : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_AllowShowMaximized
-    }
-    public static var allowShowFullScreen : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_AllowShowFullScreen
-    }
-    public static var allowShowArranged : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_AllowShowArranged
-    }
-    public static var useStartupInfoForFirstWindow : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_UseStartupInfoForFirstWindow
-    }
-    public static var all : WinAppSDK.PlacementRestorationBehavior {
-        __x_ABI_CMicrosoft_CUI_CWindowing_CPlacementRestorationBehavior_All
-    }
-}
-extension WinAppSDK.PlacementRestorationBehavior: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinAppSDK.TitleBarHeightOption {
     public static var standard : WinAppSDK.TitleBarHeightOption {

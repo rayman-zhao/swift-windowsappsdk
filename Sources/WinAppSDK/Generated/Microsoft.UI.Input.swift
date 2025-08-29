@@ -19,10 +19,6 @@ public typealias GestureSettings = __x_ABI_CMicrosoft_CUI_CInput_CGestureSetting
 public typealias HoldingState = __x_ABI_CMicrosoft_CUI_CInput_CHoldingState
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputactivationstate)
 public typealias InputActivationState = __x_ABI_CMicrosoft_CUI_CInput_CInputActivationState
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputlayoutpolicy)
-public typealias InputLayoutPolicy = __x_ABI_CMicrosoft_CUI_CInput_CInputLayoutPolicy
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointeractivationbehavior)
-public typealias InputPointerActivationBehavior = __x_ABI_CMicrosoft_CUI_CInput_CInputPointerActivationBehavior
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersourcedevicekinds)
 public typealias InputPointerSourceDeviceKinds = __x_ABI_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputsystemcursorshape)
@@ -1147,12 +1143,6 @@ public final class InputKeyboardSource : WinAppSDK.InputObject {
         return try _IInputKeyboardSourceStatics2.GetForIsland(island)
     }
 
-    private static let _IInputKeyboardSourceStatics3: __ABI_Microsoft_UI_Input.IInputKeyboardSourceStatics3 = try! RoGetActivationFactory("Microsoft.UI.Input.InputKeyboardSource")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputkeyboardsource.getforwindowid)
-    public static func getForWindowId(_ windowId: WinAppSDK.WindowId) throws -> InputKeyboardSource! {
-        return try _IInputKeyboardSourceStatics3.GetForWindowId(windowId)
-    }
-
     private lazy var _IInputKeyboardSource2: __ABI_Microsoft_UI_Input.IInputKeyboardSource2! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputkeyboardsource.getcurrentkeystate)
     public func getCurrentKeyState(_ virtualKey: UWP.VirtualKey) throws -> VirtualKeyStates {
@@ -1270,12 +1260,6 @@ public final class InputLightDismissAction : WinAppSDK.InputObject {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputlightdismissaction.getforwindowid)
     public static func getForWindowId(_ windowId: WinAppSDK.WindowId) throws -> InputLightDismissAction! {
         return try _IInputLightDismissActionStatics.GetForWindowId(windowId)
-    }
-
-    private static let _IInputLightDismissActionStatics2: __ABI_Microsoft_UI_Input.IInputLightDismissActionStatics2 = try! RoGetActivationFactory("Microsoft.UI.Input.InputLightDismissAction")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputlightdismissaction.getforisland)
-    public static func getForIsland(_ content: WinAppSDK.ContentIsland!) throws -> InputLightDismissAction! {
-        return try _IInputLightDismissActionStatics2.GetForIsland(content)
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputlightdismissaction.dismissed)
@@ -1596,22 +1580,6 @@ public final class InputPointerSource : WinAppSDK.InputObject {
         return try _IInputPointerSourceStatics.GetForIsland(island)
     }
 
-    private static let _IInputPointerSourceStatics2: __ABI_Microsoft_UI_Input.IInputPointerSourceStatics2 = try! RoGetActivationFactory("Microsoft.UI.Input.InputPointerSource")
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.getforvisual)
-    public static func getForVisual(_ visual: WinAppSDK.Visual!) throws -> InputPointerSource! {
-        return try _IInputPointerSourceStatics2.GetForVisual(visual)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.getforwindowid)
-    public static func getForWindowId(_ windowId: WinAppSDK.WindowId) throws -> InputPointerSource! {
-        return try _IInputPointerSourceStatics2.GetForWindowId(windowId)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.removeforvisual)
-    public static func removeForVisual(_ visual: WinAppSDK.Visual!) throws {
-        try _IInputPointerSourceStatics2.RemoveForVisual(visual)
-    }
-
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.cursor)
     public var cursor : InputCursor! {
         get { try! _default.get_Cursor() }
@@ -1753,47 +1721,8 @@ public final class InputPointerSource : WinAppSDK.InputObject {
       )
     }()
 
-    private lazy var _IInputPointerSource2: __ABI_Microsoft_UI_Input.IInputPointerSource2! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.trysetdevicekinds)
-    public func trySetDeviceKinds(_ DeviceKinds: InputPointerSourceDeviceKinds) throws -> Bool {
-        try _IInputPointerSource2.TrySetDeviceKinds(DeviceKinds)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.activationbehavior)
-    public var activationBehavior : InputPointerActivationBehavior {
-        get { try! _IInputPointerSource2.get_ActivationBehavior() }
-        set { try! _IInputPointerSource2.put_ActivationBehavior(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.directmanipulationhittest)
-    public lazy var directManipulationHitTest : Event<TypedEventHandler<InputPointerSource?, PointerEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IInputPointerSource2 else { return .init() }
-          return try! this.add_DirectManipulationHitTest($0)
-        },
-        remove: { [weak self] in
-         try? self?._IInputPointerSource2.remove_DirectManipulationHitTest($0)
-       }
-      )
-    }()
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.inputpointersource.touchhittesting)
-    public lazy var touchHitTesting : Event<TypedEventHandler<InputPointerSource?, TouchHitTestingEventArgs?>> = {
-      .init(
-        add: { [weak self] in
-          guard let this = self?._IInputPointerSource2 else { return .init() }
-          return try! this.add_TouchHitTesting($0)
-        },
-        remove: { [weak self] in
-         try? self?._IInputPointerSource2.remove_TouchHitTesting($0)
-       }
-      )
-    }()
-
     deinit {
         _default = nil
-        _IInputPointerSource2 = nil
     }
 }
 
@@ -2593,65 +2522,6 @@ public final class TappedEventArgs : WinRTClass {
     }
 }
 
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs)
-public final class TouchHitTestingEventArgs : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Input.ITouchHitTestingEventArgs
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.getproximityevaluation)
-    public func getProximityEvaluation() throws -> ProximityEvaluation {
-        try _default.GetProximityEvaluation()
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.setproximityevaluation)
-    public func setProximityEvaluation(_ proximityEvaluation: ProximityEvaluation) throws {
-        try _default.SetProximityEvaluation(proximityEvaluation)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.evaluateproximitytorect)
-    public func evaluateProximityToRect(_ controlBoundingBox: WindowsFoundation.Rect) throws -> ProximityEvaluation {
-        try _default.EvaluateProximityToRect(controlBoundingBox)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.evaluateproximitytopolygon)
-    public func evaluateProximityToPolygon(_ controlVertices: [WindowsFoundation.Point]) throws -> ProximityEvaluation {
-        try _default.EvaluateProximityToPolygon(controlVertices)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.boundingbox)
-    public var boundingBox : WindowsFoundation.Rect {
-        get { try! _default.get_BoundingBox() }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.handled)
-    public var handled : Bool {
-        get { try! _default.get_Handled() }
-        set { try! _default.put_Handled(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.touchhittestingeventargs.point)
-    public var point : WindowsFoundation.Point {
-        get { try! _default.get_Point() }
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.windowrectchangedeventargs)
 public final class WindowRectChangedEventArgs : WinRTClass {
     private typealias SwiftABI = __ABI_Microsoft_UI_Input.IWindowRectChangedEventArgs
@@ -2827,19 +2697,6 @@ public struct PhysicalKeyStatus: Hashable, Codable, Sendable {
         self.isMenuKeyDown = isMenuKeyDown
         self.wasKeyDown = wasKeyDown
         self.isKeyReleased = isKeyReleased
-    }
-}
-
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.proximityevaluation)
-public struct ProximityEvaluation: Hashable, Codable, Sendable {
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.proximityevaluation.score)
-    public var score: Int32 = 0
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.input.proximityevaluation.adjustedpoint)
-    public var adjustedPoint: WindowsFoundation.Point = .init()
-    public init() {}
-    public init(score: Int32, adjustedPoint: WindowsFoundation.Point) {
-        self.score = score
-        self.adjustedPoint = adjustedPoint
     }
 }
 
@@ -3027,29 +2884,6 @@ extension WinAppSDK.InputActivationState {
     }
 }
 extension WinAppSDK.InputActivationState: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.InputLayoutPolicy {
-    public static var leftToRight : WinAppSDK.InputLayoutPolicy {
-        __x_ABI_CMicrosoft_CUI_CInput_CInputLayoutPolicy_LeftToRight
-    }
-    public static var rightToLeft : WinAppSDK.InputLayoutPolicy {
-        __x_ABI_CMicrosoft_CUI_CInput_CInputLayoutPolicy_RightToLeft
-    }
-}
-extension WinAppSDK.InputLayoutPolicy: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.InputPointerActivationBehavior {
-    public static var `default` : WinAppSDK.InputPointerActivationBehavior {
-        __x_ABI_CMicrosoft_CUI_CInput_CInputPointerActivationBehavior_Default
-    }
-    public static var activate : WinAppSDK.InputPointerActivationBehavior {
-        __x_ABI_CMicrosoft_CUI_CInput_CInputPointerActivationBehavior_Activate
-    }
-    public static var noActivate : WinAppSDK.InputPointerActivationBehavior {
-        __x_ABI_CMicrosoft_CUI_CInput_CInputPointerActivationBehavior_NoActivate
-    }
-}
-extension WinAppSDK.InputPointerActivationBehavior: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinAppSDK.InputPointerSourceDeviceKinds {
     public static var none : WinAppSDK.InputPointerSourceDeviceKinds {

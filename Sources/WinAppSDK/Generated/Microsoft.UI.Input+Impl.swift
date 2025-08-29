@@ -469,15 +469,6 @@ public enum __IMPL_Microsoft_UI_Input {
         }
     }
 
-    public enum TouchHitTestingEventArgsBridge: AbiBridge {
-        public typealias SwiftProjection = TouchHitTestingEventArgs
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CInput_CITouchHitTestingEventArgs>?) -> TouchHitTestingEventArgs? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
     public enum WindowRectChangedEventArgsBridge: AbiBridge {
         public typealias SwiftProjection = WindowRectChangedEventArgs
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CInput_CIWindowRectChangedEventArgs
@@ -538,17 +529,6 @@ extension PhysicalKeyStatus: WinRTBridgeable {
     }
     public func toABI() -> ABI {
         __ABI_Microsoft_UI_Input._ABI_PhysicalKeyStatus(from: self).detach()
-    }
-}
-
-@_spi(WinRTInternal)
-extension ProximityEvaluation: WinRTBridgeable {
-    public typealias ABI = __x_ABI_CMicrosoft_CUI_CInput_CProximityEvaluation
-    public static func from(abi: ABI) -> Self {
-        .init(score: abi.Score, adjustedPoint: .from(abi: abi.AdjustedPoint))
-    }
-    public func toABI() -> ABI {
-        .from(swift: self)
     }
 }
 
@@ -859,13 +839,6 @@ public class TappedEventArgsMaker: MakeFromAbi {
     public typealias SwiftType = TappedEventArgs
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return TappedEventArgs(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class TouchHitTestingEventArgsMaker: MakeFromAbi {
-    public typealias SwiftType = TouchHitTestingEventArgs
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return TouchHitTestingEventArgs(fromAbi: abi)
     }
 }
 @_spi(WinRTInternal)

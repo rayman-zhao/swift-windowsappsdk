@@ -41,8 +41,6 @@ public typealias CompositionGetValueStatus = __x_ABI_CMicrosoft_CUI_CComposition
 public typealias CompositionGradientExtendMode = __x_ABI_CMicrosoft_CUI_CComposition_CCompositionGradientExtendMode
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionmappingmode)
 public typealias CompositionMappingMode = __x_ABI_CMicrosoft_CUI_CComposition_CCompositionMappingMode
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadowdraworder)
-public typealias CompositionProjectedShadowDrawOrder = __x_ABI_CMicrosoft_CUI_CComposition_CCompositionProjectedShadowDrawOrder
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionstretch)
 public typealias CompositionStretch = __x_ABI_CMicrosoft_CUI_CComposition_CCompositionStretch
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionstrokecap)
@@ -2018,34 +2016,6 @@ public final class CompositionNineGridBrush : WinAppSDK.CompositionBrush {
     }
 }
 
-/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionnotificationdeferral)
-public final class CompositionNotificationDeferral : WinRTClass {
-    private typealias SwiftABI = __ABI_Microsoft_UI_Composition.ICompositionNotificationDeferral
-    private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CICompositionNotificationDeferral
-    private lazy var _default: SwiftABI! = getInterfaceForCaching()
-    @_spi(WinRTInternal)
-    override public func _getABI<T>() -> UnsafeMutablePointer<T>? {
-        if T.self == CABI.self {
-            return RawPointer(_default)
-        }
-        return super._getABI()
-    }
-
-    @_spi(WinRTInternal)
-    public init(fromAbi: WindowsFoundation.IInspectable) {
-        super.init(fromAbi)
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionnotificationdeferral.complete)
-    public func complete() throws {
-        try _default.Complete()
-    }
-
-    deinit {
-        _default = nil
-    }
-}
-
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionobject)
 open class CompositionObject : WinRTClass, WindowsFoundation.IClosable, IAnimationObject {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition.ICompositionObject
@@ -2286,28 +2256,8 @@ public final class CompositionProjectedShadow : WinAppSDK.CompositionObject {
         get { try! _default.get_Receivers() }
     }
 
-    private lazy var _IExpCompositionProjectedShadow: __ABI_Microsoft_UI_Composition.IExpCompositionProjectedShadow! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadow.maxopacity)
-    public var maxOpacity : Float {
-        get { try! _IExpCompositionProjectedShadow.get_MaxOpacity() }
-        set { try! _IExpCompositionProjectedShadow.put_MaxOpacity(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadow.minopacity)
-    public var minOpacity : Float {
-        get { try! _IExpCompositionProjectedShadow.get_MinOpacity() }
-        set { try! _IExpCompositionProjectedShadow.put_MinOpacity(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadow.opacityfalloff)
-    public var opacityFalloff : Float {
-        get { try! _IExpCompositionProjectedShadow.get_OpacityFalloff() }
-        set { try! _IExpCompositionProjectedShadow.put_OpacityFalloff(newValue) }
-    }
-
     deinit {
         _default = nil
-        _IExpCompositionProjectedShadow = nil
     }
 }
 
@@ -2341,22 +2291,8 @@ public final class CompositionProjectedShadowCaster : WinAppSDK.CompositionObjec
         set { try! _default.put_CastingVisual(newValue) }
     }
 
-    private lazy var _IExpCompositionProjectedShadowCaster: __ABI_Microsoft_UI_Composition.IExpCompositionProjectedShadowCaster! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadowcaster.ancestorclip)
-    public var ancestorClip : Visual! {
-        get { try! _IExpCompositionProjectedShadowCaster.get_AncestorClip() }
-        set { try! _IExpCompositionProjectedShadowCaster.put_AncestorClip(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadowcaster.mask)
-    public var mask : CompositionBrush! {
-        get { try! _IExpCompositionProjectedShadowCaster.get_Mask() }
-        set { try! _IExpCompositionProjectedShadowCaster.put_Mask(newValue) }
-    }
-
     deinit {
         _default = nil
-        _IExpCompositionProjectedShadowCaster = nil
     }
 }
 
@@ -2459,22 +2395,8 @@ public final class CompositionProjectedShadowReceiver : WinAppSDK.CompositionObj
         set { try! _default.put_ReceivingVisual(newValue) }
     }
 
-    private lazy var _IExpCompositionProjectedShadowReceiver: __ABI_Microsoft_UI_Composition.IExpCompositionProjectedShadowReceiver! = getInterfaceForCaching()
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadowreceiver.draworder)
-    public var drawOrder : CompositionProjectedShadowDrawOrder {
-        get { try! _IExpCompositionProjectedShadowReceiver.get_DrawOrder() }
-        set { try! _IExpCompositionProjectedShadowReceiver.put_DrawOrder(newValue) }
-    }
-
-    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionprojectedshadowreceiver.mask)
-    public var mask : CompositionBrush! {
-        get { try! _IExpCompositionProjectedShadowReceiver.get_Mask() }
-        set { try! _IExpCompositionProjectedShadowReceiver.put_Mask(newValue) }
-    }
-
     deinit {
         _default = nil
-        _IExpCompositionProjectedShadowReceiver = nil
     }
 }
 
@@ -6343,16 +6265,6 @@ extension WinAppSDK.CompositionMappingMode {
     }
 }
 extension WinAppSDK.CompositionMappingMode: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
-
-extension WinAppSDK.CompositionProjectedShadowDrawOrder {
-    public static var postChildren : WinAppSDK.CompositionProjectedShadowDrawOrder {
-        __x_ABI_CMicrosoft_CUI_CComposition_CCompositionProjectedShadowDrawOrder_PostChildren
-    }
-    public static var preChildren : WinAppSDK.CompositionProjectedShadowDrawOrder {
-        __x_ABI_CMicrosoft_CUI_CComposition_CCompositionProjectedShadowDrawOrder_PreChildren
-    }
-}
-extension WinAppSDK.CompositionProjectedShadowDrawOrder: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
 extension WinAppSDK.CompositionStretch {
     public static var none : WinAppSDK.CompositionStretch {
