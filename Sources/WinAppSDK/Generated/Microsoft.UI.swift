@@ -19,720 +19,714 @@ public final class Colors : WinRTClass {
     }
 
     @_spi(WinRTInternal)
-    public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CIColors>?) -> Colors? {
-        guard let abi = abi else { return nil }
-        return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-    }
-
-    @_spi(WinRTInternal)
     public init(fromAbi: WindowsFoundation.IInspectable) {
         super.init(fromAbi)
     }
 
-    private static let _IColorsStatics: __ABI_Microsoft_UI.IColorsStatics = try! RoGetActivationFactory(HString("Microsoft.UI.Colors"))
+    private static let _IColorsStatics: __ABI_Microsoft_UI.IColorsStatics = try! RoGetActivationFactory("Microsoft.UI.Colors")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.aliceblue)
     public static var aliceBlue : UWP.Color {
-        get { try! _IColorsStatics.get_AliceBlueImpl() }
+        get { try! _IColorsStatics.get_AliceBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.antiquewhite)
     public static var antiqueWhite : UWP.Color {
-        get { try! _IColorsStatics.get_AntiqueWhiteImpl() }
+        get { try! _IColorsStatics.get_AntiqueWhite() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.aqua)
     public static var aqua : UWP.Color {
-        get { try! _IColorsStatics.get_AquaImpl() }
+        get { try! _IColorsStatics.get_Aqua() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.aquamarine)
     public static var aquamarine : UWP.Color {
-        get { try! _IColorsStatics.get_AquamarineImpl() }
+        get { try! _IColorsStatics.get_Aquamarine() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.azure)
     public static var azure : UWP.Color {
-        get { try! _IColorsStatics.get_AzureImpl() }
+        get { try! _IColorsStatics.get_Azure() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.beige)
     public static var beige : UWP.Color {
-        get { try! _IColorsStatics.get_BeigeImpl() }
+        get { try! _IColorsStatics.get_Beige() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.bisque)
     public static var bisque : UWP.Color {
-        get { try! _IColorsStatics.get_BisqueImpl() }
+        get { try! _IColorsStatics.get_Bisque() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.black)
     public static var black : UWP.Color {
-        get { try! _IColorsStatics.get_BlackImpl() }
+        get { try! _IColorsStatics.get_Black() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.blanchedalmond)
     public static var blanchedAlmond : UWP.Color {
-        get { try! _IColorsStatics.get_BlanchedAlmondImpl() }
+        get { try! _IColorsStatics.get_BlanchedAlmond() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.blue)
     public static var blue : UWP.Color {
-        get { try! _IColorsStatics.get_BlueImpl() }
+        get { try! _IColorsStatics.get_Blue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.blueviolet)
     public static var blueViolet : UWP.Color {
-        get { try! _IColorsStatics.get_BlueVioletImpl() }
+        get { try! _IColorsStatics.get_BlueViolet() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.brown)
     public static var brown : UWP.Color {
-        get { try! _IColorsStatics.get_BrownImpl() }
+        get { try! _IColorsStatics.get_Brown() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.burlywood)
     public static var burlyWood : UWP.Color {
-        get { try! _IColorsStatics.get_BurlyWoodImpl() }
+        get { try! _IColorsStatics.get_BurlyWood() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.cadetblue)
     public static var cadetBlue : UWP.Color {
-        get { try! _IColorsStatics.get_CadetBlueImpl() }
+        get { try! _IColorsStatics.get_CadetBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.chartreuse)
     public static var chartreuse : UWP.Color {
-        get { try! _IColorsStatics.get_ChartreuseImpl() }
+        get { try! _IColorsStatics.get_Chartreuse() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.chocolate)
     public static var chocolate : UWP.Color {
-        get { try! _IColorsStatics.get_ChocolateImpl() }
+        get { try! _IColorsStatics.get_Chocolate() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.coral)
     public static var coral : UWP.Color {
-        get { try! _IColorsStatics.get_CoralImpl() }
+        get { try! _IColorsStatics.get_Coral() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.cornflowerblue)
     public static var cornflowerBlue : UWP.Color {
-        get { try! _IColorsStatics.get_CornflowerBlueImpl() }
+        get { try! _IColorsStatics.get_CornflowerBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.cornsilk)
     public static var cornsilk : UWP.Color {
-        get { try! _IColorsStatics.get_CornsilkImpl() }
+        get { try! _IColorsStatics.get_Cornsilk() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.crimson)
     public static var crimson : UWP.Color {
-        get { try! _IColorsStatics.get_CrimsonImpl() }
+        get { try! _IColorsStatics.get_Crimson() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.cyan)
     public static var cyan : UWP.Color {
-        get { try! _IColorsStatics.get_CyanImpl() }
+        get { try! _IColorsStatics.get_Cyan() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkblue)
     public static var darkBlue : UWP.Color {
-        get { try! _IColorsStatics.get_DarkBlueImpl() }
+        get { try! _IColorsStatics.get_DarkBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkcyan)
     public static var darkCyan : UWP.Color {
-        get { try! _IColorsStatics.get_DarkCyanImpl() }
+        get { try! _IColorsStatics.get_DarkCyan() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkgoldenrod)
     public static var darkGoldenrod : UWP.Color {
-        get { try! _IColorsStatics.get_DarkGoldenrodImpl() }
+        get { try! _IColorsStatics.get_DarkGoldenrod() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkgray)
     public static var darkGray : UWP.Color {
-        get { try! _IColorsStatics.get_DarkGrayImpl() }
+        get { try! _IColorsStatics.get_DarkGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkgreen)
     public static var darkGreen : UWP.Color {
-        get { try! _IColorsStatics.get_DarkGreenImpl() }
+        get { try! _IColorsStatics.get_DarkGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkkhaki)
     public static var darkKhaki : UWP.Color {
-        get { try! _IColorsStatics.get_DarkKhakiImpl() }
+        get { try! _IColorsStatics.get_DarkKhaki() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkmagenta)
     public static var darkMagenta : UWP.Color {
-        get { try! _IColorsStatics.get_DarkMagentaImpl() }
+        get { try! _IColorsStatics.get_DarkMagenta() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkolivegreen)
     public static var darkOliveGreen : UWP.Color {
-        get { try! _IColorsStatics.get_DarkOliveGreenImpl() }
+        get { try! _IColorsStatics.get_DarkOliveGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkorange)
     public static var darkOrange : UWP.Color {
-        get { try! _IColorsStatics.get_DarkOrangeImpl() }
+        get { try! _IColorsStatics.get_DarkOrange() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkorchid)
     public static var darkOrchid : UWP.Color {
-        get { try! _IColorsStatics.get_DarkOrchidImpl() }
+        get { try! _IColorsStatics.get_DarkOrchid() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkred)
     public static var darkRed : UWP.Color {
-        get { try! _IColorsStatics.get_DarkRedImpl() }
+        get { try! _IColorsStatics.get_DarkRed() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darksalmon)
     public static var darkSalmon : UWP.Color {
-        get { try! _IColorsStatics.get_DarkSalmonImpl() }
+        get { try! _IColorsStatics.get_DarkSalmon() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkseagreen)
     public static var darkSeaGreen : UWP.Color {
-        get { try! _IColorsStatics.get_DarkSeaGreenImpl() }
+        get { try! _IColorsStatics.get_DarkSeaGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkslateblue)
     public static var darkSlateBlue : UWP.Color {
-        get { try! _IColorsStatics.get_DarkSlateBlueImpl() }
+        get { try! _IColorsStatics.get_DarkSlateBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkslategray)
     public static var darkSlateGray : UWP.Color {
-        get { try! _IColorsStatics.get_DarkSlateGrayImpl() }
+        get { try! _IColorsStatics.get_DarkSlateGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkturquoise)
     public static var darkTurquoise : UWP.Color {
-        get { try! _IColorsStatics.get_DarkTurquoiseImpl() }
+        get { try! _IColorsStatics.get_DarkTurquoise() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.darkviolet)
     public static var darkViolet : UWP.Color {
-        get { try! _IColorsStatics.get_DarkVioletImpl() }
+        get { try! _IColorsStatics.get_DarkViolet() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.deeppink)
     public static var deepPink : UWP.Color {
-        get { try! _IColorsStatics.get_DeepPinkImpl() }
+        get { try! _IColorsStatics.get_DeepPink() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.deepskyblue)
     public static var deepSkyBlue : UWP.Color {
-        get { try! _IColorsStatics.get_DeepSkyBlueImpl() }
+        get { try! _IColorsStatics.get_DeepSkyBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.dimgray)
     public static var dimGray : UWP.Color {
-        get { try! _IColorsStatics.get_DimGrayImpl() }
+        get { try! _IColorsStatics.get_DimGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.dodgerblue)
     public static var dodgerBlue : UWP.Color {
-        get { try! _IColorsStatics.get_DodgerBlueImpl() }
+        get { try! _IColorsStatics.get_DodgerBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.firebrick)
     public static var firebrick : UWP.Color {
-        get { try! _IColorsStatics.get_FirebrickImpl() }
+        get { try! _IColorsStatics.get_Firebrick() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.floralwhite)
     public static var floralWhite : UWP.Color {
-        get { try! _IColorsStatics.get_FloralWhiteImpl() }
+        get { try! _IColorsStatics.get_FloralWhite() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.forestgreen)
     public static var forestGreen : UWP.Color {
-        get { try! _IColorsStatics.get_ForestGreenImpl() }
+        get { try! _IColorsStatics.get_ForestGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.fuchsia)
     public static var fuchsia : UWP.Color {
-        get { try! _IColorsStatics.get_FuchsiaImpl() }
+        get { try! _IColorsStatics.get_Fuchsia() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.gainsboro)
     public static var gainsboro : UWP.Color {
-        get { try! _IColorsStatics.get_GainsboroImpl() }
+        get { try! _IColorsStatics.get_Gainsboro() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.ghostwhite)
     public static var ghostWhite : UWP.Color {
-        get { try! _IColorsStatics.get_GhostWhiteImpl() }
+        get { try! _IColorsStatics.get_GhostWhite() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.gold)
     public static var gold : UWP.Color {
-        get { try! _IColorsStatics.get_GoldImpl() }
+        get { try! _IColorsStatics.get_Gold() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.goldenrod)
     public static var goldenrod : UWP.Color {
-        get { try! _IColorsStatics.get_GoldenrodImpl() }
+        get { try! _IColorsStatics.get_Goldenrod() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.gray)
     public static var gray : UWP.Color {
-        get { try! _IColorsStatics.get_GrayImpl() }
+        get { try! _IColorsStatics.get_Gray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.green)
     public static var green : UWP.Color {
-        get { try! _IColorsStatics.get_GreenImpl() }
+        get { try! _IColorsStatics.get_Green() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.greenyellow)
     public static var greenYellow : UWP.Color {
-        get { try! _IColorsStatics.get_GreenYellowImpl() }
+        get { try! _IColorsStatics.get_GreenYellow() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.honeydew)
     public static var honeydew : UWP.Color {
-        get { try! _IColorsStatics.get_HoneydewImpl() }
+        get { try! _IColorsStatics.get_Honeydew() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.hotpink)
     public static var hotPink : UWP.Color {
-        get { try! _IColorsStatics.get_HotPinkImpl() }
+        get { try! _IColorsStatics.get_HotPink() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.indianred)
     public static var indianRed : UWP.Color {
-        get { try! _IColorsStatics.get_IndianRedImpl() }
+        get { try! _IColorsStatics.get_IndianRed() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.indigo)
     public static var indigo : UWP.Color {
-        get { try! _IColorsStatics.get_IndigoImpl() }
+        get { try! _IColorsStatics.get_Indigo() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.ivory)
     public static var ivory : UWP.Color {
-        get { try! _IColorsStatics.get_IvoryImpl() }
+        get { try! _IColorsStatics.get_Ivory() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.khaki)
     public static var khaki : UWP.Color {
-        get { try! _IColorsStatics.get_KhakiImpl() }
+        get { try! _IColorsStatics.get_Khaki() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lavender)
     public static var lavender : UWP.Color {
-        get { try! _IColorsStatics.get_LavenderImpl() }
+        get { try! _IColorsStatics.get_Lavender() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lavenderblush)
     public static var lavenderBlush : UWP.Color {
-        get { try! _IColorsStatics.get_LavenderBlushImpl() }
+        get { try! _IColorsStatics.get_LavenderBlush() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lawngreen)
     public static var lawnGreen : UWP.Color {
-        get { try! _IColorsStatics.get_LawnGreenImpl() }
+        get { try! _IColorsStatics.get_LawnGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lemonchiffon)
     public static var lemonChiffon : UWP.Color {
-        get { try! _IColorsStatics.get_LemonChiffonImpl() }
+        get { try! _IColorsStatics.get_LemonChiffon() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightblue)
     public static var lightBlue : UWP.Color {
-        get { try! _IColorsStatics.get_LightBlueImpl() }
+        get { try! _IColorsStatics.get_LightBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightcoral)
     public static var lightCoral : UWP.Color {
-        get { try! _IColorsStatics.get_LightCoralImpl() }
+        get { try! _IColorsStatics.get_LightCoral() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightcyan)
     public static var lightCyan : UWP.Color {
-        get { try! _IColorsStatics.get_LightCyanImpl() }
+        get { try! _IColorsStatics.get_LightCyan() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightgoldenrodyellow)
     public static var lightGoldenrodYellow : UWP.Color {
-        get { try! _IColorsStatics.get_LightGoldenrodYellowImpl() }
+        get { try! _IColorsStatics.get_LightGoldenrodYellow() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightgray)
     public static var lightGray : UWP.Color {
-        get { try! _IColorsStatics.get_LightGrayImpl() }
+        get { try! _IColorsStatics.get_LightGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightgreen)
     public static var lightGreen : UWP.Color {
-        get { try! _IColorsStatics.get_LightGreenImpl() }
+        get { try! _IColorsStatics.get_LightGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightpink)
     public static var lightPink : UWP.Color {
-        get { try! _IColorsStatics.get_LightPinkImpl() }
+        get { try! _IColorsStatics.get_LightPink() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightsalmon)
     public static var lightSalmon : UWP.Color {
-        get { try! _IColorsStatics.get_LightSalmonImpl() }
+        get { try! _IColorsStatics.get_LightSalmon() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightseagreen)
     public static var lightSeaGreen : UWP.Color {
-        get { try! _IColorsStatics.get_LightSeaGreenImpl() }
+        get { try! _IColorsStatics.get_LightSeaGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightskyblue)
     public static var lightSkyBlue : UWP.Color {
-        get { try! _IColorsStatics.get_LightSkyBlueImpl() }
+        get { try! _IColorsStatics.get_LightSkyBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightslategray)
     public static var lightSlateGray : UWP.Color {
-        get { try! _IColorsStatics.get_LightSlateGrayImpl() }
+        get { try! _IColorsStatics.get_LightSlateGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightsteelblue)
     public static var lightSteelBlue : UWP.Color {
-        get { try! _IColorsStatics.get_LightSteelBlueImpl() }
+        get { try! _IColorsStatics.get_LightSteelBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lightyellow)
     public static var lightYellow : UWP.Color {
-        get { try! _IColorsStatics.get_LightYellowImpl() }
+        get { try! _IColorsStatics.get_LightYellow() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.lime)
     public static var lime : UWP.Color {
-        get { try! _IColorsStatics.get_LimeImpl() }
+        get { try! _IColorsStatics.get_Lime() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.limegreen)
     public static var limeGreen : UWP.Color {
-        get { try! _IColorsStatics.get_LimeGreenImpl() }
+        get { try! _IColorsStatics.get_LimeGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.linen)
     public static var linen : UWP.Color {
-        get { try! _IColorsStatics.get_LinenImpl() }
+        get { try! _IColorsStatics.get_Linen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.magenta)
     public static var magenta : UWP.Color {
-        get { try! _IColorsStatics.get_MagentaImpl() }
+        get { try! _IColorsStatics.get_Magenta() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.maroon)
     public static var maroon : UWP.Color {
-        get { try! _IColorsStatics.get_MaroonImpl() }
+        get { try! _IColorsStatics.get_Maroon() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumaquamarine)
     public static var mediumAquamarine : UWP.Color {
-        get { try! _IColorsStatics.get_MediumAquamarineImpl() }
+        get { try! _IColorsStatics.get_MediumAquamarine() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumblue)
     public static var mediumBlue : UWP.Color {
-        get { try! _IColorsStatics.get_MediumBlueImpl() }
+        get { try! _IColorsStatics.get_MediumBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumorchid)
     public static var mediumOrchid : UWP.Color {
-        get { try! _IColorsStatics.get_MediumOrchidImpl() }
+        get { try! _IColorsStatics.get_MediumOrchid() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumpurple)
     public static var mediumPurple : UWP.Color {
-        get { try! _IColorsStatics.get_MediumPurpleImpl() }
+        get { try! _IColorsStatics.get_MediumPurple() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumseagreen)
     public static var mediumSeaGreen : UWP.Color {
-        get { try! _IColorsStatics.get_MediumSeaGreenImpl() }
+        get { try! _IColorsStatics.get_MediumSeaGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumslateblue)
     public static var mediumSlateBlue : UWP.Color {
-        get { try! _IColorsStatics.get_MediumSlateBlueImpl() }
+        get { try! _IColorsStatics.get_MediumSlateBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumspringgreen)
     public static var mediumSpringGreen : UWP.Color {
-        get { try! _IColorsStatics.get_MediumSpringGreenImpl() }
+        get { try! _IColorsStatics.get_MediumSpringGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumturquoise)
     public static var mediumTurquoise : UWP.Color {
-        get { try! _IColorsStatics.get_MediumTurquoiseImpl() }
+        get { try! _IColorsStatics.get_MediumTurquoise() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mediumvioletred)
     public static var mediumVioletRed : UWP.Color {
-        get { try! _IColorsStatics.get_MediumVioletRedImpl() }
+        get { try! _IColorsStatics.get_MediumVioletRed() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.midnightblue)
     public static var midnightBlue : UWP.Color {
-        get { try! _IColorsStatics.get_MidnightBlueImpl() }
+        get { try! _IColorsStatics.get_MidnightBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mintcream)
     public static var mintCream : UWP.Color {
-        get { try! _IColorsStatics.get_MintCreamImpl() }
+        get { try! _IColorsStatics.get_MintCream() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.mistyrose)
     public static var mistyRose : UWP.Color {
-        get { try! _IColorsStatics.get_MistyRoseImpl() }
+        get { try! _IColorsStatics.get_MistyRose() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.moccasin)
     public static var moccasin : UWP.Color {
-        get { try! _IColorsStatics.get_MoccasinImpl() }
+        get { try! _IColorsStatics.get_Moccasin() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.navajowhite)
     public static var navajoWhite : UWP.Color {
-        get { try! _IColorsStatics.get_NavajoWhiteImpl() }
+        get { try! _IColorsStatics.get_NavajoWhite() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.navy)
     public static var navy : UWP.Color {
-        get { try! _IColorsStatics.get_NavyImpl() }
+        get { try! _IColorsStatics.get_Navy() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.oldlace)
     public static var oldLace : UWP.Color {
-        get { try! _IColorsStatics.get_OldLaceImpl() }
+        get { try! _IColorsStatics.get_OldLace() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.olive)
     public static var olive : UWP.Color {
-        get { try! _IColorsStatics.get_OliveImpl() }
+        get { try! _IColorsStatics.get_Olive() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.olivedrab)
     public static var oliveDrab : UWP.Color {
-        get { try! _IColorsStatics.get_OliveDrabImpl() }
+        get { try! _IColorsStatics.get_OliveDrab() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.orange)
     public static var orange : UWP.Color {
-        get { try! _IColorsStatics.get_OrangeImpl() }
+        get { try! _IColorsStatics.get_Orange() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.orangered)
     public static var orangeRed : UWP.Color {
-        get { try! _IColorsStatics.get_OrangeRedImpl() }
+        get { try! _IColorsStatics.get_OrangeRed() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.orchid)
     public static var orchid : UWP.Color {
-        get { try! _IColorsStatics.get_OrchidImpl() }
+        get { try! _IColorsStatics.get_Orchid() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.palegoldenrod)
     public static var paleGoldenrod : UWP.Color {
-        get { try! _IColorsStatics.get_PaleGoldenrodImpl() }
+        get { try! _IColorsStatics.get_PaleGoldenrod() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.palegreen)
     public static var paleGreen : UWP.Color {
-        get { try! _IColorsStatics.get_PaleGreenImpl() }
+        get { try! _IColorsStatics.get_PaleGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.paleturquoise)
     public static var paleTurquoise : UWP.Color {
-        get { try! _IColorsStatics.get_PaleTurquoiseImpl() }
+        get { try! _IColorsStatics.get_PaleTurquoise() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.palevioletred)
     public static var paleVioletRed : UWP.Color {
-        get { try! _IColorsStatics.get_PaleVioletRedImpl() }
+        get { try! _IColorsStatics.get_PaleVioletRed() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.papayawhip)
     public static var papayaWhip : UWP.Color {
-        get { try! _IColorsStatics.get_PapayaWhipImpl() }
+        get { try! _IColorsStatics.get_PapayaWhip() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.peachpuff)
     public static var peachPuff : UWP.Color {
-        get { try! _IColorsStatics.get_PeachPuffImpl() }
+        get { try! _IColorsStatics.get_PeachPuff() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.peru)
     public static var peru : UWP.Color {
-        get { try! _IColorsStatics.get_PeruImpl() }
+        get { try! _IColorsStatics.get_Peru() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.pink)
     public static var pink : UWP.Color {
-        get { try! _IColorsStatics.get_PinkImpl() }
+        get { try! _IColorsStatics.get_Pink() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.plum)
     public static var plum : UWP.Color {
-        get { try! _IColorsStatics.get_PlumImpl() }
+        get { try! _IColorsStatics.get_Plum() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.powderblue)
     public static var powderBlue : UWP.Color {
-        get { try! _IColorsStatics.get_PowderBlueImpl() }
+        get { try! _IColorsStatics.get_PowderBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.purple)
     public static var purple : UWP.Color {
-        get { try! _IColorsStatics.get_PurpleImpl() }
+        get { try! _IColorsStatics.get_Purple() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.red)
     public static var red : UWP.Color {
-        get { try! _IColorsStatics.get_RedImpl() }
+        get { try! _IColorsStatics.get_Red() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.rosybrown)
     public static var rosyBrown : UWP.Color {
-        get { try! _IColorsStatics.get_RosyBrownImpl() }
+        get { try! _IColorsStatics.get_RosyBrown() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.royalblue)
     public static var royalBlue : UWP.Color {
-        get { try! _IColorsStatics.get_RoyalBlueImpl() }
+        get { try! _IColorsStatics.get_RoyalBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.saddlebrown)
     public static var saddleBrown : UWP.Color {
-        get { try! _IColorsStatics.get_SaddleBrownImpl() }
+        get { try! _IColorsStatics.get_SaddleBrown() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.salmon)
     public static var salmon : UWP.Color {
-        get { try! _IColorsStatics.get_SalmonImpl() }
+        get { try! _IColorsStatics.get_Salmon() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.sandybrown)
     public static var sandyBrown : UWP.Color {
-        get { try! _IColorsStatics.get_SandyBrownImpl() }
+        get { try! _IColorsStatics.get_SandyBrown() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.seagreen)
     public static var seaGreen : UWP.Color {
-        get { try! _IColorsStatics.get_SeaGreenImpl() }
+        get { try! _IColorsStatics.get_SeaGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.seashell)
     public static var seaShell : UWP.Color {
-        get { try! _IColorsStatics.get_SeaShellImpl() }
+        get { try! _IColorsStatics.get_SeaShell() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.sienna)
     public static var sienna : UWP.Color {
-        get { try! _IColorsStatics.get_SiennaImpl() }
+        get { try! _IColorsStatics.get_Sienna() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.silver)
     public static var silver : UWP.Color {
-        get { try! _IColorsStatics.get_SilverImpl() }
+        get { try! _IColorsStatics.get_Silver() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.skyblue)
     public static var skyBlue : UWP.Color {
-        get { try! _IColorsStatics.get_SkyBlueImpl() }
+        get { try! _IColorsStatics.get_SkyBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.slateblue)
     public static var slateBlue : UWP.Color {
-        get { try! _IColorsStatics.get_SlateBlueImpl() }
+        get { try! _IColorsStatics.get_SlateBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.slategray)
     public static var slateGray : UWP.Color {
-        get { try! _IColorsStatics.get_SlateGrayImpl() }
+        get { try! _IColorsStatics.get_SlateGray() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.snow)
     public static var snow : UWP.Color {
-        get { try! _IColorsStatics.get_SnowImpl() }
+        get { try! _IColorsStatics.get_Snow() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.springgreen)
     public static var springGreen : UWP.Color {
-        get { try! _IColorsStatics.get_SpringGreenImpl() }
+        get { try! _IColorsStatics.get_SpringGreen() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.steelblue)
     public static var steelBlue : UWP.Color {
-        get { try! _IColorsStatics.get_SteelBlueImpl() }
+        get { try! _IColorsStatics.get_SteelBlue() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.tan)
     public static var tan : UWP.Color {
-        get { try! _IColorsStatics.get_TanImpl() }
+        get { try! _IColorsStatics.get_Tan() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.teal)
     public static var teal : UWP.Color {
-        get { try! _IColorsStatics.get_TealImpl() }
+        get { try! _IColorsStatics.get_Teal() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.thistle)
     public static var thistle : UWP.Color {
-        get { try! _IColorsStatics.get_ThistleImpl() }
+        get { try! _IColorsStatics.get_Thistle() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.tomato)
     public static var tomato : UWP.Color {
-        get { try! _IColorsStatics.get_TomatoImpl() }
+        get { try! _IColorsStatics.get_Tomato() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.transparent)
     public static var transparent : UWP.Color {
-        get { try! _IColorsStatics.get_TransparentImpl() }
+        get { try! _IColorsStatics.get_Transparent() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.turquoise)
     public static var turquoise : UWP.Color {
-        get { try! _IColorsStatics.get_TurquoiseImpl() }
+        get { try! _IColorsStatics.get_Turquoise() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.violet)
     public static var violet : UWP.Color {
-        get { try! _IColorsStatics.get_VioletImpl() }
+        get { try! _IColorsStatics.get_Violet() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.wheat)
     public static var wheat : UWP.Color {
-        get { try! _IColorsStatics.get_WheatImpl() }
+        get { try! _IColorsStatics.get_Wheat() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.white)
     public static var white : UWP.Color {
-        get { try! _IColorsStatics.get_WhiteImpl() }
+        get { try! _IColorsStatics.get_White() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.whitesmoke)
     public static var whiteSmoke : UWP.Color {
-        get { try! _IColorsStatics.get_WhiteSmokeImpl() }
+        get { try! _IColorsStatics.get_WhiteSmoke() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.yellow)
     public static var yellow : UWP.Color {
-        get { try! _IColorsStatics.get_YellowImpl() }
+        get { try! _IColorsStatics.get_Yellow() }
     }
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors.yellowgreen)
     public static var yellowGreen : UWP.Color {
-        get { try! _IColorsStatics.get_YellowGreenImpl() }
+        get { try! _IColorsStatics.get_YellowGreen() }
     }
 
     deinit {
@@ -740,43 +734,34 @@ public final class Colors : WinRTClass {
     }
 }
 
-public typealias ClosableNotifierHandler = () -> ()
+public typealias ClosableNotifierHandler = () throws -> ()
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.displayid)
-public struct DisplayId: Hashable, Codable {
+public struct DisplayId: Hashable, Codable, Sendable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.displayid.value)
     public var value: UInt64 = 0
     public init() {}
     public init(value: UInt64) {
         self.value = value
     }
-    public static func from(abi: __x_ABI_CMicrosoft_CUI_CDisplayId) -> DisplayId {
-        .init(value: abi.Value)
-    }
 }
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.iconid)
-public struct IconId: Hashable, Codable {
+public struct IconId: Hashable, Codable, Sendable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.iconid.value)
     public var value: UInt64 = 0
     public init() {}
     public init(value: UInt64) {
         self.value = value
     }
-    public static func from(abi: __x_ABI_CMicrosoft_CUI_CIconId) -> IconId {
-        .init(value: abi.Value)
-    }
 }
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowid)
-public struct WindowId: Hashable, Codable {
+public struct WindowId: Hashable, Codable, Sendable {
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowid.value)
     public var value: UInt64 = 0
     public init() {}
     public init(value: UInt64) {
         self.value = value
-    }
-    public static func from(abi: __x_ABI_CMicrosoft_CUI_CWindowId) -> WindowId {
-        .init(value: abi.Value)
     }
 }
 
@@ -791,9 +776,9 @@ public protocol IClosableNotifier : WinRTInterface {
 }
 
 public extension EventSource where Handler == ClosableNotifierHandler {
-    func invoke() {
+    func invoke() throws {
         for handler in getInvocationList() {
-            handler()
+            try handler()
         }
     }
 }
