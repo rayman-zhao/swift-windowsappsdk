@@ -16,9 +16,9 @@ let package = Package(
         .library(name: "CWinAppSDK", targets: ["CWinAppSDK"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/rayman-zhao/swift-cwinrt", branch: "wasdk1.8"),
-        .package(url: "https://github.com/rayman-zhao/swift-windowsfoundation", branch: "wasdk1.8"),
-        .package(url: "https://github.com/rayman-zhao/swift-uwp", branch: "wasdk1.8"),
+        .package(url: "https://github.com/rayman-zhao/swift-cwinrt", branch: "main"),
+        .package(url: "https://github.com/rayman-zhao/swift-windowsfoundation", branch: "main"),
+        .package(url: "https://github.com/rayman-zhao/swift-uwp", branch: "main"),
     ],
     targets: [
         .target(
