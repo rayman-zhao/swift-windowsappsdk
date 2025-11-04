@@ -1450,6 +1450,93 @@ fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLife
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange: WindowsFoundation.IID {
+    .init(Data1: 0x79fffbf6, Data2: 0xdc39, Data3: 0x59e3, Data4: ( 0xa6,0x84,0xfa,0x55,0xfb,0x49,0x23,0x8f ))// 79fffbf6-dc39-59e3-a684-fa55fb49238f
+}
+
+internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
+public class IIterableRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
+
+    open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange
+    internal typealias SwiftABI = IIterableRuntimeCompatibilityChange
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WinAppSDK.RuntimeCompatibilityChange>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterable, AbiInterfaceImpl {
+    typealias T = WinAppSDK.RuntimeCompatibilityChange
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
+        try! _default.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterable_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xe2fcc7c1, Data2: 0x3bfc, Data3: 0x5a0b, Data4: ( 0xb2,0xb0,0x72,0xe7,0x69,0xd1,0xcb,0x7e ))// e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
 }
@@ -4126,6 +4213,155 @@ fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLife
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange: WindowsFoundation.IID {
+    .init(Data1: 0x25abd83a, Data2: 0xa7d6, Data3: 0x5c3a, Data4: ( 0x94,0xa4,0x67,0x4f,0xd9,0xce,0xc6,0xb4 ))// 25abd83a-a7d6-5c3a-94a4-674fd9cec6b4
+}
+
+internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var items: [WinAppSDK.RuntimeCompatibilityChange] = .from(abi: (count: $1, start: $2))
+        let result = __unwrapped__instance.getMany(&items)
+        items.fill(abi: $2)
+        $3?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
+public class IIteratorRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
+
+    open func get_Current() throws -> WinAppSDK.RuntimeCompatibilityChange {
+        var result: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CRuntimeCompatibilityChange = .init(0)
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &result))
+        }
+        return result
+    }
+
+    open func get_HasCurrent() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func MoveNext() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ items: inout [WinAppSDK.RuntimeCompatibilityChange]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
+            }
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange
+    internal typealias SwiftABI = IIteratorRuntimeCompatibilityChange
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterator, AbiInterfaceImpl {
+    typealias T = WinAppSDK.RuntimeCompatibilityChange
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNext()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany)
+    fileprivate func getMany(_ items: inout [WinAppSDK.RuntimeCompatibilityChange]) -> UInt32 {
+        try! _default.GetMany(&items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WinAppSDK.RuntimeCompatibilityChange {
+        get { try! _default.get_Current() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrent() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterator_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x8c304ebb, Data2: 0x6615, Data3: 0x50a4, Data4: ( 0x88,0x29,0x87,0x9e,0xcd,0x44,0x32,0x36 ))// 8c304ebb-6615-50a4-8829-879ecd443236
 }
@@ -6780,6 +7016,188 @@ fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLi
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange: WindowsFoundation.IID {
+    .init(Data1: 0xb3675e71, Data2: 0x9db8, Data3: 0x5b51, Data4: ( 0x98,0x6a,0x12,0x23,0x96,0x4c,0x6f,0x52 ))// b3675e71-9db8-5b51-986a-1223964c6f52
+}
+
+internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    GetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let result = __unwrapped__instance.getAt(index)
+        $2?.initialize(to: result)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    IndexOf: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: WinAppSDK.RuntimeCompatibilityChange = $1
+        var index: UInt32 = 0
+        let result = __unwrapped__instance.indexOf(value, &index)
+        $2?.initialize(to: index)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let startIndex: UInt32 = $1
+        var items: [WinAppSDK.RuntimeCompatibilityChange] = .from(abi: (count: $2, start: $3))
+        let result = __unwrapped__instance.getMany(startIndex, &items)
+        items.fill(abi: $3)
+        $4?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
+public class IVectorViewRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
+
+    open func GetAt(_ index: UInt32) throws -> WinAppSDK.RuntimeCompatibilityChange {
+        var result: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CRuntimeCompatibilityChange = .init(0)
+        _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
+        }
+        return result
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func IndexOf(_ value: WinAppSDK.RuntimeCompatibilityChange, _ index: inout UInt32) throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, &index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.RuntimeCompatibilityChange]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
+            }
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange
+    internal typealias SwiftABI = IVectorViewRuntimeCompatibilityChange
+    internal typealias SwiftProjection = WindowsFoundation.AnyIVectorView<WinAppSDK.RuntimeCompatibilityChange>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVectorView, AbiInterfaceImpl {
+    typealias T = WinAppSDK.RuntimeCompatibilityChange
+    typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: Collection
+    typealias Element = T
+    var startIndex: Int { 0 }
+    var endIndex: Int { Int(size) }
+    func index(after i: Int) -> Int {
+        i+1
+    }
+
+    func index(of: Element) -> Int? {
+        var index: UInt32 = 0
+        let result = indexOf(of, &index)
+        guard result else { return nil }
+        return Int(index)
+    }
+    var count: Int { Int(size) }
+
+    subscript(position: Int) -> Element {
+        get {
+            getAt(UInt32(position))
+        }
+    }
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getat)
+    fileprivate func getAt(_ index: UInt32) -> WinAppSDK.RuntimeCompatibilityChange {
+        try! _default.GetAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.indexof)
+    fileprivate func indexOf(_ value: WinAppSDK.RuntimeCompatibilityChange, _ index: inout UInt32) -> Bool {
+        try! _default.IndexOf(value, &index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getmany)
+    fileprivate func getMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.RuntimeCompatibilityChange]) -> UInt32 {
+        try! _default.GetMany(startIndex, &items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableRuntimeCompatibilityChange! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIVector_1_float: WindowsFoundation.IID {
     .init(Data1: 0x61cf693f, Data2: 0xdb4c, Data3: 0x579f, Data4: ( 0xb9,0x05,0x5d,0xd3,0xd2,0x3c,0xfd,0x4d ))// 61cf693f-db4c-579f-b905-5dd3d23cfd4d
 }
@@ -8487,6 +8905,347 @@ fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecy
     private lazy var _IIterable: IIterableAppInstance! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.AppInstance?>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange: WindowsFoundation.IID {
+    .init(Data1: 0xb2d54673, Data2: 0x319a, Data3: 0x5cef, Data4: ( 0x99,0x97,0x2a,0xa9,0x5c,0xae,0x7d,0x4b ))// b2d54673-319a-5cef-9997-2aa95cae7d4b
+}
+
+internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IVector`1<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    GetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let result = __unwrapped__instance.getAt(index)
+        $2?.initialize(to: result)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    GetView: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.getView()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    IndexOf: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: WinAppSDK.RuntimeCompatibilityChange = $1
+        var index: UInt32 = 0
+        let result = __unwrapped__instance.indexOf(value, &index)
+        $2?.initialize(to: index)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    SetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let value: WinAppSDK.RuntimeCompatibilityChange = $2
+        __unwrapped__instance.setAt(index, value)
+        return S_OK
+    },
+
+    InsertAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let value: WinAppSDK.RuntimeCompatibilityChange = $2
+        __unwrapped__instance.insertAt(index, value)
+        return S_OK
+    },
+
+    RemoveAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        __unwrapped__instance.removeAt(index)
+        return S_OK
+    },
+
+    Append: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: WinAppSDK.RuntimeCompatibilityChange = $1
+        __unwrapped__instance.append(value)
+        return S_OK
+    },
+
+    RemoveAtEnd: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        __unwrapped__instance.removeAtEnd()
+        return S_OK
+    },
+
+    Clear: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        __unwrapped__instance.clear()
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let startIndex: UInt32 = $1
+        var items: [WinAppSDK.RuntimeCompatibilityChange] = .from(abi: (count: $2, start: $3))
+        let result = __unwrapped__instance.getMany(startIndex, &items)
+        items.fill(abi: $3)
+        $4?.initialize(to: result)
+        return S_OK
+    },
+
+    ReplaceAll: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let items: [WinAppSDK.RuntimeCompatibilityChange] = .from(abi: (count: $1, start: $2))
+        __unwrapped__instance.replaceAll(items)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
+public class IVectorRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
+
+    open func GetAt(_ index: UInt32) throws -> WinAppSDK.RuntimeCompatibilityChange {
+        var result: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CRuntimeCompatibilityChange = .init(0)
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
+        }
+        return result
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func GetView() throws -> WindowsFoundation.AnyIVectorView<WinAppSDK.RuntimeCompatibilityChange>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.unwrapFrom(abi: result)
+    }
+
+    open func IndexOf(_ value: WinAppSDK.RuntimeCompatibilityChange, _ index: inout UInt32) throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, &index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func SetAt(_ index: UInt32, _ value: WinAppSDK.RuntimeCompatibilityChange) throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+
+    open func InsertAt(_ index: UInt32, _ value: WinAppSDK.RuntimeCompatibilityChange) throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+
+    open func RemoveAt(_ index: UInt32) throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+
+    open func Append(_ value: WinAppSDK.RuntimeCompatibilityChange) throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+
+    open func RemoveAtEnd() throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+
+    open func Clear() throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+
+    open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.RuntimeCompatibilityChange]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
+            }
+        }
+        return result
+    }
+
+    open func ReplaceAll(_ items: [WinAppSDK.RuntimeCompatibilityChange]) throws {
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, _items.count, _items.start))
+            }
+        }
+    }
+
+}
+
+internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange
+    internal typealias SwiftABI = IVectorRuntimeCompatibilityChange
+    internal typealias SwiftProjection = WindowsFoundation.AnyIVector<WinAppSDK.RuntimeCompatibilityChange>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVector, AbiInterfaceImpl {
+    typealias T = WinAppSDK.RuntimeCompatibilityChange
+    typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: Collection
+    typealias Element = T
+    var startIndex: Int { 0 }
+    var endIndex: Int { Int(size) }
+    func index(after i: Int) -> Int {
+        i+1
+    }
+
+    func index(of: Element) -> Int? {
+        var index: UInt32 = 0
+        let result = indexOf(of, &index)
+        guard result else { return nil }
+        return Int(index)
+    }
+    var count: Int { Int(size) }
+
+
+    subscript(position: Int) -> Element {
+        get {
+            getAt(UInt32(position))
+        }
+        set(newValue) {
+            setAt(UInt32(position), newValue)
+        }
+    }
+
+    func removeLast() {
+        removeAtEnd()
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getat)
+    fileprivate func getAt(_ index: UInt32) -> WinAppSDK.RuntimeCompatibilityChange {
+        try! _default.GetAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getview)
+    fileprivate func getView() -> WindowsFoundation.AnyIVectorView<WinAppSDK.RuntimeCompatibilityChange>? {
+        try! _default.GetView()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.indexof)
+    fileprivate func indexOf(_ value: WinAppSDK.RuntimeCompatibilityChange, _ index: inout UInt32) -> Bool {
+        try! _default.IndexOf(value, &index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.setat)
+    fileprivate func setAt(_ index: UInt32, _ value: WinAppSDK.RuntimeCompatibilityChange) {
+        try! _default.SetAt(index, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.insertat)
+    fileprivate func insertAt(_ index: UInt32, _ value: WinAppSDK.RuntimeCompatibilityChange) {
+        try! _default.InsertAt(index, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.removeat)
+    fileprivate func removeAt(_ index: UInt32) {
+        try! _default.RemoveAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.append)
+    fileprivate func append(_ value: WinAppSDK.RuntimeCompatibilityChange) {
+        try! _default.Append(value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.removeatend)
+    fileprivate func removeAtEnd() {
+        try! _default.RemoveAtEnd()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.clear)
+    fileprivate func clear() {
+        try! _default.Clear()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getmany)
+    fileprivate func getMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.RuntimeCompatibilityChange]) -> UInt32 {
+        try! _default.GetMany(startIndex, &items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.replaceall)
+    fileprivate func replaceAll(_ items: [WinAppSDK.RuntimeCompatibilityChange]) {
+        try! _default.ReplaceAll(items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableRuntimeCompatibilityChange! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
         try! _IIterable.First()
     }
 
