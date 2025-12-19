@@ -5,20 +5,8 @@ import Foundation
 @_spi(WinRTInternal) @_spi(WinRTImplements) import WindowsFoundation
 import CWinRT
 
-private var IID___x_ABI_CMicrosoft_CUI_CText_CIFontWeights: WindowsFoundation.IID {
-    .init(Data1: 0x386CD040, Data2: 0x5404, Data3: 0x5A8D, Data4: ( 0x8B,0xC7,0x2C,0xA9,0x89,0xF5,0xC0,0x65 ))// 386CD040-5404-5A8D-8BC7-2CA989F5C065
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics: WindowsFoundation.IID {
-    .init(Data1: 0xCC390DF6, Data2: 0x76B0, Data3: 0x5807, Data4: ( 0x8B,0x9D,0xE9,0x49,0xA4,0xE6,0x23,0xAE ))// CC390DF6-76B0-5807-8B9D-E949A4E623AE
-}
-
 private var IID___x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormat: WindowsFoundation.IID {
     .init(Data1: 0xF5710050, Data2: 0x98E5, Data3: 0x5788, Data4: ( 0xB1,0xE3,0x32,0x19,0x1E,0xEB,0xF9,0x4D ))// F5710050-98E5-5788-B1E3-32191EEBF94D
-}
-
-private var IID___x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics: WindowsFoundation.IID {
-    .init(Data1: 0xCD353B3C, Data2: 0xAF63, Data3: 0x5CFB, Data4: ( 0x91,0x8C,0x0F,0x9C,0x89,0x31,0xA1,0x61 ))// CD353B3C-AF63-5CFB-918C-0F9C8931A161
 }
 
 private var IID___x_ABI_CMicrosoft_CUI_CText_CITextDocument: WindowsFoundation.IID {
@@ -43,104 +31,6 @@ private var IID___x_ABI_CMicrosoft_CUI_CText_CITextSelection: WindowsFoundation.
 
 @_spi(WinRTInternal)
 public enum __ABI_Microsoft_UI_Text {
-    public class IFontWeights: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CIFontWeights }
-
-    }
-
-    public class IFontWeightsStatics: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics }
-
-        public func get_Black() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Black(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Bold() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Bold(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_ExtraBlack() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExtraBlack(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_ExtraBold() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExtraBold(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_ExtraLight() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExtraLight(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Light() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Light(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Medium() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Medium(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Normal() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Normal(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_SemiBold() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_SemiBold(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_SemiLight() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_SemiLight(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_Thin() throws -> UWP.FontWeight {
-            var value: __x_ABI_CWindows_CUI_CText_CFontWeight = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CIFontWeightsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Thin(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-    }
-
     public class ITextCharacterFormat: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormat }
 
@@ -893,75 +783,6 @@ public enum __ABI_Microsoft_UI_Text {
     )
 
     public typealias ITextCharacterFormatWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Text.ITextCharacterFormatBridge>
-    public class ITextConstantsStatics: WindowsFoundation.IInspectable {
-        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics }
-
-        public func get_AutoColor() throws -> UWP.Color {
-            var value: __x_ABI_CWindows_CUI_CColor = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_AutoColor(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_MinUnitCount() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinUnitCount(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_MaxUnitCount() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxUnitCount(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_UndefinedColor() throws -> UWP.Color {
-            var value: __x_ABI_CWindows_CUI_CColor = .init()
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_UndefinedColor(pThis, &value))
-            }
-            return .from(abi: value)
-        }
-
-        public func get_UndefinedFloatValue() throws -> Float {
-            var value: FLOAT = 0.0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_UndefinedFloatValue(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_UndefinedInt32Value() throws -> Int32 {
-            var value: INT32 = 0
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_UndefinedInt32Value(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_UndefinedFontStretch() throws -> UWP.FontStretch {
-            var value: __x_ABI_CWindows_CUI_CText_CFontStretch = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_UndefinedFontStretch(pThis, &value))
-            }
-            return value
-        }
-
-        public func get_UndefinedFontStyle() throws -> UWP.FontStyle {
-            var value: __x_ABI_CWindows_CUI_CText_CFontStyle = .init(0)
-            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextConstantsStatics.self) { pThis in
-                try CHECKED(pThis.pointee.lpVtbl.pointee.get_UndefinedFontStyle(pThis, &value))
-            }
-            return value
-        }
-
-    }
-
     public class ITextDocument: WindowsFoundation.IInspectable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextDocument }
 

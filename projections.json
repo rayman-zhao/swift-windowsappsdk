@@ -20,7 +20,7 @@
     "Microsoft.UI.Content.DesktopChildSiteBridge",
     "Microsoft.UI.Dispatching.DispatcherQueueController",
     "Microsoft.UI.Input",
-    "Microsoft.UI.Text",
+    "Microsoft.UI.Text.RichEditTextDocument",
     "Microsoft.UI.Windowing.AppWindow",
     "Microsoft.UI.Windowing.AppWindowTitleBar",
     "Microsoft.UI.Windowing.DisplayArea",

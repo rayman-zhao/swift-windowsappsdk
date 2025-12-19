@@ -932,28 +932,10 @@ public enum __IMPL_Microsoft_UI_Text {
 
     }
 
-    public enum FontWeightsBridge: AbiBridge {
-        public typealias SwiftProjection = FontWeights
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CText_CIFontWeights
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CText_CIFontWeights>?) -> FontWeights? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
     public enum RichEditTextDocumentBridge: AbiBridge {
         public typealias SwiftProjection = RichEditTextDocument
         public typealias CABI = __x_ABI_CMicrosoft_CUI_CText_CITextDocument
         public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CText_CITextDocument>?) -> RichEditTextDocument? {
-            guard let abi = abi else { return nil }
-            return .init(fromAbi: WindowsFoundation.IInspectable(abi))
-        }
-    }
-
-    public enum RichEditTextRangeBridge: AbiBridge {
-        public typealias SwiftProjection = RichEditTextRange
-        public typealias CABI = __x_ABI_CMicrosoft_CUI_CText_CITextRange
-        public static func from(abi: ComPtr<__x_ABI_CMicrosoft_CUI_CText_CITextRange>?) -> RichEditTextRange? {
             guard let abi = abi else { return nil }
             return .init(fromAbi: WindowsFoundation.IInspectable(abi))
         }
@@ -993,23 +975,9 @@ public class ITextSelectionMaker: MakeFromAbi {
     }
 }
 @_spi(WinRTInternal)
-public class FontWeightsMaker: MakeFromAbi {
-    public typealias SwiftType = FontWeights
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return FontWeights(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
 public class RichEditTextDocumentMaker: MakeFromAbi {
     public typealias SwiftType = RichEditTextDocument
     public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
         return RichEditTextDocument(fromAbi: abi)
-    }
-}
-@_spi(WinRTInternal)
-public class RichEditTextRangeMaker: MakeFromAbi {
-    public typealias SwiftType = RichEditTextRange
-    public static func from(abi: WindowsFoundation.IInspectable) -> SwiftType {
-        return RichEditTextRange(fromAbi: abi)
     }
 }
