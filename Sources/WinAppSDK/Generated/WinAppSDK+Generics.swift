@@ -58,6 +58,165 @@ internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft_
         return handler
     }
 }
+private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0x4689da0a, Data2: 0xd31d, Data3: 0x5be4, Data4: ( 0x87,0x22,0xbf,0xdb,0x60,0x89,0x30,0x26 ))// 4689da0a-d31d-5be4-8722-bfdb60893026
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    Invoke: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFileResult?>? = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: ComPtr($1))
+            let asyncStatus: WindowsFoundation.AsyncStatus = $2
+            try __unwrapped__instance(asyncInfo, asyncStatus)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class AsyncOperationCompletedHandlerPickFileResult: WindowsFoundation.IUnknown {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFileResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
+        let asyncInfoWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(asyncInfo)
+        let _asyncInfo = try! asyncInfoWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _asyncInfo, asyncStatus))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.AsyncOperationCompletedHandler<WinAppSDK.PickFileResult?>
+    internal typealias CABI = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = WinAppSDK.AsyncOperationCompletedHandlerPickFileResult
+
+    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (asyncInfo, asyncStatus) in
+            try _default.Invoke(asyncInfo, asyncStatus)
+        }
+        return handler
+    }
+}
+private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult: WindowsFoundation.IID {
+    .init(Data1: 0xa429a329, Data2: 0x573b, Data3: 0x52b9, Data4: ( 0x88,0x3f,0x3c,0xcf,0xb3,0x10,0xf1,0x43 ))// a429a329-573b-52b9-883f-3ccfb310f143
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.release($0) },
+    Invoke: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFolderResult?>? = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.unwrapFrom(abi: ComPtr($1))
+            let asyncStatus: WindowsFoundation.AsyncStatus = $2
+            try __unwrapped__instance(asyncInfo, asyncStatus)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge>
+public class AsyncOperationCompletedHandlerPickFolderResult: WindowsFoundation.IUnknown {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult }
+
+    open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFolderResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
+        let asyncInfoWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper(asyncInfo)
+        let _asyncInfo = try! asyncInfoWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _asyncInfo, asyncStatus))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.AsyncOperationCompletedHandler<WinAppSDK.PickFolderResult?>
+    internal typealias CABI = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult
+    internal typealias SwiftABI = WinAppSDK.AsyncOperationCompletedHandlerPickFolderResult
+
+    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (asyncInfo, asyncStatus) in
+            try _default.Invoke(asyncInfo, asyncStatus)
+        }
+        return handler
+    }
+}
+private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0xf1a085fd, Data2: 0xb82d, Data3: 0x5f07, Data4: ( 0x81,0xf6,0x28,0xab,0xef,0xd1,0xc8,0x4c ))// f1a085fd-b82d-5f07-81f6-28abefd1c84c
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    Invoke: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let asyncInfo: WindowsFoundation.AnyIAsyncOperation<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>? = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: ComPtr($1))
+            let asyncStatus: WindowsFoundation.AsyncStatus = $2
+            try __unwrapped__instance(asyncInfo, asyncStatus)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class AsyncOperationCompletedHandlerIVectorViewPickFileResult: WindowsFoundation.IUnknown {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
+        let asyncInfoWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(asyncInfo)
+        let _asyncInfo = try! asyncInfoWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _asyncInfo, asyncStatus))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.AsyncOperationCompletedHandler<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>
+    internal typealias CABI = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = WinAppSDK.AsyncOperationCompletedHandlerIVectorViewPickFileResult
+
+    internal static func from(abi: ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (asyncInfo, asyncStatus) in
+            try _default.Invoke(asyncInfo, asyncStatus)
+        }
+        return handler
+    }
+}
 private var IID___x_ABI_C__FIIterable_1_float: WindowsFoundation.IID {
     .init(Data1: 0xb01bee51, Data2: 0x063a, Data3: 0x5fda, Data4: ( 0xbd,0x72,0xd7,0x66,0x37,0xbb,0x8c,0xb8 ))// b01bee51-063a-5fda-bd72-d76637bb8cb8
 }
@@ -1537,6 +1696,93 @@ fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplica
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0xff8b2322, Data2: 0xce6d, Data3: 0x5136, Data4: ( 0xb5,0xf0,0x40,0x34,0xdf,0xe0,0x9c,0x4b ))// ff8b2322-ce6d-5136-b5f0-4034dfe09c4b
+}
+
+internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Microsoft.Windows.Storage.Pickers.PickFileResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class IIterablePickFileResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.PickFileResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = IIterablePickFileResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WinAppSDK.PickFileResult?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterable, AbiInterfaceImpl {
+    typealias T = WinAppSDK.PickFileResult?
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.PickFileResult?>? {
+        try! _default.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterable_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xe2fcc7c1, Data2: 0x3bfc, Data3: 0x5a0b, Data4: ( 0xb2,0xb0,0x72,0xe7,0x69,0xd1,0xcb,0x7e ))// e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
 }
@@ -1792,6 +2038,93 @@ fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HS
     // MARK: WinRT
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
+        try! _default.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0x4fed2669, Data2: 0xd0d3, Data3: 0x59f6, Data4: ( 0x91,0xd9,0x95,0x90,0x2d,0x72,0x8d,0x6a ))// 4fed2669-d0d3-59f6-91d9-95902d728d6a
+}
+
+internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Foundation.Collections.IVector`1<String>>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IIterableIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
+
+    open func First() throws -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IIterableIKeyValuePairString_IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterable, AbiInterfaceImpl {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>? {
         try! _default.First()
     }
 
@@ -4362,6 +4695,157 @@ fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplica
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0xb07e34ef, Data2: 0xae42, Data3: 0x5dea, Data4: ( 0xb3,0xd3,0x4c,0x25,0x29,0x90,0xab,0x31 ))// b07e34ef-ae42-5dea-b3d3-4c252990ab31
+}
+
+internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Microsoft.Windows.Storage.Pickers.PickFileResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        result?.copyTo($1)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var items: [WinAppSDK.PickFileResult?] = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: (count: $1, start: $2))
+        let result = __unwrapped__instance.getMany(&items)
+        items.fill(abi: $2, abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self)
+        $3?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class IIteratorPickFileResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func get_Current() throws -> WinAppSDK.PickFileResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.from(abi: result)
+    }
+
+    open func get_HasCurrent() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func MoveNext() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ items: inout [WinAppSDK.PickFileResult?]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self) { _items in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
+            }
+        items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = IIteratorPickFileResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WinAppSDK.PickFileResult?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterator, AbiInterfaceImpl {
+    typealias T = WinAppSDK.PickFileResult?
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNext()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany)
+    fileprivate func getMany(_ items: inout [WinAppSDK.PickFileResult?]) -> UInt32 {
+        try! _default.GetMany(&items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WinAppSDK.PickFileResult? {
+        get { try! _default.get_Current() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrent() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterator_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x8c304ebb, Data2: 0x6615, Data3: 0x50a4, Data4: ( 0x88,0x29,0x87,0x9e,0xcd,0x44,0x32,0x36 ))// 8c304ebb-6615-50a4-8829-879ecd443236
 }
@@ -4818,6 +5302,158 @@ fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HS
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0xa11824c9, Data2: 0xe458, Data3: 0x502a, Data4: ( 0xaf,0xd8,0xce,0x3c,0xe0,0xab,0xd6,0xfe ))// a11824c9-e458-502a-afd8-ce3ce0abd6fe
+}
+
+internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Foundation.Collections.IVector`1<String>>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var items: [WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?] = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self, abi: (count: $1, start: $2))
+        let result = __unwrapped__instance.getMany(&items)
+        items.fill(abi: $2, abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self)
+        $3?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IIteratorIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
+
+    open func get_Current() throws -> WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+    open func get_HasCurrent() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func MoveNext() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self) { _items in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
+            }
+        items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self, abi: _items)
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IIteratorIKeyValuePairString_IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterator, AbiInterfaceImpl {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNext()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany)
+    fileprivate func getMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?]) -> UInt32 {
+        try! _default.GetMany(&items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>? {
+        get { try! _default.get_Current() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrent() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase: WindowsFoundation.IID {
     .init(Data1: 0xe1ea9d61, Data2: 0x0e9e, Data3: 0x5375, Data4: ( 0xac,0x74,0x50,0x2e,0x67,0xf9,0xed,0xe1 ))// e1ea9d61-0e9e-5375-ac74-502e67f9ede1
 }
@@ -5133,6 +5769,114 @@ fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IKeyValuePai
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ikeyvaluepair-2.value)
     fileprivate var value : String {
+        get { try! _default.get_Value() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0x174f26c7, Data2: 0x79ea, Data3: 0x5f7c, Data4: ( 0xbd,0x70,0xac,0x44,0x57,0xf2,0xca,0xc8 ))// 174f26c7-79ea-5f7c-bd70-ac4457f2cac8
+}
+
+internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Foundation.Collections.IVector`1<String>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Key: {
+        guard let __unwrapped__instance = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.key
+        $1?.initialize(to: try! HString(result).detach())
+        return S_OK
+    },
+
+    get_Value: {
+        guard let __unwrapped__instance = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.value
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
+
+    open func get_Key() throws -> String {
+        var result: HSTRING?
+        _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func get_Value() throws -> WindowsFoundation.AnyIVector<String>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Value(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IKeyValuePairString_IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IKeyValuePair, AbiInterfaceImpl {
+    typealias K = String
+    typealias V = WindowsFoundation.AnyIVector<String>?
+    typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ikeyvaluepair-2.key)
+    fileprivate var key : String {
+        get { try! _default.get_Key() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ikeyvaluepair-2.value)
+    fileprivate var value : WindowsFoundation.AnyIVector<String>? {
         get { try! _default.get_Value() }
     }
 
@@ -5465,6 +6209,173 @@ fileprivate class __x_ABI_C__FIMapView_2_HSTRING_HSTRINGImpl : IMapView, AbiInte
     private lazy var _IIterable: IIterableIKeyValuePairString_String! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0x153f9c9c, Data2: 0xd22a, Data3: 0x5c9e, Data4: ( 0x9c,0x74,0x8b,0x85,0xc9,0x08,0xb0,0x00 ))// 153f9c9c-d22a-5c9e-9c74-8b85c908b000
+}
+
+internal var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IMapView`2<String, Windows.Foundation.Collections.IVector`1<String>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    Lookup: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.lookup(key)
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($2)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    HasKey: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.hasKey(key)
+        $2?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    Split: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var first: WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?
+        var second: WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?
+        __unwrapped__instance.split(&first, &second)
+        let firstWrapper = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper(first)
+        firstWrapper?.copyTo($1)
+        let secondWrapper = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper(second)
+        secondWrapper?.copyTo($2)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IMapViewString_IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
+
+    open func Lookup(_ key: String) throws -> WindowsFoundation.AnyIVector<String>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            let _key = try! HString(key)
+            _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Lookup(pThis, _key.get(), &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func HasKey(_ key: String) throws -> Bool {
+        var result: boolean = 0
+        let _key = try! HString(key)
+        _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.HasKey(pThis, _key.get(), &result))
+        }
+        return .init(from: result)
+    }
+
+    open func Split(_ first: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?, _ second: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?) throws {
+        let (_first, _second) = try ComPtrs.initialize { (_firstAbi, _secondAbi) in
+            _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Split(pThis, &_firstAbi, &_secondAbi))
+            }
+        }
+        first = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: _first)
+        second = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: _second)
+    }
+
+}
+
+internal enum __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IMapViewString_IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMapView, AbiInterfaceImpl {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
+    typealias K = String
+    typealias V = WindowsFoundation.AnyIVector<String>?
+    typealias Bridge = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.lookup)
+    fileprivate func lookup(_ key: String) -> WindowsFoundation.AnyIVector<String>? {
+        try! _default.Lookup(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.haskey)
+    fileprivate func hasKey(_ key: String) -> Bool {
+        try! _default.HasKey(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.split)
+    fileprivate func split(_ first: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?, _ second: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?) {
+        try! _default.Split(&first, &second)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableIKeyValuePairString_IVectorString! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>? {
         try! _IIterable.First()
     }
 
@@ -5908,6 +6819,229 @@ fileprivate class __x_ABI_C__FIMap_2_HSTRING_HSTRINGImpl : IMap, AbiInterfaceImp
     private lazy var _IIterable: IIterableIKeyValuePairString_String! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0xe475ca9d, Data2: 0x6afb, Data3: 0x5992, Data4: ( 0x99,0x3e,0x53,0xe6,0xef,0x7a,0x9e,0xcd ))// e475ca9d-6afb-5992-993e-53e6ef7a9ecd
+}
+
+internal var __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IMap`2<String, Windows.Foundation.Collections.IVector`1<String>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    Lookup: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.lookup(key)
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($2)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    HasKey: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.hasKey(key)
+        $2?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetView: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.getView()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    Insert: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let value: WindowsFoundation.AnyIVector<String>? = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: ComPtr($2))
+        let result = __unwrapped__instance.insert(key, value)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    Remove: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        __unwrapped__instance.remove(key)
+        return S_OK
+    },
+
+    Clear: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        __unwrapped__instance.clear()
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IMapString_IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
+
+    open func Lookup(_ key: String) throws -> WindowsFoundation.AnyIVector<String>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            let _key = try! HString(key)
+            _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Lookup(pThis, _key.get(), &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func HasKey(_ key: String) throws -> Bool {
+        var result: boolean = 0
+        let _key = try! HString(key)
+        _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.HasKey(pThis, _key.get(), &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetView() throws -> WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+    open func Insert(_ key: String, _ value: WindowsFoundation.AnyIVector<String>?) throws -> Bool {
+        var result: boolean = 0
+        let _key = try! HString(key)
+        let valueWrapper = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper(value)
+        let _value = try! valueWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Insert(pThis, _key.get(), _value, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func Remove(_ key: String) throws {
+        let _key = try! HString(key)
+        _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Remove(pThis, _key.get()))
+        }
+    }
+
+    open func Clear() throws {
+        _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+
+}
+
+internal enum __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IMapString_IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIMap<String, WindowsFoundation.AnyIVector<String>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMap, AbiInterfaceImpl {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
+    typealias K = String
+    typealias V = WindowsFoundation.AnyIVector<String>?
+    typealias Bridge = __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.lookup)
+    fileprivate func lookup(_ key: String) -> WindowsFoundation.AnyIVector<String>? {
+        try! _default.Lookup(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.haskey)
+    fileprivate func hasKey(_ key: String) -> Bool {
+        try! _default.HasKey(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.getview)
+    fileprivate func getView() -> WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>? {
+        try! _default.GetView()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.insert)
+    fileprivate func insert(_ key: String, _ value: WindowsFoundation.AnyIVector<String>?) -> Bool {
+        try! _default.Insert(key, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.remove)
+    fileprivate func remove(_ key: String) {
+        try! _default.Remove(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.clear)
+    fileprivate func clear() {
+        try! _default.Clear()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableIKeyValuePairString_IVectorString! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imap-2.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>? {
         try! _IIterable.First()
     }
 
@@ -7192,6 +8326,376 @@ fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppli
     private lazy var _IIterable: IIterableRuntimeCompatibilityChange! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0x76506627, Data2: 0xd304, Data3: 0x5763, Data4: ( 0x86,0xc2,0xd7,0xfd,0x3f,0x17,0x15,0x2b ))// 76506627-d304-5763-86c2-d7fd3f17152b
+}
+
+internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Storage.Pickers.PickFileResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    GetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let result = __unwrapped__instance.getAt(index)
+        result?.copyTo($2)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    IndexOf: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: WinAppSDK.PickFileResult? = __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.from(abi: ComPtr($1))
+        var index: UInt32 = 0
+        let result = __unwrapped__instance.indexOf(value, &index)
+        $2?.initialize(to: index)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let startIndex: UInt32 = $1
+        var items: [WinAppSDK.PickFileResult?] = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: (count: $2, start: $3))
+        let result = __unwrapped__instance.getMany(startIndex, &items)
+        items.fill(abi: $3, abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self)
+        $4?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class IVectorViewPickFileResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func GetAt(_ index: UInt32) throws -> WinAppSDK.PickFileResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.from(abi: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func IndexOf(_ value: WinAppSDK.PickFileResult?, _ index: inout UInt32) throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, RawPointer(value), &index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.PickFileResult?]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self) { _items in
+            _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
+            }
+        items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = IVectorViewPickFileResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IVectorView, AbiInterfaceImpl {
+    typealias T = WinAppSDK.PickFileResult?
+    typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: Collection
+    typealias Element = T
+    var startIndex: Int { 0 }
+    var endIndex: Int { Int(size) }
+    func index(after i: Int) -> Int {
+        i+1
+    }
+
+    func index(of: Element) -> Int? {
+        var index: UInt32 = 0
+        let result = indexOf(of, &index)
+        guard result else { return nil }
+        return Int(index)
+    }
+    var count: Int { Int(size) }
+
+    subscript(position: Int) -> Element {
+        get {
+            getAt(UInt32(position))
+        }
+    }
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getat)
+    fileprivate func getAt(_ index: UInt32) -> WinAppSDK.PickFileResult? {
+        try! _default.GetAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.indexof)
+    fileprivate func indexOf(_ value: WinAppSDK.PickFileResult?, _ index: inout UInt32) -> Bool {
+        try! _default.IndexOf(value, &index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getmany)
+    fileprivate func getMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.PickFileResult?]) -> UInt32 {
+        try! _default.GetMany(startIndex, &items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterablePickFileResult! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WinAppSDK.PickFileResult?>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIVectorView_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0x2f13c006, Data2: 0xa03a, Data3: 0x5f69, Data4: ( 0xb0,0x90,0x75,0xa4,0x3e,0x33,0x42,0x3e ))// 2f13c006-a03a-5f69-b090-75a43e33423e
+}
+
+internal var __x_ABI_C__FIVectorView_1_HSTRINGVTable: __x_ABI_C__FIVectorView_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIVectorView_1_HSTRINGWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1_HSTRINGWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IVectorView`1<String>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    GetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let result = __unwrapped__instance.getAt(index)
+        $2?.initialize(to: try! HString(result).detach())
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    IndexOf: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: String = .init(from: $1)
+        var index: UInt32 = 0
+        let result = __unwrapped__instance.indexOf(value, &index)
+        $2?.initialize(to: index)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVectorView_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let startIndex: UInt32 = $1
+        var items: [String] = .from(abi: (count: $2, start: $3))
+        let result = __unwrapped__instance.getMany(startIndex, &items)
+        do {
+            try items.fill(abi: $3)
+        } catch { return failWith(error: error) }
+        $4?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIVectorView_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1_HSTRINGBridge>
+public class IVectorViewString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1_HSTRING }
+
+    open func GetAt(_ index: UInt32) throws -> String {
+        var result: HSTRING?
+        _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func IndexOf(_ value: String, _ index: inout UInt32) throws -> Bool {
+        var result: boolean = 0
+        let _value = try! HString(value)
+        _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, _value.get(), &index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ startIndex: UInt32, _ items: inout [String]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
+            }
+        items = .from(abi: _items)
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIVectorView_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIVectorView_1_HSTRING
+    internal typealias SwiftABI = IVectorViewString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIVectorView<String>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIVectorView_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIVectorView_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIVectorView_1_HSTRINGImpl : IVectorView, AbiInterfaceImpl {
+    typealias T = String
+    typealias Bridge = __x_ABI_C__FIVectorView_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: Collection
+    typealias Element = T
+    var startIndex: Int { 0 }
+    var endIndex: Int { Int(size) }
+    func index(after i: Int) -> Int {
+        i+1
+    }
+
+    func index(of: Element) -> Int? {
+        var index: UInt32 = 0
+        let result = indexOf(of, &index)
+        guard result else { return nil }
+        return Int(index)
+    }
+    var count: Int { Int(size) }
+
+    subscript(position: Int) -> Element {
+        get {
+            getAt(UInt32(position))
+        }
+    }
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getat)
+    fileprivate func getAt(_ index: UInt32) -> String {
+        try! _default.GetAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.indexof)
+    fileprivate func indexOf(_ value: String, _ index: inout UInt32) -> Bool {
+        try! _default.IndexOf(value, &index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.getmany)
+    fileprivate func getMany(_ startIndex: UInt32, _ items: inout [String]) -> UInt32 {
+        try! _default.GetMany(startIndex, &items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableString! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivectorview-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<String>? {
         try! _IIterable.First()
     }
 
@@ -9252,6 +10756,354 @@ fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicati
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
+    .init(Data1: 0x98b9acc1, Data2: 0x4b56, Data3: 0x532e, Data4: ( 0xac,0x73,0x03,0xd5,0x29,0x1c,0xca,0x90 ))// 98b9acc1-4b56-532e-ac73-03d5291cca90
+}
+
+internal var __x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1_HSTRINGWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IVector`1<String>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    GetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let result = __unwrapped__instance.getAt(index)
+        $2?.initialize(to: try! HString(result).detach())
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    GetView: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.getView()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIVectorView_1_HSTRINGWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    IndexOf: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: String = .init(from: $1)
+        var index: UInt32 = 0
+        let result = __unwrapped__instance.indexOf(value, &index)
+        $2?.initialize(to: index)
+        $3?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    SetAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let value: String = .init(from: $2)
+        __unwrapped__instance.setAt(index, value)
+        return S_OK
+    },
+
+    InsertAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        let value: String = .init(from: $2)
+        __unwrapped__instance.insertAt(index, value)
+        return S_OK
+    },
+
+    RemoveAt: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let index: UInt32 = $1
+        __unwrapped__instance.removeAt(index)
+        return S_OK
+    },
+
+    Append: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let value: String = .init(from: $1)
+        __unwrapped__instance.append(value)
+        return S_OK
+    },
+
+    RemoveAtEnd: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        __unwrapped__instance.removeAtEnd()
+        return S_OK
+    },
+
+    Clear: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        __unwrapped__instance.clear()
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let startIndex: UInt32 = $1
+        var items: [String] = .from(abi: (count: $2, start: $3))
+        let result = __unwrapped__instance.getMany(startIndex, &items)
+        do {
+            try items.fill(abi: $3)
+        } catch { return failWith(error: error) }
+        $4?.initialize(to: result)
+        return S_OK
+    },
+
+    ReplaceAll: {
+        guard let __unwrapped__instance = __x_ABI_C__FIVector_1_HSTRINGWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let items: [String] = .from(abi: (count: $1, start: $2))
+        __unwrapped__instance.replaceAll(items)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGBridge>
+public class IVectorString: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1_HSTRING }
+
+    open func GetAt(_ index: UInt32) throws -> String {
+        var result: HSTRING?
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func GetView() throws -> WindowsFoundation.AnyIVectorView<String>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVectorView_1_HSTRINGWrapper.unwrapFrom(abi: result)
+    }
+
+    open func IndexOf(_ value: String, _ index: inout UInt32) throws -> Bool {
+        var result: boolean = 0
+        let _value = try! HString(value)
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, _value.get(), &index, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func SetAt(_ index: UInt32, _ value: String) throws {
+        let _value = try! HString(value)
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, _value.get()))
+        }
+    }
+
+    open func InsertAt(_ index: UInt32, _ value: String) throws {
+        let _value = try! HString(value)
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, _value.get()))
+        }
+    }
+
+    open func RemoveAt(_ index: UInt32) throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+
+    open func Append(_ value: String) throws {
+        let _value = try! HString(value)
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, _value.get()))
+        }
+    }
+
+    open func RemoveAtEnd() throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+
+    open func Clear() throws {
+        _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+
+    open func GetMany(_ startIndex: UInt32, _ items: inout [String]) throws -> UInt32 {
+        var result: UINT32 = 0
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
+            }
+        items = .from(abi: _items)
+        }
+        return result
+    }
+
+    open func ReplaceAll(_ items: [String]) throws {
+        try items.toABI { _items in
+            _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, _items.count, _items.start))
+            }
+        }
+    }
+
+}
+
+internal enum __x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIVector_1_HSTRING
+    internal typealias SwiftABI = IVectorString
+    internal typealias SwiftProjection = WindowsFoundation.AnyIVector<String>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIVector_1_HSTRINGImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIVector_1_HSTRINGVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIVector_1_HSTRINGImpl : IVector, AbiInterfaceImpl {
+    typealias T = String
+    typealias Bridge = __x_ABI_C__FIVector_1_HSTRINGBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: Collection
+    typealias Element = T
+    var startIndex: Int { 0 }
+    var endIndex: Int { Int(size) }
+    func index(after i: Int) -> Int {
+        i+1
+    }
+
+    func index(of: Element) -> Int? {
+        var index: UInt32 = 0
+        let result = indexOf(of, &index)
+        guard result else { return nil }
+        return Int(index)
+    }
+    var count: Int { Int(size) }
+
+
+    subscript(position: Int) -> Element {
+        get {
+            getAt(UInt32(position))
+        }
+        set(newValue) {
+            setAt(UInt32(position), newValue)
+        }
+    }
+
+    func removeLast() {
+        removeAtEnd()
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getat)
+    fileprivate func getAt(_ index: UInt32) -> String {
+        try! _default.GetAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getview)
+    fileprivate func getView() -> WindowsFoundation.AnyIVectorView<String>? {
+        try! _default.GetView()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.indexof)
+    fileprivate func indexOf(_ value: String, _ index: inout UInt32) -> Bool {
+        try! _default.IndexOf(value, &index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.setat)
+    fileprivate func setAt(_ index: UInt32, _ value: String) {
+        try! _default.SetAt(index, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.insertat)
+    fileprivate func insertAt(_ index: UInt32, _ value: String) {
+        try! _default.InsertAt(index, value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.removeat)
+    fileprivate func removeAt(_ index: UInt32) {
+        try! _default.RemoveAt(index)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.append)
+    fileprivate func append(_ value: String) {
+        try! _default.Append(value)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.removeatend)
+    fileprivate func removeAtEnd() {
+        try! _default.RemoveAtEnd()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.clear)
+    fileprivate func clear() {
+        try! _default.Clear()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.getmany)
+    fileprivate func getMany(_ startIndex: UInt32, _ items: inout [String]) -> UInt32 {
+        try! _default.GetMany(startIndex, &items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.replaceall)
+    fileprivate func replaceAll(_ items: [String]) {
+        try! _default.ReplaceAll(items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableString! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ivector-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<String>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArguments: WindowsFoundation.IID {
     .init(Data1: 0x37d74b33, Data2: 0x9510, Data3: 0x5748, Data4: ( 0xb3,0x3d,0x46,0x76,0xee,0x2b,0x48,0xa7 ))// 37d74b33-9510-5748-b33d-4676ee2b48a7
 }
@@ -9426,6 +11278,466 @@ fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CCompos
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
     fileprivate var completed : AsyncOperationCompletedHandler<WinAppSDK.AnyICompositionSurface?>? {
+        get { try! _default.get_Completed() }
+        set { try! _default.put_Completed(newValue) }
+    }
+
+    private lazy var _IAsyncInfo: __ABI_Windows_Foundation.IAsyncInfo! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.cancel)
+    fileprivate func cancel() throws {
+        try _IAsyncInfo.Cancel()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.close)
+    fileprivate func close() throws {
+        try _IAsyncInfo.Close()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.errorcode)
+    fileprivate var errorCode : HRESULT {
+        get { try! _IAsyncInfo.get_ErrorCode() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.id)
+    fileprivate var id : UInt32 {
+        get { try! _IAsyncInfo.get_Id() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.status)
+    fileprivate var status : WindowsFoundation.AsyncStatus {
+        get { try! _IAsyncInfo.get_Status() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0x98316bd9, Data2: 0x5a80, Data3: 0x5c8a, Data4: ( 0x8f,0x99,0x2e,0xfb,0xe1,0xe7,0x02,0x33 ))// 98316bd9-5a80-5c8a-8f99-2efbe1e70233
+}
+
+internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IAsyncInfoWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.Storage.Pickers.PickFileResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    put_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        guard let handler = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
+        __unwrapped__instance.completed = handler
+        return S_OK
+    },
+
+    get_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.completed
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    GetResults: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let result = try __unwrapped__instance.getResults()
+            result?.copyTo($1)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class IAsyncOperationPickFileResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.PickFileResult?>?) throws {
+        let handlerWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(handler)
+        let _handler = try! handlerWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, _handler))
+        }
+    }
+
+    open func get_Completed() throws -> AsyncOperationCompletedHandler<WinAppSDK.PickFileResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: result)
+    }
+
+    open func GetResults() throws -> WinAppSDK.PickFileResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.from(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = IAsyncOperationPickFileResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFileResult?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl {
+    typealias TResult = WinAppSDK.PickFileResult?
+    typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.getresults)
+    fileprivate func getResults() throws -> WinAppSDK.PickFileResult? {
+        try _default.GetResults()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
+    fileprivate var completed : AsyncOperationCompletedHandler<WinAppSDK.PickFileResult?>? {
+        get { try! _default.get_Completed() }
+        set { try! _default.put_Completed(newValue) }
+    }
+
+    private lazy var _IAsyncInfo: __ABI_Windows_Foundation.IAsyncInfo! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.cancel)
+    fileprivate func cancel() throws {
+        try _IAsyncInfo.Cancel()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.close)
+    fileprivate func close() throws {
+        try _IAsyncInfo.Close()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.errorcode)
+    fileprivate var errorCode : HRESULT {
+        get { try! _IAsyncInfo.get_ErrorCode() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.id)
+    fileprivate var id : UInt32 {
+        get { try! _IAsyncInfo.get_Id() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.status)
+    fileprivate var status : WindowsFoundation.AsyncStatus {
+        get { try! _IAsyncInfo.get_Status() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult: WindowsFoundation.IID {
+    .init(Data1: 0xf5ef0362, Data2: 0xd68a, Data3: 0x5d05, Data4: ( 0xa1,0x66,0xfe,0x60,0x8b,0x68,0xc2,0x78 ))// f5ef0362-d68a-5d05-a166-fe608b68c278
+}
+
+internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IAsyncInfoWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.Storage.Pickers.PickFolderResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    put_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        guard let handler = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
+        __unwrapped__instance.completed = handler
+        return S_OK
+    },
+
+    get_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.completed
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    GetResults: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let result = try __unwrapped__instance.getResults()
+            result?.copyTo($1)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge>
+public class IAsyncOperationPickFolderResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult }
+
+    open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.PickFolderResult?>?) throws {
+        let handlerWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper(handler)
+        let _handler = try! handlerWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, _handler))
+        }
+    }
+
+    open func get_Completed() throws -> AsyncOperationCompletedHandler<WinAppSDK.PickFolderResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.unwrapFrom(abi: result)
+    }
+
+    open func GetResults() throws -> WinAppSDK.PickFolderResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Windows_Storage_Pickers.PickFolderResultBridge.from(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult
+    internal typealias SwiftABI = IAsyncOperationPickFolderResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFolderResult?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultImpl : IAsyncOperation, AbiInterfaceImpl {
+    typealias TResult = WinAppSDK.PickFolderResult?
+    typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.getresults)
+    fileprivate func getResults() throws -> WinAppSDK.PickFolderResult? {
+        try _default.GetResults()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
+    fileprivate var completed : AsyncOperationCompletedHandler<WinAppSDK.PickFolderResult?>? {
+        get { try! _default.get_Completed() }
+        set { try! _default.put_Completed(newValue) }
+    }
+
+    private lazy var _IAsyncInfo: __ABI_Windows_Foundation.IAsyncInfo! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.cancel)
+    fileprivate func cancel() throws {
+        try _IAsyncInfo.Cancel()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.close)
+    fileprivate func close() throws {
+        try _IAsyncInfo.Close()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.errorcode)
+    fileprivate var errorCode : HRESULT {
+        get { try! _IAsyncInfo.get_ErrorCode() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.id)
+    fileprivate var id : UInt32 {
+        get { try! _IAsyncInfo.get_Id() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.status)
+    fileprivate var status : WindowsFoundation.AsyncStatus {
+        get { try! _IAsyncInfo.get_Status() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult: WindowsFoundation.IID {
+    .init(Data1: 0xf8cde12a, Data2: 0x675a, Data3: 0x5291, Data4: ( 0xb0,0x48,0x58,0x6c,0x26,0x25,0xae,0x3e ))// f8cde12a-675a-5291-b048-586c2625ae3e
+}
+
+internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IAsyncInfoWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Storage.Pickers.PickFileResult>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    put_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        guard let handler = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
+        __unwrapped__instance.completed = handler
+        return S_OK
+    },
+
+    get_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.completed
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    GetResults: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let result = try __unwrapped__instance.getResults()
+            let resultWrapper = WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(result)
+            resultWrapper?.copyTo($1)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
+public class IAsyncOperationIVectorViewPickFileResult: WindowsFoundation.IInspectable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
+
+    open func put_Completed(_ handler: AsyncOperationCompletedHandler<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>?) throws {
+        let handlerWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper(handler)
+        let _handler = try! handlerWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, _handler))
+        }
+    }
+
+    open func get_Completed() throws -> AsyncOperationCompletedHandler<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: result)
+    }
+
+    open func GetResults() throws -> WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult
+    internal typealias SwiftABI = IAsyncOperationIVectorViewPickFileResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIAsyncOperation<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>
+    internal static func from(abi: ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl {
+    typealias TResult = WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?
+    typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.getresults)
+    fileprivate func getResults() throws -> WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>? {
+        try _default.GetResults()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
+    fileprivate var completed : AsyncOperationCompletedHandler<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>? {
         get { try! _default.get_Completed() }
         set { try! _default.put_Completed(newValue) }
     }

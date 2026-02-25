@@ -29,7 +29,8 @@
     "Microsoft.Windows.ApplicationModel.Resources.ResourceManager",
     "Microsoft.Windows.ApplicationModel.WindowsAppRuntime",
     "Microsoft.Windows.AppLifecycle.ActivationRegistrationManager",
-    "Microsoft.Windows.AppLifecycle.AppInstance"
+    "Microsoft.Windows.AppLifecycle.AppInstance",
+    "Microsoft.Windows.Storage.Pickers"
   ],
   "exclude": [
   ]

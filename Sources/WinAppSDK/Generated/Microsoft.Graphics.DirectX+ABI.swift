@@ -5,5 +5,4 @@ import Foundation
 import CWinRT
 
 @_spi(WinRTInternal)
-public enum __ABI_Microsoft_Graphics_DirectX {
-}
+public enum __ABI_Microsoft_Graphics_DirectX {}
