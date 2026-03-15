@@ -71,6 +71,7 @@ public class WindowsAppRuntimeInitializer {
         }
 
         try CHECKED(RoInitialize(roInitParam))
+        try CHECKED(SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE))  // <-- this here
 
         guard initWinAppSDK else {
             return
