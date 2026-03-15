@@ -37,5 +37,11 @@ let package = Package(
             ],
             linkerSettings: linkerSettings
         ),
+        .testTarget(
+            name: "WinAppSDKTests",
+            dependencies: [
+                "WinAppSDK",
+            ]
+        )
     ]
 )
