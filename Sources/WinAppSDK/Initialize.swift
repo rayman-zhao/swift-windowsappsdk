@@ -29,10 +29,16 @@ public class WindowsAppRuntimeInitializer {
     private typealias pfnMddBootstrapInitialize2 = @convention(c) (UInt32, PCWSTR?, PACKAGE_VERSION, MddBootstrapInitializeOptions) -> HRESULT
     private typealias pfnMddBootstrapShutdown = @convention(c) () -> Void
     private lazy var bootstrapperDll: HMODULE = {
+        // SwiftBuild (Swift 6.4+ default engine) stages dependency-target resources
+        // as `<package>_<target>.bundle`; the legacy llbuild engine used `.resources`.
         guard let url = Bundle.main.url(
             forResource: "Microsoft.WindowsAppRuntime.Bootstrap",
             withExtension: ".dll",
-            subdirectory: "swift-windowsappsdk_CWinAppSDK.resources") else {    
+            subdirectory: "swift-windowsappsdk_CWinAppSDK.bundle")
+            ?? Bundle.main.url(
+                forResource: "Microsoft.WindowsAppRuntime.Bootstrap",
+                withExtension: ".dll",
+                subdirectory: "swift-windowsappsdk_CWinAppSDK.resources") else {
             preconditionFailure("Microsoft.WindowsAppRuntime.Bootstrap.dll not found!")
         }
         let path = url.withUnsafeFileSystemRepresentation { String(cString: $0!) }
