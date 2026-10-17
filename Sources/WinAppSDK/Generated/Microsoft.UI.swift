@@ -97,7 +97,7 @@ extension __x_ABI_CMicrosoft_CUI_CWindowId {
 }
 // MARK: - ClosableNotifierHandler
 
-public typealias ClosableNotifierHandler = () throws -> ()
+public typealias ClosableNotifierHandler = @Sendable () throws -> ()
 
 // MARK: - ClosableNotifierHandler Internals
 
@@ -124,7 +124,7 @@ extension __ABI_Microsoft_UI {
         Data1: 0x478CEC68, Data2: 0xEA8E, Data3: 0x52FC, Data4: ( 0x87,0xE2,0xC8,0x19,0xDE,0x00,0x0F,0x92 ) // 478CEC68-EA8E-52FC-87E2-C819DE000F92
     ) 
 
-    public class ClosableNotifierHandler: WindowsFoundation.IUnknown {
+    public class ClosableNotifierHandler: WindowsFoundation.IUnknown, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIClosableNotifierHandler }
 
         open func Invoke() throws {
@@ -137,7 +137,7 @@ extension __ABI_Microsoft_UI {
 
 
     typealias ClosableNotifierHandlerWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI.ClosableNotifierHandlerBridge>
-    internal static var ClosableNotifierHandlerVTable: __x_ABI_CMicrosoft_CUI_CIClosableNotifierHandlerVtbl = .init(
+    internal static nonisolated(unsafe) var ClosableNotifierHandlerVTable: __x_ABI_CMicrosoft_CUI_CIClosableNotifierHandlerVtbl = .init(
         QueryInterface: { ClosableNotifierHandlerWrapper.queryInterface($0, $1, $2) },
         AddRef: { ClosableNotifierHandlerWrapper.addRef($0) },
         Release: { ClosableNotifierHandlerWrapper.release($0) },
@@ -206,7 +206,7 @@ extension __IMPL_Microsoft_UI {
         }
     }
 
-    fileprivate class IClosableNotifierImpl: IClosableNotifier, WinRTAbiImpl {
+    fileprivate class IClosableNotifierImpl: IClosableNotifier, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IClosableNotifierBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -254,7 +254,7 @@ extension __ABI_Microsoft_UI {
         Data1: 0x2989E93B, Data2: 0xED0F, Data3: 0x5E79, Data4: ( 0x90,0xF2,0xEA,0xC5,0x92,0xFC,0x6E,0x6A ) // 2989E93B-ED0F-5E79-90F2-EAC592FC6E6A
     ) 
 
-    public class IClosableNotifier: WindowsFoundation.IInspectable {
+    public class IClosableNotifier: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIClosableNotifier }
 
         open func get_IsClosed() throws -> Bool {
@@ -299,7 +299,7 @@ extension __ABI_Microsoft_UI {
 
     }
 
-    internal static var IClosableNotifierVTable: __x_ABI_CMicrosoft_CUI_CIClosableNotifierVtbl = .init(
+    internal static nonisolated(unsafe) var IClosableNotifierVTable: __x_ABI_CMicrosoft_CUI_CIClosableNotifierVtbl = .init(
         QueryInterface: { IClosableNotifierWrapper.queryInterface($0, $1, $2) },
         AddRef: { IClosableNotifierWrapper.addRef($0) },
         Release: { IClosableNotifierWrapper.release($0) },
@@ -378,7 +378,7 @@ public class IClosableNotifierMaker: MakeFromAbi {
 // MARK: - Colors
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.colors)
-public final class Colors : WinRTClass {
+public final class Colors : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI.IColors
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CIColors
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1133,7 +1133,7 @@ extension __ABI_Microsoft_UI {
         Data1: 0x8CF15863, Data2: 0x8411, Data3: 0x5AFD, Data4: ( 0x94,0x6C,0x32,0x8E,0x04,0xDA,0x2F,0x2F ) // 8CF15863-8411-5AFD-946C-328E04DA2F2F
     ) 
 
-    public class IColors: WindowsFoundation.IInspectable {
+    public class IColors: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIColors }
 
     }
@@ -1142,7 +1142,7 @@ extension __ABI_Microsoft_UI {
         Data1: 0x8620A5B0, Data2: 0x015A, Data3: 0x57AC, Data4: ( 0xA3,0xF3,0x89,0x5D,0x0B,0x12,0x69,0xAE ) // 8620A5B0-015A-57AC-A3F3-895D0B1269AE
     ) 
 
-    public class IColorsStatics: WindowsFoundation.IInspectable {
+    public class IColorsStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CIColorsStatics }
 
         public func get_AliceBlue() throws -> UWP.Color {

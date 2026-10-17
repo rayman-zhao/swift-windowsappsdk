@@ -197,7 +197,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
         Data1: 0x5AC4E92E, Data2: 0x017B, Data3: 0x5D68, Data4: ( 0x81,0x98,0xF6,0x86,0x36,0xAB,0x99,0xD3 ) // 5AC4E92E-017B-5D68-8198-F68636AB99D3
     ) 
 
-    public class IActivationRegistrationManagerStatics: WindowsFoundation.IInspectable {
+    public class IActivationRegistrationManagerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIActivationRegistrationManagerStatics }
 
         public func RegisterForFileTypeActivation(_ supportedFileTypes: [String], _ logo: String, _ displayName: String, _ supportedVerbs: [String], _ exePath: String) throws {
@@ -261,7 +261,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
 // MARK: - AppActivationArguments
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applifecycle.appactivationarguments)
-public final class AppActivationArguments : WinRTClass {
+public final class AppActivationArguments : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_AppLifecycle.IAppActivationArguments
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppActivationArguments
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -320,7 +320,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
         Data1: 0x14F99EAF, Data2: 0x1580, Data3: 0x5062, Data4: ( 0xBD,0xC8,0xD5,0xD1,0xC3,0x11,0x38,0xFB ) // 14F99EAF-1580-5062-BDC8-D5D1C31138FB
     ) 
 
-    public class IAppActivationArguments: WindowsFoundation.IInspectable {
+    public class IAppActivationArguments: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppActivationArguments }
 
         public func get_Kind() throws -> WinAppSDK.ExtendedActivationKind {
@@ -346,7 +346,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
 // MARK: - AppInstance
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applifecycle.appinstance)
-public final class AppInstance : WinRTClass {
+public final class AppInstance : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_AppLifecycle.IAppInstance
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -460,7 +460,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
         Data1: 0x75766AE4, Data2: 0x0239, Data3: 0x5A26, Data4: ( 0xB9,0xDA,0xD5,0xBF,0xC7,0x5A,0x48,0x66 ) // 75766AE4-0239-5A26-B9DA-D5BFC75A4866
     ) 
 
-    public class IAppInstance: WindowsFoundation.IInspectable {
+    public class IAppInstance: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance }
 
         public func UnregisterKey() throws {
@@ -505,10 +505,12 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
 
         public func get_Key() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -534,7 +536,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
         Data1: 0x4F414B25, Data2: 0x8330, Data3: 0x5A9B, Data4: ( 0xBB,0xC1,0x82,0x29,0xD4,0x79,0x64,0x9D ) // 4F414B25-8330-5A9B-BBC1-8229D479649D
     ) 
 
-    public class IAppInstanceStatics: WindowsFoundation.IInspectable {
+    public class IAppInstanceStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstanceStatics }
 
         public func GetCurrent() throws -> WinAppSDK.AppInstance? {
@@ -571,7 +573,7 @@ extension __ABI_Microsoft_Windows_AppLifecycle {
         Data1: 0xFE9F1885, Data2: 0x7160, Data3: 0x5397, Data4: ( 0xBA,0x9B,0x58,0x90,0xB2,0x4F,0xDC,0x04 ) // FE9F1885-7160-5397-BA9B-5890B24FDC04
     ) 
 
-    public class IAppInstanceStatics2: WindowsFoundation.IInspectable {
+    public class IAppInstanceStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstanceStatics2 }
 
         public func Restart(_ arguments: String) throws -> UWP.AppRestartFailureReason {

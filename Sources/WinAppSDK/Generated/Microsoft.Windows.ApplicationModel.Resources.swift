@@ -64,7 +64,7 @@ extension __IMPL_Microsoft_Windows_ApplicationModel_Resources {
         }
     }
 
-    fileprivate class IResourceContextImpl: IResourceContext, WinRTAbiImpl {
+    fileprivate class IResourceContextImpl: IResourceContext, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IResourceContextBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -86,7 +86,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x96FB48DC, Data2: 0xF77D, Data3: 0x55FF, Data4: ( 0xAF,0x12,0x34,0x86,0x1E,0x3D,0x49,0x39 ) // 96FB48DC-F77D-55FF-AF12-34861E3D4939
     ) 
 
-    public class IResourceContext: WindowsFoundation.IInspectable {
+    public class IResourceContext: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceContext }
 
         open func get_QualifierValues() throws -> WindowsFoundation.AnyIMap<String, String>? {
@@ -100,7 +100,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 
     }
 
-    internal static var IResourceContextVTable: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceContextVtbl = .init(
+    internal static nonisolated(unsafe) var IResourceContextVTable: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceContextVtbl = .init(
         QueryInterface: { IResourceContextWrapper.queryInterface($0, $1, $2) },
         AddRef: { IResourceContextWrapper.addRef($0) },
         Release: { IResourceContextWrapper.release($0) },
@@ -190,7 +190,7 @@ extension __IMPL_Microsoft_Windows_ApplicationModel_Resources {
         }
     }
 
-    fileprivate class IResourceManagerImpl: IResourceManager, WinRTAbiImpl {
+    fileprivate class IResourceManagerImpl: IResourceManager, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IResourceManagerBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -230,7 +230,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0xAC2291EF, Data2: 0x81BE, Data3: 0x5C99, Data4: ( 0xA0,0xAE,0xBC,0xEE,0x01,0x80,0xB8,0xA8 ) // AC2291EF-81BE-5C99-A0AE-BCEE0180B8A8
     ) 
 
-    public class IResourceManager: WindowsFoundation.IInspectable {
+    public class IResourceManager: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManager }
 
         open func get_MainResourceMap() throws -> WinAppSDK.ResourceMap? {
@@ -269,7 +269,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 
     }
 
-    internal static var IResourceManagerVTable: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManagerVtbl = .init(
+    internal static nonisolated(unsafe) var IResourceManagerVTable: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManagerVtbl = .init(
         QueryInterface: { IResourceManagerWrapper.queryInterface($0, $1, $2) },
         AddRef: { IResourceManagerWrapper.addRef($0) },
         Release: { IResourceManagerWrapper.release($0) },
@@ -342,7 +342,7 @@ public class IResourceManagerMaker: MakeFromAbi {
 // MARK: - ResourceCandidate
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcecandidate)
-public final class ResourceCandidate : WinRTClass {
+public final class ResourceCandidate : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_Resources.IResourceCandidate
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceCandidate
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -420,24 +420,28 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x6C54BC0C, Data2: 0xEF1E, Data3: 0x57B8, Data4: ( 0xB4,0x78,0x34,0xFE,0xCE,0x73,0x73,0x56 ) // 6C54BC0C-EF1E-57B8-B478-34FECE737356
     ) 
 
-    public class IResourceCandidate: WindowsFoundation.IInspectable {
+    public class IResourceCandidate: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceCandidate }
 
         public func get_ValueAsString() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceCandidate.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ValueAsString(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
         public func get_ValueAsBytes() throws -> [UInt8] {
             var value: WinRTArrayAbi<UINT8> = (0, nil)
+            defer {
+                CoTaskMemFree(value.start)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceCandidate.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_ValueAsBytes(pThis, &value.count, &value.start))
             }
-            defer { CoTaskMemFree(value.start) }
             return .from(abi: value)
 
         }
@@ -465,7 +469,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0xBB2B30F8, Data2: 0xC19B, Data3: 0x5F43, Data4: ( 0x88,0xD9,0x69,0xAD,0x72,0x8A,0x32,0xF4 ) // BB2B30F8-C19B-5F43-88D9-69AD728A32F4
     ) 
 
-    public class IResourceCandidateFactory: WindowsFoundation.IInspectable {
+    public class IResourceCandidateFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceCandidateFactory }
 
         public func CreateInstance(_ kind: WinAppSDK.ResourceCandidateKind, _ data: String) throws -> IResourceCandidate {
@@ -495,7 +499,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 // MARK: - ResourceContext
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcecontext)
-public final class ResourceContext : WinRTClass, IResourceContext {
+public final class ResourceContext : WinRTClass, @unchecked Sendable, IResourceContext {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_Resources.IResourceContext
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceContext
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -554,7 +558,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x7A3B1158, Data2: 0x798C, Data3: 0x5949, Data4: ( 0x96,0x9D,0x03,0x51,0x0B,0x9C,0xE6,0xCA ) // 7A3B1158-798C-5949-969D-03510B9CE6CA
     ) 
 
-    public class IResourceContext2: WindowsFoundation.IInspectable {
+    public class IResourceContext2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceContext2 }
 
     }
@@ -563,7 +567,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 // MARK: - ResourceManager
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcemanager)
-public final class ResourceManager : WinRTClass, IResourceManager {
+public final class ResourceManager : WinRTClass, @unchecked Sendable, IResourceManager {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_Resources.IResourceManager
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManager
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -650,7 +654,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x7EC10160, Data2: 0xA154, Data3: 0x5C42, Data4: ( 0x82,0x68,0x30,0xE3,0x06,0xB1,0xF5,0x85 ) // 7EC10160-A154-5C42-8268-30E306B1F585
     ) 
 
-    public class IResourceManager2: WindowsFoundation.IInspectable {
+    public class IResourceManager2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManager2 }
 
     }
@@ -659,7 +663,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0xD6ACF18F, Data2: 0x458A, Data3: 0x535B, Data4: ( 0xA5,0xC4,0xAC,0x2D,0xC4,0xE4,0x90,0x99 ) // D6ACF18F-458A-535B-A5C4-AC2DC4E49099
     ) 
 
-    public class IResourceManagerFactory: WindowsFoundation.IInspectable {
+    public class IResourceManagerFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceManagerFactory }
 
         public func CreateInstance(_ fileName: String) throws -> IResourceManager {
@@ -678,7 +682,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 // MARK: - ResourceMap
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcemap)
-public final class ResourceMap : WinRTClass {
+public final class ResourceMap : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_Resources.IResourceMap
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceMap
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -772,7 +776,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x4ABBD9BC, Data2: 0xDF4E, Data3: 0x5C7B, Data4: ( 0x81,0x2C,0x7E,0x7B,0xB0,0xC2,0x23,0x77 ) // 4ABBD9BC-DF4E-5C7B-812C-7E7BB0C22377
     ) 
 
-    public class IResourceMap: WindowsFoundation.IInspectable {
+    public class IResourceMap: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceMap }
 
         public func get_ResourceCount() throws -> UInt32 {
@@ -867,7 +871,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 // MARK: - ResourceNotFoundEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.resources.resourcenotfoundeventargs)
-public final class ResourceNotFoundEventArgs : WinRTClass {
+public final class ResourceNotFoundEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_Resources.IResourceNotFoundEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceNotFoundEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -931,7 +935,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
         Data1: 0x64ABB08B, Data2: 0xE77D, Data3: 0x5B26, Data4: ( 0x83,0x0F,0x15,0x94,0x1E,0x0E,0x82,0x00 ) // 64ABB08B-E77D-5B26-830F-15941E0E8200
     ) 
 
-    public class IResourceNotFoundEventArgs: WindowsFoundation.IInspectable {
+    public class IResourceNotFoundEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceNotFoundEventArgs }
 
         public func get_Context() throws -> WinAppSDK.ResourceContext? {
@@ -945,10 +949,12 @@ extension __ABI_Microsoft_Windows_ApplicationModel_Resources {
 
         public func get_Name() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CResources_CIResourceNotFoundEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 

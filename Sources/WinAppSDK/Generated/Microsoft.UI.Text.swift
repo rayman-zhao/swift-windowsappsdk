@@ -1089,7 +1089,7 @@ extension __IMPL_Microsoft_UI_Text {
         }
     }
 
-    fileprivate class ITextCharacterFormatImpl: ITextCharacterFormat, WinRTAbiImpl {
+    fileprivate class ITextCharacterFormatImpl: ITextCharacterFormat, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ITextCharacterFormatBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -1264,7 +1264,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0xF5710050, Data2: 0x98E5, Data3: 0x5788, Data4: ( 0xB1,0xE3,0x32,0x19,0x1E,0xEB,0xF9,0x4D ) // F5710050-98E5-5788-B1E3-32191EEBF94D
     ) 
 
-    public class ITextCharacterFormat: WindowsFoundation.IInspectable {
+    public class ITextCharacterFormat: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormat }
 
         open func get_AllCaps() throws -> WinAppSDK.FormatEffect {
@@ -1395,10 +1395,12 @@ extension __ABI_Microsoft_UI_Text {
 
         open func get_LanguageTag() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormat.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_LanguageTag(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -1419,10 +1421,12 @@ extension __ABI_Microsoft_UI_Text {
 
         open func get_Name() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormat.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -1630,7 +1634,7 @@ extension __ABI_Microsoft_UI_Text {
 
     }
 
-    internal static var ITextCharacterFormatVTable: __x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormatVtbl = .init(
+    internal static nonisolated(unsafe) var ITextCharacterFormatVTable: __x_ABI_CMicrosoft_CUI_CText_CITextCharacterFormatVtbl = .init(
         QueryInterface: { ITextCharacterFormatWrapper.queryInterface($0, $1, $2) },
         AddRef: { ITextCharacterFormatWrapper.addRef($0) },
         Release: { ITextCharacterFormatWrapper.release($0) },
@@ -2126,7 +2130,7 @@ extension __IMPL_Microsoft_UI_Text {
         }
     }
 
-    fileprivate class ITextParagraphFormatImpl: ITextParagraphFormat, WinRTAbiImpl {
+    fileprivate class ITextParagraphFormatImpl: ITextParagraphFormat, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ITextParagraphFormatBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -2315,7 +2319,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0x219B6CDF, Data2: 0x0D0B, Data3: 0x5701, Data4: ( 0xB8,0xA1,0x6C,0x90,0x6B,0x3E,0xBB,0xE1 ) // 219B6CDF-0D0B-5701-B8A1-6C906B3EBBE1
     ) 
 
-    public class ITextParagraphFormat: WindowsFoundation.IInspectable {
+    public class ITextParagraphFormat: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextParagraphFormat }
 
         open func get_Alignment() throws -> WinAppSDK.ParagraphAlignment {
@@ -2661,7 +2665,7 @@ extension __ABI_Microsoft_UI_Text {
 
     }
 
-    internal static var ITextParagraphFormatVTable: __x_ABI_CMicrosoft_CUI_CText_CITextParagraphFormatVtbl = .init(
+    internal static nonisolated(unsafe) var ITextParagraphFormatVTable: __x_ABI_CMicrosoft_CUI_CText_CITextParagraphFormatVtbl = .init(
         QueryInterface: { ITextParagraphFormatWrapper.queryInterface($0, $1, $2) },
         AddRef: { ITextParagraphFormatWrapper.addRef($0) },
         Release: { ITextParagraphFormatWrapper.release($0) },
@@ -3189,7 +3193,7 @@ extension __IMPL_Microsoft_UI_Text {
         }
     }
 
-    fileprivate class ITextRangeImpl: ITextRange, WinRTAbiImpl {
+    fileprivate class ITextRangeImpl: ITextRange, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ITextRangeBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -3430,7 +3434,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0x06D4ABCF, Data2: 0x0C06, Data3: 0x5D12, Data4: ( 0xA7,0x43,0x85,0x53,0x7E,0xFD,0x09,0xEA ) // 06D4ABCF-0C06-5D12-A743-85537EFD09EA
     ) 
 
-    public class ITextRange: WindowsFoundation.IInspectable {
+    public class ITextRange: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextRange }
 
         open func get_Character() throws -> Character {
@@ -3519,10 +3523,12 @@ extension __ABI_Microsoft_UI_Text {
 
         open func get_Link() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextRange.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Link(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -3574,10 +3580,12 @@ extension __ABI_Microsoft_UI_Text {
 
         open func get_Text() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextRange.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Text(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -3694,11 +3702,13 @@ extension __ABI_Microsoft_UI_Text {
 
         open func GetText(_ options: WinAppSDK.TextGetOptions, _ value: inout String) throws {
             var _value: HSTRING?
+            defer {
+                WindowsDeleteString(_value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextRange.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetText(pThis, options, &_value))
             }
             value = .init(from: _value)
-            WindowsDeleteString(_value)
         }
 
         open func GetTextViaStream(_ options: WinAppSDK.TextGetOptions, _ value: UWP.AnyIRandomAccessStream?) throws {
@@ -3833,7 +3843,7 @@ extension __ABI_Microsoft_UI_Text {
 
     }
 
-    internal static var ITextRangeVTable: __x_ABI_CMicrosoft_CUI_CText_CITextRangeVtbl = .init(
+    internal static nonisolated(unsafe) var ITextRangeVTable: __x_ABI_CMicrosoft_CUI_CText_CITextRangeVtbl = .init(
         QueryInterface: { ITextRangeWrapper.queryInterface($0, $1, $2) },
         AddRef: { ITextRangeWrapper.addRef($0) },
         Release: { ITextRangeWrapper.release($0) },
@@ -4405,7 +4415,7 @@ extension __IMPL_Microsoft_UI_Text {
         }
     }
 
-    fileprivate class ITextSelectionImpl: ITextSelection, WinRTAbiImpl {
+    fileprivate class ITextSelectionImpl: ITextSelection, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ITextSelectionBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -4693,7 +4703,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0x8F5E6CB1, Data2: 0x2B04, Data3: 0x589F, Data4: ( 0xBD,0x24,0x54,0xE5,0xCD,0x8D,0xD3,0x99 ) // 8F5E6CB1-2B04-589F-BD24-54E5CD8DD399
     ) 
 
-    public class ITextSelection: WindowsFoundation.IInspectable {
+    public class ITextSelection: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextSelection }
 
         open func get_Options() throws -> WinAppSDK.SelectionOptions {
@@ -4775,7 +4785,7 @@ extension __ABI_Microsoft_UI_Text {
 
     }
 
-    internal static var ITextSelectionVTable: __x_ABI_CMicrosoft_CUI_CText_CITextSelectionVtbl = .init(
+    internal static nonisolated(unsafe) var ITextSelectionVTable: __x_ABI_CMicrosoft_CUI_CText_CITextSelectionVtbl = .init(
         QueryInterface: { ITextSelectionWrapper.queryInterface($0, $1, $2) },
         AddRef: { ITextSelectionWrapper.addRef($0) },
         Release: { ITextSelectionWrapper.release($0) },
@@ -4918,7 +4928,7 @@ public class ITextSelectionMaker: MakeFromAbi {
 // MARK: - RichEditTextDocument
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.text.richedittextdocument)
-public final class RichEditTextDocument : WinRTClass {
+public final class RichEditTextDocument : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Text.ITextDocument
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CText_CITextDocument
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -5129,7 +5139,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0x1149D57D, Data2: 0x86A6, Data3: 0x59DD, Data4: ( 0x88,0xD9,0x19,0x6F,0x27,0xBC,0x5C,0x85 ) // 1149D57D-86A6-59DD-88D9-196F27BC5C85
     ) 
 
-    public class ITextDocument: WindowsFoundation.IInspectable {
+    public class ITextDocument: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextDocument }
 
         public func get_CaretType() throws -> WinAppSDK.CaretType {
@@ -5281,11 +5291,13 @@ extension __ABI_Microsoft_UI_Text {
 
         public func GetText(_ options: WinAppSDK.TextGetOptions, _ value: inout String) throws {
             var _value: HSTRING?
+            defer {
+                WindowsDeleteString(_value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextDocument.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetText(pThis, options, &_value))
             }
             value = .init(from: _value)
-            WindowsDeleteString(_value)
         }
 
         public func LoadFromStream(_ options: WinAppSDK.TextSetOptions, _ value: UWP.AnyIRandomAccessStream?) throws {
@@ -5379,7 +5391,7 @@ extension __ABI_Microsoft_UI_Text {
         Data1: 0x21FEBCF1, Data2: 0x2110, Data3: 0x5879, Data4: ( 0xB1,0xDA,0xB3,0x43,0x09,0x7E,0x71,0xE1 ) // 21FEBCF1-2110-5879-B1DA-B343097E71E1
     ) 
 
-    public class ITextDocument2: WindowsFoundation.IInspectable {
+    public class ITextDocument2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CText_CITextDocument2 }
 
         public func GetMathMode() throws -> WinAppSDK.RichEditMathMode {
@@ -5398,11 +5410,13 @@ extension __ABI_Microsoft_UI_Text {
 
         public func GetMathML(_ value: inout String) throws {
             var _value: HSTRING?
+            defer {
+                WindowsDeleteString(_value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CText_CITextDocument2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMathML(pThis, &_value))
             }
             value = .init(from: _value)
-            WindowsDeleteString(_value)
         }
 
         public func SetMathML(_ value: String) throws {

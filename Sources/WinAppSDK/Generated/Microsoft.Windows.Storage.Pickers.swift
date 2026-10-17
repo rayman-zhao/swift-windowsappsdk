@@ -58,7 +58,7 @@ extension WinAppSDK.PickerViewMode: @retroactive Hashable, @retroactive Codable,
 // MARK: - FileOpenPicker
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.storage.pickers.fileopenpicker)
-public final class FileOpenPicker : WinRTClass {
+public final class FileOpenPicker : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_Storage_Pickers.IFileOpenPicker
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileOpenPicker
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -145,7 +145,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x9D00F175, Data2: 0xC783, Data3: 0x51BD, Data4: ( 0x8C,0x93,0xFB,0x63,0x69,0x5D,0x3A,0xBC ) // 9D00F175-C783-51BD-8C93-FB63695D3ABC
     ) 
 
-    public class IFileOpenPicker: WindowsFoundation.IInspectable {
+    public class IFileOpenPicker: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileOpenPicker }
 
         public func get_ViewMode() throws -> WinAppSDK.PickerViewMode {
@@ -178,10 +178,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_CommitButtonText() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileOpenPicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommitButtonText(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -225,7 +227,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x315E86D7, Data2: 0xD7A2, Data3: 0x5D81, Data4: ( 0xB3,0x79,0x7A,0xF7,0x82,0x07,0xB1,0xAF ) // 315E86D7-D7A2-5D81-B379-7AF78207B1AF
     ) 
 
-    public class IFileOpenPickerFactory: WindowsFoundation.IInspectable {
+    public class IFileOpenPickerFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileOpenPickerFactory }
 
         public func CreateInstance(_ windowId: WinAppSDK.WindowId) throws -> IFileOpenPicker {
@@ -243,7 +245,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 // MARK: - FileSavePicker
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.storage.pickers.filesavepicker)
-public final class FileSavePicker : WinRTClass {
+public final class FileSavePicker : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_Storage_Pickers.IFileSavePicker
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -337,7 +339,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x79F1F4DF, Data2: 0x741B, Data3: 0x59B2, Data4: ( 0xAA,0x06,0xFE,0x9A,0xC8,0x17,0xB7,0xDD ) // 79F1F4DF-741B-59B2-AA06-FE9AC817B7DD
     ) 
 
-    public class IFileSavePicker: WindowsFoundation.IInspectable {
+    public class IFileSavePicker: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker }
 
         public func get_SuggestedStartLocation() throws -> WinAppSDK.PickerLocationId {
@@ -356,10 +358,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_CommitButtonText() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommitButtonText(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -381,10 +385,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_DefaultFileExtension() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_DefaultFileExtension(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -397,10 +403,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_SuggestedFileName() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SuggestedFileName(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -413,10 +421,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_SuggestedFolder() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SuggestedFolder(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -442,7 +452,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x2E256696, Data2: 0x30B6, Data3: 0x5A05, Data4: ( 0xA8,0xF5,0xC7,0x52,0xDB,0x6D,0xD2,0x68 ) // 2E256696-30B6-5A05-A8F5-C752DB6DD268
     ) 
 
-    public class IFileSavePickerFactory: WindowsFoundation.IInspectable {
+    public class IFileSavePickerFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFileSavePickerFactory }
 
         public func CreateInstance(_ windowId: WinAppSDK.WindowId) throws -> IFileSavePicker {
@@ -460,7 +470,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 // MARK: - FolderPicker
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.storage.pickers.folderpicker)
-public final class FolderPicker : WinRTClass {
+public final class FolderPicker : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_Storage_Pickers.IFolderPicker
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFolderPicker
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -537,7 +547,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x3EF0D1CA, Data2: 0x97C6, Data3: 0x5873, Data4: ( 0x8E,0xA2,0x02,0xC4,0x50,0x17,0x42,0x90 ) // 3EF0D1CA-97C6-5873-8EA2-02C450174290
     ) 
 
-    public class IFolderPicker: WindowsFoundation.IInspectable {
+    public class IFolderPicker: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFolderPicker }
 
         public func get_ViewMode() throws -> WinAppSDK.PickerViewMode {
@@ -570,10 +580,12 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 
         public func get_CommitButtonText() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFolderPicker.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommitButtonText(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -599,7 +611,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0xE1550D89, Data2: 0xB389, Data3: 0x5886, Data4: ( 0x83,0x95,0x02,0x2B,0x15,0x88,0xD6,0xA8 ) // E1550D89-B389-5886-8395-022B1588D6A8
     ) 
 
-    public class IFolderPickerFactory: WindowsFoundation.IInspectable {
+    public class IFolderPickerFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIFolderPickerFactory }
 
         public func CreateInstance(_ windowId: WinAppSDK.WindowId) throws -> IFolderPicker {
@@ -617,7 +629,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 // MARK: - PickFileResult
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.storage.pickers.pickfileresult)
-public final class PickFileResult : WinRTClass {
+public final class PickFileResult : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_Storage_Pickers.IPickFileResult
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -671,15 +683,17 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0xE6F2E3D6, Data2: 0x7BB0, Data3: 0x5D81, Data4: ( 0x9E,0x7D,0x6F,0xD3,0x5A,0x1F,0x25,0xAB ) // E6F2E3D6-7BB0-5D81-9E7D-6FD35A1F25AB
     ) 
 
-    public class IPickFileResult: WindowsFoundation.IInspectable {
+    public class IPickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult }
 
         public func get_Path() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -689,7 +703,7 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
 // MARK: - PickFolderResult
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.storage.pickers.pickfolderresult)
-public final class PickFolderResult : WinRTClass {
+public final class PickFolderResult : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_Storage_Pickers.IPickFolderResult
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFolderResult
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -743,15 +757,17 @@ extension __ABI_Microsoft_Windows_Storage_Pickers {
         Data1: 0x6F7FD316, Data2: 0xFE29, Data3: 0x59D1, Data4: ( 0x93,0x43,0xC4,0x9C,0xF5,0xCD,0xE6,0x80 ) // 6F7FD316-FE29-59D1-9343-C49CF5CDE680
     ) 
 
-    public class IPickFolderResult: WindowsFoundation.IInspectable {
+    public class IPickFolderResult: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFolderResult }
 
         public func get_Path() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFolderResult.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 

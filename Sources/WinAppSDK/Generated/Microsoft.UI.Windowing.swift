@@ -146,7 +146,7 @@ extension WinAppSDK.TitleBarTheme: @retroactive Hashable, @retroactive Codable, 
 // MARK: - AppWindow
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindow)
-public final class AppWindow : WinRTClass {
+public final class AppWindow : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindow
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -434,7 +434,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xCFA788B3, Data2: 0x643B, Data3: 0x5C5E, Data4: ( 0xAD,0x4E,0x32,0x1D,0x48,0xA8,0x2A,0xCD ) // CFA788B3-643B-5C5E-AD4E-321D48A82ACD
     ) 
 
-    public class IAppWindow: WindowsFoundation.IInspectable {
+    public class IAppWindow: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow }
 
         public func get_Id() throws -> WinAppSDK.WindowId {
@@ -502,10 +502,12 @@ extension __ABI_Microsoft_UI_Windowing {
 
         public func get_Title() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_Title(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -652,7 +654,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x6CD41292, Data2: 0x794C, Data3: 0x5CAC, Data4: ( 0x89,0x61,0x21,0x0D,0x01,0x2C,0x6E,0xBC ) // 6CD41292-794C-5CAC-8961-210D012C6EBC
     ) 
 
-    public class IAppWindow2: WindowsFoundation.IInspectable {
+    public class IAppWindow2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow2 }
 
         public func get_ClientSize() throws -> UWP.SizeInt32 {
@@ -699,7 +701,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x2F260CEA, Data2: 0x193D, Data3: 0x5DD6, Data4: ( 0xA9,0x04,0xD7,0x64,0x9A,0x60,0x8D,0x2F ) // 2F260CEA-193D-5DD6-A904-D7649A608D2F
     ) 
 
-    public class IAppWindow3: WindowsFoundation.IInspectable {
+    public class IAppWindow3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow3 }
 
         public func AssociateWithDispatcherQueue(_ dispatcherQueue: WinAppSDK.DispatcherQueue?) throws {
@@ -723,7 +725,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x383BFB91, Data2: 0xEA29, Data3: 0x5414, Data4: ( 0x80,0xCD,0x6C,0x76,0xD9,0x81,0xEB,0x31 ) // 383BFB91-EA29-5414-80CD-6C76D981EB31
     ) 
 
-    public class IAppWindow4: WindowsFoundation.IInspectable {
+    public class IAppWindow4: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindow4 }
 
         public func SetTaskbarIcon(_ iconPath: String) throws {
@@ -758,7 +760,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x3C315C24, Data2: 0xD540, Data3: 0x5D72, Data4: ( 0xB5,0x18,0xB2,0x26,0xB8,0x36,0x27,0xCB ) // 3C315C24-D540-5D72-B518-B226B83627CB
     ) 
 
-    public class IAppWindowStatics: WindowsFoundation.IInspectable {
+    public class IAppWindowStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics }
 
         public func Create() throws -> WinAppSDK.AppWindow? {
@@ -803,7 +805,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xCABC23DB, Data2: 0x4606, Data3: 0x5D6E, Data4: ( 0x89,0xA5,0x06,0xDE,0x1D,0x8B,0xD3,0xE2 ) // CABC23DB-4606-5D6E-89A5-06DE1D8BD3E2
     ) 
 
-    public class IAppWindowStatics2: WindowsFoundation.IInspectable {
+    public class IAppWindowStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowStatics2 }
 
         public func CreateWithDispatcherQueue(_ appWindowPresenter: WinAppSDK.AppWindowPresenter?, _ ownerWindowId: WinAppSDK.WindowId, _ DispatcherQueue: WinAppSDK.DispatcherQueue?) throws -> WinAppSDK.AppWindow? {
@@ -821,7 +823,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - AppWindowChangedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowchangedeventargs)
-public final class AppWindowChangedEventArgs : WinRTClass {
+public final class AppWindowChangedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindowChangedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -912,7 +914,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x2182BC5D, Data2: 0xFDAC, Data3: 0x5C3E, Data4: ( 0xBF,0x37,0x7D,0x8D,0x68,0x4E,0x9D,0x1D ) // 2182BC5D-FDAC-5C3E-BF37-7D8D684E9D1D
     ) 
 
-    public class IAppWindowChangedEventArgs: WindowsFoundation.IInspectable {
+    public class IAppWindowChangedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs }
 
         public func get_DidPositionChange() throws -> Bool {
@@ -953,7 +955,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xA773AB4C, Data2: 0xA5EC, Data3: 0x50E8, Data4: ( 0x98,0xAC,0x24,0x7F,0xE6,0xCD,0x42,0x27 ) // A773AB4C-A5EC-50E8-98AC-247FE6CD4227
     ) 
 
-    public class IAppWindowChangedEventArgs2: WindowsFoundation.IInspectable {
+    public class IAppWindowChangedEventArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowChangedEventArgs2 }
 
         public func get_DidZOrderChange() throws -> Bool {
@@ -994,7 +996,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - AppWindowClosingEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowclosingeventargs)
-public final class AppWindowClosingEventArgs : WinRTClass {
+public final class AppWindowClosingEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindowClosingEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1049,7 +1051,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x0E09D90B, Data2: 0x2261, Data3: 0x590B, Data4: ( 0x9A,0xD1,0x85,0x04,0x99,0x1D,0x87,0x54 ) // 0E09D90B-2261-590B-9AD1-8504991D8754
     ) 
 
-    public class IAppWindowClosingEventArgs: WindowsFoundation.IInspectable {
+    public class IAppWindowClosingEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowClosingEventArgs }
 
         public func get_Cancel() throws -> Bool {
@@ -1072,7 +1074,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - AppWindowPresenter
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowpresenter)
-open class AppWindowPresenter : WinRTClass {
+open class AppWindowPresenter : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindowPresenter
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1100,7 +1102,7 @@ open class AppWindowPresenter : WinRTClass {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IAppWindowPresenterFactory : __ABI_Microsoft_UI_Windowing.IAppWindowPresenterFactory =  try! RoGetActivationFactory("Microsoft.UI.Windowing.AppWindowPresenter")
+    private static nonisolated(unsafe) var _IAppWindowPresenterFactory : __ABI_Microsoft_UI_Windowing.IAppWindowPresenterFactory =  try! RoGetActivationFactory("Microsoft.UI.Windowing.AppWindowPresenter")
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowpresenter.kind)
     public var kind : AppWindowPresenterKind {
@@ -1151,7 +1153,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xBC3042C2, Data2: 0xC6C6, Data3: 0x5632, Data4: ( 0x89,0x89,0xFF,0x0E,0xC6,0xD3,0xB4,0x0D ) // BC3042C2-C6C6-5632-8989-FF0EC6D3B40D
     ) 
 
-    public class IAppWindowPresenter: WindowsFoundation.IInspectable {
+    public class IAppWindowPresenter: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenter }
 
         public func get_Kind() throws -> WinAppSDK.AppWindowPresenterKind {
@@ -1168,7 +1170,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x62082E3C, Data2: 0x1368, Data3: 0x5238, Data4: ( 0x90,0xD1,0xE9,0x32,0xDC,0x71,0x8A,0x82 ) // 62082E3C-1368-5238-90D1-E932DC718A82
     ) 
 
-    public class IAppWindowPresenterFactory: WindowsFoundation.IInspectable {
+    public class IAppWindowPresenterFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowPresenterFactory }
 
     }
@@ -1177,7 +1179,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - AppWindowTitleBar
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.appwindowtitlebar)
-public final class AppWindowTitleBar : WinRTClass {
+public final class AppWindowTitleBar : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IAppWindowTitleBar
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1357,7 +1359,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x5574EFA2, Data2: 0xC91C, Data3: 0x5700, Data4: ( 0xA3,0x63,0x53,0x9C,0x71,0xA7,0xAA,0xF4 ) // 5574EFA2-C91C-5700-A363-539C71A7AAF4
     ) 
 
-    public class IAppWindowTitleBar: WindowsFoundation.IInspectable {
+    public class IAppWindowTitleBar: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar }
 
         public func get_BackgroundColor() throws -> UWP.Color? {
@@ -1636,7 +1638,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x86FAED38, Data2: 0x748A, Data3: 0x5B4B, Data4: ( 0x9C,0xCF,0x3B,0xA0,0x49,0x6C,0x90,0x41 ) // 86FAED38-748A-5B4B-9CCF-3BA0496C9041
     ) 
 
-    public class IAppWindowTitleBar2: WindowsFoundation.IInspectable {
+    public class IAppWindowTitleBar2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar2 }
 
         public func get_PreferredHeightOption() throws -> WinAppSDK.TitleBarHeightOption {
@@ -1659,7 +1661,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x07146E74, Data2: 0x0410, Data3: 0x5597, Data4: ( 0xAB,0xA7,0x1A,0xF2,0x76,0xD2,0xAE,0x07 ) // 07146E74-0410-5597-ABA7-1AF276D2AE07
     ) 
 
-    public class IAppWindowTitleBar3: WindowsFoundation.IInspectable {
+    public class IAppWindowTitleBar3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBar3 }
 
         public func get_PreferredTheme() throws -> WinAppSDK.TitleBarTheme {
@@ -1682,7 +1684,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x9E1DA52E, Data2: 0x8B15, Data3: 0x54D6, Data4: ( 0xA8,0x86,0xF7,0xB9,0xF9,0xD9,0x30,0xB2 ) // 9E1DA52E-8B15-54D6-A886-F7B9F9D930B2
     ) 
 
-    public class IAppWindowTitleBarStatics: WindowsFoundation.IInspectable {
+    public class IAppWindowTitleBarStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIAppWindowTitleBarStatics }
 
         public func IsCustomizationSupported() throws -> Bool {
@@ -1699,7 +1701,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - DisplayArea
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.displayarea)
-public final class DisplayArea : WinRTClass {
+public final class DisplayArea : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IDisplayArea
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1805,7 +1807,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x5C7E0537, Data2: 0xB621, Data3: 0x5579, Data4: ( 0xBC,0xAE,0xA8,0x4A,0xA8,0x74,0x61,0x67 ) // 5C7E0537-B621-5579-BCAE-A84AA8746167
     ) 
 
-    public class IDisplayArea: WindowsFoundation.IInspectable {
+    public class IDisplayArea: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea }
 
         public func get_DisplayId() throws -> WinAppSDK.DisplayId {
@@ -1846,7 +1848,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x02AB4926, Data2: 0x211E, Data3: 0x5D49, Data4: ( 0x8E,0x4B,0x2A,0xF1,0x93,0xDA,0xED,0x09 ) // 02AB4926-211E-5D49-8E4B-2AF193DAED09
     ) 
 
-    public class IDisplayAreaStatics: WindowsFoundation.IInspectable {
+    public class IDisplayAreaStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics }
 
         public func get_Primary() throws -> WinAppSDK.DisplayArea? {
@@ -1909,7 +1911,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x7207AD4B, Data2: 0x890D, Data3: 0x5DD7, Data4: ( 0xBC,0x18,0x78,0xFF,0xD9,0x54,0x4D,0x8F ) // 7207AD4B-890D-5DD7-BC18-78FFD9544D8F
     ) 
 
-    public class IDisplayAreaStatics2: WindowsFoundation.IInspectable {
+    public class IDisplayAreaStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaStatics2 }
 
         public func GetFromDisplayId(_ displayId: WinAppSDK.DisplayId) throws -> WinAppSDK.DisplayArea? {
@@ -1927,7 +1929,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - DisplayAreaWatcher
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.displayareawatcher)
-public final class DisplayAreaWatcher : WinRTClass {
+public final class DisplayAreaWatcher : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IDisplayAreaWatcher
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2056,7 +2058,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x83F6562F, Data2: 0xD3A0, Data3: 0x548B, Data4: ( 0x8E,0x4F,0xA9,0x9B,0xE3,0xD9,0x5C,0x9C ) // 83F6562F-D3A0-548B-8E4F-A99BE3D95C9C
     ) 
 
-    public class IDisplayAreaWatcher: WindowsFoundation.IInspectable {
+    public class IDisplayAreaWatcher: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayAreaWatcher }
 
         public func get_Status() throws -> WinAppSDK.DisplayAreaWatcherStatus {
@@ -2165,7 +2167,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - FullScreenPresenter
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.fullscreenpresenter)
-public final class FullScreenPresenter : WinAppSDK.AppWindowPresenter {
+public final class FullScreenPresenter : WinAppSDK.AppWindowPresenter, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IFullScreenPresenter
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIFullScreenPresenter
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2220,7 +2222,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xFA9141FD, Data2: 0xB8DD, Data3: 0x5DA1, Data4: ( 0x8B,0x2B,0x7C,0xDA,0xDB,0x76,0xF5,0x93 ) // FA9141FD-B8DD-5DA1-8B2B-7CDADB76F593
     ) 
 
-    public class IFullScreenPresenter: WindowsFoundation.IInspectable {
+    public class IFullScreenPresenter: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIFullScreenPresenter }
 
     }
@@ -2229,7 +2231,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x2EC0D2C1, Data2: 0xE086, Data3: 0x55BB, Data4: ( 0xA3,0xB2,0x44,0x94,0x2E,0x23,0x1C,0x67 ) // 2EC0D2C1-E086-55BB-A3B2-44942E231C67
     ) 
 
-    public class IFullScreenPresenterStatics: WindowsFoundation.IInspectable {
+    public class IFullScreenPresenterStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIFullScreenPresenterStatics }
 
         public func Create() throws -> WinAppSDK.FullScreenPresenter? {
@@ -2247,7 +2249,7 @@ extension __ABI_Microsoft_UI_Windowing {
 // MARK: - OverlappedPresenter
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.windowing.overlappedpresenter)
-public final class OverlappedPresenter : WinAppSDK.AppWindowPresenter {
+public final class OverlappedPresenter : WinAppSDK.AppWindowPresenter, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Windowing.IOverlappedPresenter
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2426,7 +2428,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x21693970, Data2: 0x4F4C, Data3: 0x5172, Data4: ( 0x9E,0x9D,0x68,0x2A,0x2D,0x17,0x48,0x84 ) // 21693970-4F4C-5172-9E9D-682A2D174884
     ) 
 
-    public class IOverlappedPresenter: WindowsFoundation.IInspectable {
+    public class IOverlappedPresenter: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter }
 
         public func get_HasBorder() throws -> Bool {
@@ -2553,7 +2555,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x5C6CCD93, Data2: 0x4244, Data3: 0x5CD2, Data4: ( 0xB3,0x55,0xED,0x5E,0xA3,0x4D,0xF7,0x30 ) // 5C6CCD93-4244-5CD2-B355-ED5EA34DF730
     ) 
 
-    public class IOverlappedPresenter2: WindowsFoundation.IInspectable {
+    public class IOverlappedPresenter2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter2 }
 
         public func MinimizeWithActivation(_ activateWindow: Bool) throws {
@@ -2574,7 +2576,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x55D26138, Data2: 0x4C38, Data3: 0x57E7, Data4: ( 0xA0,0xC1,0xD4,0x67,0xB7,0x74,0xDB,0x8C ) // 55D26138-4C38-57E7-A0C1-D467B774DB8C
     ) 
 
-    public class IOverlappedPresenter3: WindowsFoundation.IInspectable {
+    public class IOverlappedPresenter3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenter3 }
 
         public func get_PreferredMinimumHeight() throws -> Int32? {
@@ -2651,7 +2653,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0x997225E4, Data2: 0x7B00, Data3: 0x5AEE, Data4: ( 0xA4,0xBE,0xD4,0x06,0x8D,0x19,0x99,0xE2 ) // 997225E4-7B00-5AEE-A4BE-D4068D1999E2
     ) 
 
-    public class IOverlappedPresenterStatics: WindowsFoundation.IInspectable {
+    public class IOverlappedPresenterStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics }
 
         public func Create() throws -> WinAppSDK.OverlappedPresenter? {
@@ -2696,7 +2698,7 @@ extension __ABI_Microsoft_UI_Windowing {
         Data1: 0xED5C4F92, Data2: 0x32F4, Data3: 0x5D15, Data4: ( 0x80,0xD0,0xB2,0xA5,0xEF,0xA0,0x4D,0x39 ) // ED5C4F92-32F4-5D15-80D0-B2A5EFA04D39
     ) 
 
-    public class IOverlappedPresenterStatics2: WindowsFoundation.IInspectable {
+    public class IOverlappedPresenterStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CWindowing_CIOverlappedPresenterStatics2 }
 
         public func get_RequestedStartupState() throws -> WinAppSDK.OverlappedPresenterState {

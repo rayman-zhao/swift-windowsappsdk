@@ -42,7 +42,7 @@ extension WinAppSDK.DispatcherRunOptions: @retroactive Hashable, @retroactive Co
 
 // MARK: - DispatcherQueueHandler
 
-public typealias DispatcherQueueHandler = () throws -> ()
+public typealias DispatcherQueueHandler = @Sendable () throws -> ()
 
 // MARK: - DispatcherQueueHandler Internals
 
@@ -69,7 +69,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x2E0872A9, Data2: 0x4E29, Data3: 0x5F14, Data4: ( 0xB6,0x88,0xFB,0x96,0xD5,0xF9,0xD5,0xF8 ) // 2E0872A9-4E29-5F14-B688-FB96D5F9D5F8
     ) 
 
-    public class DispatcherQueueHandler: WindowsFoundation.IUnknown {
+    public class DispatcherQueueHandler: WindowsFoundation.IUnknown, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueHandler }
 
         open func Invoke() throws {
@@ -82,7 +82,7 @@ extension __ABI_Microsoft_UI_Dispatching {
 
 
     typealias DispatcherQueueHandlerWrapper = InterfaceWrapperBase<__IMPL_Microsoft_UI_Dispatching.DispatcherQueueHandlerBridge>
-    internal static var DispatcherQueueHandlerVTable: __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueHandlerVtbl = .init(
+    internal static nonisolated(unsafe) var DispatcherQueueHandlerVTable: __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueHandlerVtbl = .init(
         QueryInterface: { DispatcherQueueHandlerWrapper.queryInterface($0, $1, $2) },
         AddRef: { DispatcherQueueHandlerWrapper.addRef($0) },
         Release: { DispatcherQueueHandlerWrapper.release($0) },
@@ -105,7 +105,7 @@ public extension WinRTDelegateBridge where CABI == __x_ABI_CMicrosoft_CUI_CDispa
 // MARK: - DispatcherExitDeferral
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.dispatching.dispatcherexitdeferral)
-public final class DispatcherExitDeferral : WinRTClass {
+public final class DispatcherExitDeferral : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Dispatching.IDispatcherExitDeferral
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherExitDeferral
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -164,7 +164,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x910B5AAC, Data2: 0x3310, Data3: 0x563E, Data4: ( 0x84,0x18,0xF3,0x00,0x55,0x79,0x72,0x9E ) // 910B5AAC-3310-563E-8418-F3005579729E
     ) 
 
-    public class IDispatcherExitDeferral: WindowsFoundation.IInspectable {
+    public class IDispatcherExitDeferral: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherExitDeferral }
 
         public func Complete() throws {
@@ -179,7 +179,7 @@ extension __ABI_Microsoft_UI_Dispatching {
 // MARK: - DispatcherQueue
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.dispatching.dispatcherqueue)
-public final class DispatcherQueue : WinRTClass {
+public final class DispatcherQueue : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Dispatching.IDispatcherQueue
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueue
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -330,7 +330,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0xF6EBF8FA, Data2: 0xBE1C, Data3: 0x5BF6, Data4: ( 0xA4,0x67,0x73,0xDA,0x28,0x73,0x8A,0xE8 ) // F6EBF8FA-BE1C-5BF6-A467-73DA28738AE8
     ) 
 
-    public class IDispatcherQueue: WindowsFoundation.IInspectable {
+    public class IDispatcherQueue: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueue }
 
         public func CreateTimer() throws -> WinAppSDK.DispatcherQueueTimer? {
@@ -400,7 +400,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x0CF48751, Data2: 0xF1AC, Data3: 0x59B8, Data4: ( 0xBA,0x52,0x6C,0xE7,0xA1,0x44,0x4D,0x6F ) // 0CF48751-F1AC-59B8-BA52-6CE7A1444D6F
     ) 
 
-    public class IDispatcherQueue2: WindowsFoundation.IInspectable {
+    public class IDispatcherQueue2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueue2 }
 
         public func get_HasThreadAccess() throws -> Bool {
@@ -417,7 +417,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x14A7A175, Data2: 0x5C27, Data3: 0x5A35, Data4: ( 0xB0,0x79,0x21,0x96,0x0C,0xF7,0x64,0xA8 ) // 14A7A175-5C27-5A35-B079-21960CF764A8
     ) 
 
-    public class IDispatcherQueue3: WindowsFoundation.IInspectable {
+    public class IDispatcherQueue3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueue3 }
 
         public func EnqueueEventLoopExit() throws {
@@ -482,7 +482,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0xCD3382EA, Data2: 0xA455, Data3: 0x5124, Data4: ( 0xB6,0x3A,0xCA,0x40,0xD3,0x4C,0xA2,0x3C ) // CD3382EA-A455-5124-B63A-CA40D34CA23C
     ) 
 
-    public class IDispatcherQueueStatics: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueStatics }
 
         public func GetForCurrentThread() throws -> WinAppSDK.DispatcherQueue? {
@@ -500,7 +500,7 @@ extension __ABI_Microsoft_UI_Dispatching {
 // MARK: - DispatcherQueueController
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.dispatching.dispatcherqueuecontroller)
-public final class DispatcherQueueController : WinRTClass {
+public final class DispatcherQueueController : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Dispatching.IDispatcherQueueController
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueController
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -577,7 +577,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0xBCE8178D, Data2: 0x2183, Data3: 0x584C, Data4: ( 0x9E,0x5B,0xF9,0x36,0x6F,0x6A,0xE4,0x84 ) // BCE8178D-2183-584C-9E5B-F9366F6AE484
     ) 
 
-    public class IDispatcherQueueController: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueController: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueController }
 
         public func get_DispatcherQueue() throws -> WinAppSDK.DispatcherQueue? {
@@ -604,7 +604,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x4C68EE2A, Data2: 0x1CB1, Data3: 0x5591, Data4: ( 0xA3,0xA2,0x9B,0x59,0x0B,0x8F,0x8B,0x9A ) // 4C68EE2A-1CB1-5591-A3A2-9B590B8F8B9A
     ) 
 
-    public class IDispatcherQueueController2: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueController2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueController2 }
 
         public func ShutdownQueue() throws {
@@ -619,7 +619,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0xF18D6145, Data2: 0x722B, Data3: 0x593D, Data4: ( 0xBC,0xF2,0xA6,0x1E,0x71,0x3F,0x00,0x37 ) // F18D6145-722B-593D-BCF2-A61E713F0037
     ) 
 
-    public class IDispatcherQueueControllerStatics: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueControllerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueControllerStatics }
 
         public func CreateOnDedicatedThread() throws -> WinAppSDK.DispatcherQueueController? {
@@ -646,7 +646,7 @@ extension __ABI_Microsoft_UI_Dispatching {
 // MARK: - DispatcherQueueShutdownStartingEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.dispatching.dispatcherqueueshutdownstartingeventargs)
-public final class DispatcherQueueShutdownStartingEventArgs : WinRTClass {
+public final class DispatcherQueueShutdownStartingEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Dispatching.IDispatcherQueueShutdownStartingEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueShutdownStartingEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -700,7 +700,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0x32519BE5, Data2: 0x072B, Data3: 0x5660, Data4: ( 0xA7,0x0E,0x88,0x35,0xC9,0xB8,0x15,0x7D ) // 32519BE5-072B-5660-A70E-8835C9B8157D
     ) 
 
-    public class IDispatcherQueueShutdownStartingEventArgs: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueShutdownStartingEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueShutdownStartingEventArgs }
 
         public func GetDeferral() throws -> WindowsFoundation.Deferral? {
@@ -718,7 +718,7 @@ extension __ABI_Microsoft_UI_Dispatching {
 // MARK: - DispatcherQueueTimer
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.dispatching.dispatcherqueuetimer)
-public final class DispatcherQueueTimer : WinRTClass {
+public final class DispatcherQueueTimer : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Dispatching.IDispatcherQueueTimer
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueTimer
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -807,7 +807,7 @@ extension __ABI_Microsoft_UI_Dispatching {
         Data1: 0xAD4D63FD, Data2: 0x88FE, Data3: 0x541F, Data4: ( 0xAC,0x11,0xBF,0x2D,0xC1,0xED,0x2C,0xE5 ) // AD4D63FD-88FE-541F-AC11-BF2DC1ED2CE5
     ) 
 
-    public class IDispatcherQueueTimer: WindowsFoundation.IInspectable {
+    public class IDispatcherQueueTimer: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CDispatching_CIDispatcherQueueTimer }
 
         public func get_Interval() throws -> WindowsFoundation.TimeSpan {

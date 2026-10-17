@@ -118,7 +118,7 @@ extension __IMPL_Microsoft_UI_Composition_SystemBackdrops {
         }
     }
 
-    fileprivate class ISystemBackdropControllerImpl: ISystemBackdropController, WinRTAbiImpl {
+    fileprivate class ISystemBackdropControllerImpl: ISystemBackdropController, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ISystemBackdropControllerBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -151,7 +151,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x5632D76C, Data2: 0x0B74, Data3: 0x5B52, Data4: ( 0xAA,0x33,0x80,0x26,0x20,0x68,0xAE,0xB2 ) // 5632D76C-0B74-5B52-AA33-80262068AEB2
     ) 
 
-    public class ISystemBackdropController: WindowsFoundation.IInspectable {
+    public class ISystemBackdropController: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropController }
 
         open func SetTargetWithWindowId(_ windowId: WinAppSDK.WindowId, _ desktopWindowTarget: UWP.CompositionTarget?) throws -> Bool {
@@ -172,7 +172,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
 
     }
 
-    internal static var ISystemBackdropControllerVTable: __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropControllerVtbl = .init(
+    internal static nonisolated(unsafe) var ISystemBackdropControllerVTable: __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropControllerVtbl = .init(
         QueryInterface: { ISystemBackdropControllerWrapper.queryInterface($0, $1, $2) },
         AddRef: { ISystemBackdropControllerWrapper.addRef($0) },
         Release: { ISystemBackdropControllerWrapper.release($0) },
@@ -289,7 +289,7 @@ extension __IMPL_Microsoft_UI_Composition_SystemBackdrops {
         }
     }
 
-    fileprivate class ISystemBackdropControllerWithTargetsImpl: ISystemBackdropControllerWithTargets, WinRTAbiImpl {
+    fileprivate class ISystemBackdropControllerWithTargetsImpl: ISystemBackdropControllerWithTargets, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ISystemBackdropControllerWithTargetsBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -361,7 +361,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x9C56FE7C, Data2: 0x98EB, Data3: 0x5F89, Data4: ( 0xAD,0x97,0xDA,0xD5,0x7F,0xC3,0x0C,0x8C ) // 9C56FE7C-98EB-5F89-AD97-DAD57FC30C8C
     ) 
 
-    public class ISystemBackdropControllerWithTargets: WindowsFoundation.IInspectable {
+    public class ISystemBackdropControllerWithTargets: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropControllerWithTargets }
 
         open func get_State() throws -> WinAppSDK.SystemBackdropState {
@@ -422,7 +422,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
 
     }
 
-    internal static var ISystemBackdropControllerWithTargetsVTable: __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropControllerWithTargetsVtbl = .init(
+    internal static nonisolated(unsafe) var ISystemBackdropControllerWithTargetsVTable: __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropControllerWithTargetsVtbl = .init(
         QueryInterface: { ISystemBackdropControllerWithTargetsWrapper.queryInterface($0, $1, $2) },
         AddRef: { ISystemBackdropControllerWithTargetsWrapper.addRef($0) },
         Release: { ISystemBackdropControllerWithTargetsWrapper.release($0) },
@@ -525,7 +525,7 @@ public class ISystemBackdropControllerWithTargetsMaker: MakeFromAbi {
 // MARK: - DesktopAcrylicController
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.systembackdrops.desktopacryliccontroller)
-public final class DesktopAcrylicController : WinRTClass, WindowsFoundation.IClosable, ISystemBackdropController, ISystemBackdropControllerWithTargets, WinAppSDK.IClosableNotifier {
+public final class DesktopAcrylicController : WinRTClass, @unchecked Sendable, WindowsFoundation.IClosable, ISystemBackdropController, ISystemBackdropControllerWithTargets, WinAppSDK.IClosableNotifier {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_SystemBackdrops.IDesktopAcrylicController
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIDesktopAcrylicController
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -719,7 +719,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x7C20A6AF, Data2: 0x8EB3, Data3: 0x5F08, Data4: ( 0xBD,0xFC,0x6D,0x35,0xE3,0x5D,0xFE,0x45 ) // 7C20A6AF-8EB3-5F08-BDFC-6D35E35DFE45
     ) 
 
-    public class IDesktopAcrylicController: WindowsFoundation.IInspectable {
+    public class IDesktopAcrylicController: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIDesktopAcrylicController }
 
         public func get_FallbackColor() throws -> UWP.Color {
@@ -784,7 +784,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x88E0A368, Data2: 0xDFC7, Data3: 0x5971, Data4: ( 0xA5,0x0B,0x40,0xDF,0x5A,0xA5,0xF5,0xC2 ) // 88E0A368-DFC7-5971-A50B-40DF5AA5F5C2
     ) 
 
-    public class IDesktopAcrylicController2: WindowsFoundation.IInspectable {
+    public class IDesktopAcrylicController2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIDesktopAcrylicController2 }
 
         public func ResetProperties() throws {
@@ -799,7 +799,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x30D917E6, Data2: 0x02D3, Data3: 0x59CA, Data4: ( 0xB4,0x40,0xBF,0x9D,0x2E,0x7C,0xC1,0x40 ) // 30D917E6-02D3-59CA-B440-BF9D2E7CC140
     ) 
 
-    public class IDesktopAcrylicController3: WindowsFoundation.IInspectable {
+    public class IDesktopAcrylicController3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIDesktopAcrylicController3 }
 
         public func get_Kind() throws -> WinAppSDK.DesktopAcrylicKind {
@@ -822,7 +822,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0xA9E8F790, Data2: 0x79EF, Data3: 0x5416, Data4: ( 0x9B,0x67,0x6B,0xCF,0xE8,0x67,0xC8,0xB7 ) // A9E8F790-79EF-5416-9B67-6BCFE867C8B7
     ) 
 
-    public class IDesktopAcrylicControllerStatics: WindowsFoundation.IInspectable {
+    public class IDesktopAcrylicControllerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIDesktopAcrylicControllerStatics }
 
         public func IsSupported() throws -> Bool {
@@ -839,7 +839,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
 // MARK: - MicaController
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.systembackdrops.micacontroller)
-public final class MicaController : WinRTClass, WindowsFoundation.IClosable, ISystemBackdropController, ISystemBackdropControllerWithTargets, WinAppSDK.IClosableNotifier {
+public final class MicaController : WinRTClass, @unchecked Sendable, WindowsFoundation.IClosable, ISystemBackdropController, ISystemBackdropControllerWithTargets, WinAppSDK.IClosableNotifier {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_SystemBackdrops.IMicaController
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIMicaController
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1031,7 +1031,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x2DE996A9, Data2: 0x0A2A, Data3: 0x5889, Data4: ( 0xA8,0x9C,0x1F,0x84,0x06,0x0A,0x8C,0xAB ) // 2DE996A9-0A2A-5889-A89C-1F84060A8CAB
     ) 
 
-    public class IMicaController: WindowsFoundation.IInspectable {
+    public class IMicaController: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIMicaController }
 
         public func get_FallbackColor() throws -> UWP.Color {
@@ -1096,7 +1096,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0xF1ED4A52, Data2: 0xD9CA, Data3: 0x506E, Data4: ( 0x95,0x86,0xCA,0xAE,0xFD,0x3A,0xA9,0x71 ) // F1ED4A52-D9CA-506E-9586-CAAEFD3AA971
     ) 
 
-    public class IMicaController2: WindowsFoundation.IInspectable {
+    public class IMicaController2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIMicaController2 }
 
         public func get_Kind() throws -> WinAppSDK.MicaKind {
@@ -1125,7 +1125,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0x7D85D834, Data2: 0xD514, Data3: 0x5250, Data4: ( 0xB7,0xC4,0x0B,0x78,0x50,0xD1,0xEF,0xDC ) // 7D85D834-D514-5250-B7C4-0B7850D1EFDC
     ) 
 
-    public class IMicaControllerStatics: WindowsFoundation.IInspectable {
+    public class IMicaControllerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CIMicaControllerStatics }
 
         public func IsSupported() throws -> Bool {
@@ -1142,7 +1142,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
 // MARK: - SystemBackdropConfiguration
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.systembackdrops.systembackdropconfiguration)
-public final class SystemBackdropConfiguration : WinRTClass {
+public final class SystemBackdropConfiguration : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_SystemBackdrops.ISystemBackdropConfiguration
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropConfiguration
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1220,7 +1220,7 @@ extension __ABI_Microsoft_UI_Composition_SystemBackdrops {
         Data1: 0xEBCCE1B9, Data2: 0x0E0C, Data3: 0x5431, Data4: ( 0xAB,0x0E,0x00,0xF3,0xF0,0x66,0x99,0x62 ) // EBCCE1B9-0E0C-5431-AB0E-00F3F0669962
     ) 
 
-    public class ISystemBackdropConfiguration: WindowsFoundation.IInspectable {
+    public class ISystemBackdropConfiguration: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CSystemBackdrops_CISystemBackdropConfiguration }
 
         public func get_HighContrastBackgroundColor() throws -> UWP.Color? {

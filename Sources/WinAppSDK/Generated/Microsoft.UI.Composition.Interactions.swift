@@ -164,7 +164,7 @@ extension __IMPL_Microsoft_UI_Composition_Interactions {
         }
     }
 
-    fileprivate class ICompositionInteractionSourceImpl: ICompositionInteractionSource, WinRTAbiImpl {
+    fileprivate class ICompositionInteractionSourceImpl: ICompositionInteractionSource, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = ICompositionInteractionSourceBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -181,12 +181,12 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x711C72C0, Data2: 0xC406, Data3: 0x4A12, Data4: ( 0x85,0x9B,0xB4,0x4F,0x65,0x1A,0xF0,0x46 ) // 711C72C0-C406-4A12-859B-B44F651AF046
     ) 
 
-    public class ICompositionInteractionSource: WindowsFoundation.IInspectable {
+    public class ICompositionInteractionSource: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSource }
 
     }
 
-    internal static var ICompositionInteractionSourceVTable: __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSourceVtbl = .init(
+    internal static nonisolated(unsafe) var ICompositionInteractionSourceVTable: __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSourceVtbl = .init(
         QueryInterface: { ICompositionInteractionSourceWrapper.queryInterface($0, $1, $2) },
         AddRef: { ICompositionInteractionSourceWrapper.addRef($0) },
         Release: { ICompositionInteractionSourceWrapper.release($0) },
@@ -274,7 +274,7 @@ extension __IMPL_Microsoft_UI_Composition_Interactions {
         }
     }
 
-    fileprivate class IInteractionTrackerOwnerImpl: IInteractionTrackerOwner, WinRTAbiImpl {
+    fileprivate class IInteractionTrackerOwnerImpl: IInteractionTrackerOwner, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IInteractionTrackerOwnerBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -321,7 +321,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x8869779D, Data2: 0x1D2A, Data3: 0x5816, Data4: ( 0x83,0x6A,0x68,0xA9,0x10,0x50,0x7D,0x87 ) // 8869779D-1D2A-5816-836A-68A910507D87
     ) 
 
-    public class IInteractionTrackerOwner: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerOwner: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerOwner }
 
         open func CustomAnimationStateEntered(_ sender: WinAppSDK.InteractionTracker?, _ args: WinAppSDK.InteractionTrackerCustomAnimationStateEnteredArgs?) throws {
@@ -362,7 +362,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 
     }
 
-    internal static var IInteractionTrackerOwnerVTable: __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerOwnerVtbl = .init(
+    internal static nonisolated(unsafe) var IInteractionTrackerOwnerVTable: __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerOwnerVtbl = .init(
         QueryInterface: { IInteractionTrackerOwnerWrapper.queryInterface($0, $1, $2) },
         AddRef: { IInteractionTrackerOwnerWrapper.addRef($0) },
         Release: { IInteractionTrackerOwnerWrapper.release($0) },
@@ -464,7 +464,7 @@ public class IInteractionTrackerOwnerMaker: MakeFromAbi {
 // MARK: - CompositionConditionalValue
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.compositionconditionalvalue)
-public final class CompositionConditionalValue : WinAppSDK.CompositionObject {
+public final class CompositionConditionalValue : WinAppSDK.CompositionObject, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.ICompositionConditionalValue
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionConditionalValue
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -531,7 +531,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x3743DDA0, Data2: 0xFBE2, Data3: 0x5ECF, Data4: ( 0x9E,0x80,0x46,0x38,0xA0,0x11,0xF7,0x07 ) // 3743DDA0-FBE2-5ECF-9E80-4638A011F707
     ) 
 
-    public class ICompositionConditionalValue: WindowsFoundation.IInspectable {
+    public class ICompositionConditionalValue: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionConditionalValue }
 
         public func get_Condition() throws -> WinAppSDK.ExpressionAnimation? {
@@ -570,7 +570,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xDF133C1F, Data2: 0xA185, Data3: 0x536C, Data4: ( 0xB5,0x4B,0x8F,0x36,0x92,0x12,0xA5,0x81 ) // DF133C1F-A185-536C-B54B-8F369212A581
     ) 
 
-    public class ICompositionConditionalValueStatics: WindowsFoundation.IInspectable {
+    public class ICompositionConditionalValueStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionConditionalValueStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.CompositionConditionalValue? {
@@ -588,7 +588,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - CompositionInteractionSourceCollection
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.compositioninteractionsourcecollection)
-public final class CompositionInteractionSourceCollection : WinAppSDK.CompositionObject, IIterable {
+public final class CompositionInteractionSourceCollection : WinAppSDK.CompositionObject, @unchecked Sendable, IIterable {
     public typealias T = AnyICompositionInteractionSource?
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.ICompositionInteractionSourceCollection
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection
@@ -668,7 +668,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x9AA1B86B, Data2: 0xB002, Data3: 0x5E2E, Data4: ( 0xBB,0x2B,0x0E,0x2C,0x54,0x74,0x45,0xE1 ) // 9AA1B86B-B002-5E2E-BB2B-0E2C547445E1
     ) 
 
-    public class ICompositionInteractionSourceCollection: WindowsFoundation.IInspectable {
+    public class ICompositionInteractionSourceCollection: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSourceCollection }
 
         public func get_Count() throws -> Int32 {
@@ -707,7 +707,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionSourceConfiguration
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactionsourceconfiguration)
-public final class InteractionSourceConfiguration : WinAppSDK.CompositionObject {
+public final class InteractionSourceConfiguration : WinAppSDK.CompositionObject, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionSourceConfiguration
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -774,7 +774,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x099E0124, Data2: 0xDADF, Data3: 0x5BC6, Data4: ( 0xA8,0x95,0x90,0x38,0x76,0x57,0x55,0x0F ) // 099E0124-DADF-5BC6-A895-90387657550F
     ) 
 
-    public class IInteractionSourceConfiguration: WindowsFoundation.IInspectable {
+    public class IInteractionSourceConfiguration: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionSourceConfiguration }
 
         public func get_PositionXSourceMode() throws -> WinAppSDK.InteractionSourceRedirectionMode {
@@ -825,7 +825,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTracker
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontracker)
-public final class InteractionTracker : WinAppSDK.CompositionObject {
+public final class InteractionTracker : WinAppSDK.CompositionObject, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTracker
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1080,7 +1080,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x02D8EC1F, Data2: 0x8F04, Data3: 0x505E, Data4: ( 0xBD,0x1E,0x47,0xB2,0xA2,0x04,0xDE,0x51 ) // 02D8EC1F-8F04-505E-BD1E-47B2A204DE51
     ) 
 
-    public class IInteractionTracker: WindowsFoundation.IInspectable {
+    public class IInteractionTracker: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker }
 
         public func get_InteractionSources() throws -> WinAppSDK.CompositionInteractionSourceCollection? {
@@ -1345,7 +1345,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x396D7FB1, Data2: 0x2FAD, Data3: 0x5508, Data4: ( 0x85,0x91,0x4F,0xF0,0xDC,0x5A,0x74,0x84 ) // 396D7FB1-2FAD-5508-8591-4FF0DC5A7484
     ) 
 
-    public class IInteractionTracker2: WindowsFoundation.IInspectable {
+    public class IInteractionTracker2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker2 }
 
         public func ConfigureCenterPointXInertiaModifiers(_ conditionalValues: WindowsFoundation.AnyIIterable<WinAppSDK.CompositionConditionalValue?>?) throws {
@@ -1370,7 +1370,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x239752CF, Data2: 0x266C, Data3: 0x5ACB, Data4: ( 0xAC,0xC3,0xB3,0xE3,0xEC,0xAF,0x4D,0x3F ) // 239752CF-266C-5ACB-ACC3-B3E3ECAF4D3F
     ) 
 
-    public class IInteractionTracker3: WindowsFoundation.IInspectable {
+    public class IInteractionTracker3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker3 }
 
         public func ConfigureVector2PositionInertiaModifiers(_ modifiers: WindowsFoundation.AnyIIterable<WinAppSDK.InteractionTrackerVector2InertiaModifier?>?) throws {
@@ -1387,7 +1387,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xA9A9CE02, Data2: 0x53C9, Data3: 0x5690, Data4: ( 0xA5,0x75,0xF3,0x40,0xB7,0xC2,0xFD,0xF2 ) // A9A9CE02-53C9-5690-A575-F340B7C2FDF2
     ) 
 
-    public class IInteractionTracker4: WindowsFoundation.IInspectable {
+    public class IInteractionTracker4: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker4 }
 
         public func TryUpdatePositionWithOption(_ value: WindowsFoundation.Vector3, _ option: WinAppSDK.InteractionTrackerClampingOption) throws -> Int32 {
@@ -1420,7 +1420,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xDBFCD333, Data2: 0xC3BF, Data3: 0x5057, Data4: ( 0xA4,0x5E,0x25,0xED,0xF0,0x6E,0xBD,0x8F ) // DBFCD333-C3BF-5057-A45E-25EDF06EBD8F
     ) 
 
-    public class IInteractionTracker5: WindowsFoundation.IInspectable {
+    public class IInteractionTracker5: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTracker5 }
 
         public func TryUpdatePositionWithOption(_ value: WindowsFoundation.Vector3, _ option: WinAppSDK.InteractionTrackerClampingOption, _ posUpdateOption: WinAppSDK.InteractionTrackerPositionUpdateOption) throws -> Int32 {
@@ -1437,7 +1437,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x7AC9867A, Data2: 0xE16E, Data3: 0x56EF, Data4: ( 0x98,0x09,0xF6,0xE4,0x04,0x24,0x0F,0x50 ) // 7AC9867A-E16E-56EF-9809-F6E404240F50
     ) 
 
-    public class IInteractionTrackerStatics: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.InteractionTracker? {
@@ -1466,7 +1466,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x25658E4C, Data2: 0xB99F, Data3: 0x5108, Data4: ( 0xAA,0xB7,0x1C,0xC4,0x4F,0x11,0x50,0x8B ) // 25658E4C-B99F-5108-AAB7-1CC44F11508B
     ) 
 
-    public class IInteractionTrackerStatics2: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerStatics2 }
 
         public func SetBindingMode(_ boundTracker1: WinAppSDK.InteractionTracker?, _ boundTracker2: WinAppSDK.InteractionTracker?, _ axisMode: WinAppSDK.InteractionBindingAxisModes) throws {
@@ -1489,7 +1489,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerCustomAnimationStateEnteredArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackercustomanimationstateenteredargs)
-public final class InteractionTrackerCustomAnimationStateEnteredArgs : WinRTClass {
+public final class InteractionTrackerCustomAnimationStateEnteredArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerCustomAnimationStateEnteredArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1550,7 +1550,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x7464035C, Data2: 0xCFCE, Data3: 0x56DA, Data4: ( 0x94,0x72,0x42,0x0F,0x27,0x6B,0xD0,0xA5 ) // 7464035C-CFCE-56DA-9472-420F276BD0A5
     ) 
 
-    public class IInteractionTrackerCustomAnimationStateEnteredArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerCustomAnimationStateEnteredArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs }
 
         public func get_RequestId() throws -> Int32 {
@@ -1567,7 +1567,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x06B99FBC, Data2: 0xD6A8, Data3: 0x5AE3, Data4: ( 0x88,0xB8,0xE9,0x16,0x21,0xBE,0xCB,0xD6 ) // 06B99FBC-D6A8-5AE3-88B8-E91621BECBD6
     ) 
 
-    public class IInteractionTrackerCustomAnimationStateEnteredArgs2: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerCustomAnimationStateEnteredArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerCustomAnimationStateEnteredArgs2 }
 
         public func get_IsFromBinding() throws -> Bool {
@@ -1584,7 +1584,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerIdleStateEnteredArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackeridlestateenteredargs)
-public final class InteractionTrackerIdleStateEnteredArgs : WinRTClass {
+public final class InteractionTrackerIdleStateEnteredArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerIdleStateEnteredArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1645,7 +1645,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x199094AB, Data2: 0x15FD, Data3: 0x539C, Data4: ( 0x97,0xB8,0x96,0x4A,0x81,0x96,0xF7,0x77 ) // 199094AB-15FD-539C-97B8-964A8196F777
     ) 
 
-    public class IInteractionTrackerIdleStateEnteredArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerIdleStateEnteredArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs }
 
         public func get_RequestId() throws -> Int32 {
@@ -1662,7 +1662,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x4EB213C0, Data2: 0x931C, Data3: 0x5164, Data4: ( 0x89,0x65,0x11,0xC0,0x18,0x6D,0x33,0x90 ) // 4EB213C0-931C-5164-8965-11C0186D3390
     ) 
 
-    public class IInteractionTrackerIdleStateEnteredArgs2: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerIdleStateEnteredArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerIdleStateEnteredArgs2 }
 
         public func get_IsFromBinding() throws -> Bool {
@@ -1679,7 +1679,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInertiaModifier
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinertiamodifier)
-open class InteractionTrackerInertiaModifier : WinAppSDK.CompositionObject {
+open class InteractionTrackerInertiaModifier : WinAppSDK.CompositionObject, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaModifier
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1706,7 +1706,7 @@ open class InteractionTrackerInertiaModifier : WinAppSDK.CompositionObject {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IInteractionTrackerInertiaModifierFactory : __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaModifierFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier")
+    private static nonisolated(unsafe) var _IInteractionTrackerInertiaModifierFactory : __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaModifierFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaModifier")
 
     deinit {
         _default = nil
@@ -1752,7 +1752,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x4D3A0C6B, Data2: 0xC508, Data3: 0x5029, Data4: ( 0xA4,0x7A,0xCB,0xF6,0x46,0x36,0xF0,0x10 ) // 4D3A0C6B-C508-5029-A47A-CBF64636F010
     ) 
 
-    public class IInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier }
 
     }
@@ -1761,7 +1761,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x6DEE5B33, Data2: 0x0B5A, Data3: 0x57B1, Data4: ( 0x85,0x37,0x93,0xD4,0xFD,0x03,0x8F,0x9F ) // 6DEE5B33-0B5A-57B1-8537-93D4FD038F9F
     ) 
 
-    public class IInteractionTrackerInertiaModifierFactory: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaModifierFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifierFactory }
 
     }
@@ -1770,7 +1770,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInertiaMotion
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinertiamotion)
-public final class InteractionTrackerInertiaMotion : WinAppSDK.InteractionTrackerInertiaModifier {
+public final class InteractionTrackerInertiaMotion : WinAppSDK.InteractionTrackerInertiaModifier, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaMotion
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1837,7 +1837,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x91F662C0, Data2: 0x3141, Data3: 0x5B5E, Data4: ( 0x86,0x2F,0xCF,0xC6,0x0B,0xEE,0x8C,0xD6 ) // 91F662C0-3141-5B5E-862F-CFC60BEE8CD6
     ) 
 
-    public class IInteractionTrackerInertiaMotion: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaMotion: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotion }
 
         public func get_Condition() throws -> WinAppSDK.ExpressionAnimation? {
@@ -1876,7 +1876,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xB0185A4F, Data2: 0x0059, Data3: 0x52C6, Data4: ( 0xA6,0x60,0x9A,0xED,0x0C,0x44,0xFF,0x7D ) // B0185A4F-0059-52C6-A660-9AED0C44FF7D
     ) 
 
-    public class IInteractionTrackerInertiaMotionStatics: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaMotionStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaMotionStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.InteractionTrackerInertiaMotion? {
@@ -1894,7 +1894,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInertiaNaturalMotion
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinertianaturalmotion)
-public final class InteractionTrackerInertiaNaturalMotion : WinAppSDK.InteractionTrackerInertiaModifier {
+public final class InteractionTrackerInertiaNaturalMotion : WinAppSDK.InteractionTrackerInertiaModifier, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaNaturalMotion
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1961,7 +1961,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x8C7482E0, Data2: 0x185D, Data3: 0x56B1, Data4: ( 0xB6,0x7F,0xFC,0xA4,0xFC,0xD1,0x3C,0xD2 ) // 8C7482E0-185D-56B1-B67F-FCA4FCD13CD2
     ) 
 
-    public class IInteractionTrackerInertiaNaturalMotion: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaNaturalMotion: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotion }
 
         public func get_Condition() throws -> WinAppSDK.ExpressionAnimation? {
@@ -2000,7 +2000,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x860EC143, Data2: 0xF165, Data3: 0x5298, Data4: ( 0xAB,0xF2,0x47,0x36,0x9D,0xD0,0x7F,0x10 ) // 860EC143-F165-5298-ABF2-47369DD07F10
     ) 
 
-    public class IInteractionTrackerInertiaNaturalMotionStatics: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaNaturalMotionStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaNaturalMotionStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.InteractionTrackerInertiaNaturalMotion? {
@@ -2018,7 +2018,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInertiaRestingValue
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinertiarestingvalue)
-public final class InteractionTrackerInertiaRestingValue : WinAppSDK.InteractionTrackerInertiaModifier {
+public final class InteractionTrackerInertiaRestingValue : WinAppSDK.InteractionTrackerInertiaModifier, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaRestingValue
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2085,7 +2085,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x1A2B20CD, Data2: 0x3371, Data3: 0x53FF, Data4: ( 0xA5,0x60,0xF4,0x84,0x7B,0x46,0x7D,0x73 ) // 1A2B20CD-3371-53FF-A560-F4847B467D73
     ) 
 
-    public class IInteractionTrackerInertiaRestingValue: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaRestingValue: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValue }
 
         public func get_Condition() throws -> WinAppSDK.ExpressionAnimation? {
@@ -2124,7 +2124,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xCF0F0414, Data2: 0x7FDF, Data3: 0x5284, Data4: ( 0xAE,0xEF,0x28,0xB7,0x1B,0x62,0xAA,0x4F ) // CF0F0414-7FDF-5284-AEEF-28B71B62AA4F
     ) 
 
-    public class IInteractionTrackerInertiaRestingValueStatics: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaRestingValueStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaRestingValueStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.InteractionTrackerInertiaRestingValue? {
@@ -2142,7 +2142,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInertiaStateEnteredArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinertiastateenteredargs)
-public final class InteractionTrackerInertiaStateEnteredArgs : WinRTClass {
+public final class InteractionTrackerInertiaStateEnteredArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInertiaStateEnteredArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2240,7 +2240,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x5B76C949, Data2: 0xA4D0, Data3: 0x5C9D, Data4: ( 0x92,0x92,0x70,0x13,0xAE,0x96,0x56,0xC7 ) // 5B76C949-A4D0-5C9D-9292-7013AE9656C7
     ) 
 
-    public class IInteractionTrackerInertiaStateEnteredArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaStateEnteredArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs }
 
         public func get_ModifiedRestingPosition() throws -> WindowsFoundation.Vector3? {
@@ -2307,7 +2307,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xC42D7E8F, Data2: 0x7199, Data3: 0x57A9, Data4: ( 0x8A,0xEC,0x87,0x27,0x55,0x2B,0x13,0xE6 ) // C42D7E8F-7199-57A9-8AEC-8727552B13E6
     ) 
 
-    public class IInteractionTrackerInertiaStateEnteredArgs2: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaStateEnteredArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs2 }
 
         public func get_IsInertiaFromImpulse() throws -> Bool {
@@ -2324,7 +2324,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xCE726CA0, Data2: 0x1C04, Data3: 0x531B, Data4: ( 0x99,0x51,0x4A,0xEC,0x99,0x69,0x52,0xE4 ) // CE726CA0-1C04-531B-9951-4AEC996952E4
     ) 
 
-    public class IInteractionTrackerInertiaStateEnteredArgs3: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInertiaStateEnteredArgs3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaStateEnteredArgs3 }
 
         public func get_IsFromBinding() throws -> Bool {
@@ -2341,7 +2341,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerInteractingStateEnteredArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerinteractingstateenteredargs)
-public final class InteractionTrackerInteractingStateEnteredArgs : WinRTClass {
+public final class InteractionTrackerInteractingStateEnteredArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerInteractingStateEnteredArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2402,7 +2402,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x70D29B84, Data2: 0x0931, Data3: 0x5F17, Data4: ( 0xA8,0xA1,0x82,0xF8,0xF8,0x78,0x25,0x32 ) // 70D29B84-0931-5F17-A8A1-82F8F8782532
     ) 
 
-    public class IInteractionTrackerInteractingStateEnteredArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInteractingStateEnteredArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs }
 
         public func get_RequestId() throws -> Int32 {
@@ -2419,7 +2419,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x2F1FF38D, Data2: 0x2F51, Data3: 0x5CEB, Data4: ( 0x8D,0x09,0xBD,0xA1,0x51,0x9F,0x93,0x42 ) // 2F1FF38D-2F51-5CEB-8D09-BDA1519F9342
     ) 
 
-    public class IInteractionTrackerInteractingStateEnteredArgs2: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerInteractingStateEnteredArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInteractingStateEnteredArgs2 }
 
         public func get_IsFromBinding() throws -> Bool {
@@ -2436,7 +2436,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerRequestIgnoredArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackerrequestignoredargs)
-public final class InteractionTrackerRequestIgnoredArgs : WinRTClass {
+public final class InteractionTrackerRequestIgnoredArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerRequestIgnoredArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2490,7 +2490,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xC276205E, Data2: 0xF7A5, Data3: 0x5BA2, Data4: ( 0xAD,0x45,0xD1,0x2C,0x3C,0x33,0x91,0x49 ) // C276205E-F7A5-5BA2-AD45-D12C3C339149
     ) 
 
-    public class IInteractionTrackerRequestIgnoredArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerRequestIgnoredArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerRequestIgnoredArgs }
 
         public func get_RequestId() throws -> Int32 {
@@ -2507,7 +2507,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerValuesChangedArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackervalueschangedargs)
-public final class InteractionTrackerValuesChangedArgs : WinRTClass {
+public final class InteractionTrackerValuesChangedArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerValuesChangedArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2571,7 +2571,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x9B495BED, Data2: 0x1CF7, Data3: 0x55C1, Data4: ( 0x82,0xB9,0x80,0x22,0xCB,0xF3,0xC7,0x66 ) // 9B495BED-1CF7-55C1-82B9-8022CBF3C766
     ) 
 
-    public class IInteractionTrackerValuesChangedArgs: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerValuesChangedArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerValuesChangedArgs }
 
         public func get_Position() throws -> WindowsFoundation.Vector3 {
@@ -2604,7 +2604,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerVector2InertiaModifier
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackervector2inertiamodifier)
-open class InteractionTrackerVector2InertiaModifier : WinAppSDK.CompositionObject {
+open class InteractionTrackerVector2InertiaModifier : WinAppSDK.CompositionObject, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerVector2InertiaModifier
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2631,7 +2631,7 @@ open class InteractionTrackerVector2InertiaModifier : WinAppSDK.CompositionObjec
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IInteractionTrackerVector2InertiaModifierFactory : __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerVector2InertiaModifierFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier")
+    private static nonisolated(unsafe) var _IInteractionTrackerVector2InertiaModifierFactory : __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerVector2InertiaModifierFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaModifier")
 
     deinit {
         _default = nil
@@ -2677,7 +2677,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x4B8ED310, Data2: 0xCB61, Data3: 0x5F0A, Data4: ( 0xB9,0x9A,0x94,0x0C,0xDD,0x2C,0x42,0xB1 ) // 4B8ED310-CB61-5F0A-B99A-940CDD2C42B1
     ) 
 
-    public class IInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier }
 
     }
@@ -2686,7 +2686,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x1B3FD240, Data2: 0xBA66, Data3: 0x5296, Data4: ( 0xB8,0x01,0x62,0xA2,0xA3,0x60,0x66,0x13 ) // 1B3FD240-BA66-5296-B801-62A2A3606613
     ) 
 
-    public class IInteractionTrackerVector2InertiaModifierFactory: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerVector2InertiaModifierFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifierFactory }
 
     }
@@ -2695,7 +2695,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - InteractionTrackerVector2InertiaNaturalMotion
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.interactiontrackervector2inertianaturalmotion)
-public final class InteractionTrackerVector2InertiaNaturalMotion : WinAppSDK.InteractionTrackerVector2InertiaModifier {
+public final class InteractionTrackerVector2InertiaNaturalMotion : WinAppSDK.InteractionTrackerVector2InertiaModifier, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IInteractionTrackerVector2InertiaNaturalMotion
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2762,7 +2762,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x097BA1A6, Data2: 0xE077, Data3: 0x52D1, Data4: ( 0x86,0xD3,0x38,0xE3,0xF6,0x61,0x9D,0xDF ) // 097BA1A6-E077-52D1-86D3-38E3F6619DDF
     ) 
 
-    public class IInteractionTrackerVector2InertiaNaturalMotion: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerVector2InertiaNaturalMotion: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotion }
 
         public func get_Condition() throws -> WinAppSDK.ExpressionAnimation? {
@@ -2801,7 +2801,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xCC24AB87, Data2: 0x9131, Data3: 0x5286, Data4: ( 0xB3,0xCE,0x1E,0xF9,0x7E,0x09,0x74,0xE6 ) // CC24AB87-9131-5286-B3CE-1EF97E0974E6
     ) 
 
-    public class IInteractionTrackerVector2InertiaNaturalMotionStatics: WindowsFoundation.IInspectable {
+    public class IInteractionTrackerVector2InertiaNaturalMotionStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaNaturalMotionStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?) throws -> WinAppSDK.InteractionTrackerVector2InertiaNaturalMotion? {
@@ -2819,7 +2819,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
 // MARK: - VisualInteractionSource
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.visualinteractionsource)
-open class VisualInteractionSource : WinAppSDK.CompositionObject, ICompositionInteractionSource {
+open class VisualInteractionSource : WinAppSDK.CompositionObject, @unchecked Sendable, ICompositionInteractionSource {
     private typealias SwiftABI = __ABI_Microsoft_UI_Composition_Interactions.IVisualInteractionSource
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSource
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2846,7 +2846,7 @@ open class VisualInteractionSource : WinAppSDK.CompositionObject, ICompositionIn
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IVisualInteractionSourceObjectFactory : __ABI_Microsoft_UI_Composition_Interactions.IVisualInteractionSourceObjectFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.VisualInteractionSource")
+    private static nonisolated(unsafe) var _IVisualInteractionSourceObjectFactory : __ABI_Microsoft_UI_Composition_Interactions.IVisualInteractionSourceObjectFactory =  try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.VisualInteractionSource")
 
     private static let _IVisualInteractionSourceStatics: __ABI_Microsoft_UI_Composition_Interactions.IVisualInteractionSourceStatics = try! RoGetActivationFactory("Microsoft.UI.Composition.Interactions.VisualInteractionSource")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.interactions.visualinteractionsource.create)
@@ -3034,7 +3034,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xEA595C95, Data2: 0xB9CB, Data3: 0x5CD4, Data4: ( 0xBB,0x9C,0x49,0x34,0xFF,0x32,0x90,0x63 ) // EA595C95-B9CB-5CD4-BB9C-4934FF329063
     ) 
 
-    public class IVisualInteractionSource: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSource: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSource }
 
         public func get_IsPositionXRailsEnabled() throws -> Bool {
@@ -3184,7 +3184,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xFF1132BA, Data2: 0xDC0D, Data3: 0x519E, Data4: ( 0xBE,0x49,0xBE,0x30,0x1E,0x52,0x30,0x6A ) // FF1132BA-DC0D-519E-BE49-BE301E52306A
     ) 
 
-    public class IVisualInteractionSource2: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSource2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSource2 }
 
         public func get_DeltaPosition() throws -> WindowsFoundation.Vector3 {
@@ -3281,7 +3281,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xD523BD66, Data2: 0xA05D, Data3: 0x5417, Data4: ( 0x8E,0x07,0x84,0xAE,0x3C,0xAF,0x97,0x52 ) // D523BD66-A05D-5417-8E07-84AE3CAF9752
     ) 
 
-    public class IVisualInteractionSource3: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSource3: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSource3 }
 
         public func get_PointerWheelConfig() throws -> WinAppSDK.InteractionSourceConfiguration? {
@@ -3299,7 +3299,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xFEB73102, Data2: 0x238C, Data3: 0x52AA, Data4: ( 0x8E,0x03,0xB6,0x8D,0x5E,0xCC,0x44,0xB3 ) // FEB73102-238C-52AA-8E03-B68D5ECC44B3
     ) 
 
-    public class IVisualInteractionSourceObjectFactory: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSourceObjectFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSourceObjectFactory }
 
     }
@@ -3308,7 +3308,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0x5FC9C763, Data2: 0xE2E5, Data3: 0x530E, Data4: ( 0x87,0xCD,0xB9,0x31,0x18,0xAD,0xE8,0xA3 ) // 5FC9C763-E2E5-530E-87CD-B93118ADE8A3
     ) 
 
-    public class IVisualInteractionSourceStatics: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSourceStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics }
 
         public func Create(_ source: WinAppSDK.Visual?) throws -> WinAppSDK.VisualInteractionSource? {
@@ -3326,7 +3326,7 @@ extension __ABI_Microsoft_UI_Composition_Interactions {
         Data1: 0xA6B494FE, Data2: 0x12A1, Data3: 0x5A73, Data4: ( 0xB8,0x7E,0x4C,0x4E,0xF5,0x8E,0xAC,0x6C ) // A6B494FE-12A1-5A73-B87E-4C4EF58EAC6C
     ) 
 
-    public class IVisualInteractionSourceStatics2: WindowsFoundation.IInspectable {
+    public class IVisualInteractionSourceStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIVisualInteractionSourceStatics2 }
 
         public func CreateFromIVisualElement(_ source: WinAppSDK.AnyIVisualElement?) throws -> WinAppSDK.VisualInteractionSource? {

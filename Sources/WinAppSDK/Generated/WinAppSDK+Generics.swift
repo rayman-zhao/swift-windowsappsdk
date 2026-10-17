@@ -16,7 +16,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperation
     }
 }
 
-internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.release($0) },
@@ -31,7 +31,7 @@ internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__C
     }
 )
 typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceBridge>
-public class AsyncOperationCompletedHandlerICompositionSurface: WindowsFoundation.IUnknown {
+public class AsyncOperationCompletedHandlerICompositionSurface: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurface }
 
     open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.AnyICompositionSurface?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
@@ -69,7 +69,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperation
     }
 }
 
-internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -84,7 +84,7 @@ internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__C
     }
 )
 typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class AsyncOperationCompletedHandlerPickFileResult: WindowsFoundation.IUnknown {
+public class AsyncOperationCompletedHandlerPickFileResult: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFileResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
@@ -122,7 +122,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperation
     }
 }
 
-internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.release($0) },
@@ -137,7 +137,7 @@ internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__C
     }
 )
 typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge>
-public class AsyncOperationCompletedHandlerPickFolderResult: WindowsFoundation.IUnknown {
+public class AsyncOperationCompletedHandlerPickFolderResult: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult }
 
     open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.PickFolderResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
@@ -175,7 +175,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperation
     }
 }
 
-internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -190,7 +190,7 @@ internal var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorVi
     }
 )
 typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class AsyncOperationCompletedHandlerIVectorViewPickFileResult: WindowsFoundation.IUnknown {
+public class AsyncOperationCompletedHandlerIVectorViewPickFileResult: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
@@ -221,7 +221,7 @@ private var IID___x_ABI_C__FIIterable_1_float: WindowsFoundation.IID {
     .init(Data1: 0xb01bee51, Data2: 0x063a, Data3: 0x5fda, Data4: ( 0xbd,0x72,0xd7,0x66,0x37,0xbb,0x8c,0xb8 ))// b01bee51-063a-5fda-bd72-d76637bb8cb8
 }
 
-internal var __x_ABI_C__FIIterable_1_floatVTable: __x_ABI_C__FIIterable_1_floatVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1_floatVTable: __x_ABI_C__FIIterable_1_floatVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1_floatWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1_floatWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1_floatWrapper.release($0) },
@@ -258,7 +258,7 @@ internal var __x_ABI_C__FIIterable_1_floatVTable: __x_ABI_C__FIIterable_1_floatV
     }
 )
 typealias __x_ABI_C__FIIterable_1_floatWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1_floatBridge>
-public class IIterableFloat: WindowsFoundation.IInspectable {
+public class IIterableFloat: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1_float }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<Float>? {
@@ -287,7 +287,7 @@ internal enum __x_ABI_C__FIIterable_1_floatBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1_floatImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1_floatImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = Float
     typealias Bridge = __x_ABI_C__FIIterable_1_floatBridge
     let _default: Bridge.SwiftABI
@@ -308,7 +308,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x1def86ce, Data2: 0x4be1, Data3: 0x5ccc, Data4: ( 0xba,0x28,0x05,0xd7,0x46,0xd9,0xbb,0x8d ))// 1def86ce-4be1-5ccc-ba28-05d746d9bb8d
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.release($0) },
@@ -345,7 +345,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationBridge>
-public class IIterableCompositionAnimation: WindowsFoundation.IInspectable {
+public class IIterableCompositionAnimation: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimation }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionAnimation?>? {
@@ -374,7 +374,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionAnimation?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationBridge
     let _default: Bridge.SwiftABI
@@ -395,7 +395,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x0a1f6ff8, Data2: 0x2211, Data3: 0x5f18, Data4: ( 0xb9,0x59,0x2b,0xc4,0x04,0x31,0xfd,0x37 ))// 0a1f6ff8-2211-5f18-b959-2bc40431fd37
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.release($0) },
@@ -432,7 +432,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge>
-public class IIterableCompositionColorGradientStop: WindowsFoundation.IInspectable {
+public class IIterableCompositionColorGradientStop: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionColorGradientStop?>? {
@@ -461,7 +461,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionColorGradientStop?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge
     let _default: Bridge.SwiftABI
@@ -482,7 +482,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x7cc33343, Data2: 0x15e6, Data3: 0x5a20, Data4: ( 0xac,0xbd,0xa2,0xaf,0x4c,0xb2,0x16,0xa3 ))// 7cc33343-15e6-5a20-acbd-a2af4cb216a3
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.release($0) },
@@ -519,7 +519,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterBridge>
-public class IIterableCompositionProjectedShadowCaster: WindowsFoundation.IInspectable {
+public class IIterableCompositionProjectedShadowCaster: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCaster }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionProjectedShadowCaster?>? {
@@ -548,7 +548,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionProjectedShadowCaster?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterBridge
     let _default: Bridge.SwiftABI
@@ -569,7 +569,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x89fadb12, Data2: 0xce6b, Data3: 0x5056, Data4: ( 0xb3,0x4b,0x42,0xcf,0x64,0x63,0xa8,0x7b ))// 89fadb12-ce6b-5056-b34b-42cf6463a87b
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.release($0) },
@@ -606,7 +606,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverBridge>
-public class IIterableCompositionProjectedShadowReceiver: WindowsFoundation.IInspectable {
+public class IIterableCompositionProjectedShadowReceiver: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiver }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionProjectedShadowReceiver?>? {
@@ -635,7 +635,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionProjectedShadowReceiver?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverBridge
     let _default: Bridge.SwiftABI
@@ -656,7 +656,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xc9e6839b, Data2: 0x5066, Data3: 0x5658, Data4: ( 0xaf,0xc8,0x57,0xd5,0x0f,0x1b,0xde,0x3f ))// c9e6839b-5066-5658-afc8-57d50f1bde3f
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.release($0) },
@@ -693,7 +693,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge>
-public class IIterableCompositionShape: WindowsFoundation.IInspectable {
+public class IIterableCompositionShape: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionShape?>? {
@@ -722,7 +722,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionShape?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge
     let _default: Bridge.SwiftABI
@@ -743,7 +743,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xbfe6e6f0, Data2: 0x29d3, Data3: 0x5d7b, Data4: ( 0xac,0x52,0x9f,0xf2,0xf2,0xfa,0xa5,0xc1 ))// bfe6e6f0-29d3-5d7b-ac52-9ff2f2faa5c1
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.release($0) },
@@ -780,7 +780,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueBridge>
-public class IIterableCompositionConditionalValue: WindowsFoundation.IInspectable {
+public class IIterableCompositionConditionalValue: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValue }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.CompositionConditionalValue?>? {
@@ -809,7 +809,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionConditionalValue?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueBridge
     let _default: Bridge.SwiftABI
@@ -830,7 +830,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xef893131, Data2: 0x12b4, Data3: 0x5e2d, Data4: ( 0x9a,0x98,0xb0,0x83,0xab,0x21,0x89,0x18 ))// ef893131-12b4-5e2d-9a98-b083ab218918
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.release($0) },
@@ -867,7 +867,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceBridge>
-public class IIterableICompositionInteractionSource: WindowsFoundation.IInspectable {
+public class IIterableICompositionInteractionSource: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSource }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.AnyICompositionInteractionSource?>? {
@@ -896,7 +896,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AnyICompositionInteractionSource?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceBridge
     let _default: Bridge.SwiftABI
@@ -917,7 +917,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xc2ab0a9f, Data2: 0x2518, Data3: 0x5c81, Data4: ( 0x9a,0xda,0x72,0x16,0x9f,0x0f,0x00,0xa3 ))// c2ab0a9f-2518-5c81-9ada-72169f0f00a3
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.release($0) },
@@ -954,7 +954,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierBridge>
-public class IIterableInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable {
+public class IIterableInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.InteractionTrackerInertiaModifier?>? {
@@ -983,7 +983,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.InteractionTrackerInertiaModifier?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierBridge
     let _default: Bridge.SwiftABI
@@ -1004,7 +1004,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x6a242990, Data2: 0x7db7, Data3: 0x57bd, Data4: ( 0x8d,0x01,0xe2,0x0b,0x65,0x81,0x32,0x0a ))// 6a242990-7db7-57bd-8d01-e20b6581320a
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.release($0) },
@@ -1041,7 +1041,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierBridge>
-public class IIterableInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable {
+public class IIterableInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.InteractionTrackerVector2InertiaModifier?>? {
@@ -1070,7 +1070,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.InteractionTrackerVector2InertiaModifier?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierBridge
     let _default: Bridge.SwiftABI
@@ -1091,7 +1091,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x1d4a1b0e, Data2: 0xa493, Data3: 0x58b9, Data4: ( 0x80,0xf4,0x20,0x0c,0xd0,0x44,0x00,0xf9 ))// 1d4a1b0e-a493-58b9-80f4-200cd04400f9
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.release($0) },
@@ -1128,7 +1128,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVis
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualBridge>
-public class IIterableVisual: WindowsFoundation.IInspectable {
+public class IIterableVisual: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisual }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.Visual?>? {
@@ -1157,7 +1157,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVi
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.Visual?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualBridge
     let _default: Bridge.SwiftABI
@@ -1178,7 +1178,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChil
     .init(Data1: 0x20eed339, Data2: 0xc583, Data3: 0x5027, Data4: ( 0x91,0xcc,0xa3,0xee,0xe3,0x91,0x90,0x04 ))// 20eed339-c583-5027-91cc-a3eee3919004
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.release($0) },
@@ -1215,7 +1215,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSi
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge>
-public class IIterableChildSiteLink: WindowsFoundation.IInspectable {
+public class IIterableChildSiteLink: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.ChildSiteLink?>? {
@@ -1244,7 +1244,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildS
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.ChildSiteLink?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge
     let _default: Bridge.SwiftABI
@@ -1265,7 +1265,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesk
     .init(Data1: 0x63e787bb, Data2: 0x0f05, Data3: 0x5896, Data4: ( 0x84,0xce,0xa6,0x32,0x68,0x34,0x3f,0xd8 ))// 63e787bb-0f05-5896-84ce-a63268343fd8
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.release($0) },
@@ -1302,7 +1302,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktop
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge>
-public class IIterableDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
+public class IIterableDesktopPopupSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.DesktopPopupSiteBridge?>? {
@@ -1331,7 +1331,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDeskto
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.DesktopPopupSiteBridge?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge
     let _default: Bridge.SwiftABI
@@ -1352,7 +1352,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointe
     .init(Data1: 0x645acc33, Data2: 0xffce, Data3: 0x5ad3, Data4: ( 0xbe,0x2b,0xc4,0x9b,0x9c,0x27,0xc3,0x5d ))// 645acc33-ffce-5ad3-be2b-c49b9c27c35d
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.release($0) },
@@ -1389,7 +1389,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPo
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge>
-public class IIterablePointerPoint: WindowsFoundation.IInspectable {
+public class IIterablePointerPoint: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.PointerPoint?>? {
@@ -1418,7 +1418,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerP
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PointerPoint?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge
     let _default: Bridge.SwiftABI
@@ -1439,7 +1439,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDi
     .init(Data1: 0xfb253085, Data2: 0x6cfc, Data3: 0x5fa6, Data4: ( 0x94,0x8e,0x97,0x38,0x3f,0x5b,0xe3,0x6c ))// fb253085-6cfc-5fa6-948e-97383f5be36c
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.release($0) },
@@ -1476,7 +1476,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDispl
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge>
-public class IIterableDisplayArea: WindowsFoundation.IInspectable {
+public class IIterableDisplayArea: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.DisplayArea?>? {
@@ -1505,7 +1505,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisp
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.DisplayArea?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge
     let _default: Bridge.SwiftABI
@@ -1526,7 +1526,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecy
     .init(Data1: 0x46dd4ef2, Data2: 0xc3a5, Data3: 0x5a9f, Data4: ( 0xb7,0x2d,0x8f,0x08,0x36,0xbe,0x42,0x4a ))// 46dd4ef2-c3a5-5a9f-b72d-8f0836be424a
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.release($0) },
@@ -1563,7 +1563,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge>
-public class IIterableAppInstance: WindowsFoundation.IInspectable {
+public class IIterableAppInstance: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.AppInstance?>? {
@@ -1592,7 +1592,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycl
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AppInstance?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge
     let _default: Bridge.SwiftABI
@@ -1613,7 +1613,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicati
     .init(Data1: 0x79fffbf6, Data2: 0xdc39, Data3: 0x59e3, Data4: ( 0xa6,0x84,0xfa,0x55,0xfb,0x49,0x23,0x8f ))// 79fffbf6-dc39-59e3-a684-fa55fb49238f
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
@@ -1650,7 +1650,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationM
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
-public class IIterableRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+public class IIterableRuntimeCompatibilityChange: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.RuntimeCompatibilityChange>? {
@@ -1679,7 +1679,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplication
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.RuntimeCompatibilityChange
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
     let _default: Bridge.SwiftABI
@@ -1700,7 +1700,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__
     .init(Data1: 0xff8b2322, Data2: 0xce6d, Data3: 0x5136, Data4: ( 0xb5,0xf0,0x40,0x34,0xdf,0xe0,0x9c,0x4b ))// ff8b2322-ce6d-5136-b5f0-4034dfe09c4b
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -1737,7 +1737,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPi
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class IIterablePickFileResult: WindowsFoundation.IInspectable {
+public class IIterablePickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WinAppSDK.PickFileResult?>? {
@@ -1766,7 +1766,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CP
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PickFileResult?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
     let _default: Bridge.SwiftABI
@@ -1787,7 +1787,7 @@ private var IID___x_ABI_C__FIIterable_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xe2fcc7c1, Data2: 0x3bfc, Data3: 0x5a0b, Data4: ( 0xb2,0xb0,0x72,0xe7,0x69,0xd1,0xcb,0x7e ))// e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
 }
 
-internal var __x_ABI_C__FIIterable_1_HSTRINGVTable: __x_ABI_C__FIIterable_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1_HSTRINGVTable: __x_ABI_C__FIIterable_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1_HSTRINGWrapper.release($0) },
@@ -1824,7 +1824,7 @@ internal var __x_ABI_C__FIIterable_1_HSTRINGVTable: __x_ABI_C__FIIterable_1_HSTR
     }
 )
 typealias __x_ABI_C__FIIterable_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1_HSTRINGBridge>
-public class IIterableString: WindowsFoundation.IInspectable {
+public class IIterableString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1_HSTRING }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<String>? {
@@ -1853,7 +1853,7 @@ internal enum __x_ABI_C__FIIterable_1_HSTRINGBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1_HSTRINGImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1_HSTRINGImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = String
     typealias Bridge = __x_ABI_C__FIIterable_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -1874,7 +1874,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_
     .init(Data1: 0x999d6f68, Data2: 0xb74e, Data3: 0x5e06, Data4: ( 0xa7,0x98,0xd2,0x54,0xc4,0x89,0x56,0x70 ))// 999d6f68-b74e-5e06-a798-d254c4895670
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.release($0) },
@@ -1911,7 +1911,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge>
-public class IIterableIKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable {
+public class IIterableIKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?>? {
@@ -1940,7 +1940,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_AB
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge
     let _default: Bridge.SwiftABI
@@ -1961,7 +1961,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTR
     .init(Data1: 0xe9bdaaf0, Data2: 0xcbf6, Data3: 0x5c72, Data4: ( 0xbe,0x90,0x29,0xcb,0xf3,0xa1,0x31,0x9b ))// e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.release($0) },
@@ -1998,7 +1998,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge>
-public class IIterableIKeyValuePairString_String: WindowsFoundation.IInspectable {
+public class IIterableIKeyValuePairString_String: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
@@ -2027,7 +2027,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRIN
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, String>?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -2048,7 +2048,7 @@ private var IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_
     .init(Data1: 0x4fed2669, Data2: 0xd0d3, Data3: 0x59f6, Data4: ( 0x91,0xd9,0x95,0x90,0x2d,0x72,0x8d,0x6a ))// 4fed2669-d0d3-59f6-91d9-95902d728d6a
 }
 
-internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -2085,7 +2085,7 @@ internal var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI
     }
 )
 typealias __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IIterableIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+public class IIterableIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
 
     open func First() throws -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?>? {
@@ -2114,7 +2114,7 @@ internal enum __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_AB
     }
 }
 
-fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterable, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
     typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -2135,7 +2135,7 @@ private var IID___x_ABI_C__FIIterator_1_float: WindowsFoundation.IID {
     .init(Data1: 0x42614e61, Data2: 0xb0aa, Data3: 0x5e72, Data4: ( 0x93,0x54,0x27,0x71,0xdb,0x20,0xb7,0xa8 ))// 42614e61-b0aa-5e72-9354-2771db20b7a8
 }
 
-internal var __x_ABI_C__FIIterator_1_floatVTable: __x_ABI_C__FIIterator_1_floatVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1_floatVTable: __x_ABI_C__FIIterator_1_floatVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1_floatWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1_floatWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1_floatWrapper.release($0) },
@@ -2194,7 +2194,7 @@ internal var __x_ABI_C__FIIterator_1_floatVTable: __x_ABI_C__FIIterator_1_floatV
     }
 )
 typealias __x_ABI_C__FIIterator_1_floatWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1_floatBridge>
-public class IIteratorFloat: WindowsFoundation.IInspectable {
+public class IIteratorFloat: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1_float }
 
     open func get_Current() throws -> Float {
@@ -2248,7 +2248,7 @@ internal enum __x_ABI_C__FIIterator_1_floatBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1_floatImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1_floatImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = Float
     typealias Bridge = __x_ABI_C__FIIterator_1_floatBridge
     let _default: Bridge.SwiftABI
@@ -2284,7 +2284,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x3094fcbe, Data2: 0x7d8f, Data3: 0x5bb0, Data4: ( 0xbf,0x52,0x08,0x5b,0xce,0xe7,0x64,0x96 ))// 3094fcbe-7d8f-5bb0-bf52-085bcee76496
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper.release($0) },
@@ -2343,7 +2343,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationBridge>
-public class IIteratorCompositionAnimation: WindowsFoundation.IInspectable {
+public class IIteratorCompositionAnimation: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimation }
 
     open func get_Current() throws -> WinAppSDK.CompositionAnimation? {
@@ -2373,11 +2373,20 @@ public class IIteratorCompositionAnimation: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionAnimation?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionAnimationBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionAnimation>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionAnimation>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimation.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionAnimationBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionAnimationBridge.self, abi: _items)
         }
         return result
     }
@@ -2399,7 +2408,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionAnimation?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionAnimationBridge
     let _default: Bridge.SwiftABI
@@ -2435,7 +2444,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x5865f61c, Data2: 0x2bca, Data3: 0x5f80, Data4: ( 0x96,0x8a,0x8e,0x06,0xbd,0xc2,0x8c,0xb0 ))// 5865f61c-2bca-5f80-968a-8e06bdc28cb0
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.release($0) },
@@ -2494,7 +2503,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge>
-public class IIteratorCompositionColorGradientStop: WindowsFoundation.IInspectable {
+public class IIteratorCompositionColorGradientStop: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop }
 
     open func get_Current() throws -> WinAppSDK.CompositionColorGradientStop? {
@@ -2524,11 +2533,20 @@ public class IIteratorCompositionColorGradientStop: WindowsFoundation.IInspectab
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionColorGradientStop?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
         }
         return result
     }
@@ -2550,7 +2568,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionColorGradientStop?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge
     let _default: Bridge.SwiftABI
@@ -2586,7 +2604,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x1ac58905, Data2: 0x0d81, Data3: 0x581d, Data4: ( 0xb7,0x18,0x80,0x12,0x97,0x56,0x8e,0xc1 ))// 1ac58905-0d81-581d-b718-801297568ec1
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper.release($0) },
@@ -2645,7 +2663,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterBridge>
-public class IIteratorCompositionProjectedShadowCaster: WindowsFoundation.IInspectable {
+public class IIteratorCompositionProjectedShadowCaster: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCaster }
 
     open func get_Current() throws -> WinAppSDK.CompositionProjectedShadowCaster? {
@@ -2675,11 +2693,20 @@ public class IIteratorCompositionProjectedShadowCaster: WindowsFoundation.IInspe
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionProjectedShadowCaster?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowCasterBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionProjectedShadowCaster>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionProjectedShadowCaster>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCaster.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowCasterBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowCasterBridge.self, abi: _items)
         }
         return result
     }
@@ -2701,7 +2728,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionProjectedShadowCaster?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowCasterBridge
     let _default: Bridge.SwiftABI
@@ -2737,7 +2764,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xd0a7e89f, Data2: 0xa01e, Data3: 0x5c64, Data4: ( 0xbf,0x5e,0x37,0xd0,0x3e,0xae,0xa3,0x20 ))// d0a7e89f-a01e-5c64-bf5e-37d03eaea320
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper.release($0) },
@@ -2796,7 +2823,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverBridge>
-public class IIteratorCompositionProjectedShadowReceiver: WindowsFoundation.IInspectable {
+public class IIteratorCompositionProjectedShadowReceiver: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiver }
 
     open func get_Current() throws -> WinAppSDK.CompositionProjectedShadowReceiver? {
@@ -2826,11 +2853,20 @@ public class IIteratorCompositionProjectedShadowReceiver: WindowsFoundation.IIns
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionProjectedShadowReceiver?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowReceiverBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionProjectedShadowReceiver>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionProjectedShadowReceiver>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiver.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowReceiverBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionProjectedShadowReceiverBridge.self, abi: _items)
         }
         return result
     }
@@ -2852,7 +2888,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionProjectedShadowReceiver?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionProjectedShadowReceiverBridge
     let _default: Bridge.SwiftABI
@@ -2888,7 +2924,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x4ec94e18, Data2: 0xf15c, Data3: 0x5432, Data4: ( 0x9b,0xb3,0x77,0xbd,0xcd,0x96,0xdc,0x04 ))// 4ec94e18-f15c-5432-9bb3-77bdcd96dc04
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.release($0) },
@@ -2947,7 +2983,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCom
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge>
-public class IIteratorCompositionShape: WindowsFoundation.IInspectable {
+public class IIteratorCompositionShape: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape }
 
     open func get_Current() throws -> WinAppSDK.CompositionShape? {
@@ -2977,11 +3013,20 @@ public class IIteratorCompositionShape: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionShape?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
         }
         return result
     }
@@ -3003,7 +3048,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionShape?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge
     let _default: Bridge.SwiftABI
@@ -3039,7 +3084,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x1bf57a13, Data2: 0xc5b6, Data3: 0x5d31, Data4: ( 0x80,0x5b,0x6f,0x00,0x9b,0x24,0xe3,0x60 ))// 1bf57a13-c5b6-5d31-805b-6f009b24e360
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper.release($0) },
@@ -3098,7 +3143,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueBridge>
-public class IIteratorCompositionConditionalValue: WindowsFoundation.IInspectable {
+public class IIteratorCompositionConditionalValue: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValue }
 
     open func get_Current() throws -> WinAppSDK.CompositionConditionalValue? {
@@ -3128,11 +3173,20 @@ public class IIteratorCompositionConditionalValue: WindowsFoundation.IInspectabl
 
     open func GetMany(_ items: inout [WinAppSDK.CompositionConditionalValue?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.CompositionConditionalValueBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionConditionalValue>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionConditionalValue>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValue.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.CompositionConditionalValueBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.CompositionConditionalValueBridge.self, abi: _items)
         }
         return result
     }
@@ -3154,7 +3208,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionConditionalValue?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CCompositionConditionalValueBridge
     let _default: Bridge.SwiftABI
@@ -3190,7 +3244,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xf21f2a85, Data2: 0xe3f0, Data3: 0x557c, Data4: ( 0x8c,0xff,0x6c,0xfb,0xc3,0x97,0x54,0xbb ))// f21f2a85-e3f0-557c-8cff-6cfbc39754bb
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper.release($0) },
@@ -3250,7 +3304,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceBridge>
-public class IIteratorICompositionInteractionSource: WindowsFoundation.IInspectable {
+public class IIteratorICompositionInteractionSource: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSource }
 
     open func get_Current() throws -> WinAppSDK.AnyICompositionInteractionSource? {
@@ -3280,11 +3334,20 @@ public class IIteratorICompositionInteractionSource: WindowsFoundation.IInspecta
 
     open func GetMany(_ items: inout [WinAppSDK.AnyICompositionInteractionSource?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.ICompositionInteractionSourceBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSource>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CICompositionInteractionSource>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSource.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.ICompositionInteractionSourceBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.ICompositionInteractionSourceBridge.self, abi: _items)
         }
         return result
     }
@@ -3306,7 +3369,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AnyICompositionInteractionSource?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CICompositionInteractionSourceBridge
     let _default: Bridge.SwiftABI
@@ -3342,7 +3405,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xad8bcabc, Data2: 0x22a3, Data3: 0x5fea, Data4: ( 0x9e,0xdc,0x20,0xe8,0xc4,0xfa,0x39,0x05 ))// ad8bcabc-22a3-5fea-9edc-20e8c4fa3905
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper.release($0) },
@@ -3401,7 +3464,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierBridge>
-public class IIteratorInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable {
+public class IIteratorInteractionTrackerInertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier }
 
     open func get_Current() throws -> WinAppSDK.InteractionTrackerInertiaModifier? {
@@ -3431,11 +3494,20 @@ public class IIteratorInteractionTrackerInertiaModifier: WindowsFoundation.IInsp
 
     open func GetMany(_ items: inout [WinAppSDK.InteractionTrackerInertiaModifier?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerInertiaModifierBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerInertiaModifier>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifier.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerInertiaModifierBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerInertiaModifierBridge.self, abi: _items)
         }
         return result
     }
@@ -3457,7 +3529,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.InteractionTrackerInertiaModifier?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerInertiaModifierBridge
     let _default: Bridge.SwiftABI
@@ -3493,7 +3565,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0xe666655f, Data2: 0x2a16, Data3: 0x5a78, Data4: ( 0xbd,0x73,0x7f,0x81,0xbb,0xa7,0xc2,0xc4 ))// e666655f-2a16-5a78-bd73-7f81bba7c2c4
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper.release($0) },
@@ -3552,7 +3624,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInt
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierBridge>
-public class IIteratorInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable {
+public class IIteratorInteractionTrackerVector2InertiaModifier: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier }
 
     open func get_Current() throws -> WinAppSDK.InteractionTrackerVector2InertiaModifier? {
@@ -3582,11 +3654,20 @@ public class IIteratorInteractionTrackerVector2InertiaModifier: WindowsFoundatio
 
     open func GetMany(_ items: inout [WinAppSDK.InteractionTrackerVector2InertiaModifier?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerVector2InertiaModifierBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CInteractions_CIInteractionTrackerVector2InertiaModifier>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifier.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerVector2InertiaModifierBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition_Interactions.InteractionTrackerVector2InertiaModifierBridge.self, abi: _items)
         }
         return result
     }
@@ -3608,7 +3689,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CIn
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.InteractionTrackerVector2InertiaModifier?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CInteractions__CInteractionTrackerVector2InertiaModifierBridge
     let _default: Bridge.SwiftABI
@@ -3644,7 +3725,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__C
     .init(Data1: 0x44b22f94, Data2: 0x798f, Data3: 0x5841, Data4: ( 0xbb,0x05,0x0d,0x1a,0xaa,0x22,0xf6,0x68 ))// 44b22f94-798f-5841-bb05-0d1aaa22f668
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper.release($0) },
@@ -3703,7 +3784,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVis
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualBridge>
-public class IIteratorVisual: WindowsFoundation.IInspectable {
+public class IIteratorVisual: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisual }
 
     open func get_Current() throws -> WinAppSDK.Visual? {
@@ -3733,11 +3814,20 @@ public class IIteratorVisual: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.Visual?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.VisualBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CIVisual>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CIVisual>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisual.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.VisualBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.VisualBridge.self, abi: _items)
         }
         return result
     }
@@ -3759,7 +3849,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVi
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.Visual?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CComposition__CVisualBridge
     let _default: Bridge.SwiftABI
@@ -3795,7 +3885,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChil
     .init(Data1: 0x95e02266, Data2: 0x15a8, Data3: 0x59ae, Data4: ( 0x8a,0x00,0x06,0xd2,0x4f,0xa3,0x4e,0x40 ))// 95e02266-15a8-59ae-8a00-06d24fa34e40
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper.release($0) },
@@ -3854,7 +3944,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSi
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge>
-public class IIteratorChildSiteLink: WindowsFoundation.IInspectable {
+public class IIteratorChildSiteLink: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink }
 
     open func get_Current() throws -> WinAppSDK.ChildSiteLink? {
@@ -3884,11 +3974,20 @@ public class IIteratorChildSiteLink: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.ChildSiteLink?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Content.ChildSiteLinkBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLink.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Content.ChildSiteLinkBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Content.ChildSiteLinkBridge.self, abi: _items)
         }
         return result
     }
@@ -3910,7 +4009,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildS
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.ChildSiteLink?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CChildSiteLinkBridge
     let _default: Bridge.SwiftABI
@@ -3946,7 +4045,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesk
     .init(Data1: 0xcc9ed456, Data2: 0x5402, Data3: 0x5d3e, Data4: ( 0x86,0xb9,0xd3,0xf2,0x57,0x08,0xe4,0x4d ))// cc9ed456-5402-5d3e-86b9-d3f25708e44d
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper.release($0) },
@@ -4005,7 +4104,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktop
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge>
-public class IIteratorDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
+public class IIteratorDesktopPopupSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge }
 
     open func get_Current() throws -> WinAppSDK.DesktopPopupSiteBridge? {
@@ -4035,11 +4134,20 @@ public class IIteratorDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.DesktopPopupSiteBridge?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Content.DesktopPopupSiteBridgeBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridge.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Content.DesktopPopupSiteBridgeBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Content.DesktopPopupSiteBridgeBridge.self, abi: _items)
         }
         return result
     }
@@ -4061,7 +4169,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDeskto
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.DesktopPopupSiteBridge?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CContent__CDesktopPopupSiteBridgeBridge
     let _default: Bridge.SwiftABI
@@ -4097,7 +4205,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointe
     .init(Data1: 0x5b63939d, Data2: 0x11cf, Data3: 0x56c4, Data4: ( 0xb0,0xd0,0x11,0xdf,0x9d,0xc4,0x87,0xd1 ))// 5b63939d-11cf-56c4-b0d0-11df9dc487d1
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.release($0) },
@@ -4156,7 +4264,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPo
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge>
-public class IIteratorPointerPoint: WindowsFoundation.IInspectable {
+public class IIteratorPointerPoint: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint }
 
     open func get_Current() throws -> WinAppSDK.PointerPoint? {
@@ -4186,11 +4294,20 @@ public class IIteratorPointerPoint: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.PointerPoint?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
         }
         return result
     }
@@ -4212,7 +4329,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerP
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PointerPoint?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge
     let _default: Bridge.SwiftABI
@@ -4248,7 +4365,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDi
     .init(Data1: 0x3d833884, Data2: 0x2258, Data3: 0x5c48, Data4: ( 0x8d,0x45,0x36,0x42,0xfe,0x8c,0x67,0x55 ))// 3d833884-2258-5c48-8d45-3642fe8c6755
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.release($0) },
@@ -4307,7 +4424,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDispl
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge>
-public class IIteratorDisplayArea: WindowsFoundation.IInspectable {
+public class IIteratorDisplayArea: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea }
 
     open func get_Current() throws -> WinAppSDK.DisplayArea? {
@@ -4337,11 +4454,20 @@ public class IIteratorDisplayArea: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.DisplayArea?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self, abi: _items)
         }
         return result
     }
@@ -4363,7 +4489,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisp
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.DisplayArea?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge
     let _default: Bridge.SwiftABI
@@ -4399,7 +4525,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecy
     .init(Data1: 0x58c4b850, Data2: 0xcfd3, Data3: 0x54c7, Data4: ( 0x95,0x68,0xcf,0x76,0xa0,0x17,0xaf,0xae ))// 58c4b850-cfd3-54c7-9568-cf76a017afae
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.release($0) },
@@ -4458,7 +4584,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge>
-public class IIteratorAppInstance: WindowsFoundation.IInspectable {
+public class IIteratorAppInstance: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance }
 
     open func get_Current() throws -> WinAppSDK.AppInstance? {
@@ -4488,11 +4614,20 @@ public class IIteratorAppInstance: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.AppInstance?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
         }
         return result
     }
@@ -4514,7 +4649,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycl
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AppInstance?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge
     let _default: Bridge.SwiftABI
@@ -4550,7 +4685,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicati
     .init(Data1: 0x25abd83a, Data2: 0xa7d6, Data3: 0x5c3a, Data4: ( 0x94,0xa4,0x67,0x4f,0xd9,0xce,0xc6,0xb4 ))// 25abd83a-a7d6-5c3a-94a4-674fd9cec6b4
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
@@ -4609,7 +4744,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationM
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
-public class IIteratorRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+public class IIteratorRuntimeCompatibilityChange: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
 
     open func get_Current() throws -> WinAppSDK.RuntimeCompatibilityChange {
@@ -4663,7 +4798,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplication
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.RuntimeCompatibilityChange
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
     let _default: Bridge.SwiftABI
@@ -4699,7 +4834,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__
     .init(Data1: 0xb07e34ef, Data2: 0xae42, Data3: 0x5dea, Data4: ( 0xb3,0xd3,0x4c,0x25,0x29,0x90,0xab,0x31 ))// b07e34ef-ae42-5dea-b3d3-4c252990ab31
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -4758,7 +4893,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPi
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class IIteratorPickFileResult: WindowsFoundation.IInspectable {
+public class IIteratorPickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func get_Current() throws -> WinAppSDK.PickFileResult? {
@@ -4788,11 +4923,20 @@ public class IIteratorPickFileResult: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [WinAppSDK.PickFileResult?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
         }
         return result
     }
@@ -4814,7 +4958,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CP
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PickFileResult?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
     let _default: Bridge.SwiftABI
@@ -4850,7 +4994,7 @@ private var IID___x_ABI_C__FIIterator_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x8c304ebb, Data2: 0x6615, Data3: 0x50a4, Data4: ( 0x88,0x29,0x87,0x9e,0xcd,0x44,0x32,0x36 ))// 8c304ebb-6615-50a4-8829-879ecd443236
 }
 
-internal var __x_ABI_C__FIIterator_1_HSTRINGVTable: __x_ABI_C__FIIterator_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1_HSTRINGVTable: __x_ABI_C__FIIterator_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1_HSTRINGWrapper.release($0) },
@@ -4911,15 +5055,17 @@ internal var __x_ABI_C__FIIterator_1_HSTRINGVTable: __x_ABI_C__FIIterator_1_HSTR
     }
 )
 typealias __x_ABI_C__FIIterator_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1_HSTRINGBridge>
-public class IIteratorString: WindowsFoundation.IInspectable {
+public class IIteratorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1_HSTRING }
 
     open func get_Current() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIIterator_1_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -4941,11 +5087,20 @@ public class IIteratorString: WindowsFoundation.IInspectable {
 
     open func GetMany(_ items: inout [String]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI { _items in
+        var _itemsBuffer = Array<HSTRING?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<HSTRING?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        WindowsDeleteString(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1_HSTRING.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abi: _items)
+            items = .from(abi: _items)
         }
         return result
     }
@@ -4967,7 +5122,7 @@ internal enum __x_ABI_C__FIIterator_1_HSTRINGBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1_HSTRINGImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1_HSTRINGImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = String
     typealias Bridge = __x_ABI_C__FIIterator_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -5003,7 +5158,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_
     .init(Data1: 0xd7585c8c, Data2: 0x8ac4, Data3: 0x575f, Data4: ( 0x8a,0x96,0x0d,0xe9,0xc3,0x15,0x9e,0xa9 ))// d7585c8c-8ac4-575f-8a96-0de9c3159ea9
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.release($0) },
@@ -5063,7 +5218,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge>
-public class IIteratorIKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable {
+public class IIteratorIKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase }
 
     open func get_Current() throws -> WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>? {
@@ -5093,11 +5248,20 @@ public class IIteratorIKeyValuePairString_ICompositionAnimationBase: WindowsFoun
 
     open func GetMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge.self, abi: _items)
+            items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge.self, abi: _items)
         }
         return result
     }
@@ -5119,7 +5283,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_AB
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge
     let _default: Bridge.SwiftABI
@@ -5155,7 +5319,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTR
     .init(Data1: 0x05eb86f1, Data2: 0x7140, Data3: 0x5517, Data4: ( 0xb8,0x8d,0xcb,0xae,0xbe,0x57,0xe6,0xb1 ))// 05eb86f1-7140-5517-b88d-cbaebe57e6b1
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.release($0) },
@@ -5215,7 +5379,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge>
-public class IIteratorIKeyValuePairString_String: WindowsFoundation.IInspectable {
+public class IIteratorIKeyValuePairString_String: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING }
 
     open func get_Current() throws -> WindowsFoundation.AnyIKeyValuePair<String, String>? {
@@ -5245,11 +5409,20 @@ public class IIteratorIKeyValuePairString_String: WindowsFoundation.IInspectable
 
     open func GetMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, String>?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge.self, abi: _items)
+            items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge.self, abi: _items)
         }
         return result
     }
@@ -5271,7 +5444,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRIN
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, String>?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -5307,7 +5480,7 @@ private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_
     .init(Data1: 0xa11824c9, Data2: 0xe458, Data3: 0x502a, Data4: ( 0xaf,0xd8,0xce,0x3c,0xe0,0xab,0xd6,0xfe ))// a11824c9-e458-502a-afd8-ce3ce0abd6fe
 }
 
-internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -5367,7 +5540,7 @@ internal var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI
     }
 )
 typealias __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IIteratorIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+public class IIteratorIKeyValuePairString_IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
 
     open func get_Current() throws -> WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>? {
@@ -5397,11 +5570,20 @@ public class IIteratorIKeyValuePairString_IVectorString: WindowsFoundation.IInsp
 
     open func GetMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self, abi: _items)
+            items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge.self, abi: _items)
         }
         return result
     }
@@ -5423,7 +5605,7 @@ internal enum __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_AB
     }
 }
 
-fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterator, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
     typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -5459,7 +5641,7 @@ private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CCo
     .init(Data1: 0xe1ea9d61, Data2: 0x0e9e, Data3: 0x5375, Data4: ( 0xac,0x74,0x50,0x2e,0x67,0xf9,0xed,0xe1 ))// e1ea9d61-0e9e-5375-ac74-502e67f9ede1
 }
 
-internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
     QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.addRef($0) },
     Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.release($0) },
@@ -5503,15 +5685,17 @@ internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CCompo
     }
 )
 typealias __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge>
-public class IKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable {
+public class IKeyValuePairString_ICompositionAnimationBase: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase }
 
     open func get_Key() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -5541,7 +5725,7 @@ internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComp
     }
 }
 
-fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IKeyValuePair, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IKeyValuePair, AbiInterfaceImpl, @unchecked Sendable {
     typealias K = String
     typealias V = WinAppSDK.AnyICompositionAnimationBase?
     typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge
@@ -5568,7 +5752,7 @@ private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows
     .init(Data1: 0x6a46de21, Data2: 0x86a6, Data3: 0x536a, Data4: ( 0x93,0x7b,0x1e,0xdf,0xa3,0xe1,0x64,0x74 ))// 6a46de21-86a6-536a-937b-1edfa3e16474
 }
 
-internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateVtbl = .init(
     QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateWrapper.addRef($0) },
     Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateWrapper.release($0) },
@@ -5611,15 +5795,17 @@ internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__C
     }
 )
 typealias __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateBridge>
-public class IKeyValuePairString_ResourceCandidate: WindowsFoundation.IInspectable {
+public class IKeyValuePairString_ResourceCandidate: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidate }
 
     open func get_Key() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidate.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -5649,7 +5835,7 @@ internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__
     }
 }
 
-fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateImpl : IKeyValuePair, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateImpl : IKeyValuePair, AbiInterfaceImpl, @unchecked Sendable {
     typealias K = String
     typealias V = WinAppSDK.ResourceCandidate?
     typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceCandidateBridge
@@ -5676,7 +5862,7 @@ private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING: WindowsFoundation.I
     .init(Data1: 0x60310303, Data2: 0x49c5, Data3: 0x52e6, Data4: ( 0xab,0xc6,0xa9,0xb3,0x6e,0xcc,0xc7,0x16 ))// 60310303-49c5-52e6-abc6-a9b36eccc716
 }
 
-internal var __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper.release($0) },
@@ -5719,24 +5905,28 @@ internal var __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIKey
     }
 )
 typealias __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge>
-public class IKeyValuePairString_String: WindowsFoundation.IInspectable {
+public class IKeyValuePairString_String: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING }
 
     open func get_Key() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
     open func get_Value() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Value(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -5757,7 +5947,7 @@ internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge : AbiInterfaceBr
     }
 }
 
-fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IKeyValuePair, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IKeyValuePair, AbiInterfaceImpl, @unchecked Sendable {
     typealias K = String
     typealias V = String
     typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGBridge
@@ -5784,7 +5974,7 @@ private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRIN
     .init(Data1: 0x174f26c7, Data2: 0x79ea, Data3: 0x5f7c, Data4: ( 0xbd,0x70,0xac,0x44,0x57,0xf2,0xca,0xc8 ))// 174f26c7-79ea-5f7c-bd70-ac4457f2cac8
 }
 
-internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -5828,15 +6018,17 @@ internal var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVT
     }
 )
 typealias __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IKeyValuePairString_IVectorString: WindowsFoundation.IInspectable {
+public class IKeyValuePairString_IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
 
     open func get_Key() throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -5866,7 +6058,7 @@ internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGB
     }
 }
 
-fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IKeyValuePair, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IKeyValuePair, AbiInterfaceImpl, @unchecked Sendable {
     typealias K = String
     typealias V = WindowsFoundation.AnyIVector<String>?
     typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
@@ -5893,7 +6085,7 @@ private var IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposi
     .init(Data1: 0x60d8d804, Data2: 0xd025, Data3: 0x5b6e, Data4: ( 0x80,0x0c,0xb0,0x38,0xcd,0xed,0xba,0xb4 ))// 60d8d804-d025-5b6e-800c-b038cdedbab4
 }
 
-internal var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.release($0) },
@@ -5959,7 +6151,7 @@ internal var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CCompositio
     }
 )
 typealias __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge>
-public class IMapViewString_ICompositionAnimationBase: WindowsFoundation.IInspectable {
+public class IMapViewString_ICompositionAnimationBase: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase }
 
     open func Lookup(_ key: String) throws -> WinAppSDK.AnyICompositionAnimationBase? {
@@ -5991,7 +6183,13 @@ public class IMapViewString_ICompositionAnimationBase: WindowsFoundation.IInspec
 
     open func Split(_ first: inout WindowsFoundation.AnyIMapView<String, WinAppSDK.AnyICompositionAnimationBase?>?, _ second: inout WindowsFoundation.AnyIMapView<String, WinAppSDK.AnyICompositionAnimationBase?>?) throws {
         var _firstAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase>?
+        defer {
+            _ = _firstAbi?.pointee.lpVtbl.pointee.Release(_firstAbi)
+        }
         var _secondAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase>?
+        defer {
+            _ = _secondAbi?.pointee.lpVtbl.pointee.Release(_secondAbi)
+        }
         _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Split(pThis, &_firstAbi, &_secondAbi))
         }
@@ -6016,7 +6214,7 @@ internal enum __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CCompositi
     }
 }
 
-fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IMapView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IMapView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?
     typealias K = String
     typealias V = WinAppSDK.AnyICompositionAnimationBase?
@@ -6060,7 +6258,7 @@ private var IID___x_ABI_C__FIMapView_2_HSTRING_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xac7f26f2, Data2: 0xfeb7, Data3: 0x5b2a, Data4: ( 0x8a,0xc4,0x34,0x5b,0xc6,0x2c,0xae,0xde ))// ac7f26f2-feb7-5b2a-8ac4-345bc62caede
 }
 
-internal var __x_ABI_C__FIMapView_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMapView_2_HSTRING_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMapView_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMapView_2_HSTRING_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMapView_2_HSTRING_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMapView_2_HSTRING_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMapView_2_HSTRING_HSTRINGWrapper.release($0) },
@@ -6125,16 +6323,18 @@ internal var __x_ABI_C__FIMapView_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMapView_
     }
 )
 typealias __x_ABI_C__FIMapView_2_HSTRING_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING_HSTRINGBridge>
-public class IMapViewString_String: WindowsFoundation.IInspectable {
+public class IMapViewString_String: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMapView_2_HSTRING_HSTRING }
 
     open func Lookup(_ key: String) throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         let _key = try! HString(key)
         _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Lookup(pThis, _key.get(), &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -6157,7 +6357,13 @@ public class IMapViewString_String: WindowsFoundation.IInspectable {
 
     open func Split(_ first: inout WindowsFoundation.AnyIMapView<String, String>?, _ second: inout WindowsFoundation.AnyIMapView<String, String>?) throws {
         var _firstAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING_HSTRING>?
+        defer {
+            _ = _firstAbi?.pointee.lpVtbl.pointee.Release(_firstAbi)
+        }
         var _secondAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING_HSTRING>?
+        defer {
+            _ = _secondAbi?.pointee.lpVtbl.pointee.Release(_secondAbi)
+        }
         _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Split(pThis, &_firstAbi, &_secondAbi))
         }
@@ -6182,7 +6388,7 @@ internal enum __x_ABI_C__FIMapView_2_HSTRING_HSTRINGBridge : AbiInterfaceBridge 
     }
 }
 
-fileprivate class __x_ABI_C__FIMapView_2_HSTRING_HSTRINGImpl : IMapView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMapView_2_HSTRING_HSTRINGImpl : IMapView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, String>?
     typealias K = String
     typealias V = String
@@ -6226,7 +6432,7 @@ private var IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: Wi
     .init(Data1: 0x153f9c9c, Data2: 0xd22a, Data3: 0x5c9e, Data4: ( 0x9c,0x74,0x8b,0x85,0xc9,0x08,0xb0,0x00 ))// 153f9c9c-d22a-5c9e-9c74-8b85c908b000
 }
 
-internal var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -6292,7 +6498,7 @@ internal var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable:
     }
 )
 typealias __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IMapViewString_IVectorString: WindowsFoundation.IInspectable {
+public class IMapViewString_IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
 
     open func Lookup(_ key: String) throws -> WindowsFoundation.AnyIVector<String>? {
@@ -6324,7 +6530,13 @@ public class IMapViewString_IVectorString: WindowsFoundation.IInspectable {
 
     open func Split(_ first: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?, _ second: inout WindowsFoundation.AnyIMapView<String, WindowsFoundation.AnyIVector<String>?>?) throws {
         var _firstAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING>?
+        defer {
+            _ = _firstAbi?.pointee.lpVtbl.pointee.Release(_firstAbi)
+        }
         var _secondAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING>?
+        defer {
+            _ = _secondAbi?.pointee.lpVtbl.pointee.Release(_secondAbi)
+        }
         _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Split(pThis, &_firstAbi, &_secondAbi))
         }
@@ -6349,7 +6561,7 @@ internal enum __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge
     }
 }
 
-fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMapView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMapView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
     typealias K = String
     typealias V = WindowsFoundation.AnyIVector<String>?
@@ -6393,7 +6605,7 @@ private var IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition
     .init(Data1: 0x6a91806a, Data2: 0x8668, Data3: 0x5938, Data4: ( 0x93,0xf9,0x75,0x9d,0x00,0x21,0xab,0x9b ))// 6a91806a-8668-5938-93f9-759d0021ab9b
 }
 
-internal var __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVTable: __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper.release($0) },
@@ -6477,7 +6689,7 @@ internal var __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__C
     }
 )
 typealias __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseBridge>
-public class IMapString_ICompositionAnimationBase: WindowsFoundation.IInspectable {
+public class IMapString_ICompositionAnimationBase: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBase }
 
     open func Lookup(_ key: String) throws -> WinAppSDK.AnyICompositionAnimationBase? {
@@ -6557,7 +6769,7 @@ internal enum __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__
     }
 }
 
-fileprivate class __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IMap, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMap_2_HSTRING___x_ABI_CMicrosoft__CUI__CComposition__CICompositionAnimationBaseImpl : IMap, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WinAppSDK.AnyICompositionAnimationBase?>?
     typealias K = String
     typealias V = WinAppSDK.AnyICompositionAnimationBase?
@@ -6616,7 +6828,7 @@ private var IID___x_ABI_C__FIMap_2_HSTRING_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xf6d1f700, Data2: 0x49c2, Data3: 0x52ae, Data4: ( 0x81,0x54,0x82,0x6f,0x99,0x08,0x77,0x3c ))// f6d1f700-49c2-52ae-8154-826f9908773c
 }
 
-internal var __x_ABI_C__FIMap_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRING_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMap_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRING_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMap_2_HSTRING_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMap_2_HSTRING_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMap_2_HSTRING_HSTRINGWrapper.release($0) },
@@ -6699,16 +6911,18 @@ internal var __x_ABI_C__FIMap_2_HSTRING_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRIN
     }
 )
 typealias __x_ABI_C__FIMap_2_HSTRING_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMap_2_HSTRING_HSTRINGBridge>
-public class IMapString_String: WindowsFoundation.IInspectable {
+public class IMapString_String: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMap_2_HSTRING_HSTRING }
 
     open func Lookup(_ key: String) throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         let _key = try! HString(key)
         _ = try perform(as: __x_ABI_C__FIMap_2_HSTRING_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Lookup(pThis, _key.get(), &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -6778,7 +6992,7 @@ internal enum __x_ABI_C__FIMap_2_HSTRING_HSTRINGBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIMap_2_HSTRING_HSTRINGImpl : IMap, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMap_2_HSTRING_HSTRINGImpl : IMap, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, String>?
     typealias K = String
     typealias V = String
@@ -6837,7 +7051,7 @@ private var IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: Window
     .init(Data1: 0xe475ca9d, Data2: 0x6afb, Data3: 0x5992, Data4: ( 0x99,0x3e,0x53,0xe6,0xef,0x7a,0x9e,0xcd ))// e475ca9d-6afb-5992-993e-53e6ef7a9ecd
 }
 
-internal var __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -6921,7 +7135,7 @@ internal var __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGVTable: __x
     }
 )
 typealias __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IMapString_IVectorString: WindowsFoundation.IInspectable {
+public class IMapString_IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRING }
 
     open func Lookup(_ key: String) throws -> WindowsFoundation.AnyIVector<String>? {
@@ -7001,7 +7215,7 @@ internal enum __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGBridge : A
     }
 }
 
-fileprivate class __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMap, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIMap_2_HSTRING___x_ABI_C__FIVector_1_HSTRINGImpl : IMap, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WindowsFoundation.AnyIKeyValuePair<String, WindowsFoundation.AnyIVector<String>?>?
     typealias K = String
     typealias V = WindowsFoundation.AnyIVector<String>?
@@ -7060,7 +7274,7 @@ private var IID___x_ABI_C__FIVectorView_1_float: WindowsFoundation.IID {
     .init(Data1: 0x7bca64fd, Data2: 0x150c, Data3: 0x5d50, Data4: ( 0xb5,0x6b,0x9f,0x4f,0x47,0x4c,0x59,0x30 ))// 7bca64fd-150c-5d50-b56b-9f4f474c5930
 }
 
-internal var __x_ABI_C__FIVectorView_1_floatVTable: __x_ABI_C__FIVectorView_1_floatVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1_floatVTable: __x_ABI_C__FIVectorView_1_floatVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1_floatWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1_floatWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1_floatWrapper.release($0) },
@@ -7125,7 +7339,7 @@ internal var __x_ABI_C__FIVectorView_1_floatVTable: __x_ABI_C__FIVectorView_1_fl
     }
 )
 typealias __x_ABI_C__FIVectorView_1_floatWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1_floatBridge>
-public class IVectorViewFloat: WindowsFoundation.IInspectable {
+public class IVectorViewFloat: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1_float }
 
     open func GetAt(_ index: UInt32) throws -> Float {
@@ -7179,7 +7393,7 @@ internal enum __x_ABI_C__FIVectorView_1_floatBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1_floatImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1_floatImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = Float
     typealias Bridge = __x_ABI_C__FIVectorView_1_floatBridge
     let _default: Bridge.SwiftABI
@@ -7242,7 +7456,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition_
     .init(Data1: 0xb3f66d8c, Data2: 0x130e, Data3: 0x52d4, Data4: ( 0x80,0x3e,0x53,0x05,0x51,0x9d,0x50,0x56 ))// b3f66d8c-130e-52d4-803e-5305519d5056
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.release($0) },
@@ -7307,7 +7521,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CC
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge>
-public class IVectorViewCompositionColorGradientStop: WindowsFoundation.IInspectable {
+public class IVectorViewCompositionColorGradientStop: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.CompositionColorGradientStop? {
@@ -7337,11 +7551,20 @@ public class IVectorViewCompositionColorGradientStop: WindowsFoundation.IInspect
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.CompositionColorGradientStop?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
         }
         return result
     }
@@ -7363,7 +7586,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__C
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionColorGradientStop?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge
     let _default: Bridge.SwiftABI
@@ -7426,7 +7649,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition_
     .init(Data1: 0x7c3d1b0a, Data2: 0x2533, Data3: 0x568b, Data4: ( 0x96,0x3c,0x7f,0xdb,0x57,0x69,0xdb,0xe8 ))// 7c3d1b0a-2533-568b-963c-7fdb5769dbe8
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.release($0) },
@@ -7491,7 +7714,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CC
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge>
-public class IVectorViewCompositionShape: WindowsFoundation.IInspectable {
+public class IVectorViewCompositionShape: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.CompositionShape? {
@@ -7521,11 +7744,20 @@ public class IVectorViewCompositionShape: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.CompositionShape?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
         }
         return result
     }
@@ -7547,7 +7779,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__C
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionShape?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge
     let _default: Bridge.SwiftABI
@@ -7610,7 +7842,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPoin
     .init(Data1: 0x5fbb224b, Data2: 0x8430, Data3: 0x5086, Data4: ( 0xab,0x85,0xe7,0x1d,0xfa,0xa8,0x4c,0x90 ))// 5fbb224b-8430-5086-ab85-e71dfaa84c90
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.release($0) },
@@ -7675,7 +7907,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointer
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge>
-public class IVectorViewPointerPoint: WindowsFoundation.IInspectable {
+public class IVectorViewPointerPoint: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.PointerPoint? {
@@ -7705,11 +7937,20 @@ public class IVectorViewPointerPoint: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.PointerPoint?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
         }
         return result
     }
@@ -7731,7 +7972,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointe
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PointerPoint?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge
     let _default: Bridge.SwiftABI
@@ -7794,7 +8035,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__C
     .init(Data1: 0x63490e13, Data2: 0xd075, Data3: 0x5fe2, Data4: ( 0xb6,0xa4,0x86,0xa4,0x40,0x95,0x21,0x5f ))// 63490e13-d075-5fe2-b6a4-86a44095215f
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.release($0) },
@@ -7859,7 +8100,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDis
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge>
-public class IVectorViewDisplayArea: WindowsFoundation.IInspectable {
+public class IVectorViewDisplayArea: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.DisplayArea? {
@@ -7889,11 +8130,20 @@ public class IVectorViewDisplayArea: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.DisplayArea?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CWindowing_CIDisplayArea>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Windowing.DisplayAreaBridge.self, abi: _items)
         }
         return result
     }
@@ -7915,7 +8165,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDi
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.DisplayArea?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge
     let _default: Bridge.SwiftABI
@@ -7978,7 +8228,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLife
     .init(Data1: 0x1520072b, Data2: 0xd6f2, Data3: 0x5a95, Data4: ( 0x98,0x8d,0xe6,0xc4,0xa6,0xeb,0x66,0xa4 ))// 1520072b-d6f2-5a95-988d-e6c4a6eb66a4
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.release($0) },
@@ -8043,7 +8293,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecyc
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge>
-public class IVectorViewAppInstance: WindowsFoundation.IInspectable {
+public class IVectorViewAppInstance: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.AppInstance? {
@@ -8073,11 +8323,20 @@ public class IVectorViewAppInstance: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.AppInstance?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
         }
         return result
     }
@@ -8099,7 +8358,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecy
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AppInstance?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge
     let _default: Bridge.SwiftABI
@@ -8162,7 +8421,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplica
     .init(Data1: 0xb3675e71, Data2: 0x9db8, Data3: 0x5b51, Data4: ( 0x98,0x6a,0x12,0x23,0x96,0x4c,0x6f,0x52 ))// b3675e71-9db8-5b51-986a-1223964c6f52
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
@@ -8227,7 +8486,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicatio
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
-public class IVectorViewRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+public class IVectorViewRuntimeCompatibilityChange: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.RuntimeCompatibilityChange {
@@ -8281,7 +8540,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicati
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.RuntimeCompatibilityChange
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
     let _default: Bridge.SwiftABI
@@ -8344,7 +8603,7 @@ private var IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage
     .init(Data1: 0x76506627, Data2: 0xd304, Data3: 0x5763, Data4: ( 0x86,0xc2,0xd7,0xfd,0x3f,0x17,0x15,0x2b ))// 76506627-d304-5763-86c2-d7fd3f17152b
 }
 
-internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -8409,7 +8668,7 @@ internal var __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__C
     }
 )
 typealias __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class IVectorViewPickFileResult: WindowsFoundation.IInspectable {
+public class IVectorViewPickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.PickFileResult? {
@@ -8439,11 +8698,20 @@ public class IVectorViewPickFileResult: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.PickFileResult?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CStorage_CPickers_CIPickFileResult>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_Windows_Storage_Pickers.PickFileResultBridge.self, abi: _items)
         }
         return result
     }
@@ -8465,7 +8733,7 @@ internal enum __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PickFileResult?
     typealias Bridge = __x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
     let _default: Bridge.SwiftABI
@@ -8528,7 +8796,7 @@ private var IID___x_ABI_C__FIVectorView_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x2f13c006, Data2: 0xa03a, Data3: 0x5f69, Data4: ( 0xb0,0x90,0x75,0xa4,0x3e,0x33,0x42,0x3e ))// 2f13c006-a03a-5f69-b090-75a43e33423e
 }
 
-internal var __x_ABI_C__FIVectorView_1_HSTRINGVTable: __x_ABI_C__FIVectorView_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVectorView_1_HSTRINGVTable: __x_ABI_C__FIVectorView_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVectorView_1_HSTRINGWrapper.release($0) },
@@ -8595,15 +8863,17 @@ internal var __x_ABI_C__FIVectorView_1_HSTRINGVTable: __x_ABI_C__FIVectorView_1_
     }
 )
 typealias __x_ABI_C__FIVectorView_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVectorView_1_HSTRINGBridge>
-public class IVectorViewString: WindowsFoundation.IInspectable {
+public class IVectorViewString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVectorView_1_HSTRING }
 
     open func GetAt(_ index: UInt32) throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -8626,11 +8896,20 @@ public class IVectorViewString: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [String]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI { _items in
+        var _itemsBuffer = Array<HSTRING?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<HSTRING?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        WindowsDeleteString(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVectorView_1_HSTRING.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abi: _items)
+            items = .from(abi: _items)
         }
         return result
     }
@@ -8652,7 +8931,7 @@ internal enum __x_ABI_C__FIVectorView_1_HSTRINGBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIVectorView_1_HSTRINGImpl : IVectorView, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVectorView_1_HSTRINGImpl : IVectorView, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = String
     typealias Bridge = __x_ABI_C__FIVectorView_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -8715,7 +8994,7 @@ private var IID___x_ABI_C__FIVector_1_float: WindowsFoundation.IID {
     .init(Data1: 0x61cf693f, Data2: 0xdb4c, Data3: 0x579f, Data4: ( 0xb9,0x05,0x5d,0xd3,0xd2,0x3c,0xfd,0x4d ))// 61cf693f-db4c-579f-b905-5dd3d23cfd4d
 }
 
-internal var __x_ABI_C__FIVector_1_floatVTable: __x_ABI_C__FIVector_1_floatVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1_floatVTable: __x_ABI_C__FIVector_1_floatVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1_floatWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1_floatWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1_floatWrapper.release($0) },
@@ -8837,7 +9116,7 @@ internal var __x_ABI_C__FIVector_1_floatVTable: __x_ABI_C__FIVector_1_floatVtbl 
     }
 )
 typealias __x_ABI_C__FIVector_1_floatWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1_floatBridge>
-public class IVectorFloat: WindowsFoundation.IInspectable {
+public class IVectorFloat: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1_float }
 
     open func GetAt(_ index: UInt32) throws -> Float {
@@ -8944,7 +9223,7 @@ internal enum __x_ABI_C__FIVector_1_floatBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1_floatImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1_floatImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = Float
     typealias Bridge = __x_ABI_C__FIVector_1_floatBridge
     let _default: Bridge.SwiftABI
@@ -9056,7 +9335,7 @@ private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     .init(Data1: 0x77fa9267, Data2: 0xb867, Data3: 0x5f77, Data4: ( 0x8c,0x02,0x7d,0x85,0x81,0x9d,0x56,0x3b ))// 77fa9267-b867-5f77-8c02-7d85819d563b
 }
 
-internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper.release($0) },
@@ -9178,7 +9457,7 @@ internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompo
     }
 )
 typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge>
-public class IVectorCompositionColorGradientStop: WindowsFoundation.IInspectable {
+public class IVectorCompositionColorGradientStop: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.CompositionColorGradientStop? {
@@ -9253,11 +9532,20 @@ public class IVectorCompositionColorGradientStop: WindowsFoundation.IInspectable
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.CompositionColorGradientStop?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionColorGradientStop>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStop.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionColorGradientStopBridge.self, abi: _items)
         }
         return result
     }
@@ -9287,7 +9575,7 @@ internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CComp
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionColorGradientStop?
     typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionColorGradientStopBridge
     let _default: Bridge.SwiftABI
@@ -9399,7 +9687,7 @@ private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCo
     .init(Data1: 0x7397ef7a, Data2: 0xaabd, Data3: 0x50a3, Data4: ( 0x93,0x08,0x06,0xd2,0xa7,0x05,0x06,0x21 ))// 7397ef7a-aabd-50a3-9308-06d2a7050621
 }
 
-internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper.release($0) },
@@ -9521,7 +9809,7 @@ internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompo
     }
 )
 typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge>
-public class IVectorCompositionShape: WindowsFoundation.IInspectable {
+public class IVectorCompositionShape: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.CompositionShape? {
@@ -9596,11 +9884,20 @@ public class IVectorCompositionShape: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.CompositionShape?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CComposition_CICompositionShape>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShape.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Composition.CompositionShapeBridge.self, abi: _items)
         }
         return result
     }
@@ -9630,7 +9927,7 @@ internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CComp
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.CompositionShape?
     typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CComposition__CCompositionShapeBridge
     let _default: Bridge.SwiftABI
@@ -9742,7 +10039,7 @@ private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerP
     .init(Data1: 0x8220cf33, Data2: 0x5d76, Data3: 0x5607, Data4: ( 0xbb,0x7d,0xb7,0xcd,0x07,0xd2,0x7f,0x33 ))// 8220cf33-5d76-5607-bb7d-b7cd07d27f33
 }
 
-internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper.release($0) },
@@ -9864,7 +10161,7 @@ internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoin
     }
 )
 typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge>
-public class IVectorPointerPoint: WindowsFoundation.IInspectable {
+public class IVectorPointerPoint: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.PointerPoint? {
@@ -9939,11 +10236,20 @@ public class IVectorPointerPoint: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.PointerPoint?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CInput_CIPointerPoint>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoint.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_UI_Input.PointerPointBridge.self, abi: _items)
         }
         return result
     }
@@ -9973,7 +10279,7 @@ internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPoi
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.PointerPoint?
     typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CUI__CInput__CPointerPointBridge
     let _default: Bridge.SwiftABI
@@ -10085,7 +10391,7 @@ private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycl
     .init(Data1: 0xf37e92bb, Data2: 0xb953, Data3: 0x5d1e, Data4: ( 0xae,0x0b,0x15,0xe4,0x9c,0x19,0x4c,0x98 ))// f37e92bb-b953-5d1e-ae0b-15e49c194c98
 }
 
-internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper.release($0) },
@@ -10207,7 +10513,7 @@ internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__
     }
 )
 typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge>
-public class IVectorAppInstance: WindowsFoundation.IInspectable {
+public class IVectorAppInstance: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.AppInstance? {
@@ -10282,11 +10588,20 @@ public class IVectorAppInstance: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [WinAppSDK.AppInstance?]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self) { _items in
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CWindows_CAppLifecycle_CIAppInstance>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstance.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
+            items = .from(abiBridge: __IMPL_Microsoft_Windows_AppLifecycle.AppInstanceBridge.self, abi: _items)
         }
         return result
     }
@@ -10316,7 +10631,7 @@ internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle_
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.AppInstance?
     typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppInstanceBridge
     let _default: Bridge.SwiftABI
@@ -10428,7 +10743,7 @@ private var IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplication
     .init(Data1: 0xb2d54673, Data2: 0x319a, Data3: 0x5cef, Data4: ( 0x99,0x97,0x2a,0xa9,0x5c,0xae,0x7d,0x4b ))// b2d54673-319a-5cef-9997-2aa95cae7d4b
 }
 
-internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVTable: __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper.release($0) },
@@ -10550,7 +10865,7 @@ internal var __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationMod
     }
 )
 typealias __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge>
-public class IVectorRuntimeCompatibilityChange: WindowsFoundation.IInspectable {
+public class IVectorRuntimeCompatibilityChange: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChange }
 
     open func GetAt(_ index: UInt32) throws -> WinAppSDK.RuntimeCompatibilityChange {
@@ -10657,7 +10972,7 @@ internal enum __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationMo
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = WinAppSDK.RuntimeCompatibilityChange
     typealias Bridge = __x_ABI_C__FIVector_1___x_ABI_CMicrosoft__CWindows__CApplicationModel__CWindowsAppRuntime__CRuntimeCompatibilityChangeBridge
     let _default: Bridge.SwiftABI
@@ -10769,7 +11084,7 @@ private var IID___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x98b9acc1, Data2: 0x4b56, Data3: 0x532e, Data4: ( 0xac,0x73,0x03,0xd5,0x29,0x1c,0xca,0x90 ))// 98b9acc1-4b56-532e-ac73-03d5291cca90
 }
 
-internal var __x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIVector_1_HSTRINGVtbl = .init(
     QueryInterface: { __x_ABI_C__FIVector_1_HSTRINGWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIVector_1_HSTRINGWrapper.addRef($0) },
     Release: { __x_ABI_C__FIVector_1_HSTRINGWrapper.release($0) },
@@ -10893,15 +11208,17 @@ internal var __x_ABI_C__FIVector_1_HSTRINGVTable: __x_ABI_C__FIVector_1_HSTRINGV
     }
 )
 typealias __x_ABI_C__FIVector_1_HSTRINGWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIVector_1_HSTRINGBridge>
-public class IVectorString: WindowsFoundation.IInspectable {
+public class IVectorString: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIVector_1_HSTRING }
 
     open func GetAt(_ index: UInt32) throws -> String {
         var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
         _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, &result))
         }
-        defer { WindowsDeleteString(result) }
         return .init(from: result)
     }
 
@@ -10972,11 +11289,20 @@ public class IVectorString: WindowsFoundation.IInspectable {
 
     open func GetMany(_ startIndex: UInt32, _ items: inout [String]) throws -> UInt32 {
         var result: UINT32 = 0
-        try items.toABI { _items in
+        var _itemsBuffer = Array<HSTRING?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<HSTRING?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        WindowsDeleteString(element)
+                    }
+                }
+            }
             _ = try perform(as: __x_ABI_C__FIVector_1_HSTRING.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, _items.count, _items.start, &result))
             }
-        items = .from(abi: _items)
+            items = .from(abi: _items)
         }
         return result
     }
@@ -11006,7 +11332,7 @@ internal enum __x_ABI_C__FIVector_1_HSTRINGBridge : AbiInterfaceBridge {
     }
 }
 
-fileprivate class __x_ABI_C__FIVector_1_HSTRINGImpl : IVector, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIVector_1_HSTRINGImpl : IVector, AbiInterfaceImpl, @unchecked Sendable {
     typealias T = String
     typealias Bridge = __x_ABI_C__FIVector_1_HSTRINGBridge
     let _default: Bridge.SwiftABI
@@ -11125,7 +11451,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIEventHandler_1
     }
 }
 
-internal var __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsVTable: __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsVTable: __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsVtbl = .init(
     QueryInterface: { __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsWrapper.addRef($0) },
     Release: { __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsWrapper.release($0) },
@@ -11140,7 +11466,7 @@ internal var __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifec
     }
 )
 typealias __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArgumentsBridge>
-public class EventHandlerAppActivationArguments: WindowsFoundation.IUnknown {
+public class EventHandlerAppActivationArguments: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLifecycle__CAppActivationArguments }
 
     open func Invoke(_ sender: Any?, _ args: WinAppSDK.AppActivationArguments?) throws {
@@ -11171,7 +11497,7 @@ private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposit
     .init(Data1: 0x92ceaa5d, Data2: 0xb255, Data3: 0x57d9, Data4: ( 0xab,0x7c,0x0f,0x30,0x44,0x85,0xc1,0xbd ))// 92ceaa5d-b255-57d9-ab7c-0f304485c1bd
 }
 
-internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper.release($0) },
@@ -11226,7 +11552,7 @@ internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition
     }
 )
 typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceBridge>
-public class IAsyncOperationICompositionSurface: WindowsFoundation.IInspectable {
+public class IAsyncOperationICompositionSurface: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurface }
 
     open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.AnyICompositionSurface?>?) throws {
@@ -11272,7 +11598,7 @@ internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CCompositio
     }
 }
 
-fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceImpl : IAsyncOperation, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
     typealias TResult = WinAppSDK.AnyICompositionSurface?
     typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurfaceBridge
     let _default: Bridge.SwiftABI
@@ -11325,7 +11651,7 @@ private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CSto
     .init(Data1: 0x98316bd9, Data2: 0x5a80, Data3: 0x5c8a, Data4: ( 0x8f,0x99,0x2e,0xfb,0xe1,0xe7,0x02,0x33 ))// 98316bd9-5a80-5c8a-8f99-2efbe1e70233
 }
 
-internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -11379,7 +11705,7 @@ internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorag
     }
 )
 typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class IAsyncOperationPickFileResult: WindowsFoundation.IInspectable {
+public class IAsyncOperationPickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.PickFileResult?>?) throws {
@@ -11425,7 +11751,7 @@ internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStora
     }
 }
 
-fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
     typealias TResult = WinAppSDK.PickFileResult?
     typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
     let _default: Bridge.SwiftABI
@@ -11478,7 +11804,7 @@ private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CSto
     .init(Data1: 0xf5ef0362, Data2: 0xd68a, Data3: 0x5d05, Data4: ( 0xa1,0x66,0xfe,0x60,0x8b,0x68,0xc2,0x78 ))// f5ef0362-d68a-5d05-a166-fe608b68c278
 }
 
-internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper.release($0) },
@@ -11532,7 +11858,7 @@ internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorag
     }
 )
 typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge>
-public class IAsyncOperationPickFolderResult: WindowsFoundation.IInspectable {
+public class IAsyncOperationPickFolderResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResult }
 
     open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.PickFolderResult?>?) throws {
@@ -11578,7 +11904,7 @@ internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStora
     }
 }
 
-fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultImpl : IAsyncOperation, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
     typealias TResult = WinAppSDK.PickFolderResult?
     typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFolderResultBridge
     let _default: Bridge.SwiftABI
@@ -11631,7 +11957,7 @@ private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_
     .init(Data1: 0xf8cde12a, Data2: 0x675a, Data3: 0x5291, Data4: ( 0xb0,0x48,0x58,0x6c,0x26,0x25,0xae,0x3e ))// f8cde12a-675a-5291-b048-586c2625ae3e
 }
 
-internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultVtbl = .init(
     QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.addRef($0) },
     Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper.release($0) },
@@ -11686,7 +12012,7 @@ internal var __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMi
     }
 )
 typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge>
-public class IAsyncOperationIVectorViewPickFileResult: WindowsFoundation.IInspectable {
+public class IAsyncOperationIVectorViewPickFileResult: WindowsFoundation.IInspectable, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResult }
 
     open func put_Completed(_ handler: AsyncOperationCompletedHandler<WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?>?) throws {
@@ -11732,7 +12058,7 @@ internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CM
     }
 }
 
-fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl {
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
     typealias TResult = WindowsFoundation.AnyIVectorView<WinAppSDK.PickFileResult?>?
     typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_C__FIVectorView_1___x_ABI_CMicrosoft__CWindows__CStorage__CPickers__CPickFileResultBridge
     let _default: Bridge.SwiftABI
@@ -11802,7 +12128,7 @@ internal enum __x_ABI_C__FIReference_1_floatBridge: ReferenceBridge {
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1_floatVTable: __x_ABI_C__FIReference_1_floatVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1_floatVTable: __x_ABI_C__FIReference_1_floatVtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1_floatWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1_floatWrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1_floatWrapper.release($0) },
@@ -11860,7 +12186,7 @@ internal enum __x_ABI_C__FIReference_1_intBridge: ReferenceBridge {
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1_intVTable: __x_ABI_C__FIReference_1_intVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1_intVTable: __x_ABI_C__FIReference_1_intVtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1_intWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1_intWrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1_intWrapper.release($0) },
@@ -11918,7 +12244,7 @@ internal enum __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CConte
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionVTable: __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionVTable: __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionVtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionWrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1___x_ABI_CMicrosoft__CUI__CContent__CContentLayoutDirectionWrapper.release($0) },
@@ -11976,7 +12302,7 @@ internal enum __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics_
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2VTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2Vtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2VTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2Vtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2Wrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2Wrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector2Wrapper.release($0) },
@@ -12034,7 +12360,7 @@ internal enum __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics_
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3VTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3Vtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3VTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3Vtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3Wrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3Wrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CNumerics__CVector3Wrapper.release($0) },
@@ -12092,7 +12418,7 @@ internal enum __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectBridg
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectVTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectVTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectVtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectWrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CFoundation__CRectWrapper.release($0) },
@@ -12150,7 +12476,7 @@ internal enum __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorBridge: Refe
         return .init(lpVtbl: vtblPtr)
     }
 }
-internal var __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorVTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorVTable: __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorVtbl = .init(
     QueryInterface: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.addRef($0) },
     Release: { __x_ABI_C__FIReference_1___x_ABI_CWindows__CUI__CColorWrapper.release($0) },
@@ -12198,7 +12524,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsWrapper.release($0) },
@@ -12213,7 +12539,7 @@ internal var __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgsBridge>
-public class TypedEventHandlerAny_CompositionBatchCompletedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerAny_CompositionBatchCompletedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2_IInspectable___x_ABI_CMicrosoft__CUI__CComposition__CCompositionBatchCompletedEventArgs }
 
     open func Invoke(_ sender: Any?, _ args: WinAppSDK.CompositionBatchCompletedEventArgs?) throws {
@@ -12251,7 +12577,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableWrapper.release($0) },
@@ -12266,7 +12592,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposit
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectableBridge>
-public class TypedEventHandlerCompositionCapabilities_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerCompositionCapabilities_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionCapabilities_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.CompositionCapabilities?, _ args: Any?) throws {
@@ -12304,7 +12630,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsWrapper.release($0) },
@@ -12319,7 +12645,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposit
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgsBridge>
-public class TypedEventHandlerCompositionGraphicsDevice_RenderingDeviceReplacedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerCompositionGraphicsDevice_RenderingDeviceReplacedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CCompositionGraphicsDevice___x_ABI_CMicrosoft__CUI__CComposition__CRenderingDeviceReplacedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.CompositionGraphicsDevice?, _ args: WinAppSDK.RenderingDeviceReplacedEventArgs?) throws {
@@ -12355,7 +12681,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableWrapper.release($0) },
@@ -12370,7 +12696,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposit
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectableBridge>
-public class TypedEventHandlerISystemBackdropControllerWithTargets_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerISystemBackdropControllerWithTargets_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CComposition__CSystemBackdrops__CISystemBackdropControllerWithTargets_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.AnyISystemBackdropControllerWithTargets?, _ args: Any?) throws {
@@ -12410,7 +12736,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsWrapper.release($0) },
@@ -12425,7 +12751,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent_
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgsBridge>
-public class TypedEventHandlerContentIsland_ContentIslandAutomationProviderRequestedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerContentIsland_ContentIslandAutomationProviderRequestedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandAutomationProviderRequestedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.ContentIsland?, _ args: WinAppSDK.ContentIslandAutomationProviderRequestedEventArgs?) throws {
@@ -12461,7 +12787,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsWrapper.release($0) },
@@ -12476,7 +12802,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent_
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgsBridge>
-public class TypedEventHandlerContentIsland_ContentIslandStateChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerContentIsland_ContentIslandStateChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIsland___x_ABI_CMicrosoft__CUI__CContent__CContentIslandStateChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.ContentIsland?, _ args: WinAppSDK.ContentIslandStateChangedEventArgs?) throws {
@@ -12512,7 +12838,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsWrapper.release($0) },
@@ -12527,7 +12853,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent_
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgsBridge>
-public class TypedEventHandlerContentIslandEnvironment_ContentEnvironmentSettingChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerContentIslandEnvironment_ContentEnvironmentSettingChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentSettingChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.ContentIslandEnvironment?, _ args: WinAppSDK.ContentEnvironmentSettingChangedEventArgs?) throws {
@@ -12563,7 +12889,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsWrapper.release($0) },
@@ -12578,7 +12904,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent_
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgsBridge>
-public class TypedEventHandlerContentIslandEnvironment_ContentEnvironmentStateChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerContentIslandEnvironment_ContentEnvironmentStateChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CContentIslandEnvironment___x_ABI_CMicrosoft__CUI__CContent__CContentEnvironmentStateChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.ContentIslandEnvironment?, _ args: WinAppSDK.ContentEnvironmentStateChangedEventArgs?) throws {
@@ -12614,7 +12940,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper.release($0) },
@@ -12629,7 +12955,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent_
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgsBridge>
-public class TypedEventHandlerIContentSiteAutomation_ContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerIContentSiteAutomation_ContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CContent__CIContentSiteAutomation___x_ABI_CMicrosoft__CUI__CContent__CContentSiteAutomationProviderRequestedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.AnyIContentSiteAutomation?, _ args: WinAppSDK.ContentSiteAutomationProviderRequestedEventArgs?) throws {
@@ -12667,7 +12993,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableWrapper.release($0) },
@@ -12682,7 +13008,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatch
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectableBridge>
-public class TypedEventHandlerDispatcherQueue_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerDispatcherQueue_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.DispatcherQueue?, _ args: Any?) throws {
@@ -12720,7 +13046,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsWrapper.release($0) },
@@ -12735,7 +13061,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatch
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgsBridge>
-public class TypedEventHandlerDispatcherQueue_DispatcherQueueShutdownStartingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerDispatcherQueue_DispatcherQueueShutdownStartingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueue___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueShutdownStartingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.DispatcherQueue?, _ args: WinAppSDK.DispatcherQueueShutdownStartingEventArgs?) throws {
@@ -12771,7 +13097,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableWrapper.release($0) },
@@ -12786,7 +13112,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatch
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectableBridge>
-public class TypedEventHandlerDispatcherQueueTimer_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerDispatcherQueueTimer_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CDispatching__CDispatcherQueueTimer_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.DispatcherQueueTimer?, _ args: Any?) throws {
@@ -12824,7 +13150,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsWrapper.release($0) },
@@ -12839,7 +13165,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_CrossSlidingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_CrossSlidingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CCrossSlidingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.CrossSlidingEventArgs?) throws {
@@ -12875,7 +13201,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsWrapper.release($0) },
@@ -12890,7 +13216,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_DraggingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_DraggingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CDraggingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.DraggingEventArgs?) throws {
@@ -12926,7 +13252,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsWrapper.release($0) },
@@ -12941,7 +13267,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_HoldingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_HoldingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CHoldingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.HoldingEventArgs?) throws {
@@ -12977,7 +13303,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsWrapper.release($0) },
@@ -12992,7 +13318,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_ManipulationCompletedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_ManipulationCompletedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationCompletedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.ManipulationCompletedEventArgs?) throws {
@@ -13028,7 +13354,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsWrapper.release($0) },
@@ -13043,7 +13369,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_ManipulationInertiaStartingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_ManipulationInertiaStartingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationInertiaStartingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.ManipulationInertiaStartingEventArgs?) throws {
@@ -13079,7 +13405,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsWrapper.release($0) },
@@ -13094,7 +13420,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_ManipulationStartedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_ManipulationStartedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationStartedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.ManipulationStartedEventArgs?) throws {
@@ -13130,7 +13456,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsWrapper.release($0) },
@@ -13145,7 +13471,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_ManipulationUpdatedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_ManipulationUpdatedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CManipulationUpdatedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.ManipulationUpdatedEventArgs?) throws {
@@ -13181,7 +13507,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsWrapper.release($0) },
@@ -13196,7 +13522,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_RightTappedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_RightTappedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CRightTappedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.RightTappedEventArgs?) throws {
@@ -13232,7 +13558,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsWrapper.release($0) },
@@ -13247,7 +13573,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgsBridge>
-public class TypedEventHandlerGestureRecognizer_TappedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerGestureRecognizer_TappedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CGestureRecognizer___x_ABI_CMicrosoft__CUI__CInput__CTappedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.GestureRecognizer?, _ args: WinAppSDK.TappedEventArgs?) throws {
@@ -13283,7 +13609,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsWrapper.release($0) },
@@ -13298,7 +13624,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgsBridge>
-public class TypedEventHandlerInputActivationListener_InputActivationListenerActivationChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputActivationListener_InputActivationListenerActivationChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListener___x_ABI_CMicrosoft__CUI__CInput__CInputActivationListenerActivationChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputActivationListener?, _ args: WinAppSDK.InputActivationListenerActivationChangedEventArgs?) throws {
@@ -13334,7 +13660,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsWrapper.release($0) },
@@ -13349,7 +13675,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgsBridge>
-public class TypedEventHandlerInputFocusController_FocusChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputFocusController_FocusChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputFocusController?, _ args: WinAppSDK.FocusChangedEventArgs?) throws {
@@ -13385,7 +13711,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.release($0) },
@@ -13400,7 +13726,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsBridge>
-public class TypedEventHandlerInputFocusController_FocusNavigationRequestEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputFocusController_FocusNavigationRequestEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusController___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputFocusController?, _ args: WinAppSDK.FocusNavigationRequestEventArgs?) throws {
@@ -13436,7 +13762,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper.release($0) },
@@ -13451,7 +13777,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgsBridge>
-public class TypedEventHandlerInputFocusNavigationHost_FocusNavigationRequestEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputFocusNavigationHost_FocusNavigationRequestEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputFocusNavigationHost___x_ABI_CMicrosoft__CUI__CInput__CFocusNavigationRequestEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputFocusNavigationHost?, _ args: WinAppSDK.FocusNavigationRequestEventArgs?) throws {
@@ -13487,7 +13813,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsWrapper.release($0) },
@@ -13502,7 +13828,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgsBridge>
-public class TypedEventHandlerInputKeyboardSource_CharacterReceivedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputKeyboardSource_CharacterReceivedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CCharacterReceivedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputKeyboardSource?, _ args: WinAppSDK.CharacterReceivedEventArgs?) throws {
@@ -13538,7 +13864,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsWrapper.release($0) },
@@ -13553,7 +13879,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgsBridge>
-public class TypedEventHandlerInputKeyboardSource_ContextMenuKeyEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputKeyboardSource_ContextMenuKeyEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CContextMenuKeyEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputKeyboardSource?, _ args: WinAppSDK.ContextMenuKeyEventArgs?) throws {
@@ -13589,7 +13915,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsWrapper.release($0) },
@@ -13604,7 +13930,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgsBridge>
-public class TypedEventHandlerInputKeyboardSource_KeyEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputKeyboardSource_KeyEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputKeyboardSource___x_ABI_CMicrosoft__CUI__CInput__CKeyEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputKeyboardSource?, _ args: WinAppSDK.KeyEventArgs?) throws {
@@ -13640,7 +13966,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsWrapper.release($0) },
@@ -13655,7 +13981,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgsBridge>
-public class TypedEventHandlerInputLightDismissAction_InputLightDismissEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputLightDismissAction_InputLightDismissEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissAction___x_ABI_CMicrosoft__CUI__CInput__CInputLightDismissEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputLightDismissAction?, _ args: WinAppSDK.InputLightDismissEventArgs?) throws {
@@ -13691,7 +14017,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsWrapper.release($0) },
@@ -13706,7 +14032,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_EnteredMoveSizeEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_EnteredMoveSizeEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteredMoveSizeEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.EnteredMoveSizeEventArgs?) throws {
@@ -13742,7 +14068,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsWrapper.release($0) },
@@ -13757,7 +14083,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_EnteringMoveSizeEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_EnteringMoveSizeEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CEnteringMoveSizeEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.EnteringMoveSizeEventArgs?) throws {
@@ -13793,7 +14119,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsWrapper.release($0) },
@@ -13808,7 +14134,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_ExitedMoveSizeEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_ExitedMoveSizeEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CExitedMoveSizeEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.ExitedMoveSizeEventArgs?) throws {
@@ -13844,7 +14170,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsWrapper.release($0) },
@@ -13859,7 +14185,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_NonClientCaptionTappedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_NonClientCaptionTappedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientCaptionTappedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.NonClientCaptionTappedEventArgs?) throws {
@@ -13895,7 +14221,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsWrapper.release($0) },
@@ -13910,7 +14236,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_NonClientPointerEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_NonClientPointerEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientPointerEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.NonClientPointerEventArgs?) throws {
@@ -13946,7 +14272,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsWrapper.release($0) },
@@ -13961,7 +14287,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_NonClientRegionsChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_NonClientRegionsChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CNonClientRegionsChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.NonClientRegionsChangedEventArgs?) throws {
@@ -13997,7 +14323,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsWrapper.release($0) },
@@ -14012,7 +14338,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_WindowRectChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_WindowRectChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.WindowRectChangedEventArgs?) throws {
@@ -14048,7 +14374,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsWrapper.release($0) },
@@ -14063,7 +14389,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgsBridge>
-public class TypedEventHandlerInputNonClientPointerSource_WindowRectChangingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputNonClientPointerSource_WindowRectChangingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputNonClientPointerSource___x_ABI_CMicrosoft__CUI__CInput__CWindowRectChangingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputNonClientPointerSource?, _ args: WinAppSDK.WindowRectChangingEventArgs?) throws {
@@ -14099,7 +14425,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsWrapper.release($0) },
@@ -14114,7 +14440,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__C
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgsBridge>
-public class TypedEventHandlerInputPointerSource_PointerEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerInputPointerSource_PointerEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CInput__CInputPointerSource___x_ABI_CMicrosoft__CUI__CInput__CPointerEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.InputPointerSource?, _ args: WinAppSDK.PointerEventArgs?) throws {
@@ -14150,7 +14476,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableWrapper.release($0) },
@@ -14165,7 +14491,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowin
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectableBridge>
-public class TypedEventHandlerAppWindow_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerAppWindow_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.AppWindow?, _ args: Any?) throws {
@@ -14203,7 +14529,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsWrapper.release($0) },
@@ -14218,7 +14544,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowin
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgsBridge>
-public class TypedEventHandlerAppWindow_AppWindowChangedEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerAppWindow_AppWindowChangedEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowChangedEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.AppWindow?, _ args: WinAppSDK.AppWindowChangedEventArgs?) throws {
@@ -14254,7 +14580,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsWrapper.release($0) },
@@ -14269,7 +14595,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowin
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgsBridge>
-public class TypedEventHandlerAppWindow_AppWindowClosingEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerAppWindow_AppWindowClosingEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindow___x_ABI_CMicrosoft__CUI__CWindowing__CAppWindowClosingEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.AppWindow?, _ args: WinAppSDK.AppWindowClosingEventArgs?) throws {
@@ -14305,7 +14631,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper.release($0) },
@@ -14320,7 +14646,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowin
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectableBridge>
-public class TypedEventHandlerDisplayAreaWatcher_Any: WindowsFoundation.IUnknown {
+public class TypedEventHandlerDisplayAreaWatcher_Any: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher_IInspectable }
 
     open func Invoke(_ sender: WinAppSDK.DisplayAreaWatcher?, _ args: Any?) throws {
@@ -14358,7 +14684,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper.release($0) },
@@ -14373,7 +14699,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowin
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaBridge>
-public class TypedEventHandlerDisplayAreaWatcher_DisplayArea: WindowsFoundation.IUnknown {
+public class TypedEventHandlerDisplayAreaWatcher_DisplayArea: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayAreaWatcher___x_ABI_CMicrosoft__CUI__CWindowing__CDisplayArea }
 
     open func Invoke(_ sender: WinAppSDK.DisplayAreaWatcher?, _ args: WinAppSDK.DisplayArea?) throws {
@@ -14409,7 +14735,7 @@ internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FITypedEventHand
     }
 }
 
-internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsVtbl = .init(
+internal nonisolated(unsafe) var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsVTable: __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsVtbl = .init(
     QueryInterface: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsWrapper.queryInterface($0, $1, $2) },
     AddRef: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsWrapper.addRef($0) },
     Release: { __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsWrapper.release($0) },
@@ -14424,7 +14750,7 @@ internal var __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApp
     }
 )
 typealias __x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgsBridge>
-public class TypedEventHandlerResourceManager_ResourceNotFoundEventArgs: WindowsFoundation.IUnknown {
+public class TypedEventHandlerResourceManager_ResourceNotFoundEventArgs: WindowsFoundation.IUnknown, @unchecked Sendable {
     override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FITypedEventHandler_2___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceManager___x_ABI_CMicrosoft__CWindows__CApplicationModel__CResources__CResourceNotFoundEventArgs }
 
     open func Invoke(_ sender: WinAppSDK.ResourceManager?, _ args: WinAppSDK.ResourceNotFoundEventArgs?) throws {

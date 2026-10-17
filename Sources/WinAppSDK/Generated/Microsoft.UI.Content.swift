@@ -126,7 +126,7 @@ extension __IMPL_Microsoft_UI_Content {
         }
     }
 
-    fileprivate class IContentSiteAutomationImpl: IContentSiteAutomation, WinRTAbiImpl {
+    fileprivate class IContentSiteAutomationImpl: IContentSiteAutomation, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IContentSiteAutomationBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -206,7 +206,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xDB4F4683, Data2: 0xCD76, Data3: 0x50D0, Data4: ( 0x9A,0xE1,0x04,0x4C,0xEB,0x3D,0x3C,0x7A ) // DB4F4683-CD76-50D0-9AE1-044CEB3D3C7A
     ) 
 
-    public class IContentSiteAutomation: WindowsFoundation.IInspectable {
+    public class IContentSiteAutomation: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomation }
 
         open func get_AutomationOption() throws -> WinAppSDK.ContentAutomationOptions {
@@ -298,7 +298,7 @@ extension __ABI_Microsoft_UI_Content {
 
     }
 
-    internal static var IContentSiteAutomationVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationVtbl = .init(
+    internal static nonisolated(unsafe) var IContentSiteAutomationVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationVtbl = .init(
         QueryInterface: { IContentSiteAutomationWrapper.queryInterface($0, $1, $2) },
         AddRef: { IContentSiteAutomationWrapper.addRef($0) },
         Release: { IContentSiteAutomationWrapper.release($0) },
@@ -465,7 +465,7 @@ extension __IMPL_Microsoft_UI_Content {
         }
     }
 
-    fileprivate class IContentSiteBridgeImpl: IContentSiteBridge, WinRTAbiImpl {
+    fileprivate class IContentSiteBridgeImpl: IContentSiteBridge, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IContentSiteBridgeBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -505,7 +505,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xFAAAB99E, Data2: 0xA42B, Data3: 0x549C, Data4: ( 0x92,0xDF,0x3B,0x6D,0x6E,0x1E,0x36,0x8B ) // FAAAB99E-A42B-549C-92DF-3B6D6E1E368B
     ) 
 
-    public class IContentSiteBridge: WindowsFoundation.IInspectable {
+    public class IContentSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridge }
 
         open func get_DispatcherQueue() throws -> WinAppSDK.DispatcherQueue? {
@@ -550,7 +550,7 @@ extension __ABI_Microsoft_UI_Content {
 
     }
 
-    internal static var IContentSiteBridgeVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeVtbl = .init(
+    internal static nonisolated(unsafe) var IContentSiteBridgeVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteBridgeVtbl = .init(
         QueryInterface: { IContentSiteBridgeWrapper.queryInterface($0, $1, $2) },
         AddRef: { IContentSiteBridgeWrapper.addRef($0) },
         Release: { IContentSiteBridgeWrapper.release($0) },
@@ -667,7 +667,7 @@ extension __IMPL_Microsoft_UI_Content {
         }
     }
 
-    fileprivate class IContentSiteInputImpl: IContentSiteInput, WinRTAbiImpl {
+    fileprivate class IContentSiteInputImpl: IContentSiteInput, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IContentSiteInputBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -696,7 +696,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x0EAD8189, Data2: 0x10D3, Data3: 0x550D, Data4: ( 0xB7,0x47,0x88,0x47,0xBD,0x7C,0x9D,0x21 ) // 0EAD8189-10D3-550D-B747-8847BD7C9D21
     ) 
 
-    public class IContentSiteInput: WindowsFoundation.IInspectable {
+    public class IContentSiteInput: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteInput }
 
         open func get_ProcessesKeyboardInput() throws -> Bool {
@@ -729,7 +729,7 @@ extension __ABI_Microsoft_UI_Content {
 
     }
 
-    internal static var IContentSiteInputVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteInputVtbl = .init(
+    internal static nonisolated(unsafe) var IContentSiteInputVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteInputVtbl = .init(
         QueryInterface: { IContentSiteInputWrapper.queryInterface($0, $1, $2) },
         AddRef: { IContentSiteInputWrapper.addRef($0) },
         Release: { IContentSiteInputWrapper.release($0) },
@@ -835,7 +835,7 @@ extension __IMPL_Microsoft_UI_Content {
         }
     }
 
-    fileprivate class IContentSiteLinkImpl: IContentSiteLink, WinRTAbiImpl {
+    fileprivate class IContentSiteLinkImpl: IContentSiteLink, WinRTAbiImpl, @unchecked Sendable {
         fileprivate typealias Bridge = IContentSiteLinkBridge
         fileprivate let _default: Bridge.SwiftABI
         fileprivate var thisPtr: WindowsFoundation.IInspectable { _default }
@@ -857,7 +857,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xD9247341, Data2: 0xF5D0, Data3: 0x5084, Data4: ( 0xAF,0x66,0xF5,0xDF,0x5F,0x31,0x4F,0xC0 ) // D9247341-F5D0-5084-AF66-F5DF5F314FC0
     ) 
 
-    public class IContentSiteLink: WindowsFoundation.IInspectable {
+    public class IContentSiteLink: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteLink }
 
         open func get_Parent() throws -> WinAppSDK.ContentIsland? {
@@ -871,7 +871,7 @@ extension __ABI_Microsoft_UI_Content {
 
     }
 
-    internal static var IContentSiteLinkVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteLinkVtbl = .init(
+    internal static nonisolated(unsafe) var IContentSiteLinkVTable: __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteLinkVtbl = .init(
         QueryInterface: { IContentSiteLinkWrapper.queryInterface($0, $1, $2) },
         AddRef: { IContentSiteLinkWrapper.addRef($0) },
         Release: { IContentSiteLinkWrapper.release($0) },
@@ -920,7 +920,7 @@ public class IContentSiteLinkMaker: MakeFromAbi {
 // MARK: - ChildSiteLink
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.childsitelink)
-public final class ChildSiteLink : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteInput, IContentSiteLink {
+public final class ChildSiteLink : WinRTClass, @unchecked Sendable, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteInput, IContentSiteLink {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IChildSiteLink
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1136,7 +1136,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xB5A64814, Data2: 0x608B, Data3: 0x5FB7, Data4: ( 0xA7,0xCB,0xEB,0x62,0x8F,0xD5,0x88,0xCD ) // B5A64814-608B-5FB7-A7CB-EB628FD588CD
     ) 
 
-    public class IChildSiteLink: WindowsFoundation.IInspectable {
+    public class IChildSiteLink: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLink }
 
         public func get_ActualSize() throws -> WindowsFoundation.Vector2 {
@@ -1197,7 +1197,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x28EDC98A, Data2: 0x4F94, Data3: 0x50B1, Data4: ( 0x8A,0x87,0x9E,0x71,0x69,0xEB,0xF4,0xB7 ) // 28EDC98A-4F94-50B1-8A87-9E7169EBF4B7
     ) 
 
-    public class IChildSiteLinkStatics: WindowsFoundation.IInspectable {
+    public class IChildSiteLinkStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIChildSiteLinkStatics }
 
         public func Create(_ parent: WinAppSDK.ContentIsland?, _ placementVisual: WinAppSDK.ContainerVisual?) throws -> WinAppSDK.ChildSiteLink? {
@@ -1224,7 +1224,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentCoordinateConverter
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateconverter)
-open class ContentCoordinateConverter : WinRTClass {
+open class ContentCoordinateConverter : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentCoordinateConverter
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1252,7 +1252,7 @@ open class ContentCoordinateConverter : WinRTClass {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IContentCoordinateConverterFactory : __ABI_Microsoft_UI_Content.IContentCoordinateConverterFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentCoordinateConverter")
+    private static nonisolated(unsafe) var _IContentCoordinateConverterFactory : __ABI_Microsoft_UI_Content.IContentCoordinateConverterFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentCoordinateConverter")
 
     private static let _IContentCoordinateConverterStatics: __ABI_Microsoft_UI_Content.IContentCoordinateConverterStatics = try! RoGetActivationFactory("Microsoft.UI.Content.ContentCoordinateConverter")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentcoordinateconverter.createforwindowid)
@@ -1339,7 +1339,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x10A11230, Data2: 0x5EB4, Data3: 0x5840, Data4: ( 0xA3,0x46,0x57,0x0F,0x4A,0x49,0x04,0x0F ) // 10A11230-5EB4-5840-A346-570F4A49040F
     ) 
 
-    public class IContentCoordinateConverter: WindowsFoundation.IInspectable {
+    public class IContentCoordinateConverter: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter }
 
         public func ConvertLocalToScreenWithPoint(_ localPoint: WindowsFoundation.Point) throws -> UWP.PointInt32 {
@@ -1352,24 +1352,28 @@ extension __ABI_Microsoft_UI_Content {
 
         public func ConvertLocalToScreenWithPoints(_ localPoints: [WindowsFoundation.Point]) throws -> [UWP.PointInt32] {
             var result: WinRTArrayAbi<__x_ABI_CWindows_CGraphics_CPointInt32> = (0, nil)
+            defer {
+                CoTaskMemFree(result.start)
+            }
             try localPoints.toABI { _localPoints in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertLocalToScreenWithPoints(pThis, _localPoints.count, _localPoints.start, &result.count, &result.start))
                 }
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abi: result)
 
         }
 
         public func ConvertLocalToScreenWithPointsAndRoundingMode(_ localPoints: [WindowsFoundation.Point], _ roundingMode: WinAppSDK.ContentCoordinateRoundingMode) throws -> [UWP.PointInt32] {
             var result: WinRTArrayAbi<__x_ABI_CWindows_CGraphics_CPointInt32> = (0, nil)
+            defer {
+                CoTaskMemFree(result.start)
+            }
             try localPoints.toABI { _localPoints in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertLocalToScreenWithPointsAndRoundingMode(pThis, _localPoints.count, _localPoints.start, roundingMode, &result.count, &result.start))
                 }
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abi: result)
 
         }
@@ -1392,12 +1396,14 @@ extension __ABI_Microsoft_UI_Content {
 
         public func ConvertScreenToLocalWithPoints(_ screenPoints: [UWP.PointInt32]) throws -> [WindowsFoundation.Point] {
             var result: WinRTArrayAbi<__x_ABI_CWindows_CFoundation_CPoint> = (0, nil)
+            defer {
+                CoTaskMemFree(result.start)
+            }
             try screenPoints.toABI { _screenPoints in
                 _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverter.self) { pThis in
                     try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertScreenToLocalWithPoints(pThis, _screenPoints.count, _screenPoints.start, &result.count, &result.start))
                 }
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abi: result)
 
         }
@@ -1416,7 +1422,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xA4B216EE, Data2: 0x0E26, Data3: 0x56BD, Data4: ( 0x92,0x09,0xA7,0x5C,0xF9,0xD8,0x0F,0x27 ) // A4B216EE-0E26-56BD-9209-A75CF9D80F27
     ) 
 
-    public class IContentCoordinateConverterFactory: WindowsFoundation.IInspectable {
+    public class IContentCoordinateConverterFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverterFactory }
 
     }
@@ -1425,7 +1431,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xF56374CE, Data2: 0xB6DF, Data3: 0x5B42, Data4: ( 0xA5,0x8F,0x4E,0x3B,0xB0,0x39,0xE3,0xA9 ) // F56374CE-B6DF-5B42-A58F-4E3BB039E3A9
     ) 
 
-    public class IContentCoordinateConverterStatics: WindowsFoundation.IInspectable {
+    public class IContentCoordinateConverterStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentCoordinateConverterStatics }
 
         public func CreateForWindowId(_ windowId: WinAppSDK.WindowId) throws -> WinAppSDK.ContentCoordinateConverter? {
@@ -1443,7 +1449,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentDeferral
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentdeferral)
-public final class ContentDeferral : WinRTClass {
+public final class ContentDeferral : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentDeferral
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentDeferral
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1497,7 +1503,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x470529F5, Data2: 0xCD93, Data3: 0x599B, Data4: ( 0x96,0x8E,0xF8,0xA6,0x89,0xBC,0x3A,0x07 ) // 470529F5-CD93-599B-968E-F8A689BC3A07
     ) 
 
-    public class IContentDeferral: WindowsFoundation.IInspectable {
+    public class IContentDeferral: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentDeferral }
 
         public func Complete() throws {
@@ -1512,7 +1518,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentEnvironmentSettingChangedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentenvironmentsettingchangedeventargs)
-public final class ContentEnvironmentSettingChangedEventArgs : WinRTClass {
+public final class ContentEnvironmentSettingChangedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentEnvironmentSettingChangedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentSettingChangedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1566,15 +1572,17 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x76478051, Data2: 0xFC80, Data3: 0x5EEC, Data4: ( 0xA3,0xF3,0x62,0x60,0x6A,0xBE,0x06,0xB7 ) // 76478051-FC80-5EEC-A3F3-62606ABE06B7
     ) 
 
-    public class IContentEnvironmentSettingChangedEventArgs: WindowsFoundation.IInspectable {
+    public class IContentEnvironmentSettingChangedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentSettingChangedEventArgs }
 
         public func get_SettingName() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentSettingChangedEventArgs.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_SettingName(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -1584,7 +1592,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentEnvironmentStateChangedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentenvironmentstatechangedeventargs)
-public final class ContentEnvironmentStateChangedEventArgs : WinRTClass {
+public final class ContentEnvironmentStateChangedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentEnvironmentStateChangedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentStateChangedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1650,7 +1658,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x8970FA4F, Data2: 0x10BA, Data3: 0x5F67, Data4: ( 0x97,0x0B,0x8C,0x72,0xBC,0x00,0x9B,0x67 ) // 8970FA4F-10BA-5F67-970B-8C72BC009B67
     ) 
 
-    public class IContentEnvironmentStateChangedEventArgs: WindowsFoundation.IInspectable {
+    public class IContentEnvironmentStateChangedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentStateChangedEventArgs }
 
         public func get_DidAppWindowIdChange() throws -> Bool {
@@ -1675,7 +1683,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xCEC0497D, Data2: 0x76C7, Data3: 0x544B, Data4: ( 0xBF,0x6E,0x81,0x6C,0x9B,0x16,0xC9,0x9F ) // CEC0497D-76C7-544B-BF6E-816C9B16C99F
     ) 
 
-    public class IContentEnvironmentStateChangedEventArgs2: WindowsFoundation.IInspectable {
+    public class IContentEnvironmentStateChangedEventArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentEnvironmentStateChangedEventArgs2 }
 
         public func get_DidDisplayScaleChange() throws -> Bool {
@@ -1692,7 +1700,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentIsland
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland)
-open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, WinAppSDK.ICompositionSupportsSystemBackdrop {
+open class ContentIsland : WinRTClass, @unchecked Sendable, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, WinAppSDK.ICompositionSupportsSystemBackdrop {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIsland
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIsland
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -1720,7 +1728,7 @@ open class ContentIsland : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IC
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IContentIslandFactory : __ABI_Microsoft_UI_Content.IContentIslandFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentIsland")
+    private static nonisolated(unsafe) var _IContentIslandFactory : __ABI_Microsoft_UI_Content.IContentIslandFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentIsland")
 
     private static let _IContentIslandStatics: __ABI_Microsoft_UI_Content.IContentIslandStatics = try! RoGetActivationFactory("Microsoft.UI.Content.ContentIsland")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentisland.create)
@@ -2035,7 +2043,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x5B2504BA, Data2: 0x361C, Data3: 0x50AA, Data4: ( 0xBD,0x6E,0x41,0x22,0xC6,0xD9,0x38,0x89 ) // 5B2504BA-361C-50AA-BD6E-4122C6D93889
     ) 
 
-    public class IContentIsland: WindowsFoundation.IInspectable {
+    public class IContentIsland: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIsland }
 
         public func get_ActualSize() throws -> WindowsFoundation.Vector2 {
@@ -2251,7 +2259,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x9F891825, Data2: 0x4F83, Data3: 0x5ADA, Data4: ( 0x9E,0xBD,0x9D,0x32,0x94,0x60,0xAE,0xDE ) // 9F891825-4F83-5ADA-9EBD-9D329460AEDE
     ) 
 
-    public class IContentIsland2: WindowsFoundation.IInspectable {
+    public class IContentIsland2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIsland2 }
 
         public func get_Children() throws -> WindowsFoundation.AnyIIterable<WinAppSDK.ChildSiteLink?>? {
@@ -2310,7 +2318,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x8752C11E, Data2: 0x1896, Data3: 0x565A, Data4: ( 0xBF,0xB0,0x2B,0x07,0x70,0x03,0x0E,0x97 ) // 8752C11E-1896-565A-BFB0-2B0770030E97
     ) 
 
-    public class IContentIslandAutomation: WindowsFoundation.IInspectable {
+    public class IContentIslandAutomation: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandAutomation }
 
         public func get_AutomationOption() throws -> WinAppSDK.ContentAutomationOptions {
@@ -2363,7 +2371,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x82383F52, Data2: 0xE81A, Data3: 0x5EC9, Data4: ( 0xA9,0x54,0xBA,0xC8,0xA9,0x31,0xBA,0x7D ) // 82383F52-E81A-5EC9-A954-BAC8A931BA7D
     ) 
 
-    public class IContentIslandFactory: WindowsFoundation.IInspectable {
+    public class IContentIslandFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandFactory }
 
     }
@@ -2372,7 +2380,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x7B9EB7CC, Data2: 0x8C43, Data3: 0x5E0A, Data4: ( 0xAB,0x23,0xAB,0x48,0x62,0x8F,0xD2,0x23 ) // 7B9EB7CC-8C43-5E0A-AB23-AB48628FD223
     ) 
 
-    public class IContentIslandStatics: WindowsFoundation.IInspectable {
+    public class IContentIslandStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStatics }
 
         public func Create(_ Root: WinAppSDK.Visual?) throws -> WinAppSDK.ContentIsland? {
@@ -2386,20 +2394,34 @@ extension __ABI_Microsoft_UI_Content {
 
         public func FindAllForCompositor(_ compositor: WinAppSDK.Compositor?) throws -> [WinAppSDK.ContentIsland?] {
             var result: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIContentIsland>?> = (0, nil)
+            defer {
+                if let start = result.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(result.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+                CoTaskMemFree(result.start)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.FindAllForCompositor(pThis, RawPointer(compositor), &result.count, &result.start))
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abiBridge: __IMPL_Microsoft_UI_Content.ContentIslandBridge.self, abi: result)
 
         }
 
         public func FindAllForCurrentThread() throws -> [WinAppSDK.ContentIsland?] {
             var result: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIContentIsland>?> = (0, nil)
+            defer {
+                if let start = result.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(result.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+                CoTaskMemFree(result.start)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.FindAllForCurrentThread(pThis, &result.count, &result.start))
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abiBridge: __IMPL_Microsoft_UI_Content.ContentIslandBridge.self, abi: result)
 
         }
@@ -2428,7 +2450,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xB2C6FA77, Data2: 0x13C9, Data3: 0x5064, Data4: ( 0xBB,0x1D,0xF8,0x78,0xD8,0x6A,0xCC,0x65 ) // B2C6FA77-13C9-5064-BB1D-F878D86ACC65
     ) 
 
-    public class IContentIslandStatics2: WindowsFoundation.IInspectable {
+    public class IContentIslandStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStatics2 }
 
         public func CreateForSystemVisual(_ queue: WinAppSDK.DispatcherQueue?, _ root: UWP.Visual?) throws -> WinAppSDK.ContentIsland? {
@@ -2442,10 +2464,17 @@ extension __ABI_Microsoft_UI_Content {
 
         public func FindAllForSystemCompositor(_ compositor: UWP.Compositor?) throws -> [WinAppSDK.ContentIsland?] {
             var result: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_CMicrosoft_CUI_CContent_CIContentIsland>?> = (0, nil)
+            defer {
+                if let start = result.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(result.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+                CoTaskMemFree(result.start)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStatics2.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.FindAllForSystemCompositor(pThis, RawPointer(compositor), &result.count, &result.start))
             }
-            defer { CoTaskMemFree(result.start) }
             return .from(abiBridge: __IMPL_Microsoft_UI_Content.ContentIslandBridge.self, abi: result)
 
         }
@@ -2465,7 +2494,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentIslandAutomationProviderRequestedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandautomationproviderrequestedeventargs)
-public final class ContentIslandAutomationProviderRequestedEventArgs : WinRTClass {
+public final class ContentIslandAutomationProviderRequestedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIslandAutomationProviderRequestedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandAutomationProviderRequestedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2526,7 +2555,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x9FE24BED, Data2: 0x2B9C, Data3: 0x5137, Data4: ( 0x88,0x7F,0x40,0x3C,0x94,0x84,0x18,0x24 ) // 9FE24BED-2B9C-5137-887F-403C94841824
     ) 
 
-    public class IContentIslandAutomationProviderRequestedEventArgs: WindowsFoundation.IInspectable {
+    public class IContentIslandAutomationProviderRequestedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandAutomationProviderRequestedEventArgs }
 
         public func get_AutomationProvider() throws -> Any? {
@@ -2566,7 +2595,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentIslandEnvironment
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment)
-open class ContentIslandEnvironment : WinRTClass {
+open class ContentIslandEnvironment : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIslandEnvironment
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2594,7 +2623,7 @@ open class ContentIslandEnvironment : WinRTClass {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IContentIslandEnvironmentFactory : __ABI_Microsoft_UI_Content.IContentIslandEnvironmentFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentIslandEnvironment")
+    private static nonisolated(unsafe) var _IContentIslandEnvironmentFactory : __ABI_Microsoft_UI_Content.IContentIslandEnvironmentFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentIslandEnvironment")
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandenvironment.appwindowid)
     public var appWindowId : WinAppSDK.WindowId {
@@ -2683,7 +2712,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xC334236D, Data2: 0xDA88, Data3: 0x566D, Data4: ( 0x81,0x1D,0x74,0xAE,0xF2,0xEB,0xA9,0x78 ) // C334236D-DA88-566D-811D-74AEF2EBA978
     ) 
 
-    public class IContentIslandEnvironment: WindowsFoundation.IInspectable {
+    public class IContentIslandEnvironment: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment }
 
         public func get_AppWindowId() throws -> WinAppSDK.WindowId {
@@ -2740,7 +2769,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x6BF81A71, Data2: 0xC1E4, Data3: 0x54D6, Data4: ( 0xAC,0x0D,0x02,0xBC,0xFF,0x52,0x97,0xE7 ) // 6BF81A71-C1E4-54D6-AC0D-02BCFF5297E7
     ) 
 
-    public class IContentIslandEnvironment2: WindowsFoundation.IInspectable {
+    public class IContentIslandEnvironment2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironment2 }
 
         public func get_DisplayScale() throws -> Float {
@@ -2757,7 +2786,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x47A782D6, Data2: 0xB177, Data3: 0x5C1E, Data4: ( 0xBF,0x87,0x90,0x43,0x7D,0xD8,0x09,0xD0 ) // 47A782D6-B177-5C1E-BF87-90437DD809D0
     ) 
 
-    public class IContentIslandEnvironmentFactory: WindowsFoundation.IInspectable {
+    public class IContentIslandEnvironmentFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandEnvironmentFactory }
 
     }
@@ -2766,7 +2795,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentIslandStateChangedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentislandstatechangedeventargs)
-public final class ContentIslandStateChangedEventArgs : WinRTClass {
+public final class ContentIslandStateChangedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentIslandStateChangedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStateChangedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2852,7 +2881,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xC828EEB2, Data2: 0x0C62, Data3: 0x5B40, Data4: ( 0x9D,0x48,0x77,0xC0,0x60,0x83,0xC2,0x78 ) // C828EEB2-0C62-5B40-9D48-77C06083C278
     ) 
 
-    public class IContentIslandStateChangedEventArgs: WindowsFoundation.IInspectable {
+    public class IContentIslandStateChangedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStateChangedEventArgs }
 
         public func get_DidActualSizeChange() throws -> Bool {
@@ -2901,7 +2930,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x8AD25BE1, Data2: 0xA89A, Data3: 0x5872, Data4: ( 0x89,0x6E,0x82,0x98,0xDD,0x20,0xEB,0x0D ) // 8AD25BE1-A89A-5872-896E-8298DD20EB0D
     ) 
 
-    public class IContentIslandStateChangedEventArgs2: WindowsFoundation.IInspectable {
+    public class IContentIslandStateChangedEventArgs2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentIslandStateChangedEventArgs2 }
 
         public func get_DidLocalToClientTransformMatrixChange() throws -> Bool {
@@ -2926,7 +2955,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentSiteAutomationProviderRequestedEventArgs
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteautomationproviderrequestedeventargs)
-public final class ContentSiteAutomationProviderRequestedEventArgs : WinRTClass {
+public final class ContentSiteAutomationProviderRequestedEventArgs : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteAutomationProviderRequestedEventArgs
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationProviderRequestedEventArgs
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -2987,7 +3016,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x73A093B9, Data2: 0x55D4, Data3: 0x5598, Data4: ( 0xB7,0x0E,0x62,0x50,0xB7,0x32,0xF8,0x21 ) // 73A093B9-55D4-5598-B70E-6250B732F821
     ) 
 
-    public class IContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IInspectable {
+    public class IContentSiteAutomationProviderRequestedEventArgs: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteAutomationProviderRequestedEventArgs }
 
         public func get_AutomationProvider() throws -> Any? {
@@ -3027,7 +3056,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentSiteEnvironmentView
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview)
-open class ContentSiteEnvironmentView : WinRTClass {
+open class ContentSiteEnvironmentView : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteEnvironmentView
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -3055,7 +3084,7 @@ open class ContentSiteEnvironmentView : WinRTClass {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IContentSiteEnvironmentViewFactory : __ABI_Microsoft_UI_Content.IContentSiteEnvironmentViewFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentSiteEnvironmentView")
+    private static nonisolated(unsafe) var _IContentSiteEnvironmentViewFactory : __ABI_Microsoft_UI_Content.IContentSiteEnvironmentViewFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentSiteEnvironmentView")
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteenvironmentview.appwindowid)
     public var appWindowId : WinAppSDK.WindowId {
@@ -3118,7 +3147,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x5B6FE420, Data2: 0x0BB3, Data3: 0x54DD, Data4: ( 0x85,0x89,0x78,0x6C,0xF0,0x2E,0x38,0xF1 ) // 5B6FE420-0BB3-54DD-8589-786CF02E38F1
     ) 
 
-    public class IContentSiteEnvironmentView: WindowsFoundation.IInspectable {
+    public class IContentSiteEnvironmentView: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView }
 
         public func get_AppWindowId() throws -> WinAppSDK.WindowId {
@@ -3143,7 +3172,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x0B43C89A, Data2: 0x9196, Data3: 0x5A64, Data4: ( 0xA0,0x78,0xEB,0x15,0x0A,0xCA,0xE5,0x27 ) // 0B43C89A-9196-5A64-A078-EB150ACAE527
     ) 
 
-    public class IContentSiteEnvironmentView2: WindowsFoundation.IInspectable {
+    public class IContentSiteEnvironmentView2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentView2 }
 
         public func get_DisplayScale() throws -> Float {
@@ -3160,7 +3189,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xC901EDF2, Data2: 0xF184, Data3: 0x5A64, Data4: ( 0x8D,0x58,0x8C,0xF8,0xEF,0xA8,0xB6,0x78 ) // C901EDF2-F184-5A64-8D58-8CF8EFA8B678
     ) 
 
-    public class IContentSiteEnvironmentViewFactory: WindowsFoundation.IInspectable {
+    public class IContentSiteEnvironmentViewFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteEnvironmentViewFactory }
 
     }
@@ -3169,7 +3198,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - ContentSiteView
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview)
-open class ContentSiteView : WinRTClass {
+open class ContentSiteView : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IContentSiteView
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -3197,7 +3226,7 @@ open class ContentSiteView : WinRTClass {
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IContentSiteViewFactory : __ABI_Microsoft_UI_Content.IContentSiteViewFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentSiteView")
+    private static nonisolated(unsafe) var _IContentSiteViewFactory : __ABI_Microsoft_UI_Content.IContentSiteViewFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.ContentSiteView")
 
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.contentsiteview.actualsize)
     public var actualSize : WindowsFoundation.Vector2 {
@@ -3342,7 +3371,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x2D5D8DD5, Data2: 0x358E, Data3: 0x5B05, Data4: ( 0x99,0x3B,0xB2,0x66,0x6D,0x17,0x86,0xB3 ) // 2D5D8DD5-358E-5B05-993B-B2666D1786B3
     ) 
 
-    public class IContentSiteView: WindowsFoundation.IInspectable {
+    public class IContentSiteView: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView }
 
         public func get_ActualSize() throws -> WindowsFoundation.Vector2 {
@@ -3466,7 +3495,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x628ADCE3, Data2: 0x820F, Data3: 0x57DE, Data4: ( 0xBD,0xC8,0x37,0x20,0xFF,0x73,0x01,0x4B ) // 628ADCE3-820F-57DE-BDC8-3720FF73014B
     ) 
 
-    public class IContentSiteView2: WindowsFoundation.IInspectable {
+    public class IContentSiteView2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteView2 }
 
         public func get_LocalToClientTransformMatrix() throws -> WindowsFoundation.Matrix4x4 {
@@ -3507,7 +3536,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xF9D1D5FF, Data2: 0x9669, Data3: 0x5553, Data4: ( 0xA8,0x75,0xAE,0xE0,0x3E,0x11,0xED,0xD8 ) // F9D1D5FF-9669-5553-A875-AEE03E11EDD8
     ) 
 
-    public class IContentSiteViewAutomation: WindowsFoundation.IInspectable {
+    public class IContentSiteViewAutomation: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteViewAutomation }
 
         public func get_AutomationOption() throws -> WinAppSDK.ContentAutomationOptions {
@@ -3524,7 +3553,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x9EFD72F0, Data2: 0x63EF, Data3: 0x5B6A, Data4: ( 0xA5,0x0C,0x56,0x85,0xBD,0x81,0x00,0xF1 ) // 9EFD72F0-63EF-5B6A-A50C-5685BD8100F1
     ) 
 
-    public class IContentSiteViewFactory: WindowsFoundation.IInspectable {
+    public class IContentSiteViewFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIContentSiteViewFactory }
 
     }
@@ -3533,7 +3562,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - DesktopChildSiteBridge
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopchildsitebridge)
-public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge {
+public final class DesktopChildSiteBridge : WinAppSDK.DesktopSiteBridge, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopChildSiteBridge
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -3605,7 +3634,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xB2F2FF7B, Data2: 0x1825, Data3: 0x51B0, Data4: ( 0xB8,0x0B,0x75,0x99,0x88,0x9C,0x56,0x9F ) // B2F2FF7B-1825-51B0-B80B-7599889C569F
     ) 
 
-    public class IDesktopChildSiteBridge: WindowsFoundation.IInspectable {
+    public class IDesktopChildSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridge }
 
         public func get_ResizePolicy() throws -> WinAppSDK.ContentSizePolicy {
@@ -3637,7 +3666,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xAB6B82DE, Data2: 0x6A47, Data3: 0x5DE3, Data4: ( 0xA8,0x60,0x61,0x3C,0x8D,0xB6,0x79,0xAB ) // AB6B82DE-6A47-5DE3-A860-613C8DB679AB
     ) 
 
-    public class IDesktopChildSiteBridgeStatics: WindowsFoundation.IInspectable {
+    public class IDesktopChildSiteBridgeStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridgeStatics }
 
         public func Create(_ compositor: WinAppSDK.Compositor?, _ parentWindowId: WinAppSDK.WindowId) throws -> WinAppSDK.DesktopChildSiteBridge? {
@@ -3655,7 +3684,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xAAE99407, Data2: 0xE378, Data3: 0x5C53, Data4: ( 0x9A,0xFF,0x5A,0x3B,0x53,0xE1,0x94,0xA8 ) // AAE99407-E378-5C53-9AFF-5A3B53E194A8
     ) 
 
-    public class IDesktopChildSiteBridgeStatics2: WindowsFoundation.IInspectable {
+    public class IDesktopChildSiteBridgeStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopChildSiteBridgeStatics2 }
 
         public func CreateWithDispatcherQueue(_ queue: WinAppSDK.DispatcherQueue?, _ parentWindowId: WinAppSDK.WindowId) throws -> WinAppSDK.DesktopChildSiteBridge? {
@@ -3673,7 +3702,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - DesktopPopupSiteBridge
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktoppopupsitebridge)
-public final class DesktopPopupSiteBridge : WinRTClass, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteBridge, IContentSiteLink {
+public final class DesktopPopupSiteBridge : WinRTClass, @unchecked Sendable, WindowsFoundation.IClosable, WinAppSDK.IClosableNotifier, IContentSiteAutomation, IContentSiteBridge, IContentSiteLink {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopPopupSiteBridge
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -3927,7 +3956,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x84EAAB23, Data2: 0xF716, Data3: 0x5AD8, Data4: ( 0xAC,0x00,0x3D,0x77,0xC0,0x1D,0x42,0xCC ) // 84EAAB23-F716-5AD8-AC00-3D77C01D42CC
     ) 
 
-    public class IDesktopPopupSiteBridge: WindowsFoundation.IInspectable {
+    public class IDesktopPopupSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridge }
 
         public func get_IsEnabled() throws -> Bool {
@@ -4023,7 +4052,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0x4EA2B77B, Data2: 0x3177, Data3: 0x5E5B, Data4: ( 0x8D,0x0D,0xA7,0x6E,0x15,0xC6,0xD0,0x80 ) // 4EA2B77B-3177-5E5B-8D0D-A76E15C6D080
     ) 
 
-    public class IDesktopPopupSiteBridgeStatics: WindowsFoundation.IInspectable {
+    public class IDesktopPopupSiteBridgeStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopPopupSiteBridgeStatics }
 
         public func Create(_ parent: WinAppSDK.ContentIsland?) throws -> WinAppSDK.DesktopPopupSiteBridge? {
@@ -4041,7 +4070,7 @@ extension __ABI_Microsoft_UI_Content {
 // MARK: - DesktopSiteBridge
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge)
-open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsFoundation.IClosable, IContentSiteBridge {
+open class DesktopSiteBridge : WinRTClass, @unchecked Sendable, WinAppSDK.IClosableNotifier, WindowsFoundation.IClosable, IContentSiteBridge {
     private typealias SwiftABI = __ABI_Microsoft_UI_Content.IDesktopSiteBridge
     private typealias CABI = __x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -4069,7 +4098,7 @@ open class DesktopSiteBridge : WinRTClass, WinAppSDK.IClosableNotifier, WindowsF
     override open func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? {
         return super.queryInterface(iid)
     }
-    private static var _IDesktopSiteBridgeFactory : __ABI_Microsoft_UI_Content.IDesktopSiteBridgeFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.DesktopSiteBridge")
+    private static nonisolated(unsafe) var _IDesktopSiteBridgeFactory : __ABI_Microsoft_UI_Content.IDesktopSiteBridgeFactory =  try! RoGetActivationFactory("Microsoft.UI.Content.DesktopSiteBridge")
 
     private static let _IDesktopSiteBridgeStatics: __ABI_Microsoft_UI_Content.IDesktopSiteBridgeStatics = try! RoGetActivationFactory("Microsoft.UI.Content.DesktopSiteBridge")
     /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.content.desktopsitebridge.issupported)
@@ -4240,7 +4269,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xF0AE8750, Data2: 0x905C, Data3: 0x50A2, Data4: ( 0x8A,0x12,0x45,0x45,0xC6,0x24,0x5B,0xB4 ) // F0AE8750-905C-50A2-8A12-4545C6245BB4
     ) 
 
-    public class IDesktopSiteBridge: WindowsFoundation.IInspectable {
+    public class IDesktopSiteBridge: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridge }
 
         public func get_IsEnabled() throws -> Bool {
@@ -4327,7 +4356,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xD94EE1FF, Data2: 0x3AF1, Data3: 0x54D0, Data4: ( 0x93,0x11,0x65,0x2B,0x29,0xC5,0x7C,0x5B ) // D94EE1FF-3AF1-54D0-9311-652B29C57C5B
     ) 
 
-    public class IDesktopSiteBridgeFactory: WindowsFoundation.IInspectable {
+    public class IDesktopSiteBridgeFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeFactory }
 
     }
@@ -4336,7 +4365,7 @@ extension __ABI_Microsoft_UI_Content {
         Data1: 0xE0B38DAF, Data2: 0x9CD4, Data3: 0x50C5, Data4: ( 0x83,0xEE,0xC7,0x6E,0x3C,0xF3,0x4E,0xBA ) // E0B38DAF-9CD4-50C5-83EE-C76E3CF34EBA
     ) 
 
-    public class IDesktopSiteBridgeStatics: WindowsFoundation.IInspectable {
+    public class IDesktopSiteBridgeStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CContent_CIDesktopSiteBridgeStatics }
 
         public func IsSupported() throws -> Bool {

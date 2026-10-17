@@ -77,7 +77,7 @@ extension __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CWind
 // MARK: - DeploymentInitializeOptions
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.windowsappruntime.deploymentinitializeoptions)
-public final class DeploymentInitializeOptions : WinRTClass {
+public final class DeploymentInitializeOptions : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime.IDeploymentInitializeOptions
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentInitializeOptions
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -145,7 +145,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0x578A5FD4, Data2: 0x9D7F, Data3: 0x5E01, Data4: ( 0x97,0xB8,0xD8,0xEA,0x61,0xDB,0x40,0x27 ) // 578A5FD4-9D7F-5E01-97B8-D8EA61DB4027
     ) 
 
-    public class IDeploymentInitializeOptions: WindowsFoundation.IInspectable {
+    public class IDeploymentInitializeOptions: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentInitializeOptions }
 
         public func get_ForceDeployment() throws -> Bool {
@@ -168,7 +168,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xAD902820, Data2: 0x149F, Data3: 0x5E16, Data4: ( 0xA5,0x66,0x9B,0x23,0x63,0x99,0x7D,0xE2 ) // AD902820-149F-5E16-A566-9B2363997DE2
     ) 
 
-    public class IDeploymentInitializeOptions2: WindowsFoundation.IInspectable {
+    public class IDeploymentInitializeOptions2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentInitializeOptions2 }
 
         public func get_OnErrorShowUI() throws -> Bool {
@@ -219,7 +219,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0x6782A9D0, Data2: 0xBFD0, Data3: 0x50EA, Data4: ( 0x81,0xB0,0x32,0xE9,0xED,0x37,0xCD,0xF0 ) // 6782A9D0-BFD0-50EA-81B0-32E9ED37CDF0
     ) 
 
-    public class IDeploymentManagerStatics: WindowsFoundation.IInspectable {
+    public class IDeploymentManagerStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentManagerStatics }
 
         public func GetStatus() throws -> WinAppSDK.DeploymentResult? {
@@ -246,7 +246,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xF49C16EE, Data2: 0x6EBC, Data3: 0x5F15, Data4: ( 0xBE,0xBB,0x2B,0xA4,0x9F,0x8C,0x0B,0x30 ) // F49C16EE-6EBC-5F15-BEBB-2BA49F8C0B30
     ) 
 
-    public class IDeploymentManagerStatics2: WindowsFoundation.IInspectable {
+    public class IDeploymentManagerStatics2: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentManagerStatics2 }
 
         public func Initialize(_ deploymentInitializeOptions: WinAppSDK.DeploymentInitializeOptions?) throws -> WinAppSDK.DeploymentResult? {
@@ -264,7 +264,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
 // MARK: - DeploymentResult
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.windowsappruntime.deploymentresult)
-public final class DeploymentResult : WinRTClass {
+public final class DeploymentResult : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime.IDeploymentResult
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentResult
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -328,7 +328,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0x27203F62, Data2: 0x463D, Data3: 0x587A, Data4: ( 0x8E,0xB7,0x87,0x00,0x98,0x90,0x10,0x78 ) // 27203F62-463D-587A-8EB7-870098901078
     ) 
 
-    public class IDeploymentResult: WindowsFoundation.IInspectable {
+    public class IDeploymentResult: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentResult }
 
         public func get_Status() throws -> WinAppSDK.DeploymentStatus {
@@ -353,7 +353,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xACD7BDAE, Data2: 0x4AE6, Data3: 0x5CAC, Data4: ( 0x82,0x05,0x1E,0x8C,0x30,0x5F,0x95,0x3B ) // ACD7BDAE-4AE6-5CAC-8205-1E8C305F953B
     ) 
 
-    public class IDeploymentResultFactory: WindowsFoundation.IInspectable {
+    public class IDeploymentResultFactory: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIDeploymentResultFactory }
 
         public func CreateInstance(_ status: WinAppSDK.DeploymentStatus, _ extendedError: HRESULT) throws -> IDeploymentResult {
@@ -408,7 +408,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xED9BE8FF, Data2: 0x073C, Data3: 0x5C66, Data4: ( 0xBF,0x97,0xEF,0x0C,0xE6,0x74,0x05,0xC3 ) // ED9BE8FF-073C-5C66-BF97-EF0CE67405C3
     ) 
 
-    public class IReleaseInfoStatics: WindowsFoundation.IInspectable {
+    public class IReleaseInfoStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIReleaseInfoStatics }
 
         public func get_Major() throws -> UInt16 {
@@ -437,19 +437,23 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
 
         public func get_VersionTag() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIReleaseInfoStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_VersionTag(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
         public func get_AsString() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIReleaseInfoStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_AsString(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
@@ -459,7 +463,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
 // MARK: - RuntimeCompatibilityOptions
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.windows.applicationmodel.windowsappruntime.runtimecompatibilityoptions)
-public final class RuntimeCompatibilityOptions : WinRTClass {
+public final class RuntimeCompatibilityOptions : WinRTClass, @unchecked Sendable {
     private typealias SwiftABI = __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime.IRuntimeCompatibilityOptions
     private typealias CABI = __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIRuntimeCompatibilityOptions
     private lazy var _default: SwiftABI! = getInterfaceForCaching()
@@ -535,7 +539,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xD7403BD9, Data2: 0xB25D, Data3: 0x5B8F, Data4: ( 0x8D,0xE1,0x9D,0xCB,0x57,0xD9,0x9F,0x6C ) // D7403BD9-B25D-5B8F-8DE1-9DCB57D99F6C
     ) 
 
-    public class IRuntimeCompatibilityOptions: WindowsFoundation.IInspectable {
+    public class IRuntimeCompatibilityOptions: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIRuntimeCompatibilityOptions }
 
         public func get_PatchLevel1() throws -> WinAppSDK.WindowsAppRuntimeVersion {
@@ -609,7 +613,7 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
         Data1: 0xE5CB9549, Data2: 0x8951, Data3: 0x590E, Data4: ( 0xA7,0x53,0x8F,0x28,0x1C,0xD7,0x7A,0xB5 ) // E5CB9549-8951-590E-A753-8F281CD77AB5
     ) 
 
-    public class IRuntimeInfoStatics: WindowsFoundation.IInspectable {
+    public class IRuntimeInfoStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
         override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIRuntimeInfoStatics }
 
         public func get_Version() throws -> UWP.PackageVersion {
@@ -622,10 +626,12 @@ extension __ABI_Microsoft_Windows_ApplicationModel_WindowsAppRuntime {
 
         public func get_AsString() throws -> String {
             var value: HSTRING?
+            defer {
+                WindowsDeleteString(value)
+            }
             _ = try perform(as: __x_ABI_CMicrosoft_CWindows_CApplicationModel_CWindowsAppRuntime_CIRuntimeInfoStatics.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.get_AsString(pThis, &value))
             }
-            defer { WindowsDeleteString(value) }
             return .init(from: value)
         }
 
