@@ -13,4 +13,5 @@
 #include <../nuget/include/WindowsAppSDK-VersionInfo.h>
 
 // re-define the string to make it visible in Swift. (#define only supports numbers & strings)
-static PCWSTR WINDOWSAPPSDK_RELEASE_VERSION_TAG_SWIFT = WINDOWSAPPSDK_RELEASE_VERSION_TAG_W;
+// const so Swift 6 strict concurrency treats the imported global as immutable
+static const PCWSTR WINDOWSAPPSDK_RELEASE_VERSION_TAG_SWIFT = WINDOWSAPPSDK_RELEASE_VERSION_TAG_W;
