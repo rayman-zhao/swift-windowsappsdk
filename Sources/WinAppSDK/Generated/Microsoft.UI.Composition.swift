@@ -308,6 +308,21 @@ extension WinAppSDK.CompositionEffectFactoryLoadStatus {
 }
 extension WinAppSDK.CompositionEffectFactoryLoadStatus: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
 
+// MARK: - CompositionEngineType
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionenginetype)
+public typealias CompositionEngineType = __x_ABI_CMicrosoft_CUI_CComposition_CCompositionEngineType
+
+extension WinAppSDK.CompositionEngineType {
+    public static var system : WinAppSDK.CompositionEngineType {
+        __x_ABI_CMicrosoft_CUI_CComposition_CCompositionEngineType_System
+    }
+    public static var inProcess : WinAppSDK.CompositionEngineType {
+        __x_ABI_CMicrosoft_CUI_CComposition_CCompositionEngineType_InProcess
+    }
+}
+extension WinAppSDK.CompositionEngineType: @retroactive Hashable, @retroactive Codable, @retroactive @unchecked Sendable {}
+
 // MARK: - CompositionGetValueStatus
 
 /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositiongetvaluestatus)
@@ -4746,6 +4761,72 @@ extension __ABI_Microsoft_UI_Composition {
             _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionEllipseGeometry.self) { pThis in
                 try CHECKED(pThis.pointee.lpVtbl.pointee.put_Radius(pThis, .from(swift: value)))
             }
+        }
+
+    }
+
+}
+// MARK: - CompositionEngine
+
+/// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionengine)
+public final class CompositionEngine {
+    private static let _ICompositionEngineStatics: __ABI_Microsoft_UI_Composition.ICompositionEngineStatics = try! RoGetActivationFactory("Microsoft.UI.Composition.CompositionEngine")
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionengine.trysetprocessengine)
+    public static func trySetProcessEngine(_ requested: CompositionEngineType) throws -> Bool {
+        return try _ICompositionEngineStatics.TrySetProcessEngine(requested)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionengine.getforsystemengine)
+    public static func getForSystemEngine(_ compositionObject: Any!) throws -> Any! {
+        return try _ICompositionEngineStatics.GetForSystemEngine(compositionObject)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/windows/windows-app-sdk/api/winrt/microsoft.ui.composition.compositionengine.getforinprocessengine)
+    public static func getForInProcessEngine(_ compositionObject: Any!) throws -> Any! {
+        return try _ICompositionEngineStatics.GetForInProcessEngine(compositionObject)
+    }
+
+}
+
+// MARK: - CompositionEngine Internals
+
+@_spi(WinRTInternal)
+extension __ABI_Microsoft_UI_Composition {
+    private static let IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionEngineStatics: WindowsFoundation.IID = .init(
+        Data1: 0x6CCF1385, Data2: 0xC6C7, Data3: 0x54D8, Data4: ( 0xAC,0xA1,0xE7,0xD6,0x6C,0xFE,0xE7,0x04 ) // 6CCF1385-C6C7-54D8-ACA1-E7D66CFEE704
+    ) 
+
+    public class ICompositionEngineStatics: WindowsFoundation.IInspectable, @unchecked Sendable {
+        override public class var IID: WindowsFoundation.IID { IID___x_ABI_CMicrosoft_CUI_CComposition_CICompositionEngineStatics }
+
+        public func TrySetProcessEngine(_ requested: WinAppSDK.CompositionEngineType) throws -> Bool {
+            var result: boolean = 0
+            _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionEngineStatics.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.TrySetProcessEngine(pThis, requested, &result))
+            }
+            return .init(from: result)
+        }
+
+        public func GetForSystemEngine(_ compositionObject: Any?) throws -> Any? {
+            let (result) = try ComPtrs.initialize { resultAbi in
+                let compositionObjectWrapper = __ABI_.AnyWrapper(compositionObject)
+                let _compositionObject = try! compositionObjectWrapper?.toABI { $0 }
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionEngineStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForSystemEngine(pThis, _compositionObject, &resultAbi))
+                }
+            }
+            return __ABI_.AnyWrapper.unwrapFrom(abi: result)
+        }
+
+        public func GetForInProcessEngine(_ compositionObject: Any?) throws -> Any? {
+            let (result) = try ComPtrs.initialize { resultAbi in
+                let compositionObjectWrapper = __ABI_.AnyWrapper(compositionObject)
+                let _compositionObject = try! compositionObjectWrapper?.toABI { $0 }
+                _ = try perform(as: __x_ABI_CMicrosoft_CUI_CComposition_CICompositionEngineStatics.self) { pThis in
+                    try CHECKED(pThis.pointee.lpVtbl.pointee.GetForInProcessEngine(pThis, _compositionObject, &resultAbi))
+                }
+            }
+            return __ABI_.AnyWrapper.unwrapFrom(abi: result)
         }
 
     }
