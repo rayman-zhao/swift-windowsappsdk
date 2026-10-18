@@ -157,8 +157,10 @@ function Copy-PackageAssets {
     $ProjectDir = Join-Path $PSScriptRoot "Sources\C$ProjectName\nuget"
 
     # copy dlls from runtimes\win-<arch>\native to vendor\bin
-    $PackageDir = Join-Path $PackagesDir "$Package.$PackageVersion"
-    $PackagesRuntimeDir = Join-Path $PackageDir "runtimes\win-$Arch\native"
+    # (the bootstrap DLLs ship in the WindowsAppSDK.Foundation package, not Runtime)
+    $FoundationPackage = $Projections.Dependencies | Where-Object { $_.Id -eq "Microsoft.WindowsAppSDK.Foundation" }
+    $FoundationDir = Join-Path $PackagesDir "$($FoundationPackage.Id).$($FoundationPackage.Version)"
+    $PackagesRuntimeDir = Join-Path $FoundationDir "runtimes\win-$Arch\native"
     $PackagesBinaries = Get-ChildItem -Path $PackagesRuntimeDir -Filter *.dll -Recurse
 
     $ProjectBinaryDir = Join-Path $ProjectDir "bin"
@@ -171,6 +173,8 @@ function Copy-PackageAssets {
     }
 
     # copy headers from include to vendor\include
+    # (the full header set - MddBootstrap.h, MsixDynamicDependency.h, etc. - ships in the Runtime package)
+    $PackageDir = Join-Path $PackagesDir "$Package.$PackageVersion"
     $ProjectHeadersDir = Join-Path $ProjectDir "include"
     if (-not (Test-Path $ProjectHeadersDir)) {
         New-Item -Path $ProjectHeadersDir -ItemType Directory -Force | Out-Null
@@ -181,9 +185,10 @@ function Copy-PackageAssets {
         Copy-Item -Path $_.FullName -Destination $ProjectHeadersDir -Force
     }
 
-    # Copy libs from lib\win-<arch> to vendor\lib
+    # Copy libs from lib\native\<arch> to vendor\lib
+    # (the bootstrap import libs ship in the WindowsAppSDK.Foundation package)
     $ProjectLibsDir = Join-Path $ProjectDir "lib"
-    $PackagesLibsDir = Join-Path $PackageDir "lib\win10-x64"
+    $PackagesLibsDir = Join-Path $FoundationDir "lib\native\$Arch"
     $PackagesLibs = Get-ChildItem -Path $PackagesLibsDir -Filter *.lib -Recurse
     if (-not (Test-Path $ProjectLibsDir)) {
         New-Item -Path $ProjectLibsDir -ItemType Directory -Force | Out-Null
