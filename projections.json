@@ -12,6 +12,7 @@
     { "id": "Microsoft.WindowsAppSDK.WinUI", "version": "2.3.9" }
   ],
   "include": [
+    "Microsoft.Security.Authentication.OAuth",
     "Microsoft.UI.Colors",
     "Microsoft.UI.Composition",
     "Microsoft.UI.Composition.Interactions",

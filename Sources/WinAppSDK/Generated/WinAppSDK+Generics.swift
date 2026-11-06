@@ -5,6 +5,112 @@ import Foundation
 @_spi(WinRTInternal) @_spi(WinRTImplements) import WindowsFoundation
 import CWinRT
 
+private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult: WindowsFoundation.IID {
+    .init(Data1: 0x96903c4b, Data2: 0x0624, Data3: 0x56df, Data4: ( 0x93,0x2e,0xbf,0xd5,0x61,0xd8,0x7f,0x02 ))// 96903c4b-0624-56df-932e-bfd561d87f02
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.release($0) },
+    Invoke: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.AuthRequestResult?>? = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.unwrapFrom(abi: ComPtr($1))
+            let asyncStatus: WindowsFoundation.AsyncStatus = $2
+            try __unwrapped__instance(asyncInfo, asyncStatus)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultBridge>
+public class AsyncOperationCompletedHandlerAuthRequestResult: WindowsFoundation.IUnknown, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult }
+
+    open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.AuthRequestResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
+        let asyncInfoWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper(asyncInfo)
+        let _asyncInfo = try! asyncInfoWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _asyncInfo, asyncStatus))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.AsyncOperationCompletedHandler<WinAppSDK.AuthRequestResult?>
+    internal typealias CABI = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult
+    internal typealias SwiftABI = WinAppSDK.AsyncOperationCompletedHandlerAuthRequestResult
+
+    internal static func from(abi: consuming ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (asyncInfo, asyncStatus) in
+            try _default.Invoke(asyncInfo, asyncStatus)
+        }
+        return handler
+    }
+}
+private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult: WindowsFoundation.IID {
+    .init(Data1: 0x4d1279f5, Data2: 0x8a74, Data3: 0x5874, Data4: ( 0xa8,0x20,0xfe,0xc8,0x5a,0xc0,0x6a,0x2d ))// 4d1279f5-8a74-5874-a820-fec85ac06a2d
+}
+
+internal extension WinRTDelegateBridge where CABI == __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult {
+    static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVTable) { $0 }
+        return .init(lpVtbl:vtblPtr)
+    }
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVTable: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.release($0) },
+    Invoke: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.TokenRequestResult?>? = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.unwrapFrom(abi: ComPtr($1))
+            let asyncStatus: WindowsFoundation.AsyncStatus = $2
+            try __unwrapped__instance(asyncInfo, asyncStatus)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultBridge>
+public class AsyncOperationCompletedHandlerTokenRequestResult: WindowsFoundation.IUnknown, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult }
+
+    open func Invoke(_ asyncInfo: WindowsFoundation.AnyIAsyncOperation<WinAppSDK.TokenRequestResult?>?, _ asyncStatus: WindowsFoundation.AsyncStatus) throws {
+        let asyncInfoWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper(asyncInfo)
+        let _asyncInfo = try! asyncInfoWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, _asyncInfo, asyncStatus))
+        }
+    }
+
+}
+
+internal class __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultBridge : WinRTDelegateBridge {
+    internal typealias Handler = WindowsFoundation.AsyncOperationCompletedHandler<WinAppSDK.TokenRequestResult?>
+    internal typealias CABI = __x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult
+    internal typealias SwiftABI = WinAppSDK.AsyncOperationCompletedHandlerTokenRequestResult
+
+    internal static func from(abi: consuming ComPtr<CABI>?) -> Handler? {
+        guard let abi = abi else { return nil }
+        let _default = SwiftABI(abi)
+        let handler: Handler = { (asyncInfo, asyncStatus) in
+            try _default.Invoke(asyncInfo, asyncStatus)
+        }
+        return handler
+    }
+}
 private var IID___x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurface: WindowsFoundation.IID {
     .init(Data1: 0xc89efa6d, Data2: 0x6f22, Data3: 0x5e04, Data4: ( 0x80,0x59,0xb5,0x62,0x8e,0x3f,0x01,0x80 ))// c89efa6d-6f22-5e04-8059-b5628e3f0180
 }
@@ -2178,6 +2284,93 @@ fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HS
     // MARK: WinRT
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
+        try! _default.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue: WindowsFoundation.IID {
+    .init(Data1: 0xdfabb6e1, Data2: 0x0411, Data3: 0x5a8f, Data4: ( 0xaa,0x87,0x35,0x4e,0x71,0x10,0xf0,0x99 ))// dfabb6e1-0411-5a8f-aa87-354e7110f099
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Data.Json.IJsonValue>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    First: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.first()
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge>
+public class IIterableIKeyValuePairString_IJsonValue: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue }
+
+    open func First() throws -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.First(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue
+    internal typealias SwiftABI = IIterableIKeyValuePairString_IJsonValue
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterable<WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl : IIterable, AbiInterfaceImpl, @unchecked Sendable {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?
+    typealias Bridge = __x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterable-1.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?>? {
         try! _default.First()
     }
 
@@ -5776,6 +5969,167 @@ fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING_HS
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue: WindowsFoundation.IID {
+    .init(Data1: 0xf948eac5, Data2: 0x33eb, Data3: 0x50f5, Data4: ( 0xb5,0xaf,0xe7,0xce,0xcf,0x0e,0x45,0x01 ))// f948eac5-33eb-50f5-b5af-e7cecf0e4501
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Data.Json.IJsonValue>>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Current: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.current
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    get_HasCurrent: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.hasCurrent
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    MoveNext: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.moveNext()
+        $1?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    GetMany: {
+        guard let __unwrapped__instance = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var items: [WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?] = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge.self, abi: (count: $1, start: $2))
+        let result = __unwrapped__instance.getMany(&items)
+        items.fill(abi: $2, abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge.self)
+        $3?.initialize(to: result)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge>
+public class IIteratorIKeyValuePairString_IJsonValue: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue }
+
+    open func get_Current() throws -> WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.unwrapFrom(abi: result)
+    }
+
+    open func get_HasCurrent() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HasCurrent(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func MoveNext() throws -> Bool {
+        var result: boolean = 0
+        _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveNext(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func GetMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?]) throws -> UInt32 {
+        var result: UINT32 = 0
+        var _itemsBuffer = Array<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue>?>(repeating: nil, count: items.count)
+        try _itemsBuffer.withUnsafeMutableBufferPointer { buffer in
+            let _items: WinRTArrayAbi<UnsafeMutablePointer<__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue>?> = (UInt32(buffer.count), buffer.baseAddress)
+            defer {
+                if let start = _items.start {
+                    for element in UnsafeBufferPointer(start: start, count: Int(_items.count)) {
+                        _ = element?.pointee.lpVtbl.pointee.Release(element)
+                    }
+                }
+            }
+            _ = try perform(as: __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, _items.count, _items.start, &result))
+            }
+            items = .from(abiBridge: WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge.self, abi: _items)
+        }
+        return result
+    }
+
+}
+
+internal enum __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue
+    internal typealias SwiftABI = IIteratorIKeyValuePairString_IJsonValue
+    internal typealias SwiftProjection = WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl : IIterator, AbiInterfaceImpl, @unchecked Sendable {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?
+    typealias Bridge = __x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.movenext)
+    fileprivate func moveNext() -> Bool {
+        try! _default.MoveNext()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany)
+    fileprivate func getMany(_ items: inout [WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?]) -> UInt32 {
+        try! _default.GetMany(&items)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.current)
+    fileprivate var current : WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>? {
+        get { try! _default.get_Current() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.hascurrent)
+    fileprivate var hasCurrent : Bool {
+        get { try! _default.get_HasCurrent() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIIterator_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0xa11824c9, Data2: 0xe458, Data3: 0x502a, Data4: ( 0xaf,0xd8,0xce,0x3c,0xe0,0xab,0xd6,0xfe ))// a11824c9-e458-502a-afd8-ce3ce0abd6fe
 }
@@ -6270,6 +6624,117 @@ fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING_HSTRINGImpl : IKeyValuePai
     public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
 }
 
+private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue: WindowsFoundation.IID {
+    .init(Data1: 0x4deecc89, Data2: 0xb0b8, Data3: 0x5ee8, Data4: ( 0xa5,0x1d,0x1c,0x25,0xad,0x9a,0x5b,0x01 ))// 4deecc89-b0b8-5ee8-a51d-1c25ad9a5b01
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 3).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.IID
+        $1!.pointee = 3
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IKeyValuePair`2<String, Windows.Data.Json.IJsonValue>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    get_Key: {
+        guard let __unwrapped__instance = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.key
+        $1?.initialize(to: try! HString(result).detach())
+        return S_OK
+    },
+
+    get_Value: {
+        guard let __unwrapped__instance = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.value
+        let resultWrapper = __ABI_Windows_Data_Json.IJsonValueWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge>
+public class IKeyValuePairString_IJsonValue: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue }
+
+    open func get_Key() throws -> String {
+        var result: HSTRING?
+        defer {
+            WindowsDeleteString(result)
+        }
+        _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, &result))
+        }
+        return .init(from: result)
+    }
+
+    open func get_Value() throws -> UWP.AnyIJsonValue? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Value(pThis, &resultAbi))
+            }
+        }
+        return __ABI_Windows_Data_Json.IJsonValueWrapper.unwrapFrom(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue
+    internal typealias SwiftABI = IKeyValuePairString_IJsonValue
+    internal typealias SwiftProjection = WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl : IKeyValuePair, AbiInterfaceImpl, @unchecked Sendable {
+    typealias K = String
+    typealias V = UWP.AnyIJsonValue?
+    typealias Bridge = __x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ikeyvaluepair-2.key)
+    fileprivate var key : String {
+        get { try! _default.get_Key() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.ikeyvaluepair-2.value)
+    fileprivate var value : UWP.AnyIJsonValue? {
+        get { try! _default.get_Value() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_C__FIVector_1_HSTRING: WindowsFoundation.IID {
     .init(Data1: 0x174f26c7, Data2: 0x79ea, Data3: 0x5f7c, Data4: ( 0xbd,0x70,0xac,0x44,0x57,0xf2,0xca,0xc8 ))// 174f26c7-79ea-5f7c-bd70-ac4457f2cac8
 }
@@ -6722,6 +7187,179 @@ fileprivate class __x_ABI_C__FIMapView_2_HSTRING_HSTRINGImpl : IMapView, AbiInte
     private lazy var _IIterable: IIterableIKeyValuePairString_String! = getInterfaceForCaching()
     /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.first)
     fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, String>?>? {
+        try! _IIterable.First()
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue: WindowsFoundation.IID {
+    .init(Data1: 0xeecd690c, Data2: 0x1ff3, Data3: 0x529f, Data4: ( 0x92,0x3f,0x9b,0x1c,0x31,0xfd,0x3d,0x0f ))// eecd690c-1ff3-529f-923f-9b1c31fd3d0f
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.IID
+        iids[3] = WinAppSDK.__x_ABI_C__FIIterable_1___x_ABI_C__FIKeyValuePair_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.Collections.IMapView`2<String, Windows.Data.Json.IJsonValue>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    Lookup: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.lookup(key)
+        let resultWrapper = __ABI_Windows_Data_Json.IJsonValueWrapper(result)
+        resultWrapper?.copyTo($2)
+        return S_OK
+    },
+
+    get_Size: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.size
+        $1?.initialize(to: result)
+        return S_OK
+    },
+
+    HasKey: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let key: String = .init(from: $1)
+        let result = __unwrapped__instance.hasKey(key)
+        $2?.initialize(to: .init(from: result))
+        return S_OK
+    },
+
+    Split: {
+        guard let __unwrapped__instance = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        var first: WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?
+        var second: WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?
+        __unwrapped__instance.split(&first, &second)
+        let firstWrapper = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper(first)
+        firstWrapper?.copyTo($1)
+        let secondWrapper = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper(second)
+        secondWrapper?.copyTo($2)
+        return S_OK
+    }
+)
+typealias __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge>
+public class IMapViewString_IJsonValue: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue }
+
+    open func Lookup(_ key: String) throws -> UWP.AnyIJsonValue? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            let _key = try! HString(key)
+            _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.Lookup(pThis, _key.get(), &resultAbi))
+            }
+        }
+        return __ABI_Windows_Data_Json.IJsonValueWrapper.unwrapFrom(abi: result)
+    }
+
+    open func get_Size() throws -> UInt32 {
+        var result: UINT32 = 0
+        _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, &result))
+        }
+        return result
+    }
+
+    open func HasKey(_ key: String) throws -> Bool {
+        var result: boolean = 0
+        let _key = try! HString(key)
+        _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.HasKey(pThis, _key.get(), &result))
+        }
+        return .init(from: result)
+    }
+
+    open func Split(_ first: inout WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?, _ second: inout WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?) throws {
+        var _firstAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue>?
+        defer {
+            _ = _firstAbi?.pointee.lpVtbl.pointee.Release(_firstAbi)
+        }
+        var _secondAbi: UnsafeMutablePointer<__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue>?
+        defer {
+            _ = _secondAbi?.pointee.lpVtbl.pointee.Release(_secondAbi)
+        }
+        _ = try perform(as: __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Split(pThis, &_firstAbi, &_secondAbi))
+        }
+        first = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.unwrapFrom(abi: ComPtr(_firstAbi))
+        second = WinAppSDK.__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueWrapper.unwrapFrom(abi: ComPtr(_secondAbi))
+    }
+
+}
+
+internal enum __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValue
+    internal typealias SwiftABI = IMapViewString_IJsonValue
+    internal typealias SwiftProjection = WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueImpl : IMapView, AbiInterfaceImpl, @unchecked Sendable {
+    typealias T = WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?
+    typealias K = String
+    typealias V = UWP.AnyIJsonValue?
+    typealias Bridge = __x_ABI_C__FIMapView_2_HSTRING___x_ABI_CWindows__CData__CJson__CIJsonValueBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.lookup)
+    fileprivate func lookup(_ key: String) -> UWP.AnyIJsonValue? {
+        try! _default.Lookup(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.haskey)
+    fileprivate func hasKey(_ key: String) -> Bool {
+        try! _default.HasKey(key)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.split)
+    fileprivate func split(_ first: inout WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?, _ second: inout WindowsFoundation.AnyIMapView<String, UWP.AnyIJsonValue?>?) {
+        try! _default.Split(&first, &second)
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.size)
+    fileprivate var size : UInt32 {
+        get { try! _default.get_Size() }
+    }
+
+    private lazy var _IIterable: IIterableIKeyValuePairString_IJsonValue! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.collections.imapview-2.first)
+    fileprivate func first() -> WindowsFoundation.AnyIIterator<WindowsFoundation.AnyIKeyValuePair<String, UWP.AnyIJsonValue?>?>? {
         try! _IIterable.First()
     }
 
@@ -11986,6 +12624,312 @@ internal class __x_ABI_C__FIEventHandler_1___x_ABI_CMicrosoft__CWindows__CAppLif
         return handler
     }
 }
+private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult: WindowsFoundation.IID {
+    .init(Data1: 0x90c43237, Data2: 0xb071, Data3: 0x547a, Data4: ( 0xb4,0xe1,0xb7,0x86,0xe2,0x30,0xe9,0xde ))// 90c43237-b071-547a-b4e1-b786e230e9de
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IAsyncInfoWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IAsyncOperation`1<Microsoft.Security.Authentication.OAuth.AuthRequestResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    put_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        guard let handler = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
+        __unwrapped__instance.completed = handler
+        return S_OK
+    },
+
+    get_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.completed
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    GetResults: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let result = try __unwrapped__instance.getResults()
+            result?.copyTo($1)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultBridge>
+public class IAsyncOperationAuthRequestResult: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult }
+
+    open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.AuthRequestResult?>?) throws {
+        let handlerWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper(handler)
+        let _handler = try! handlerWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, _handler))
+        }
+    }
+
+    open func get_Completed() throws -> AsyncOperationCompletedHandler<WinAppSDK.AuthRequestResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultWrapper.unwrapFrom(abi: result)
+    }
+
+    open func GetResults() throws -> WinAppSDK.AuthRequestResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Security_Authentication_OAuth.AuthRequestResultBridge.from(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResult
+    internal typealias SwiftABI = IAsyncOperationAuthRequestResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIAsyncOperation<WinAppSDK.AuthRequestResult?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
+    typealias TResult = WinAppSDK.AuthRequestResult?
+    typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CAuthRequestResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.getresults)
+    fileprivate func getResults() throws -> WinAppSDK.AuthRequestResult? {
+        try _default.GetResults()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
+    fileprivate var completed : AsyncOperationCompletedHandler<WinAppSDK.AuthRequestResult?>? {
+        get { try! _default.get_Completed() }
+        set { try! _default.put_Completed(newValue) }
+    }
+
+    private lazy var _IAsyncInfo: __ABI_Windows_Foundation.IAsyncInfo! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.cancel)
+    fileprivate func cancel() throws {
+        try _IAsyncInfo.Cancel()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.close)
+    fileprivate func close() throws {
+        try _IAsyncInfo.Close()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.errorcode)
+    fileprivate var errorCode : HRESULT {
+        get { try! _IAsyncInfo.get_ErrorCode() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.id)
+    fileprivate var id : UInt32 {
+        get { try! _IAsyncInfo.get_Id() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.status)
+    fileprivate var status : WindowsFoundation.AsyncStatus {
+        get { try! _IAsyncInfo.get_Status() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
+private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult: WindowsFoundation.IID {
+    .init(Data1: 0x001a3d77, Data2: 0x0c75, Data3: 0x5e5c, Data4: ( 0x91,0x0b,0xd1,0x43,0xe6,0x39,0xa0,0x3f ))// 001a3d77-0c75-5e5c-910b-d143e639a03f
+}
+
+internal nonisolated(unsafe) var __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVTable: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVtbl = .init(
+    QueryInterface: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.queryInterface($0, $1, $2) },
+    AddRef: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.addRef($0) },
+    Release: { __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.release($0) },
+    GetIids: {
+        let size = MemoryLayout<WindowsFoundation.IID>.size
+        let iids = CoTaskMemAlloc(UInt64(size) * 4).assumingMemoryBound(to: WindowsFoundation.IID.self)
+        iids[0] = IUnknown.IID
+        iids[1] = IInspectable.IID
+        iids[2] = WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.IID
+        iids[3] = __ABI_Windows_Foundation.IAsyncInfoWrapper.IID
+        $1!.pointee = 4
+        $2!.pointee = iids
+        return S_OK
+    },
+
+    GetRuntimeClassName: {
+        _ = $0
+        let hstring = try! HString("Windows.Foundation.IAsyncOperation`1<Microsoft.Security.Authentication.OAuth.TokenRequestResult>").detach()
+        $1!.pointee = hstring
+        return S_OK
+    },
+
+    GetTrustLevel: {
+        _ = $0
+        $1!.pointee = TrustLevel(rawValue: 0)
+        return S_OK
+    },
+
+    put_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        guard let handler = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.unwrapFrom(abi: ComPtr($1)) else { return E_INVALIDARG }
+        __unwrapped__instance.completed = handler
+        return S_OK
+    },
+
+    get_Completed: {
+        guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+        let result = __unwrapped__instance.completed
+        let resultWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper(result)
+        resultWrapper?.copyTo($1)
+        return S_OK
+    },
+
+    GetResults: {
+        do {
+            guard let __unwrapped__instance = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.tryUnwrapFrom(raw: $0) else { return E_INVALIDARG }
+            let result = try __unwrapped__instance.getResults()
+            result?.copyTo($1)
+            return S_OK
+        } catch { return failWith(error: error) }
+    }
+)
+typealias __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper = InterfaceWrapperBase<WinAppSDK.__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultBridge>
+public class IAsyncOperationTokenRequestResult: WindowsFoundation.IInspectable, @unchecked Sendable {
+    override public class var IID: WindowsFoundation.IID { IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult }
+
+    open func put_Completed(_ handler: AsyncOperationCompletedHandler<WinAppSDK.TokenRequestResult?>?) throws {
+        let handlerWrapper = WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper(handler)
+        let _handler = try! handlerWrapper?.toABI { $0 }
+        _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, _handler))
+        }
+    }
+
+    open func get_Completed() throws -> AsyncOperationCompletedHandler<WinAppSDK.TokenRequestResult?>? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, &resultAbi))
+            }
+        }
+        return WinAppSDK.__x_ABI_C__FIAsyncOperationCompletedHandler_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultWrapper.unwrapFrom(abi: result)
+    }
+
+    open func GetResults() throws -> WinAppSDK.TokenRequestResult? {
+        let (result) = try ComPtrs.initialize { resultAbi in
+            _ = try perform(as: __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult.self) { pThis in
+                try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, &resultAbi))
+            }
+        }
+        return __IMPL_Microsoft_Security_Authentication_OAuth.TokenRequestResultBridge.from(abi: result)
+    }
+
+}
+
+internal enum __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultBridge : AbiInterfaceBridge {
+    internal typealias CABI = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResult
+    internal typealias SwiftABI = IAsyncOperationTokenRequestResult
+    internal typealias SwiftProjection = WindowsFoundation.AnyIAsyncOperation<WinAppSDK.TokenRequestResult?>
+    internal static func from(abi: consuming ComPtr<CABI>?) -> SwiftProjection? {
+        guard let abi = abi else { return nil }
+        return __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultImpl(abi)
+    }
+
+    internal static func makeAbi() -> CABI {
+        let vtblPtr = withUnsafeMutablePointer(to: &__x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultVTable) { $0 }
+        return .init(lpVtbl: vtblPtr)
+    }
+}
+
+fileprivate class __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultImpl : IAsyncOperation, AbiInterfaceImpl, @unchecked Sendable {
+    typealias TResult = WinAppSDK.TokenRequestResult?
+    typealias Bridge = __x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CSecurity__CAuthentication__COAuth__CTokenRequestResultBridge
+    let _default: Bridge.SwiftABI
+    init(_ fromAbi: consuming ComPtr<Bridge.CABI>) {
+        _default = Bridge.SwiftABI(fromAbi)
+    }
+
+    // MARK: WinRT
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.getresults)
+    fileprivate func getResults() throws -> WinAppSDK.TokenRequestResult? {
+        try _default.GetResults()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.completed)
+    fileprivate var completed : AsyncOperationCompletedHandler<WinAppSDK.TokenRequestResult?>? {
+        get { try! _default.get_Completed() }
+        set { try! _default.put_Completed(newValue) }
+    }
+
+    private lazy var _IAsyncInfo: __ABI_Windows_Foundation.IAsyncInfo! = getInterfaceForCaching()
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.cancel)
+    fileprivate func cancel() throws {
+        try _IAsyncInfo.Cancel()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.close)
+    fileprivate func close() throws {
+        try _IAsyncInfo.Close()
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.errorcode)
+    fileprivate var errorCode : HRESULT {
+        get { try! _IAsyncInfo.get_ErrorCode() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.id)
+    fileprivate var id : UInt32 {
+        get { try! _IAsyncInfo.get_Id() }
+    }
+
+    /// [Open Microsoft documentation](https://learn.microsoft.com/uwp/api/windows.foundation.iasyncoperation-1.status)
+    fileprivate var status : WindowsFoundation.AsyncStatus {
+        get { try! _IAsyncInfo.get_Status() }
+    }
+
+    public func queryInterface(_ iid: WindowsFoundation.IID) -> IUnknownRef? { nil }
+}
+
 private var IID___x_ABI_C__FIAsyncOperation_1___x_ABI_CMicrosoft__CUI__CComposition__CICompositionSurface: WindowsFoundation.IID {
     .init(Data1: 0x92ceaa5d, Data2: 0xb255, Data3: 0x57d9, Data4: ( 0xab,0x7c,0x0f,0x30,0x44,0x85,0xc1,0xbd ))// 92ceaa5d-b255-57d9-ab7c-0f304485c1bd
 }
